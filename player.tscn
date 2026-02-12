@@ -5,6 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
 size = Vector2(50, 50)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
+size = Vector2(50, 50)
+
 [node name="Player" type="CharacterBody2D" unique_id=454716346]
 script = ExtResource("1_4flbx")
 move_speed = 500
@@ -20,3 +23,10 @@ offset_top = -25.0
 offset_right = 25.0
 offset_bottom = 25.0
 color = Color(0, 0.5262707, 0.5266111, 1)
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=296612009]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1530880413]
+position = Vector2(50, 0)
+shape = SubResource("RectangleShape2D_4flbx")
