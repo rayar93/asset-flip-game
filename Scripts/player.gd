@@ -4,6 +4,15 @@ extends CharacterBody2D
 @export var jump_velocity = -400
 @export var gravity = 1000
 
+@export var attack_duration = 0.1 # seconds
+
+@onready var attack_area: Area2D = $AttackArea # rename AttackArea node
+
+var facing = 1 # 1 is right, -1 is left
+
+func _ready():
+	attack_area.monitoring = false
+
 # _physics_process() is called by the engine every tick
 # we use this instead of _process so that physics is independent of framerate
 func _physics_process(delta):
@@ -17,10 +26,31 @@ func _physics_process(delta):
 		
 	# Handle horizontal movement
 	var direction = Input.get_axis("move_left", "move_right")
-	velocity.x = direction * move_speed
+	if direction != 0:
+		facing = sign(direction)
+		velocity.x = direction * move_speed
+	else:
+		velocity.x = 0
+		
+	attack_area.position.x = abs(attack_area.position.x) * facing
+	
+	# Handle attacking
+	if Input.is_action_just_pressed("attack"):
+		do_attack()
 	
 	# move_and_slide() takes our velocity and handles collision
 	move_and_slide()
+	
+func do_attack():
+	attack_area.monitoring = true
+	await get_tree().physics_frame
+	
+	for body in attack_area.get_overlapping_bodies():
+		if body.is_in_group("enemies"):
+			body.queue_free()
+			
+	await get_tree().create_timer(attack_duration).timeout
+	attack_area.monitoring = false
 
 """ Below is the default script for CharacterBody2D, for reference.
 

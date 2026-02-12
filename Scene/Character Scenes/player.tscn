@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://pdnlykm857d6"]
 
-[ext_resource type="Script" uid="uid://cl0yfwj0x7xw1" path="res://Scripts/player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://cl0yfwj0x7xw1" path="res://Scripts/player.gd" id="1_avyrm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
 size = Vector2(50, 50)
@@ -9,7 +9,7 @@ size = Vector2(50, 50)
 size = Vector2(50, 50)
 
 [node name="Player" type="CharacterBody2D" unique_id=454716346]
-script = ExtResource("1_4flbx")
+script = ExtResource("1_avyrm")
 move_speed = 500
 jump_velocity = -600
 gravity = 1500
