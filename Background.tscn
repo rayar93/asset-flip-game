@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://53upuhtel45k"]
 
 [node name="Background" type="Node2D" unique_id=1604559613]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1018788052]
+custom_minimum_size = Vector2(1024, 600)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
