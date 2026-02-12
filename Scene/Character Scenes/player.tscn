@@ -25,8 +25,15 @@ offset_bottom = 25.0
 color = Color(0, 0.5262707, 0.5266111, 1)
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=296612009]
+position = Vector2(50, 0)
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1530880413]
-position = Vector2(50, 0)
 shape = SubResource("RectangleShape2D_4flbx")
+
+[node name="ColorRect" type="ColorRect" parent="AttackArea" unique_id=2066843670]
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+color = Color(1, 0.22352941, 1, 1)
