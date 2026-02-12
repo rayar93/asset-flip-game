@@ -22,7 +22,10 @@ offset_bottom = 850.0
 color = Color(0.029670075, 0.19631776, 0.11221602, 1)
 
 [node name="Player" parent="." unique_id=454716346 instance=ExtResource("1_u52ul")]
-position = Vector2(150, 491)
+position = Vector2(492, 506)
 
-[node name="CharacterBody2D" parent="." unique_id=920785443 instance=ExtResource("2_vonw3")]
-position = Vector2(846, 483)
+[node name="Enemy" parent="." unique_id=920785443 instance=ExtResource("2_vonw3")]
+position = Vector2(101, 492)
+
+[node name="Enemy2" parent="." unique_id=1584399701 instance=ExtResource("2_vonw3")]
+position = Vector2(894, 492)
