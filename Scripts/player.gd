@@ -6,14 +6,16 @@ extends CharacterBody2D
 
 @export var attack_duration = 0.1 # seconds
 
-@onready var attack_area: Area2D = $AttackArea # rename AttackArea node
+@onready var attack_area: Area2D = $AttackRoot/AttackArea # rename AttackArea node
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+@onready var slash_vfx: AnimatedSprite2D = $AttackRoot/SlashVFX
 
 var facing = 1 # 1 is right, -1 is left
 var is_attacking = false
 
 func _ready():
 	attack_area.monitoring = false
+	slash_vfx.visible = false
 	anim.play("idle")
 
 # _physics_process() is called by the engine every tick
@@ -37,6 +39,8 @@ func _physics_process(delta):
 		
 	anim.flip_h = (facing == -1) # flip sprite when player is facing left
 	attack_area.position.x = abs(attack_area.position.x) * facing
+	slash_vfx.flip_h = (facing == -1)
+	slash_vfx.position.x = abs(slash_vfx.position.x) * facing
 	
 	# Handle attacking
 	if Input.is_action_just_pressed("attack"):
@@ -62,15 +66,25 @@ func play_anim(anim_name: String):
 		anim.play(anim_name)
 	
 func do_attack():
+	if is_attacking:
+		return
+		
 	is_attacking = true
+	
+	# turn on visuals and hitbox at the same moment
+	slash_vfx.visible = true
+	slash_vfx.play("slash")
 	attack_area.monitoring = true
+
 	await get_tree().physics_frame
 	
 	for body in attack_area.get_overlapping_bodies():
 		if body.is_in_group("enemies"):
 			body.queue_free()
-			
+	
 	await get_tree().create_timer(attack_duration).timeout
 	attack_area.monitoring = false
+	await get_tree().create_timer(0.05).timeout # slash lingers for feel
+	slash_vfx.visible = false
 	
 	is_attacking = false
