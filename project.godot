@@ -23,6 +23,7 @@ window/size/viewport_height=600
 [global_group]
 
 enemies=""
+player=""
 
 [input]
 

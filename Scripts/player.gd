@@ -151,7 +151,8 @@ func update_attack(delta: float, move_dir: float, jump_pressed: bool):
 func apply_attack_hits():
 	for body in attack_area.get_overlapping_bodies():
 		if body.is_in_group("enemies"):
-			body.queue_free()
+			if body.has_method("take_hit"):
+				body.take_hit(global_position)
 			
 func update_hurt(delta: float):
 	hurt_time_left -= delta

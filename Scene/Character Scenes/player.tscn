@@ -383,7 +383,7 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=454716346]
+[node name="Player" type="CharacterBody2D" unique_id=454716346 groups=["player"]]
 script = ExtResource("1_avyrm")
 move_speed = 500
 jump_velocity = -600
