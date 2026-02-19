@@ -1,0 +1,41 @@
+Sprint 1 (due 2/5) DONE
+•	Install Godot, explore UI, learn GDScript
+•	Set up scenes/nodes
+•	Code player movement – left/right/jump – with gravity and floor collision
+Sprint 2 (due 2/12) DONE
+•	Add a simple attack system with a directional hitbox that activates on input and detects collisions
+•	Set up GitHub version control
+•	Create a dummy enemy
+•	Begin early level prototyping
+Sprint 3 (due 2/19) DONE
+•	Set up idle/run/jump/fall animations
+•	Set up a rudimentary camera
+•	Continue level creation
+Sprint 4 — Visible attacks + basic combat feel (due 2/26) DONE
+•	Make attacks visible (slash sprite/effect/weapon node that appears briefly)
+•	Sync the visual with the hitbox timing
+•	Tune AttackArea size/offset + attack timing (duration/cooldown)
+•	Continue level creation
+Sprint 5 — Enemies v1
+•	Build 2–3 real enemy types (patroller, chaser, stationary)
+•	Enemies take hits and react (not just vanish-only; at least knockback or simple health)
+•	Place enemies in a small test room and tune difficulty
+•	upward/downward attacks
+•	Continue level creation
+Sprint 6 — Player FSM core + damage rules
+•	Player FSM: Grounded, Jump, Fall, Attack, Hurt/Knockback
+•	Player i-frames + knockback behavior
+•	Enemy knockback/stun handling (lightweight enemy FSM if needed)
+•	Continue level creation
+Sprint 7 — Rooms + playable loop + UI minimum
+•	Finalize level creation! Handcrafted rooms + transitions + spawn points
+•	Win/lose conditions
+•	Audio
+•	Graphical effects – landing dust, hit effects
+•	Minimal UI (player health)
+Stretch goals
+•	Double jump, wall jump, dash
+•	Ranged weapon
+•	Boss
+•	Multi-platform
+•	Work on player movement feel – acceleration, deceleration, air/ground control, friction when no input, turn boost, coyote time, jump buffer, variable jump height, different gravity when jumping/falling, terminal fall speed, hang time near apex, dead zones / digital smoothing, input priority rules, slope handling (?), edge forgiveness
