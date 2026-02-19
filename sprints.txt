@@ -16,15 +16,15 @@ Sprint 4 — Visible attacks + basic combat feel (due 2/26) DONE
 •	Sync the visual with the hitbox timing
 •	Tune AttackArea size/offset + attack timing (duration/cooldown)
 •	Continue level creation
+•	Implement player finite state machine
 Sprint 5 — Enemies v1
 •	Build 2–3 real enemy types (patroller, chaser, stationary)
 •	Enemies take hits and react (not just vanish-only; at least knockback or simple health)
 •	Place enemies in a small test room and tune difficulty
 •	upward/downward attacks
 •	Continue level creation
-Sprint 6 — Player FSM core + damage rules
-•	Player FSM: Grounded, Jump, Fall, Attack, Hurt/Knockback
-•	Player i-frames + knockback behavior
+Sprint 6 — FSM tweaking + damage rules
+•	Player i-frames + hurt/knockback behavior
 •	Enemy knockback/stun handling (lightweight enemy FSM if needed)
 •	Continue level creation
 Sprint 7 — Rooms + playable loop + UI minimum
