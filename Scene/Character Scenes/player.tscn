@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cu4pdh6xnjql0" path="res://Assets/Virtual Guy/Run (32x32).png" id="5_npr22"]
 [ext_resource type="Texture2D" uid="uid://d0f27yhhnaors" path="res://Assets/SlashFX Combos/SlashFX SimpleCombo3 sheet.png" id="6_qma10"]
 [ext_resource type="Texture2D" uid="uid://d4dex85k6307e" path="res://Assets/Virtual Guy/Wall Jump (32x32).png" id="8_a3c8g"]
+[ext_resource type="Script" uid="uid://bq5midtayjyae" path="res://Scripts/player_hurtbox.gd" id="10_mx2v3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
 size = Vector2(20, 25)
@@ -378,12 +379,17 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iji7n")
 }],
-"loop": true,
+"loop": false,
 "name": &"slash",
 "speed": 12.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iy31x"]
+size = Vector2(20, 25)
+
 [node name="Player" type="CharacterBody2D" unique_id=454716346 groups=["player"]]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_avyrm")
 move_speed = 500
 jump_velocity = -600
@@ -405,6 +411,8 @@ position_smoothing_speed = 10.0
 
 [node name="AttackArea" type="Area2D" parent="AttackRoot" unique_id=296612009]
 position = Vector2(25, 0)
+collision_layer = 8
+collision_mask = 64
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRoot/AttackArea" unique_id=1530880413]
@@ -416,3 +424,12 @@ position = Vector2(10, 5)
 sprite_frames = SubResource("SpriteFrames_230g6")
 animation = &"slash"
 frame_progress = 0.8433436
+
+[node name="PlayerHurtbox" type="Area2D" parent="." unique_id=287782175]
+position = Vector2(1, 3)
+collision_layer = 32
+collision_mask = 16
+script = ExtResource("10_mx2v3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHurtbox" unique_id=1155381102]
+shape = SubResource("RectangleShape2D_iy31x")

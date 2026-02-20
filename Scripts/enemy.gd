@@ -6,17 +6,18 @@ extends CharacterBody2D
 @export var notice_radius = 220
 @export var attack_radius = 45
 
-@export var attack_windup = 0.15
-@export var attack_active = 0.1
-@export var attack_recover = 0.2
-
 @export var hurt_duration = 0.25
 @export var hurt_left = 0.0
 @export var knockback_strength = 250
 
-@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+@export var attack_hit_frame = 1
+
+@onready var visual_root: Node2D = $VisualRoot
+@onready var anim: AnimatedSprite2D = $VisualRoot/AnimatedSprite2D
 @onready var hitbox: Area2D = $Hitbox
-@onready var hurtbox: Area2D = $Hurtbox
+
+@onready var visual_base_x: float = visual_root.position.x
+@onready var hitbox_base_x: float = hitbox.position.x
 
 enum State { IDLE, CHASE, ATTACK, HURT }
 var state = State.IDLE
@@ -24,14 +25,16 @@ var state = State.IDLE
 var facing = 1
 var player: Node2D = null
 
-var attack_windup_left = 0.0
-var attack_active_left = 0.0
-var attack_recover_left = 0.0
+var already_hit = false
 
 func _ready():
 	hitbox.monitoring = false
+	hitbox.monitorable = false
 	player = get_tree().get_first_node_in_group("player") as Node2D
+	$Hurtbox.hurtbox_hit.connect(_on_hurtbox_hit)
+	anim.animation_finished.connect(_on_anim_finished)
 	set_state(State.IDLE)
+	set_facing(facing)
 	
 func _physics_process(delta):
 	if player == null:
@@ -51,6 +54,35 @@ func _physics_process(delta):
 			update_hurt(delta)
 		
 	move_and_slide()
+	
+func _on_hurtbox_hit(attack_position: Vector2):
+	if state == State.HURT:
+		return
+		
+	# Calculate knockback direction
+	var dir = sign(global_position.x - attack_position.x)
+	if dir == 0:
+		dir = -facing
+		
+	velocity.x = dir * knockback_strength
+	velocity.y = -200
+	
+	set_state(State.HURT)
+	
+func set_facing(new_facing):
+	if new_facing == 0 or new_facing == facing:
+		return
+	facing = new_facing
+	
+	anim.flip_h = (facing == -1)
+	
+	visual_root.position.x = visual_base_x * facing
+	hitbox.position.x = hitbox_base_x * facing
+	
+func _on_anim_finished():
+	if state == State.ATTACK:
+		hitbox_off()
+		set_state(State.CHASE)
 	
 func distance_to_player():
 	if player == null:
@@ -83,46 +115,35 @@ func update_chase(delta):
 		
 	var dir = direction_to_player()
 	if dir != 0:
-		facing = int(dir)
+		set_facing(int(dir))
 		
 	velocity.x = dir * move_speed
 	play_anim("walk")
 	
 func update_attack(delta):
-	var dir = direction_to_player()
-	if dir != 0:
-		facing = int(dir)
-		
 	velocity.x = 0.0
-	play_anim("attack")
+		
+	# Turn on hitbox for single attack frame
+	if anim.frame == attack_hit_frame:
+		if not hitbox.monitorable:
+			hitbox_on()
+	else:
+		if hitbox.monitorable:
+			hitbox_off()
+		
+	if not anim.is_playing():
+		hitbox_off()
+		set_state(State.CHASE)
+		return
+		
+func hitbox_on():
+	already_hit = false
+	hitbox.monitoring = true
+	hitbox.monitorable = true
 	
-	if attack_windup_left > 0.0:
-		attack_windup_left -= delta
-		if attack_windup_left <= 0.0:
-			hitbox.monitoring = true
-			attack_active_left = attack_active
-		return
-		
-	if attack_active_left > 0.0:
-		attack_active_left -= delta
-		for body in hitbox.get_overlapping_bodies():
-			if body.is_in_group("player"):
-				var knockback_dir = (body.global_position - global_position).normalized()
-				var knockback = knockback_dir * 300
-				body.take_hit(knockback)
-		if attack_active_left <= 0.0:
-			hitbox.monitoring = false
-			attack_recover_left = attack_recover
-		return
-		
-	if attack_recover_left > 0.0:
-		attack_recover_left -= delta
-		if attack_recover_left <= 0.0:
-			var d = distance_to_player()
-			if d <= notice_radius:
-				set_state(State.CHASE)
-			else:
-				set_state(State.IDLE)
+func hitbox_off():
+	hitbox.monitoring = false
+	hitbox.monitorable = false
 				
 func update_hurt(delta):
 	play_anim("hurt")
@@ -139,6 +160,7 @@ func set_state(new_state: State):
 		return
 		
 	if state == State.ATTACK:
+		hitbox.monitorable = false
 		hitbox.monitoring = false
 		
 	state = new_state
@@ -149,30 +171,13 @@ func set_state(new_state: State):
 		State.CHASE:
 			pass
 		State.ATTACK:
-			attack_windup_left = attack_windup
-			attack_active_left = 0.0
-			attack_recover_left = 0.0
+			already_hit = false
+			hitbox_off()
+			anim.play("attack")
 		State.HURT:
 			hurt_left = hurt_duration
+			hitbox.monitorable = false
 			hitbox.monitoring = false
-			
-func take_hit(from_world_pos: Vector2):
-	# Ignore hits while already hurt
-	if state == State.HURT:
-		return
-		
-	# Horizontal knockback
-	var dir = sign(global_position.x - from_world_pos.x)
-	if dir == 0:
-		dir = -facing
-	velocity.x = dir * knockback_strength
-	
-	set_state(State.HURT)
-	
-func _process(delta):
-	anim.flip_h = (facing == -1)
-	hitbox.position.x = abs(hitbox.position.x) * facing
-	hurtbox.position.x = abs(hurtbox.position.x) * facing
 	
 func play_anim(name):
 	if anim.animation != name:

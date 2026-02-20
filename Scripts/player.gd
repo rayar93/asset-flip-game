@@ -8,6 +8,10 @@ extends CharacterBody2D
 @export var slash_linger = 0.05
 @export var hurt_duration = 0.2
 
+@export var attack_hit_frame = 1
+var attack_active_left = 0.0
+@export var attack_active_time = 0.1
+
 @onready var attack_area: Area2D = $AttackRoot/AttackArea # rename AttackArea node
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var slash_vfx: AnimatedSprite2D = $AttackRoot/SlashVFX
@@ -23,9 +27,16 @@ var attack_time_left := 0.0
 var linger_time_left := 0.0
 var hurt_time_left := 0.0
 
+var already_hit = false
+
 func _ready():
 	attack_area.monitoring = false
+	attack_area.monitorable = false
 	slash_vfx.visible = false
+	
+	$PlayerHurtbox.player_hurt.connect(_on_player_hurt)
+	
+	
 	if is_on_floor():
 		set_state(State.GROUNDED)
 	else:
@@ -62,6 +73,24 @@ func _physics_process(delta):
 	elif state == State.AIR and is_on_floor():
 		set_state(State.GROUNDED)
 
+func attack_on():
+	attack_area.monitoring = true
+	attack_area.monitorable = true
+	
+func attack_off():
+	attack_area.monitoring = false
+	attack_area.monitorable = false
+
+func _on_player_hurt(attack_position: Vector2):
+	# Knockback direction
+	var dir = sign(global_position.x - attack_position.x)
+	if dir == 0:
+		dir = -facing
+		
+	var knockback = Vector2(dir * 300, -200)
+	velocity = knockback
+	set_state(State.HURT)
+	
 func update_grounded(delta: float, move_dir: float, jump_pressed: bool, attack_pressed: bool):
 	# Horizontal movement
 	if move_dir != 0:
@@ -116,44 +145,18 @@ func update_attack(delta: float, move_dir: float, jump_pressed: bool):
 		
 	# Allow jumping during attack
 	if jump_pressed and is_on_floor():
-		velocity.y = jump_velocity	
+		velocity.y = jump_velocity
 	
-	# Count down the active hitbox
-	if attack_time_left > 0.0:
-		attack_time_left -= delta
-		if attack_time_left <= 0:
-			attack_area.monitoring = false
-			linger_time_left = slash_linger
-			
-		apply_attack_hits()
+	attack_active_left -= delta
+	if attack_active_left <= 0.0:
+		attack_off()
 		
-	# Count down the hit linger
-	elif linger_time_left > 0.0:
-		linger_time_left -= delta
-		if linger_time_left <= 0.0:
-			slash_vfx.visible = false
-			if is_on_floor():
-				set_state(State.GROUNDED)
-			else:
-				set_state(State.AIR)
-				
-	if is_on_floor():
-		if abs(velocity.x) > 0:
-			play_anim("run")
-		else:
-			play_anim("idle")
-	else:
-		if velocity.y < 0:
-			play_anim("jump")
-		else:
-			play_anim("fall")
+	if not slash_vfx.is_playing():
+		attack_off()
+		slash_vfx.visible = false
+		set_state(State.GROUNDED if is_on_floor() else State.AIR)
+		return
 
-func apply_attack_hits():
-	for body in attack_area.get_overlapping_bodies():
-		if body.is_in_group("enemies"):
-			if body.has_method("take_hit"):
-				body.take_hit(global_position)
-			
 func update_hurt(delta: float):
 	hurt_time_left -= delta
 	if hurt_time_left <= 0.0:
@@ -168,7 +171,7 @@ func set_state(new_state: State):
 		
 	match state:
 		State.ATTACK:
-			attack_area.monitoring = false
+			attack_off()
 			slash_vfx.visible = false
 			
 	state = new_state
@@ -179,11 +182,12 @@ func set_state(new_state: State):
 		State.AIR:
 			pass
 		State.ATTACK:
+			already_hit = false
+			attack_active_left = attack_active_time
+			attack_on()
 			slash_vfx.visible = true
+			slash_vfx.frame = 0
 			slash_vfx.play("slash")
-			attack_area.monitoring = true
-			attack_time_left = attack_duration
-			linger_time_left = 0.0
 		State.HURT:
 			hurt_time_left = hurt_duration
 			play_anim("hurt")
@@ -197,7 +201,3 @@ func _process(_delta: float):
 func play_anim(anim_name: String):
 	if anim.animation != anim_name:
 		anim.play(anim_name)
-		
-func take_hit(knockback: Vector2):
-	velocity = knockback
-	set_state(State.HURT)
