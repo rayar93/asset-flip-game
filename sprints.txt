@@ -17,17 +17,17 @@ Sprint 4 — Visible attacks + basic combat feel (due 2/26) DONE
 •	Tune AttackArea size/offset + attack timing (duration/cooldown)
 •	Continue level creation
 •	Implement player finite state machine
-Sprint 5 — Enemies v1
+Sprint 5 — Enemies v1 (due 3/5)
+•	Fix player attack
 •	Build 2–3 real enemy types (patroller, chaser, stationary)
 •	Enemies take hits and react (not just vanish-only; at least knockback or simple health)
 •	Place enemies in a small test room and tune difficulty
-•	upward/downward attacks
 •	Continue level creation
-Sprint 6 — FSM tweaking + damage rules
+Sprint 6 — FSM tweaking + damage rules (due 3/12)
 •	Player i-frames + hurt/knockback behavior
 •	Enemy knockback/stun handling (lightweight enemy FSM if needed)
 •	Continue level creation
-Sprint 7 — Rooms + playable loop + UI minimum
+Sprint 7 — Rooms + playable loop + UI minimum (due 3/19)
 •	Finalize level creation! Handcrafted rooms + transitions + spawn points
 •	Win/lose conditions
 •	Audio
@@ -35,6 +35,7 @@ Sprint 7 — Rooms + playable loop + UI minimum
 •	Minimal UI (player health)
 Stretch goals
 •	Double jump, wall jump, dash
+•	Upward/downward attacks
 •	Ranged weapon
 •	Boss
 •	Multi-platform

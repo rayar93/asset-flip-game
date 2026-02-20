@@ -8,7 +8,7 @@ func _ready() -> void:
 
 func _on_area_entered(area: Area2D):
 	# Check if area entering enemy hurtbox is player hitbox
-	if area.name == "AttackArea":
+	if area.is_in_group("player_attack"):
 		hurtbox_hit.emit(area.global_position)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

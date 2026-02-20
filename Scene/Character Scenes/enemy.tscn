@@ -281,6 +281,8 @@ shape = SubResource("RectangleShape2D_7xaro")
 [node name="Hurtbox" type="Area2D" parent="." unique_id=139990629]
 light_mask = 64
 visibility_layer = 8
+collision_layer = 64
+collision_mask = 8
 script = ExtResource("5_h3adc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=422226440]

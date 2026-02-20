@@ -407,13 +407,12 @@ animation = &"wall_jump"
 zoom = Vector2(2, 2)
 position_smoothing_speed = 10.0
 
-[node name="AttackRoot" type="Node2D" parent="." unique_id=269402468]
+[node name="AttackRoot" type="Node2D" parent="." unique_id=269402468 groups=["player_attack"]]
 
-[node name="AttackArea" type="Area2D" parent="AttackRoot" unique_id=296612009]
+[node name="AttackArea" type="Area2D" parent="AttackRoot" unique_id=296612009 groups=["player_attack"]]
 position = Vector2(25, 0)
 collision_layer = 8
 collision_mask = 64
-monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRoot/AttackArea" unique_id=1530880413]
 shape = SubResource("RectangleShape2D_4flbx")
