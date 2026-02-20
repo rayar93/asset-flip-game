@@ -1,59 +1,71 @@
 extends CharacterBody2D
 
-@export var move_speed = 300 # @export makes variables visible in the inspector
+# ===========================================================
+# Tunables (can be adjusted in the inspector)
+# ===========================================================
+
+@export var move_speed = 300
 @export var jump_velocity = -400
 @export var gravity = 1000
 
-@export var attack_duration = 0.1 # seconds
-@export var slash_linger = 0.05
 @export var hurt_duration = 0.2
 
-@export var attack_hit_frame = 1
-var attack_active_left = 0.0
 @export var attack_active_time = 0.1
+
+# ================================================
+# Node references
+# ================================================
 
 @onready var attack_area: Area2D = $AttackRoot/AttackArea # rename AttackArea node
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var slash_vfx: AnimatedSprite2D = $AttackRoot/SlashVFX
 
-# For the player's finite state machine
+# ================================================
+# Other variables
+# ================================================
+
+# Timers
+var attack_active_left = 0.0
+var hurt_time_left := 0.0
+
+# State machine
 enum State { GROUNDED, AIR, ATTACK, HURT }
 var state := State.GROUNDED
 
-var facing = 1 # 1 is right, -1 is left
+# Facing convention: 1 = right, -1 = left
+var facing = 1
 
-# Timers used by states
-var attack_time_left := 0.0
-var linger_time_left := 0.0
-var hurt_time_left := 0.0
+# ====================================
+# Engine callbacks
+# ====================================
 
-var already_hit = false
-
+# Initialization
 func _ready():
-	attack_area.monitoring = false
-	attack_area.monitorable = false
+	attack_off()
 	slash_vfx.visible = false
 	
+	# Player hurtbox emits signal when enemy hitbox overlaps
 	$PlayerHurtbox.player_hurt.connect(_on_player_hurt)
 	
-	
+	# Starting state depends on if player is on ground
 	if is_on_floor():
 		set_state(State.GROUNDED)
 	else:
 		set_state(State.AIR)
 
-# _physics_process() is called by the engine every tick
-# we use this instead of _process so that physics is independent of framerate
+# Runs every physics tick
+# Updates movement and state, applies physics
 func _physics_process(delta):
+	# Input gathered every tick
 	var move_dir: float = Input.get_axis("move_left", "move_right")
 	var jump_pressed: bool = Input.is_action_just_pressed("jump")
 	var attack_pressed: bool = Input.is_action_just_pressed("attack")
 	
-	# Handle falling
+	# Gravity when airborne
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	# Run state logic
+	# Run state logic depending on player input
 	match state:
 		State.GROUNDED:
 			update_grounded(delta, move_dir, jump_pressed, attack_pressed)
@@ -64,7 +76,7 @@ func _physics_process(delta):
 		State.HURT:
 			update_hurt(delta)
 	
-	# move_and_slide() takes our velocity and handles collision
+	# Apply motion and collisions
 	move_and_slide()
 	
 	# Post-move transitions depend on floor contact
@@ -73,6 +85,37 @@ func _physics_process(delta):
 	elif state == State.AIR and is_on_floor():
 		set_state(State.GROUNDED)
 
+# Separate from physics, remains responsive even if physics tick rate changes
+func _process(_delta: float):
+	# Every frame, make sure sprite and hitbox are faced correctly
+	anim.flip_h = (facing == -1)
+	attack_area.position.x = abs(attack_area.position.x) * facing
+	slash_vfx.flip_h = (facing == -1)
+	slash_vfx.position.x = abs(slash_vfx.position.x) * facing
+
+# ============================================
+# Signals
+# ============================================
+
+func _on_player_hurt(attack_position: Vector2):
+	# Calculate knockback direction
+	var dir = sign(global_position.x - attack_position.x)
+	if dir == 0:
+		dir = -facing
+	
+	# Apply knockback, enter hurt state
+	var knockback = Vector2(dir * 300, -200)
+	velocity = knockback
+	set_state(State.HURT)
+
+# ========================================================================
+# Helpers
+# ========================================================================
+
+func play_anim(anim_name: String):
+	if anim.animation != anim_name:
+		anim.play(anim_name)
+
 func attack_on():
 	attack_area.monitoring = true
 	attack_area.monitorable = true
@@ -80,16 +123,38 @@ func attack_on():
 func attack_off():
 	attack_area.monitoring = false
 	attack_area.monitorable = false
+	
+# ======================================
+# State transitions
+# ======================================
 
-func _on_player_hurt(attack_position: Vector2):
-	# Knockback direction
-	var dir = sign(global_position.x - attack_position.x)
-	if dir == 0:
-		dir = -facing
+# State transitions
+func set_state(new_state: State):
+	if state == new_state:
+		return
 		
-	var knockback = Vector2(dir * 300, -200)
-	velocity = knockback
-	set_state(State.HURT)
+	# Turn off hitbox when leaving ATTACK state
+	if state == State.ATTACK:
+			attack_off()
+			slash_vfx.visible = false
+			
+	state = new_state
+	
+	# Do this if entering state
+	match state:
+		State.GROUNDED:
+			pass
+		State.AIR:
+			pass
+		State.ATTACK:
+			attack_active_left = attack_active_time
+			attack_on()
+			slash_vfx.visible = true
+			slash_vfx.frame = 0
+			slash_vfx.play("slash")
+		State.HURT:
+			hurt_time_left = hurt_duration
+			play_anim("hurt")
 	
 func update_grounded(delta: float, move_dir: float, jump_pressed: bool, attack_pressed: bool):
 	# Horizontal movement
@@ -110,14 +175,14 @@ func update_grounded(delta: float, move_dir: float, jump_pressed: bool, attack_p
 		set_state(State.ATTACK)
 		return
 		
-	# Idle vs run
+	# Idle vs run animation
 	if abs(velocity.x) > 0:
 		play_anim("run")
 	else:
 		play_anim("idle")
 		
 func update_air(delta: float, move_dir: float, jump_pressed: bool, attack_pressed: bool):
-	# Air control is weaker than ground control
+	# Reduced air control
 	if move_dir != 0:
 		facing = sign(move_dir)
 		velocity.x = move_dir * move_speed * 0.7
@@ -129,7 +194,7 @@ func update_air(delta: float, move_dir: float, jump_pressed: bool, attack_presse
 		set_state(State.ATTACK)
 		return
 			
-	# Jump vs fall
+	# Jump vs fall animation
 	if velocity.y < 0:
 		play_anim("jump")
 	else:
@@ -147,10 +212,12 @@ func update_attack(delta: float, move_dir: float, jump_pressed: bool):
 	if jump_pressed and is_on_floor():
 		velocity.y = jump_velocity
 	
+	# Turn hitbox off at end of attack animation
 	attack_active_left -= delta
 	if attack_active_left <= 0.0:
 		attack_off()
-		
+	
+	# When the slash animation ends, exit ATTACK state
 	if not slash_vfx.is_playing():
 		attack_off()
 		slash_vfx.visible = false
@@ -164,40 +231,3 @@ func update_hurt(delta: float):
 			set_state(State.GROUNDED)
 		else:
 			set_state(State.AIR)
-
-func set_state(new_state: State):
-	if state == new_state:
-		return
-		
-	match state:
-		State.ATTACK:
-			attack_off()
-			slash_vfx.visible = false
-			
-	state = new_state
-	
-	match state:
-		State.GROUNDED:
-			pass
-		State.AIR:
-			pass
-		State.ATTACK:
-			already_hit = false
-			attack_active_left = attack_active_time
-			attack_on()
-			slash_vfx.visible = true
-			slash_vfx.frame = 0
-			slash_vfx.play("slash")
-		State.HURT:
-			hurt_time_left = hurt_duration
-			play_anim("hurt")
-
-func _process(_delta: float):
-	anim.flip_h = (facing == -1)
-	attack_area.position.x = abs(attack_area.position.x) * facing
-	slash_vfx.flip_h = (facing == -1)
-	slash_vfx.position.x = abs(slash_vfx.position.x) * facing
-	
-func play_anim(anim_name: String):
-	if anim.animation != anim_name:
-		anim.play(anim_name)

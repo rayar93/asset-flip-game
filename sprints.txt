@@ -27,6 +27,8 @@ Sprint 6 — FSM tweaking + damage rules (due 3/12)
 •	Player i-frames + hurt/knockback behavior
 •	Enemy knockback/stun handling (lightweight enemy FSM if needed)
 •	Continue level creation
+	player on enemy head? enemy shouldn't continually turn
+	activate player attack for wider window
 Sprint 7 — Rooms + playable loop + UI minimum (due 3/19)
 •	Finalize level creation! Handcrafted rooms + transitions + spawn points
 •	Win/lose conditions
