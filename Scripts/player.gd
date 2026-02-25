@@ -12,6 +12,9 @@ extends CharacterBody2D
 
 @export var attack_active_time = 0.1
 
+@export var dash_speed = 900
+@export var dash_duration = 0.2
+
 # ================================================
 # Node references
 # ================================================
@@ -28,14 +31,17 @@ extends CharacterBody2D
 var attack_active_left = 0.0
 var hurt_time_left := 0.0
 
+var dash_time_left = 0.0
+var can_dash = true
+
+var can_double_jump = true
+
 # State machine
-enum State { GROUNDED, AIR, ATTACK, HURT }
+enum State { GROUNDED, AIR, ATTACK, HURT, DASH }
 var state := State.GROUNDED
 
 # Facing convention: 1 = right, -1 = left
 var facing = 1
-
-var can_double_jump = true
 
 # ====================================
 # Engine callbacks
@@ -62,6 +68,7 @@ func _physics_process(delta):
 	var move_dir: float = Input.get_axis("move_left", "move_right")
 	var jump_pressed: bool = Input.is_action_just_pressed("jump")
 	var attack_pressed: bool = Input.is_action_just_pressed("attack")
+	var dash_pressed: bool = Input.is_action_just_pressed("dash")
 	
 	# Gravity when airborne
 	if not is_on_floor():
@@ -70,13 +77,15 @@ func _physics_process(delta):
 	# Run state logic depending on player input
 	match state:
 		State.GROUNDED:
-			update_grounded(delta, move_dir, jump_pressed, attack_pressed)
+			update_grounded(delta, move_dir, jump_pressed, attack_pressed, dash_pressed)
 		State.AIR:
-			update_air(delta, move_dir, jump_pressed, attack_pressed)
+			update_air(delta, move_dir, jump_pressed, attack_pressed, dash_pressed)
 		State.ATTACK:
 			update_attack(delta, move_dir, jump_pressed)
 		State.HURT:
 			update_hurt(delta)
+		State.DASH:
+			update_dash(delta)
 	
 	# Apply motion and collisions
 	move_and_slide()
@@ -130,7 +139,6 @@ func attack_off():
 # State transitions
 # ======================================
 
-# State transitions
 func set_state(new_state: State):
 	if state == new_state:
 		return
@@ -140,12 +148,23 @@ func set_state(new_state: State):
 			attack_off()
 			slash_vfx.visible = false
 			
+	# Kill momentum after dash
+	if state == State.DASH:
+		velocity.x = 0
+			
 	state = new_state
 	
 	# Do this if entering state
 	match state:
 		State.GROUNDED:
 			can_double_jump = true
+			can_dash = true
+		State.DASH:
+			dash_time_left = dash_duration
+			velocity.y = 0
+			velocity.x = facing * dash_speed
+			can_dash = false
+			anim.pause()
 		State.AIR:
 			pass
 		State.ATTACK:
@@ -157,8 +176,12 @@ func set_state(new_state: State):
 		State.HURT:
 			hurt_time_left = hurt_duration
 			play_anim("hurt")
+			
+# =================================================
+# State updates
+# =================================================
 	
-func update_grounded(_delta: float, move_dir: float, jump_pressed: bool, attack_pressed: bool):
+func update_grounded(_delta: float, move_dir: float, jump_pressed: bool, attack_pressed: bool, dash_pressed: bool):
 	# Horizontal movement
 	if move_dir != 0:
 		facing = sign(move_dir)
@@ -172,7 +195,12 @@ func update_grounded(_delta: float, move_dir: float, jump_pressed: bool, attack_
 		set_state(State.AIR)
 		return
 		
-	# Attack takes priority over idle/run
+	# Dash
+	if dash_pressed and can_dash:
+		set_state(State.DASH)
+		return
+		
+	# Attack
 	if attack_pressed:
 		set_state(State.ATTACK)
 		return
@@ -183,7 +211,7 @@ func update_grounded(_delta: float, move_dir: float, jump_pressed: bool, attack_
 	else:
 		play_anim("idle")
 		
-func update_air(_delta: float, move_dir: float, jump_pressed: bool, attack_pressed: bool):
+func update_air(_delta: float, move_dir: float, jump_pressed: bool, attack_pressed: bool, dash_pressed: bool):
 	# Reduced air control
 	if move_dir != 0:
 		facing = sign(move_dir)
@@ -195,6 +223,11 @@ func update_air(_delta: float, move_dir: float, jump_pressed: bool, attack_press
 		velocity.y = jump_velocity
 		can_double_jump = false
 		play_anim("double_jump")
+		
+	# Dash
+	if dash_pressed and can_dash:
+		set_state(State.DASH)
+		return
 			
 	# Allow air attacks
 	if attack_pressed:
@@ -236,6 +269,19 @@ func update_attack(delta: float, move_dir: float, jump_pressed: bool):
 func update_hurt(delta: float):
 	hurt_time_left -= delta
 	if hurt_time_left <= 0.0:
+		if is_on_floor():
+			set_state(State.GROUNDED)
+		else:
+			set_state(State.AIR)
+
+func update_dash(delta: float):
+	dash_time_left -= delta
+	
+	velocity.x = facing * dash_speed
+	velocity.y = 0
+	
+	if dash_time_left <= 0:
+		anim.play()
 		if is_on_floor():
 			set_state(State.GROUNDED)
 		else:
