@@ -56,7 +56,8 @@ offset_bottom = 150.0
 color = Color(0.029670075, 0.19631776, 0.11221602, 1)
 
 [node name="Floor" type="StaticBody2D" parent="Platforms" unique_id=598438735]
-position = Vector2(500, 672)
+position = Vector2(2433.0002, 1272)
+scale = Vector2(5, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Floor" unique_id=1547130118]
 shape = SubResource("RectangleShape2D_5xgho")
@@ -68,9 +69,15 @@ offset_right = 750.0
 offset_bottom = 150.0
 color = Color(0.029670075, 0.19631776, 0.11221602, 1)
 
+[node name="Enemy" parent="Platforms" unique_id=920785443 instance=ExtResource("2_vonw3")]
+position = Vector2(1064, 477)
+
+[node name="Enemy2" parent="Platforms" unique_id=1528658911 instance=ExtResource("2_vonw3")]
+position = Vector2(645, 320)
+
 [node name="Enemies" type="Node2D" parent="." unique_id=1585256352]
 
-[node name="Enemy" parent="Enemies" unique_id=920785443 instance=ExtResource("2_vonw3")]
+[node name="Enemy" parent="Enemies" unique_id=934227105 instance=ExtResource("2_vonw3")]
 position = Vector2(37, 467)
 
 [node name="Walls" type="Node2D" parent="." unique_id=826830606]
@@ -90,7 +97,7 @@ offset_bottom = 150.0
 color = Color(0.029670075, 0.19631776, 0.11221602, 1)
 
 [node name="Floor2" type="StaticBody2D" parent="Walls" unique_id=1187456537]
-position = Vector2(1383, 192)
+position = Vector2(4899, 212)
 rotation = 1.5707964
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Floor2" unique_id=1747449957]

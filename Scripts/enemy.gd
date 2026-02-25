@@ -16,6 +16,8 @@ extends CharacterBody2D
 @export var hurt_left = 0.0
 @export var knockback_strength = 250
 
+@export var max_health = 3
+
 # ==============================================
 # @onready variables are computed after _ready()
 #===============================================
@@ -35,7 +37,7 @@ extends CharacterBody2D
 # ===============
 
 # State machine variables
-enum State { IDLE, CHASE, ATTACK, HURT }
+enum State { IDLE, CHASE, ATTACK, HURT, DEAD }
 var state = State.IDLE
 
 # 1 = right, -1 = left
@@ -46,6 +48,8 @@ var player: Node2D = null
 
 # Which animation frame should the attack be active on
 var attack_hit_frame = 1
+
+var current_health = 3
 
 # ====================================
 # Engine callbacks
@@ -98,9 +102,11 @@ func _physics_process(delta):
 # ============================================
 
 func _on_hurtbox_hit(attack_position: Vector2):
-	# Ignore hits while already hurt
-	if state == State.HURT:
+	# Ignore hits while already hurt or dead
+	if state == State.HURT or state == State.DEAD:
 		return
+		
+	current_health -= 1
 		
 	# Calculate knockback direction
 	var dir = sign(global_position.x - attack_position.x)
@@ -112,7 +118,11 @@ func _on_hurtbox_hit(attack_position: Vector2):
 	velocity.x = dir * knockback_strength
 	velocity.y = -200
 	
-	set_state(State.HURT)
+	# Check if hurt or dead
+	if current_health <= 0:
+		set_state(State.DEAD)
+	else:
+		set_state(State.HURT)
 	
 # When attack animation ends, turn hitbox off and resume chasing player.
 func _on_anim_finished():
@@ -188,6 +198,8 @@ func set_state(new_state: State):
 		State.HURT:
 			hurt_left = hurt_duration
 			hitbox_off()
+		State.DEAD:
+			queue_free()
 
 # =================================================
 # State updates

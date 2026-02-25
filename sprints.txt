@@ -29,7 +29,6 @@ Sprint 5 — Enemies v1 (due 3/5)
 Sprint 6 — FSM tweaking + damage rules (due 3/12)
 •	Continue level creation
 	player on enemy head? enemy shouldn't continually turn
-	activate player attack for wider window
 Sprint 7 — Rooms + playable loop + UI minimum (due 3/19)
 •	Finalize level creation! Handcrafted rooms + transitions + spawn points
 •	Win/lose conditions
@@ -37,11 +36,12 @@ Sprint 7 — Rooms + playable loop + UI minimum (due 3/19)
 •	Graphical effects – landing dust, hit effects
 •	Minimal UI (player health)
 Stretch goals
-•	wall jump
+•	wall slide/jump
 •	improve dash w effects
 •	improve enemy death w effects
 •	Upward/downward attacks
 •	Ranged weapon
 •	Boss
 •	Multi-platform
-•	Work on player movement feel – acceleration, deceleration, air/ground control, friction when no input, turn boost, coyote time, jump buffer, variable jump height, different gravity when jumping/falling, terminal fall speed, hang time near apex, dead zones / digital smoothing, input priority rules, slope handling (?), edge forgiveness
+•	Work on player movement feel – acceleration, deceleration, friction when no input, turn boost, coyote time, jump buffer, variable jump height, different gravity when jumping/falling, terminal fall speed, hang time near apex, dead zones / digital smoothing, input priority rules, slope handling (?), edge forgiveness
+	activate player attack for wider window
