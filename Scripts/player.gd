@@ -54,7 +54,9 @@ var facing = 1
 # Initialization
 func _ready():
 	attack_off()
+	down_attack_off()
 	slash_vfx.visible = false
+	down_slash_vfx.visible = false
 	
 	# Player hurtbox emits signal when enemy hitbox overlaps
 	$PlayerHurtbox.player_hurt.connect(_on_player_hurt)
@@ -131,8 +133,9 @@ func _on_player_hurt(attack_position: Vector2):
 	
 # Pogo enemies
 func _on_down_attack_hit(area: Area2D):
-	if area.has_signal("hurtbox_hit"):
+	if state == State.ATTACK_DOWN and area.has_signal("hurtbox_hit"):
 		velocity.y = jump_velocity
+		down_attack_off()
 
 # ========================================================================
 # Helpers
@@ -145,8 +148,27 @@ func play_anim(anim_name: String):
 func attack_on():
 	attack_area.monitoring = true
 	attack_area.monitorable = true
+	down_attack_area.monitoring = false
+	down_attack_area.monitorable = false
 	
 func attack_off():
+	attack_area.monitoring = false
+	attack_area.monitorable = false
+	down_attack_area.monitoring = false
+	down_attack_area.monitorable = false
+	
+func down_attack_on():
+	down_attack_area.monitoring = false
+	down_attack_area.monitorable = false
+	PhysicsServer2D.area_set_monitorable(down_attack_area.get_rid(), true)
+	down_attack_area.monitoring = true
+	down_attack_area.monitorable = true
+	attack_area.monitoring = false
+	attack_area.monitorable = false
+	
+func down_attack_off():
+	down_attack_area.monitoring = false
+	down_attack_area.monitorable = false
 	attack_area.monitoring = false
 	attack_area.monitorable = false
 	
@@ -158,10 +180,11 @@ func set_state(new_state: State):
 	if state == new_state:
 		return
 		
-	# Turn off hitbox when leaving ATTACK state
-	if state == State.ATTACK:
-			attack_off()
-			slash_vfx.visible = false
+	# Turn off hitboxes when leaving a state
+	attack_off()
+	down_attack_off()
+	slash_vfx.visible = false
+	down_slash_vfx.visible = false
 			
 	# Kill momentum after dash
 	if state == State.DASH:
@@ -181,7 +204,8 @@ func set_state(new_state: State):
 			can_dash = false
 			anim.pause()
 		State.AIR:
-			pass
+			attack_off()
+			down_attack_off()
 		State.ATTACK:
 			attack_active_left = attack_active_time
 			attack_on()
@@ -192,11 +216,11 @@ func set_state(new_state: State):
 			hurt_time_left = hurt_duration
 			play_anim("hurt")
 		State.ATTACK_DOWN:
-			down_attack_area.monitoring = false
-			down_attack_area.monitoring = true
-			down_slash_vfx.visible = true
-			down_slash_vfx.play("down_attack")
 			attack_off()
+			down_attack_on()
+			down_slash_vfx.visible = true
+			down_slash_vfx.frame = 0
+			down_slash_vfx.play("down_attack")
 			
 # =================================================
 # State updates
@@ -313,7 +337,7 @@ func update_dash(delta: float):
 
 func update_attack_down(_delta: float):
 	if not down_slash_vfx.is_playing():
-		down_attack_area.monitoring = false
+		down_attack_off()
 		down_slash_vfx.visible = false
 		
 		if is_on_floor():

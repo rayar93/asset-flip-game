@@ -16,11 +16,11 @@ Sprint 4 — Visible attacks + basic combat feel (due 2/26) DONE
 •	Sync the visual with the hitbox timing
 •	Tune AttackArea size/offset + attack timing (duration/cooldown)
 •	Continue level creation
-•	Implement player finite state machine (ground, air, attack, hurt, dash)
+•	Implement player finite state machine (ground, air, attack, hurt, dash, down-attack)
 •	Fix player attack
 •	Double jump, dash
 •	Player i-frames + hurt/knockback behavior
-•	Enemy FSM (idle, chase, attack, hurt/knockback/stun)
+•	Enemy FSM (idle, chase, attack, hurt/knockback/stun, death)
 •	Enemies health / death
 •	Downward attacks
 Sprint 5 (due 3/5)
@@ -36,6 +36,7 @@ Sprint 6 (due 3/12)
 •	Win/lose conditions
 Sprints 7+
 •	Finalize levels
+•	Finalize animations
 •	Interactible environment? Levers, power-ups, barrels?
 •	wall slide, wall jump
 •	Upward attacks

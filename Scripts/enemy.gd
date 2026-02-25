@@ -12,7 +12,7 @@ extends CharacterBody2D
 @export var attack_radius = 45
 
 # Hurt / knockback settings
-@export var hurt_duration = 0.25
+@export var hurt_duration = 0.1
 @export var hurt_left = 0.0
 @export var knockback_strength = 250
 
@@ -190,11 +190,12 @@ func set_state(new_state: State):
 	match state:
 		State.IDLE:
 			velocity.x = 0.0
+			play_anim("idle")
 		State.CHASE:
-			pass
+			play_anim("chase")
 		State.ATTACK:
 			hitbox_off()
-			play_anim("attack")
+			anim.play("attack")
 		State.HURT:
 			hurt_left = hurt_duration
 			hitbox_off()
