@@ -35,6 +35,8 @@ var state := State.GROUNDED
 # Facing convention: 1 = right, -1 = left
 var facing = 1
 
+var can_double_jump = true
+
 # ====================================
 # Engine callbacks
 # ====================================
@@ -143,7 +145,7 @@ func set_state(new_state: State):
 	# Do this if entering state
 	match state:
 		State.GROUNDED:
-			pass
+			can_double_jump = true
 		State.AIR:
 			pass
 		State.ATTACK:
@@ -156,7 +158,7 @@ func set_state(new_state: State):
 			hurt_time_left = hurt_duration
 			play_anim("hurt")
 	
-func update_grounded(delta: float, move_dir: float, jump_pressed: bool, attack_pressed: bool):
+func update_grounded(_delta: float, move_dir: float, jump_pressed: bool, attack_pressed: bool):
 	# Horizontal movement
 	if move_dir != 0:
 		facing = sign(move_dir)
@@ -181,21 +183,28 @@ func update_grounded(delta: float, move_dir: float, jump_pressed: bool, attack_p
 	else:
 		play_anim("idle")
 		
-func update_air(delta: float, move_dir: float, jump_pressed: bool, attack_pressed: bool):
+func update_air(_delta: float, move_dir: float, jump_pressed: bool, attack_pressed: bool):
 	# Reduced air control
 	if move_dir != 0:
 		facing = sign(move_dir)
 		velocity.x = move_dir * move_speed * 0.7
 	else:
 		velocity.x = 0
+		
+	if jump_pressed and can_double_jump:
+		velocity.y = jump_velocity
+		can_double_jump = false
+		play_anim("double_jump")
 			
 	# Allow air attacks
 	if attack_pressed:
 		set_state(State.ATTACK)
 		return
 			
-	# Jump vs fall animation
-	if velocity.y < 0:
+	# Double-jump vs ump vs fall animation
+	if anim.animation == "double_jump" and velocity.y < 0:
+		pass
+	elif velocity.y < 0:
 		play_anim("jump")
 	else:
 		play_anim("fall")

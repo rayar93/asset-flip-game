@@ -201,7 +201,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"double_jump",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -401,7 +401,8 @@ shape = SubResource("RectangleShape2D_sh265")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1309260295]
 sprite_frames = SubResource("SpriteFrames_4x2cv")
-animation = &"wall_jump"
+animation = &"double_jump"
+frame_progress = 0.14105763
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1792891821]
 zoom = Vector2(2, 2)
