@@ -32,9 +32,9 @@ var player: Node2D = null
 var attack_hit_frame = 1
 var current_health = 3
 
-# ====================================
+# =======================================================================================================================================================================================
 # Engine callbacks
-# ====================================
+# =======================================================================================================================================================================================
 
 # Initialization
 func _ready():
@@ -75,38 +75,10 @@ func _physics_process(delta):
 		
 	# Apply motion and collisions
 	move_and_slide()
-	
-# ======================================
-# State transitions
-# ======================================
 
-func set_state(new_state: State):
-	if state == new_state: return
-	
-	# Turn the hitbox off when changing states to prevent sticking
-	hitbox_off()
-
-	state = new_state
-	
-	# If transitioning into a state, do this once
-	match state:
-		State.IDLE:
-			velocity.x = 0.0
-			anim.play("idle")
-		State.CHASE:
-			play_anim("walk")
-		State.ATTACK:
-			hitbox_off()
-			anim.play("attack")
-		State.HURT:
-			hurt_left = hurt_duration
-			hitbox_off()
-		State.DEAD:
-			queue_free()
-
-# =================================================
+# ====================================================================================================================================================================================================
 # State updates
-# =================================================
+# ====================================================================================================================================================================================================
 
 func update_idle():
 	velocity.x = 0.0
@@ -145,7 +117,7 @@ func update_attack():
 func update_hurt(delta):
 	hurt_left -= delta
 	
-	# After hitsun ends, idle or resume chase
+	# After hitstun ends, idle or resume chase
 	if hurt_left <= 0.0:
 		_return_to_engagement_state()
 		
@@ -154,10 +126,38 @@ func _return_to_engagement_state():
 		set_state(State.CHASE)
 	else:
 		set_state(State.IDLE)
+		
+# =========================================================================================================================================================================================
+# State transitions
+# =========================================================================================================================================================================================
 
-# ========================================================================
+func set_state(new_state: State):
+	if state == new_state: return
+	
+	# Turn the hitbox off when changing states to prevent sticking
+	hitbox_off()
+
+	state = new_state
+	
+	# If transitioning into a state, do this once
+	match state:
+		State.IDLE:
+			velocity.x = 0.0
+			anim.play("idle")
+		State.CHASE:
+			play_anim("walk")
+		State.ATTACK:
+			hitbox_off()
+			anim.play("attack")
+		State.HURT:
+			hurt_left = hurt_duration
+			hitbox_off()
+		State.DEAD:
+			queue_free()
+
+# ===========================================================================================================================================================================================================================
 # Helpers
-# ========================================================================
+# ===========================================================================================================================================================================================================================
 
 # Hitbox / animation flipping
 func set_facing(new_facing):
@@ -195,9 +195,9 @@ func play_anim(anim_name):
 	if anim.animation != anim_name:
 		anim.play(anim_name)
 
-# ============================================
+# ===============================================================================================================================================================================================
 # Signals
-# ============================================
+# ===============================================================================================================================================================================================
 
 func _on_hurtbox_hit(attack_position: Vector2):
 	# Ignore hits while already hurt or dead

@@ -31,9 +31,9 @@ enum State { GROUNDED, AIR, ATTACK, HURT, DASH, ATTACK_DOWN }
 var state := State.GROUNDED
 var facing = 1 # 1 = right, -1 = left
 
-# ====================================
+# ==============================================================================================================================================================================================================
 # Engine callbacks
-# ====================================
+# ==============================================================================================================================================================================================================
 
 # Initialization
 func _ready():
@@ -75,47 +75,10 @@ func _process(_delta: float):
 	attack_area.position.x = abs(attack_area.position.x) * facing
 	slash_vfx.flip_h = (facing == -1)
 	slash_vfx.position.x = abs(slash_vfx.position.x) * facing
-
-# ======================================
-# State transitions
-# ======================================
-
-func set_state(new_state: State):
-	if state == new_state: return
-		
-	all_attacks_off()
 			
-	# Kill momentum after dash
-	if state == State.DASH: velocity.x = 0
-			
-	state = new_state
-	
-	# Do this if entering state
-	match state:
-		State.GROUNDED:
-			can_double_jump = true
-			can_dash = true
-		State.DASH:
-			dash_time_left = dash_duration
-			velocity.y = 0
-			velocity.x = facing * dash_speed
-			can_dash = false
-			anim.pause()
-		State.AIR:
-			attack_off()
-			down_attack_off()
-		State.ATTACK:
-			attack_active_left = attack_active_time
-			attack_on()
-		State.HURT:
-			hurt_time_left = hurt_duration
-			play_anim("hurt")
-		State.ATTACK_DOWN:
-			down_attack_on()
-			
-# =================================================
+# ====================================================================================================================================================================================================
 # State updates
-# =================================================
+# ====================================================================================================================================================================================================
 	
 func update_grounded(move_dir):
 	velocity.x = move_dir * move_speed
@@ -175,10 +138,47 @@ func update_dash(delta: float):
 		
 func _return_to_base_state():
 	set_state(State.GROUNDED if is_on_floor() else State.AIR)
+	
+# =============================================================================================================================================================================================================
+# State transitions
+# =============================================================================================================================================================================================================
 
-# ========================================================================
+func set_state(new_state: State):
+	if state == new_state: return
+		
+	all_attacks_off()
+			
+	# Kill momentum after dash
+	if state == State.DASH: velocity.x = 0
+			
+	state = new_state
+	
+	# Do this if entering state
+	match state:
+		State.GROUNDED:
+			can_double_jump = true
+			can_dash = true
+		State.DASH:
+			dash_time_left = dash_duration
+			velocity.y = 0
+			velocity.x = facing * dash_speed
+			can_dash = false
+			anim.pause()
+		State.AIR:
+			attack_off()
+			down_attack_off()
+		State.ATTACK:
+			attack_active_left = attack_active_time
+			attack_on()
+		State.HURT:
+			hurt_time_left = hurt_duration
+			play_anim("hurt")
+		State.ATTACK_DOWN:
+			down_attack_on()
+
+# ===========================================================================================================================================================================================================================
 # Helpers
-# ========================================================================
+# ===========================================================================================================================================================================================================================
 
 func attack_on():
 	_toggle_area(attack_area, true)
@@ -223,9 +223,9 @@ func _check_landed_or_fell():
 	elif not is_on_floor() and state == State.GROUNDED:
 		set_state(State.AIR)
 
-# ============================================
+# ===============================================================================================================================================================================================
 # Signals
-# ============================================
+# ===============================================================================================================================================================================================
 
 func _on_player_hurt(attack_position: Vector2):
 	# Calculate knockback direction
