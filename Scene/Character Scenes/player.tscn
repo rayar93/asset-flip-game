@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://d0f27yhhnaors" path="res://Assets/SlashFX Combos/SlashFX SimpleCombo3 sheet.png" id="6_qma10"]
 [ext_resource type="Texture2D" uid="uid://d4dex85k6307e" path="res://Assets/Virtual Guy/Wall Jump (32x32).png" id="8_a3c8g"]
 [ext_resource type="Script" uid="uid://bq5midtayjyae" path="res://Scripts/player_hurtbox.gd" id="10_mx2v3"]
+[ext_resource type="Texture2D" uid="uid://pnqcbkpyocdp" path="res://Assets/SlashFX Combos/SlashFX SimpleCombo1 sheet.png" id="11_a3c8g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
 size = Vector2(20, 25)
@@ -387,6 +388,37 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iy31x"]
 size = Vector2(20, 25)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25hks"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsmeb"]
+atlas = ExtResource("11_a3c8g")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrxya"]
+atlas = ExtResource("11_a3c8g")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbjkw"]
+atlas = ExtResource("11_a3c8g")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ns8dm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsmeb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrxya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbjkw")
+}],
+"loop": false,
+"name": &"down_attack",
+"speed": 12.0
+}]
+
 [node name="Player" type="CharacterBody2D" unique_id=454716346 groups=["player"]]
 collision_layer = 2
 collision_mask = 5
@@ -402,7 +434,7 @@ shape = SubResource("RectangleShape2D_sh265")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1309260295]
 sprite_frames = SubResource("SpriteFrames_4x2cv")
 animation = &"wall_jump"
-frame_progress = 0.23101528
+frame_progress = 0.32174477
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1792891821]
 zoom = Vector2(2, 2)
@@ -433,3 +465,24 @@ script = ExtResource("10_mx2v3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHurtbox" unique_id=1155381102]
 shape = SubResource("RectangleShape2D_iy31x")
+
+[node name="DownAttackRoot" type="Node2D" parent="." unique_id=989939165]
+position = Vector2(0, 30)
+
+[node name="DownAttackArea" type="Area2D" parent="DownAttackRoot" unique_id=712024704 groups=["player_attack"]]
+collision_layer = 8
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DownAttackRoot/DownAttackArea" unique_id=791504188]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_25hks")
+
+[node name="DownSlashVFX" type="AnimatedSprite2D" parent="DownAttackRoot" unique_id=1066117910]
+visible = false
+position = Vector2(0, -20)
+rotation = -4.1887903
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_ns8dm")
+animation = &"down_attack"
+frame = 2
+frame_progress = 1.0

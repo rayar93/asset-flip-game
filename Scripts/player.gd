@@ -19,9 +19,13 @@ extends CharacterBody2D
 # Node references
 # ================================================
 
-@onready var attack_area: Area2D = $AttackRoot/AttackArea # rename AttackArea node
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+
+@onready var attack_area: Area2D = $AttackRoot/AttackArea
 @onready var slash_vfx: AnimatedSprite2D = $AttackRoot/SlashVFX
+
+@onready var down_attack_area: Area2D = $DownAttackRoot/DownAttackArea
+@onready var down_slash_vfx: AnimatedSprite2D = $DownAttackRoot/DownSlashVFX
 
 # ================================================
 # Other variables
@@ -37,7 +41,7 @@ var can_dash = true
 var can_double_jump = true
 
 # State machine
-enum State { GROUNDED, AIR, ATTACK, HURT, DASH }
+enum State { GROUNDED, AIR, ATTACK, HURT, DASH, ATTACK_DOWN }
 var state := State.GROUNDED
 
 # Facing convention: 1 = right, -1 = left
@@ -55,6 +59,9 @@ func _ready():
 	# Player hurtbox emits signal when enemy hitbox overlaps
 	$PlayerHurtbox.player_hurt.connect(_on_player_hurt)
 	
+	# Player hitbox emits signal with entering enemy hurtbox
+	down_attack_area.area_entered.connect(_on_down_attack_hit)
+	
 	# Starting state depends on if player is on ground
 	if is_on_floor():
 		set_state(State.GROUNDED)
@@ -69,6 +76,7 @@ func _physics_process(delta):
 	var jump_pressed: bool = Input.is_action_just_pressed("jump")
 	var attack_pressed: bool = Input.is_action_just_pressed("attack")
 	var dash_pressed: bool = Input.is_action_just_pressed("dash")
+	var down_pressed: bool = Input.is_action_pressed("down")
 	
 	# Gravity when airborne
 	if not is_on_floor():
@@ -79,13 +87,15 @@ func _physics_process(delta):
 		State.GROUNDED:
 			update_grounded(delta, move_dir, jump_pressed, attack_pressed, dash_pressed)
 		State.AIR:
-			update_air(delta, move_dir, jump_pressed, attack_pressed, dash_pressed)
+			update_air(delta, move_dir, jump_pressed, attack_pressed, dash_pressed, down_pressed)
 		State.ATTACK:
 			update_attack(delta, move_dir, jump_pressed)
 		State.HURT:
 			update_hurt(delta)
 		State.DASH:
 			update_dash(delta)
+		State.ATTACK_DOWN:
+			update_attack_down(delta)
 	
 	# Apply motion and collisions
 	move_and_slide()
@@ -118,6 +128,11 @@ func _on_player_hurt(attack_position: Vector2):
 	var knockback = Vector2(dir * 300, -200)
 	velocity = knockback
 	set_state(State.HURT)
+	
+# Pogo enemies
+func _on_down_attack_hit(area: Area2D):
+	if area.has_signal("hurtbox_hit"):
+		velocity.y = jump_velocity
 
 # ========================================================================
 # Helpers
@@ -176,6 +191,12 @@ func set_state(new_state: State):
 		State.HURT:
 			hurt_time_left = hurt_duration
 			play_anim("hurt")
+		State.ATTACK_DOWN:
+			down_attack_area.monitoring = false
+			down_attack_area.monitoring = true
+			down_slash_vfx.visible = true
+			down_slash_vfx.play("down_attack")
+			attack_off()
 			
 # =================================================
 # State updates
@@ -211,7 +232,7 @@ func update_grounded(_delta: float, move_dir: float, jump_pressed: bool, attack_
 	else:
 		play_anim("idle")
 		
-func update_air(_delta: float, move_dir: float, jump_pressed: bool, attack_pressed: bool, dash_pressed: bool):
+func update_air(_delta: float, move_dir: float, jump_pressed: bool, attack_pressed: bool, dash_pressed: bool, down_pressed: bool):
 	# Reduced air control
 	if move_dir != 0:
 		facing = sign(move_dir)
@@ -228,10 +249,13 @@ func update_air(_delta: float, move_dir: float, jump_pressed: bool, attack_press
 	if dash_pressed and can_dash:
 		set_state(State.DASH)
 		return
-			
-	# Allow air attacks
+		
+	# Allow air attacks including downward attacks
 	if attack_pressed:
-		set_state(State.ATTACK)
+		if down_pressed:
+			set_state(State.ATTACK_DOWN)
+		else:
+			set_state(State.ATTACK)
 		return
 			
 	# Double-jump vs ump vs fall animation
@@ -282,6 +306,16 @@ func update_dash(delta: float):
 	
 	if dash_time_left <= 0:
 		anim.play()
+		if is_on_floor():
+			set_state(State.GROUNDED)
+		else:
+			set_state(State.AIR)
+
+func update_attack_down(_delta: float):
+	if not down_slash_vfx.is_playing():
+		down_attack_area.monitoring = false
+		down_slash_vfx.visible = false
+		
 		if is_on_floor():
 			set_state(State.GROUNDED)
 		else:
