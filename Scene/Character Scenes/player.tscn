@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cu4pdh6xnjql0" path="res://Assets/Virtual Guy/Run (32x32).png" id="5_npr22"]
 [ext_resource type="Texture2D" uid="uid://d0f27yhhnaors" path="res://Assets/SlashFX Combos/SlashFX SimpleCombo3 sheet.png" id="6_qma10"]
 [ext_resource type="Texture2D" uid="uid://d4dex85k6307e" path="res://Assets/Virtual Guy/Wall Jump (32x32).png" id="8_a3c8g"]
-[ext_resource type="Script" uid="uid://bq5midtayjyae" path="res://Scripts/player_hurtbox.gd" id="10_mx2v3"]
+[ext_resource type="Script" path="res://Scripts/player_hurtbox.gd" id="10_mx2v3"]
 [ext_resource type="Texture2D" uid="uid://pnqcbkpyocdp" path="res://Assets/SlashFX Combos/SlashFX SimpleCombo1 sheet.png" id="11_a3c8g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
@@ -437,6 +437,7 @@ animation = &"wall_jump"
 frame_progress = 0.5137214
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1792891821]
+position = Vector2(0, -56)
 zoom = Vector2(2, 2)
 position_smoothing_speed = 10.0
 
