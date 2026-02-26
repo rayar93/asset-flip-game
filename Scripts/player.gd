@@ -1,14 +1,8 @@
 extends CharacterBody2D
 
 # Tunables (can be adjusted in the inspector)
-
-# ===========================================================
-
-
-
 @export_group("Movement")
 @export var move_speed = 300
-
 @export var jump_velocity = -400
 @export var gravity = 1000
 @export var dash_speed = 900
@@ -24,6 +18,8 @@ extends CharacterBody2D
 @onready var slash_vfx: AnimatedSprite2D = $AttackRoot/SlashVFX
 @onready var down_attack_area: Area2D = $DownAttackRoot/DownAttackArea
 @onready var down_slash_vfx: AnimatedSprite2D = $DownAttackRoot/DownSlashVFX
+@onready var up_attack_area: Area2D = $UpAttackRoot/UpAttackArea
+@onready var up_slash_vfx: AnimatedSprite2D = $UpAttackRoot/UpSlashVFX
 
 # Timers and flags
 var attack_active_left = 0.0
@@ -31,9 +27,10 @@ var hurt_time_left := 0.0
 var dash_time_left = 0.0
 var can_dash = true
 var can_double_jump = true
+var targets_hit_this_attack: Array[Node2D] = []
 
 # State machine
-enum State { GROUNDED, AIR, ATTACK, HURT, DASH, ATTACK_DOWN }
+enum State { GROUNDED, AIR, ATTACK, HURT, DASH, ATTACK_DOWN, ATTACK_UP }
 var state := State.GROUNDED
 var facing = 1 # 1 = right, -1 = left
 
@@ -49,7 +46,9 @@ func _ready():
 	$PlayerHurtbox.player_hurt.connect(_on_player_hurt)
 	
 	# Player hitbox emits signal with entering enemy hurtbox
+	attack_area.area_entered.connect(_on_side_attack_hit)
 	down_attack_area.area_entered.connect(_on_down_attack_hit)
+	up_attack_area.area_entered.connect(_on_up_attack_hit)
 	
 	set_state(State.GROUNDED if is_on_floor() else State.AIR)
 
@@ -70,6 +69,7 @@ func _physics_process(delta):
 		State.HURT:			update_hurt(delta)
 		State.DASH:			update_dash(delta)
 		State.ATTACK_DOWN:	update_attack_down()
+		State.ATTACK_UP:	update_attack_up(move_dir)
 	
 	move_and_slide()
 	_check_landed_or_fell()
@@ -96,7 +96,10 @@ func update_grounded(move_dir):
 	elif Input.is_action_just_pressed("dash") and can_dash:
 		set_state(State.DASH)
 	elif Input.is_action_just_pressed("attack"):
-		set_state(State.ATTACK)
+		if Input.is_action_pressed("up"):
+			set_state(State.ATTACK_UP)
+		else:
+			set_state(State.ATTACK)
 		
 	play_anim("run" if velocity.x != 0 else "idle")
 		
@@ -111,8 +114,13 @@ func update_air(move_dir):
 	elif Input.is_action_just_pressed("dash") and can_dash:
 		set_state(State.DASH)
 	elif Input.is_action_just_pressed("attack"):
-		set_state(State.ATTACK_DOWN if Input.is_action_pressed("down") else State.ATTACK)
-	
+		if Input.is_action_pressed("up"):
+			set_state(State.ATTACK_UP)
+		elif Input.is_action_pressed("down"):
+			set_state(State.ATTACK_DOWN)
+		else:
+			set_state(State.ATTACK)
+			
 	if anim.animation != "double_jump":
 		play_anim("jump" if velocity.y < 0 else "fall")
 			
@@ -128,6 +136,11 @@ func update_attack(delta, move_dir):
 		
 func update_attack_down():
 	if not down_slash_vfx.is_playing():
+		_return_to_base_state()
+		
+func update_attack_up(move_dir):
+	velocity.x = move_dir * move_speed * 0.5
+	if not up_slash_vfx.is_playing():
 		_return_to_base_state()
 
 func update_hurt(delta):
@@ -153,6 +166,7 @@ func set_state(new_state: State):
 	if state == new_state: return
 		
 	all_attacks_off()
+	targets_hit_this_attack.clear()
 			
 	# Kill momentum after dash
 	if state == State.DASH: velocity.x = 0
@@ -171,8 +185,7 @@ func set_state(new_state: State):
 			can_dash = false
 			anim.pause()
 		State.AIR:
-			attack_off()
-			down_attack_off()
+			pass
 		State.ATTACK:
 			attack_active_left = attack_active_time
 			attack_on()
@@ -181,6 +194,8 @@ func set_state(new_state: State):
 			play_anim("hurt")
 		State.ATTACK_DOWN:
 			down_attack_on()
+		State.ATTACK_UP:
+			up_attack_on()
 
 # ===========================================================================================================================================================================================================================
 # Helpers
@@ -204,9 +219,18 @@ func down_attack_off():
 	_toggle_area(down_attack_area, false)
 	down_slash_vfx.visible = false
 	
+func up_attack_on():
+	_toggle_area(up_attack_area, true)
+	_play_vfx(up_slash_vfx, "up_attack")
+	
+func up_attack_off():
+	_toggle_area(up_attack_area, false)
+	up_slash_vfx.visible = false
+	
 func all_attacks_off():
 	attack_off()
 	down_attack_off()
+	up_attack_off()
 	
 func _toggle_area(area: Area2D, active: bool):
 	area.monitoring = active
@@ -234,6 +258,8 @@ func _check_landed_or_fell():
 # ===============================================================================================================================================================================================
 
 func _on_player_hurt(attack_position: Vector2):
+	if state == State.HURT: return
+	
 	# Calculate knockback direction
 	var dir = sign(global_position.x - attack_position.x)
 	if dir == 0:
@@ -242,10 +268,23 @@ func _on_player_hurt(attack_position: Vector2):
 	# Apply knockback, enter hurt state
 	velocity = Vector2(dir * 300, -200)
 	set_state(State.HURT)
+
+func _handle_hit(area: Area2D, required_state: State):
+	if area in targets_hit_this_attack: return
 	
+	if state == required_state and area.has_signal("hurtbox_hit"):
+		targets_hit_this_attack.append(area)
+		area.hurtbox_hit.emit(global_position)
+		return true # if hit happened
+	return false
+
+func _on_side_attack_hit(area: Area2D):
+	_handle_hit(area, State.ATTACK)
+
 # Pogo enemies
 func _on_down_attack_hit(area: Area2D):
-	if state == State.ATTACK_DOWN and area.has_signal("hurtbox_hit"):
-		area.hurtbox_hit.emit(global_position)
+	if _handle_hit(area, State.ATTACK_DOWN):
 		velocity.y = jump_velocity
-		call_deferred("down_attack_off")
+		
+func _on_up_attack_hit(area: Area2D):
+	_handle_hit(area, State.ATTACK_UP)

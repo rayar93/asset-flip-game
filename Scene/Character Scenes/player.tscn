@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cu4pdh6xnjql0" path="res://Assets/Virtual Guy/Run (32x32).png" id="5_npr22"]
 [ext_resource type="Texture2D" uid="uid://d0f27yhhnaors" path="res://Assets/SlashFX Combos/SlashFX SimpleCombo3 sheet.png" id="6_qma10"]
 [ext_resource type="Texture2D" uid="uid://d4dex85k6307e" path="res://Assets/Virtual Guy/Wall Jump (32x32).png" id="8_a3c8g"]
-[ext_resource type="Script" path="res://Scripts/player_hurtbox.gd" id="10_mx2v3"]
+[ext_resource type="Script" uid="uid://bq5midtayjyae" path="res://Scripts/player_hurtbox.gd" id="10_mx2v3"]
 [ext_resource type="Texture2D" uid="uid://pnqcbkpyocdp" path="res://Assets/SlashFX Combos/SlashFX SimpleCombo1 sheet.png" id="11_a3c8g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
@@ -419,6 +419,37 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ns8dm"]
+atlas = ExtResource("11_a3c8g")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pvfu"]
+atlas = ExtResource("11_a3c8g")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2fnt"]
+atlas = ExtResource("11_a3c8g")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hlbtj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ns8dm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pvfu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2fnt")
+}],
+"loop": false,
+"name": &"up_attack",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22dvp"]
+
 [node name="Player" type="CharacterBody2D" unique_id=454716346 groups=["player"]]
 z_index = 1
 collision_layer = 2
@@ -448,7 +479,7 @@ collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRoot/AttackArea" unique_id=1530880413]
 position = Vector2(0, -2)
-scale = Vector2(1, 0.75)
+scale = Vector2(1, 0.7)
 shape = SubResource("RectangleShape2D_4flbx")
 
 [node name="SlashVFX" type="AnimatedSprite2D" parent="AttackRoot" unique_id=1561907663]
@@ -488,3 +519,26 @@ sprite_frames = SubResource("SpriteFrames_ns8dm")
 animation = &"down_attack"
 frame = 2
 frame_progress = 1.0
+
+[node name="UpAttackRoot" type="Node2D" parent="." unique_id=1581404998 groups=["player_attack"]]
+position = Vector2(0, -30)
+
+[node name="UpSlashVFX" type="AnimatedSprite2D" parent="UpAttackRoot" unique_id=277851616]
+visible = false
+position = Vector2(3, 27)
+rotation = 0.87266463
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_hlbtj")
+animation = &"up_attack"
+frame = 2
+frame_progress = 1.0
+flip_h = true
+
+[node name="UpAttackArea" type="Area2D" parent="UpAttackRoot" unique_id=167825004 groups=["player_attack"]]
+collision_layer = 8
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpAttackRoot/UpAttackArea" unique_id=1171220181 groups=["player_attack"]]
+position = Vector2(0, 10)
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_22dvp")
