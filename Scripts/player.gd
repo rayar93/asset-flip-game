@@ -5,12 +5,10 @@ extends CharacterBody2D
 @export var move_speed = 300
 @export var jump_velocity = -400
 @export var gravity = 1000
-@export var dash_speed = 900
+@export var dash_speed = 1000
 @export var dash_duration = 0.2
 
 @export_group("Combat")
-@export var hurt_duration = 0.2
-@export var attack_active_time = 0.1
 @export var max_health = 3
 
 # Node references
@@ -23,8 +21,6 @@ extends CharacterBody2D
 @onready var up_slash_vfx: AnimatedSprite2D = $UpAttackRoot/UpSlashVFX
 
 # Internal variables
-var attack_active_left = 0.0
-var hurt_time_left := 0.0
 var dash_time_left = 0.0
 var can_dash = true
 var can_double_jump = true
@@ -51,6 +47,12 @@ func _ready():
 	attack_area.area_entered.connect(_on_side_attack_hit)
 	down_attack_area.area_entered.connect(_on_down_attack_hit)
 	up_attack_area.area_entered.connect(_on_up_attack_hit)
+	
+	anim.animation_finished.connect(_on_anim_finished)
+	
+	slash_vfx.animation_finished.connect(_on_vfx_finished)
+	down_slash_vfx.animation_finished.connect(_on_vfx_finished)
+	up_slash_vfx.animation_finished.connect(_on_vfx_finished)
 	
 	set_state(State.GROUNDED if is_on_floor() else State.AIR)
 
@@ -127,12 +129,6 @@ func update_air(move_dir):
 		play_anim("jump" if velocity.y < 0 else "fall")
 			
 func update_attack(delta, move_dir):
-	velocity.x = move_dir * move_speed * 0.5
-	attack_active_left -= delta
-	
-	if attack_active_left <= 0:
-		attack_off()
-		
 	if not slash_vfx.is_playing():
 		_return_to_base_state()
 		
@@ -146,9 +142,7 @@ func update_attack_up(move_dir):
 		_return_to_base_state()
 
 func update_hurt(delta):
-	hurt_time_left -= delta
-	if hurt_time_left <= 0.0:
-		_return_to_base_state()
+	pass
 
 func update_dash(delta: float):
 	dash_time_left -= delta
@@ -189,10 +183,8 @@ func set_state(new_state: State):
 		State.AIR:
 			pass
 		State.ATTACK:
-			attack_active_left = attack_active_time
 			attack_on()
 		State.HURT:
-			hurt_time_left = hurt_duration
 			play_anim("hurt")
 		State.ATTACK_DOWN:
 			down_attack_on()
@@ -302,3 +294,11 @@ func _on_down_attack_hit(area: Area2D):
 		
 func _on_up_attack_hit(area: Area2D):
 	_handle_hit(area, State.ATTACK_UP)
+
+func _on_anim_finished():
+	if state == State.HURT:
+		_return_to_base_state()
+		
+func _on_vfx_finished():
+	if state in [State.ATTACK, State.ATTACK_UP, State.ATTACK_DOWN]:
+		_return_to_base_state()

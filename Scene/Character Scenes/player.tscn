@@ -234,9 +234,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w73u0")
 }],
-"loop": true,
+"loop": false,
 "name": &"hurt",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -382,7 +382,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"slash",
-"speed": 12.0
+"speed": 20.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iy31x"]
@@ -416,7 +416,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"down_attack",
-"speed": 12.0
+"speed": 20.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ns8dm"]
@@ -445,7 +445,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"up_attack",
-"speed": 12.0
+"speed": 20.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22dvp"]
@@ -462,8 +462,7 @@ shape = SubResource("RectangleShape2D_sh265")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1309260295]
 sprite_frames = SubResource("SpriteFrames_4x2cv")
-animation = &"wall_jump"
-frame_progress = 0.5986668
+animation = &"run"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1792891821]
 position = Vector2(0, -56)
