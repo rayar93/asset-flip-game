@@ -1,14 +1,14 @@
 extends CharacterBody2D
 
 # Tunables (can be adjusted in the inspector)
-<<<<<<< HEAD
+
 # ===========================================================
 
-@export var move_speed = 200
-=======
+
+
 @export_group("Movement")
 @export var move_speed = 300
->>>>>>> origin/main
+
 @export var jump_velocity = -400
 @export var gravity = 1000
 @export var dash_speed = 900
