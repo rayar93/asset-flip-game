@@ -200,7 +200,6 @@ func set_state(new_state: State):
 			up_attack_on()
 		State.DEAD:
 			velocity = Vector2.ZERO
-			await get_tree().create_timer(1.0).timeout
 			get_tree().reload_current_scene()
 
 # ===========================================================================================================================================================================================================================
