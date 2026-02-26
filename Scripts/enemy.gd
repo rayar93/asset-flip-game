@@ -7,7 +7,7 @@ extends CharacterBody2D
 
 @export_group("Combat")
 @export var notice_radius = 220
-@export var attack_radius = 45
+@export var attack_radius = 100
 @export var hurt_duration = 0.1
 @export var hurt_left = 0.0
 @export var knockback_strength = 250
@@ -29,8 +29,9 @@ var facing = 1 # 1 = right, -1 = left
 
 # Internal variables
 var player: Node2D = null
-var attack_hit_frame = 1
+var attack_hit_frame = 2
 var current_health = 3
+var targets_hit_this_attack: Array[Node2D] = []
 
 # =======================================================================================================================================================================================
 # Engine callbacks
@@ -48,6 +49,8 @@ func _ready():
 	
 	# Used to know when attack animation is finished
 	anim.animation_finished.connect(_on_anim_finished)
+	
+	hitbox.area_entered.connect(_on_hitbox_entered)
 	
 	# Initialize state and facing
 	hitbox_off()
@@ -136,6 +139,8 @@ func set_state(new_state: State):
 	
 	# Turn the hitbox off when changing states to prevent sticking
 	hitbox_off()
+	
+	targets_hit_this_attack.clear()
 
 	state = new_state
 	
@@ -216,6 +221,14 @@ func _on_hurtbox_hit(attack_position: Vector2):
 	velocity.y = -200
 	
 	set_state(State.DEAD if current_health <= 0 else State.HURT)
+	
+func _on_hitbox_entered(area: Area2D):
+	if area in targets_hit_this_attack:
+		return
+	
+	if state == State.ATTACK and area.has_signal("player_hurt"):
+		targets_hit_this_attack.append(area)
+		area.player_hurt.emit(global_position)
 	
 func _on_anim_finished():
 	if state == State.ATTACK:

@@ -11,6 +11,7 @@ extends CharacterBody2D
 @export_group("Combat")
 @export var hurt_duration = 0.2
 @export var attack_active_time = 0.1
+@export var max_health = 3
 
 # Node references
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
@@ -21,16 +22,17 @@ extends CharacterBody2D
 @onready var up_attack_area: Area2D = $UpAttackRoot/UpAttackArea
 @onready var up_slash_vfx: AnimatedSprite2D = $UpAttackRoot/UpSlashVFX
 
-# Timers and flags
+# Internal variables
 var attack_active_left = 0.0
 var hurt_time_left := 0.0
 var dash_time_left = 0.0
 var can_dash = true
 var can_double_jump = true
 var targets_hit_this_attack: Array[Node2D] = []
+var current_health = 3
 
 # State machine
-enum State { GROUNDED, AIR, ATTACK, HURT, DASH, ATTACK_DOWN, ATTACK_UP }
+enum State { GROUNDED, AIR, ATTACK, HURT, DASH, ATTACK_DOWN, ATTACK_UP, DEAD }
 var state := State.GROUNDED
 var facing = 1 # 1 = right, -1 = left
 
@@ -196,6 +198,10 @@ func set_state(new_state: State):
 			down_attack_on()
 		State.ATTACK_UP:
 			up_attack_on()
+		State.DEAD:
+			velocity = Vector2.ZERO
+			await get_tree().create_timer(1.0).timeout
+			get_tree().reload_current_scene()
 
 # ===========================================================================================================================================================================================================================
 # Helpers
@@ -232,6 +238,10 @@ func all_attacks_off():
 	down_attack_off()
 	up_attack_off()
 	
+func die():
+	if state == State.DEAD: return
+	set_state(State.DEAD)
+	
 func _toggle_area(area: Area2D, active: bool):
 	area.monitoring = active
 	area.monitorable = active
@@ -259,6 +269,11 @@ func _check_landed_or_fell():
 
 func _on_player_hurt(attack_position: Vector2):
 	if state == State.HURT: return
+	
+	current_health -= 1
+	if current_health <= 0:
+		die()
+		return
 	
 	# Calculate knockback direction
 	var dir = sign(global_position.x - attack_position.x)
