@@ -302,4 +302,4 @@ position = Vector2(18, 0)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VisualRoot" unique_id=1092036382]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_8lgou")
-animation = &"idle"
+animation = &"attack"
