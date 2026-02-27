@@ -24,8 +24,8 @@ Sprint 4 (due 2/26) DONE
 •	Enemy knockback / stun
 Sprint 5 (due 3/5)
 •	Build 1-2 more common enemies
-•	Place enemies in a small test room and tune difficulty
 •	Boss enemy with unique phases/FSM
+•	Upward attacks
 •	Continue level creation
 •	Spawn on death?
 Sprint 6 (due 3/12)
@@ -37,18 +37,18 @@ Sprint 6 (due 3/12)
 Sprints 7+
 •	Finalize levels
 •	Finalize animations
+•	Finalize difficulty/movement (tuning variables in-level)
 •	Interactible environment? Levers, power-ups, barrels?
 •	Wall slide, wall jump
-•	Upward attacks
 •	UI (player/enemy health?)
 •	Parry system
 •	Tutorial (J to attack, K to dash)
 •	Ranged weapon
 •	Multi-platform
-•	Work on player movement feel – acceleration, deceleration, friction when no input, turn boost, coyote time, jump buffer, variable jump height, different gravity when jumping/falling, terminal fall speed, hang time near apex, dead zones / digital smoothing, input priority rules, slope handling (?), edge forgiveness
 •	Room transitions
-•	Activate player attack for wider window
 •	Player on enemy head? enemy shouldn't continually turn
 •	Enemy behavior near cliffs
 •	Level polish - tilesets, background parallax, lighting
-•	Menu/settings/loading screens?
+•	Menu screen
+•	Controller support
+•	Work on player movement feel – acceleration, deceleration, variable jump height, terminal fall speed, hang time near apex, dead zones / digital smoothing, edge forgiveness
