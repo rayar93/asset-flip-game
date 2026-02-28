@@ -16,22 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://d0o1v15hemfdr" path="res://Assets/dark area enemies/SHADOW Series - The Blind Huntress/Sprite Sheet/2 - Run.png" id="14_qudyh"]
 [ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://Scripts/enemy_hurtbox.gd" id="15_1p8xh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mibe4"]
-atlas = ExtResource("2_1p8xh")
-region = Rect2(0, 0, 240, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tyi8h"]
-atlas = ExtResource("2_1p8xh")
-region = Rect2(240, 0, 240, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ikfnu"]
-atlas = ExtResource("2_1p8xh")
-region = Rect2(480, 0, 240, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s1bsa"]
-atlas = ExtResource("2_1p8xh")
-region = Rect2(720, 0, 240, 128)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_kwui0"]
 atlas = ExtResource("3_652m3")
 region = Rect2(0, 0, 240, 128)
@@ -99,6 +83,22 @@ region = Rect2(1920, 0, 240, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_aa3il"]
 atlas = ExtResource("5_sx15w")
 region = Rect2(2160, 0, 240, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mibe4"]
+atlas = ExtResource("2_1p8xh")
+region = Rect2(0, 0, 240, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyi8h"]
+atlas = ExtResource("2_1p8xh")
+region = Rect2(240, 0, 240, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikfnu"]
+atlas = ExtResource("2_1p8xh")
+region = Rect2(480, 0, 240, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1bsa"]
+atlas = ExtResource("2_1p8xh")
+region = Rect2(720, 0, 240, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7dbey"]
 atlas = ExtResource("6_ce4mw")
@@ -276,23 +276,6 @@ region = Rect2(1680, 0, 240, 128)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mibe4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tyi8h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ikfnu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s1bsa")
-}],
-"loop": false,
-"name": &"air_down_attack",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_kwui0")
 }, {
 "duration": 1.0,
@@ -355,6 +338,23 @@ animations = [{
 }],
 "loop": false,
 "name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mibe4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyi8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikfnu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1bsa")
+}],
+"loop": false,
+"name": &"down_attack",
 "speed": 5.0
 }, {
 "frames": [{
@@ -541,6 +541,9 @@ size = Vector2(19, 45)
 [sub_resource type="CircleShape2D" id="CircleShape2D_8q66f"]
 radius = 34.297455
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_652m3"]
+size = Vector2(16, 31)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sx15w"]
 size = Vector2(16, 34)
 
@@ -558,7 +561,9 @@ move_speed = 200
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VisualRoot" unique_id=2044635699 groups=["enemies"]]
 sprite_frames = SubResource("SpriteFrames_blwc6")
-animation = &"fall"
+animation = &"down_attack"
+frame = 3
+frame_progress = 1.0
 
 [node name="Hitbox" type="Area2D" parent="VisualRoot" unique_id=1438047601]
 collision_layer = 16
@@ -578,6 +583,10 @@ position = Vector2(9, -6.0000005)
 rotation = 0.31415927
 scale = Vector2(1, 0.55)
 shape = SubResource("CircleShape2D_8q66f")
+
+[node name="DownShape" type="CollisionShape2D" parent="VisualRoot/Hitbox" unique_id=1912021531]
+position = Vector2(1, 31.5)
+shape = SubResource("RectangleShape2D_652m3")
 
 [node name="Hurtbox" type="Area2D" parent="VisualRoot" unique_id=1444484414]
 collision_layer = 64

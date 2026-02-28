@@ -129,6 +129,7 @@ func _execute_attack_startup():
 	slash_vfx.show()
 	slash_vfx.play("attack")
 	attack_area.monitoring = true
+	attack_area.monitorable = true
 
 func _update_facing(move_dir):
 	if move_dir != 0 and state != State.DASH:
@@ -162,6 +163,7 @@ func _check_ground_status():
 
 func _return_to_base_state():
 	attack_area.monitoring = false
+	attack_area.monitorable = false
 	slash_vfx.hide()
 	set_state(State.GROUNDED if is_on_floor() else State.AIR)
 

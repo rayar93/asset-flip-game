@@ -30,6 +30,7 @@ extends CharacterBody2D
 @onready var shape_side   = $VisualRoot/Hitbox/SideShape
 @onready var shape_up     = $VisualRoot/Hitbox/UpShape
 @onready var shape_strong = $VisualRoot/Hitbox/StrongShape
+@onready var shape_down = 	$VisualRoot/Hitbox/DownShape
 
 enum State {
 	INTRO,
@@ -39,6 +40,7 @@ enum State {
 	ATTACK_SIDE,
 	ATTACK_UP,
 	ATTACK_STRONG,
+	ATTACK_DOWN,
 	HURT,
 	DEAD
 }
@@ -73,20 +75,21 @@ func _ready():
 
 func _physics_process(delta):
 	if not is_on_floor():
-		if state not in [State.ATTACK_SIDE, State.ATTACK_UP, State.ATTACK_STRONG, State.HURT, State.DEAD]:
+		if state not in [State.ATTACK_SIDE, State.ATTACK_UP, State.ATTACK_STRONG, State.ATTACK_DOWN, State.HURT, State.DEAD]:
 			_play_anim("fall")
 		velocity.y += gravity * delta
 
 	match state:
-		State.INTRO:          velocity.x = 0.0; _play_anim("idle")
-		State.CHASE:          _handle_chase_logic(delta)
-		State.DASH:           _handle_dash_logic(delta)
-		State.AIR:            _handle_air_logic()
-		State.ATTACK_SIDE:    _handle_attack_logic("attack", 0, shape_side)
-		State.ATTACK_UP:      _handle_attack_logic("up_attack", 1, shape_up)
-		State.ATTACK_STRONG:  _handle_attack_logic("strong_attack", 1, shape_strong)
-		State.HURT:           _handle_hurt_logic(delta)
-		State.DEAD:           pass
+		State.INTRO:			velocity.x = 0.0; _play_anim("idle")
+		State.CHASE:			_handle_chase_logic(delta)
+		State.DASH:				_handle_dash_logic(delta)
+		State.AIR:				_handle_air_logic()
+		State.ATTACK_SIDE:		_handle_attack_logic("attack", 0, shape_side)
+		State.ATTACK_UP:		_handle_attack_logic("up_attack", 1, shape_up)
+		State.ATTACK_STRONG:	_handle_attack_logic("strong_attack", 1, shape_strong)
+		State.ATTACK_DOWN:		_handle_attack_logic("down_attack", 1, shape_down, true)
+		State.HURT:				_handle_hurt_logic(delta)
+		State.DEAD:				pass
 
 	move_and_slide()
 
@@ -121,6 +124,9 @@ func set_state(new_state: State):
 		State.ATTACK_STRONG:
 			velocity.x = 0
 			_play_anim("strong_attack")
+		State.ATTACK_DOWN:
+			velocity.x = 0
+			_play_anim("down_attack")
 		State.HURT:
 			hurt_timer = hurt_duration
 			_play_anim("hurt")
@@ -199,20 +205,19 @@ func _handle_air_logic():
 		set_state(State.ATTACK_UP)
 		return
 	if dx <= overhead_x and abs(dy) <= below_y and dy > 0:
-		# Player is below and close overhead — dodge away
-		_set_facing(-dir)
-		velocity.x = facing * dash_speed
-		return
-	if dx < air_far_x:
-		velocity.x = move_toward(velocity.x, dir * move_speed, 30)
+		set_state(State.ATTACK_DOWN)
 		return
 
 	_set_facing(dir)
-	velocity.x = dir * (move_speed * 0.75)
+	if velocity.y >= 0:
+		set_state(State.DASH)
+	else:
+		velocity.x = dir * (move_speed * 0.75)
 
-func _handle_attack_logic(anim_name: String, active_frame: int, shape: CollisionShape2D):
+func _handle_attack_logic(anim_name: String, active_frame: int, shape: CollisionShape2D, lock_x: bool = false):
 	_play_anim(anim_name)
 	shape.disabled = (sprite.frame != active_frame)
+	if lock_x: velocity.x = 0
 
 func _handle_hurt_logic(delta):
 	hurt_timer -= delta
@@ -246,9 +251,10 @@ func _get_distance_to_player() -> float:
 	return abs(player.global_position.x - global_position.x)
 
 func _disable_all_hitboxes():
-	shape_side.disabled   = true
-	shape_up.disabled     = true
-	shape_strong.disabled = true
+	shape_side.disabled		= true
+	shape_up.disabled		= true
+	shape_strong.disabled	= true
+	shape_down.disabled		= true
 
 func _play_anim(anim_name):
 	if sprite.animation != anim_name:
@@ -280,5 +286,5 @@ func _on_hitbox_entered(area: Area2D):
 		area.player_hurt.emit(global_position)
 
 func _on_anim_finished():
-	if state in [State.ATTACK_SIDE, State.ATTACK_UP, State.ATTACK_STRONG]:
+	if state in [State.ATTACK_SIDE, State.ATTACK_UP, State.ATTACK_STRONG, State.ATTACK_DOWN]:
 		_return_to_engagement_state()

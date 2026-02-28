@@ -163,6 +163,15 @@ func _on_hurtbox_hit(attack_position: Vector2):
 
 func _on_hitbox_entered(area: Area2D):
 	if area in targets_hit_this_attack: return
+	
+	if area.is_in_group("player_attack"):
+		targets_hit_this_attack.append(area)
+		var knockback_dir = sign(global_position.x - area.global_position.x)
+		if knockback_dir == 0: knockback_dir = -facing
+		velocity = Vector2(knockback_dir * 400, -250)
+		set_state(State.HURT)
+		return
+	
 	if area.has_signal("player_hurt"):
 		targets_hit_this_attack.append(area)
 		area.player_hurt.emit(global_position)

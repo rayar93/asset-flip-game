@@ -25,6 +25,7 @@ window/size/viewport_height=600
 enemies=""
 player=""
 player_attack=""
+enemy_hitbox=""
 
 [input]
 
