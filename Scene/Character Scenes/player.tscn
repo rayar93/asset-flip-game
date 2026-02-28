@@ -383,7 +383,7 @@ flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1792891821]
 position = Vector2(0, -56)
-zoom = Vector2(2, 2)
+zoom = Vector2(1.5, 1.5)
 position_smoothing_speed = 10.0
 
 [node name="AttackRoot" type="Node2D" parent="." unique_id=269402468 groups=["player_attack"]]

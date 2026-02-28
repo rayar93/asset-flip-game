@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://pdnlykm857d6" path="res://Scene/Character Scenes/player.tscn" id="1_u52ul"]
 [ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Scene/Character Scenes/enemy.tscn" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://b8sk47eqixvhy" path="res://Scene/Character Scenes/boss.tscn" id="3_62yjf"]
 [ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://Scene/Level pieces/killzone.tscn" id="3_aqows"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xgho"]
@@ -70,9 +71,6 @@ offset_right = 750.0
 offset_bottom = 150.0
 color = Color(0.029670075, 0.19631776, 0.11221602, 1)
 
-[node name="Enemy" parent="Platforms" unique_id=920785443 instance=ExtResource("2_vonw3")]
-position = Vector2(1064, 477)
-
 [node name="Enemy2" parent="Platforms" unique_id=1528658911 instance=ExtResource("2_vonw3")]
 position = Vector2(645, 320)
 
@@ -80,6 +78,9 @@ position = Vector2(645, 320)
 
 [node name="Enemy" parent="Enemies" unique_id=934227105 instance=ExtResource("2_vonw3")]
 position = Vector2(37, 467)
+
+[node name="Boss" parent="Enemies" unique_id=2113211253 instance=ExtResource("3_62yjf")]
+position = Vector2(2091, 505)
 
 [node name="Walls" type="Node2D" parent="." unique_id=826830606]
 
