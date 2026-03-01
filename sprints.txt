@@ -1,54 +1,85 @@
 Sprint 1 (due 2/5) DONE
-•	Install Godot, explore UI, learn GDScript
-•	Set up scenes/nodes
-•	Code player movement – left/right/jump – with gravity and floor collision
+
+Install Godot, explore UI, learn GDScript
+Set up scenes/nodes
+Code player movement – left/right/jump – with gravity and floor collision
+
 Sprint 2 (due 2/12) DONE
-•	Add a simple attack system with a directional hitbox that activates on input and detects collisions
-•	Set up GitHub version control
-•	Create a dummy enemy
-•	Begin early level prototyping
+
+Add a simple attack system with a directional hitbox that activates on input and detects collisions
+Set up GitHub version control
+Create a dummy enemy
+Begin early level prototyping
+
 Sprint 3 (due 2/19) DONE
-•	Set up idle/run/jump/fall animations
-•	Set up a rudimentary camera
-•	Continue level creation
+
+Set up idle/run/jump/fall animations
+Set up a rudimentary camera
+Continue level creation
+
 Sprint 4 (due 2/26) DONE
-•	Sync attack detection with animation
-•	Tune attack size, area, timing
-•	Continue level creation
-•	Double jump, dash
-•	Player i-frames + hurt/knockback behavior
-•	Downward attacks
-•	Implement player finite state machine (ground, air, attack, hurt, dash, down-attack)
-•	Enemy FSM (idle, chase, attack, hurt, death)
-•	Enemy health / death
-•	Enemy knockback / stun
+
+Sync attack detection with animation
+Tune attack size, area, timing
+Continue level creation
+Double jump, dash
+Player i-frames + hurt/knockback behavior
+Downward attacks
+Implement player finite state machine (ground, air, attack, hurt, dash, down-attack)
+Enemy FSM (idle, chase, attack, hurt, death)
+Enemy health / death
+Enemy knockback / stun
+
 Sprint 5 (due 3/5)
-•	Build 1-2 more common enemies
-•	Boss enemy with unique phases/FSM
-•	Upward attacks
-•	Continue level creation
-•	Spawn on death?
+
+Build 1-2 more common enemies
+Boss
+Player upward attack
+Spawn on death
+Find assets to create a unified theme in each of the 2 areas
+Enemy turning bug
+
 Sprint 6 (due 3/12)
-•	Audio - sound effects, music, ambient
-•	Graphical effects – landing dust, screenshake, hit effects, dash, death/hurt
-•	Continue level creation
-•	Room transitions
-•	Win/lose conditions
-Sprints 7+
-•	Finalize levels
-•	Finalize animations
-•	Finalize difficulty/movement (tuning variables in-level)
-•	Interactible environment? Levers, power-ups, barrels?
-•	Wall slide, wall jump
-•	UI (player/enemy health?)
-•	Parry system
-•	Tutorial (J to attack, K to dash)
-•	Ranged weapon
-•	Multi-platform
-•	Room transitions
-•	Player on enemy head? enemy shouldn't continually turn
-•	Enemy behavior near cliffs
-•	Level polish - tilesets, background parallax, lighting
-•	Menu screen
-•	Controller support
-•	Work on player movement feel – acceleration, deceleration, variable jump height, terminal fall speed, hang time near apex, dead zones / digital smoothing, edge forgiveness
+
+Change player assets - hitbox reshaping, animation swaps, offset fixes
+Match enemy, player, and background assets in each of the 2 areas
+Room transitions
+Win/lose conditions
+Start area 2
+
+Sprint 7 (due 3/19)
+
+Audio: music, hit/death/jump sounds, ambient
+Screenshake, hit flash, dash vfx, death/hurt vfx, land dust
+Enemy platforming logic (including behavior near edges)
+UI: player health, boss health
+Continue level creation
+
+Sprint 8 (due 3/26)
+
+Finalize 3-6 enemies
+Finalize both areas - layout, tilesets, background, lighting mood, parallax background, transition
+
+Sprint 9 (due 4/2)
+
+Difficulty tuning and enemy placement in finalized areas
+Wall slide/jump
+Movement feel: acceleration/deceleration, variable jump height, terminal fall speed, hang time at apex, edge forgiveness
+
+Sprint 10 (due 4/9)
+
+Menu screen
+On-screen prompts
+Finalize all animations
+
+Sprint 11 (due 4/16)
+
+Polish
+Tune variables in-level
+Bug fixing
+
+Stretch goals
+
+Multi-platform
+Controller support
+Ranged attack

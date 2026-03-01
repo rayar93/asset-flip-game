@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://dp2cbtma0pvin"]
+
+[ext_resource type="PackedScene" uid="uid://pdnlykm857d6" path="res://Scene/Character Scenes/player.tscn" id="1_ko0ht"]
+[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Scene/Character Scenes/enemy.tscn" id="2_vklxa"]
+[ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://Scene/Environment/killzone.tscn" id="5_l7hf0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xgho"]
+size = Vector2(1500, 300)
+
+[node name="Level" type="Node2D" unique_id=653709450]
+
+[node name="Player" parent="." unique_id=454716346 instance=ExtResource("1_ko0ht")]
+position = Vector2(1937, 506)
+
+[node name="Platforms" type="Node2D" parent="." unique_id=1381030589]
+
+[node name="Floor4" type="StaticBody2D" parent="Platforms" unique_id=233326980]
+position = Vector2(591.00006, 377.00003)
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Floor4" unique_id=1449703258]
+shape = SubResource("RectangleShape2D_5xgho")
+
+[node name="ColorRect" type="ColorRect" parent="Platforms/Floor4" unique_id=1060432823]
+offset_left = -750.0
+offset_top = -150.0
+offset_right = 750.0
+offset_bottom = 150.0
+color = Color(0.029670075, 0.19631776, 0.11221602, 1)
+
+[node name="Floor2" type="StaticBody2D" parent="Platforms" unique_id=1413467685]
+position = Vector2(866, 445)
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Floor2" unique_id=1678768254]
+shape = SubResource("RectangleShape2D_5xgho")
+
+[node name="ColorRect" type="ColorRect" parent="Platforms/Floor2" unique_id=876192967]
+offset_left = -750.0
+offset_top = -150.0
+offset_right = 750.0
+offset_bottom = 150.0
+color = Color(0.029670075, 0.19631776, 0.11221602, 1)
+
+[node name="Floor3" type="StaticBody2D" parent="Platforms" unique_id=45983268]
+position = Vector2(303.99997, 426.99997)
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Floor3" unique_id=1538823197]
+shape = SubResource("RectangleShape2D_5xgho")
+
+[node name="ColorRect" type="ColorRect" parent="Platforms/Floor3" unique_id=2101781098]
+offset_left = -750.0
+offset_top = -150.0
+offset_right = 750.0
+offset_bottom = 150.0
+color = Color(0.029670075, 0.19631776, 0.11221602, 1)
+
+[node name="Floor" type="StaticBody2D" parent="Platforms" unique_id=598438735]
+position = Vector2(2433.0002, 1272)
+scale = Vector2(5, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Floor" unique_id=1547130118]
+shape = SubResource("RectangleShape2D_5xgho")
+
+[node name="ColorRect" type="ColorRect" parent="Platforms/Floor" unique_id=944021321]
+offset_left = -750.0
+offset_top = -150.0
+offset_right = 750.0
+offset_bottom = 150.0
+color = Color(0.029670075, 0.19631776, 0.11221602, 1)
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1585256352]
+
+[node name="Enemy" parent="Enemies" unique_id=934227105 instance=ExtResource("2_vklxa")]
+position = Vector2(37, 467)
+
+[node name="Walls" type="Node2D" parent="." unique_id=826830606]
+
+[node name="Floor2" type="StaticBody2D" parent="Walls" unique_id=1187456537]
+position = Vector2(4899, 212)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Floor2" unique_id=1747449957]
+shape = SubResource("RectangleShape2D_5xgho")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Floor2" unique_id=589869811]
+offset_left = -750.0
+offset_top = -150.0
+offset_right = 750.0
+offset_bottom = 150.0
+color = Color(0.029670075, 0.19631776, 0.11221602, 1)
+
+[node name="KillZone" parent="." unique_id=419814295 instance=ExtResource("5_l7hf0")]
+position = Vector2(101, 2365)
