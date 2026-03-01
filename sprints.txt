@@ -32,16 +32,16 @@ Enemy knockback / stun
 
 Sprint 5 (due 3/5)
 
-Build 1-2 more common enemies
 Boss
 Player upward attack
 Spawn on death
 Find assets to create a unified theme in each of the 2 areas
+Change player assets - hitbox reshaping, animation swaps, offset fixes
+Build 1-2 more common enemies
 Enemy turning bug
 
 Sprint 6 (due 3/12)
 
-Change player assets - hitbox reshaping, animation swaps, offset fixes
 Match enemy, player, and background assets in each of the 2 areas
 Room transitions
 Win/lose conditions
