@@ -63,7 +63,6 @@ func _physics_process(delta):
 		State.DASH:      _handle_dash_logic(delta)
 
 	move_and_slide()
-	_handle_body_contacts()
 	_check_ground_status()
 	_update_facing(move_dir)
 	_update_animations(move_dir)
@@ -161,18 +160,6 @@ func _execute_attack_startup():
 	attack_area.monitoring = true
 	attack_area.monitorable = true
 
-func _handle_body_contacts():
-	if state in [State.HURT, State.DEAD]: return
-	for i in get_slide_collision_count():
-		var collider = get_slide_collision(i).get_collider()
-		if collider.is_in_group("enemy"):
-			var knockback_dir = sign(global_position.x - collider.global_position.x)
-			if knockback_dir == 0: knockback_dir = -facing
-			current_health -= 1
-			velocity = Vector2(knockback_dir * 300, -300)
-			set_state(State.DEAD if current_health <= 0 else State.HURT)
-			break
-
 func _update_facing(move_dir):
 	if move_dir != 0 and state != State.DASH:
 		facing = sign(move_dir)
@@ -223,14 +210,6 @@ func _on_player_hurt(attack_position: Vector2):
 
 func _on_attack_hit(area: Area2D):
 	if area in targets_hit_this_attack: return
-
-	if area.is_in_group("enemy_hitbox"):
-		targets_hit_this_attack.append(area)
-		var knockback_dir = sign(global_position.x - area.global_position.x)
-		if knockback_dir == 0: knockback_dir = -facing
-		velocity = Vector2(knockback_dir * 400, -250)
-		set_state(State.HURT)
-		return
 
 	if area.has_signal("enemy_hurt"):
 		targets_hit_this_attack.append(area)

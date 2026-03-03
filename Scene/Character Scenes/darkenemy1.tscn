@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://daab20ylnjhit"]
 
-[ext_resource type="Script" uid="uid://dudrsnmtcljs8" path="res://Scripts/enemy.gd" id="1_7k104"]
+[ext_resource type="Script" uid="uid://dudrsnmtcljs8" path="res://Scripts/darkenemy1.gd" id="1_7k104"]
 [ext_resource type="Texture2D" uid="uid://4e7x0h1slw2u" path="res://Assets/dark area enemies/dark enemy/Sprite Sheet/Attack 1.png" id="2_fjqhh"]
 [ext_resource type="Texture2D" uid="uid://ddifj4awswi8e" path="res://Assets/dark area enemies/dark enemy/Sprite Sheet/idle.png" id="3_h3adc"]
 [ext_resource type="Texture2D" uid="uid://dmg2oe4chyfsa" path="res://Assets/dark area enemies/dark enemy/Sprite Sheet/walk.png" id="4_rha2u"]
@@ -552,6 +552,4 @@ position = Vector2(18, 0)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VisualRoot" unique_id=1092036382]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_8lgou")
-animation = &"attack"
-frame = 5
-frame_progress = 1.0
+animation = &"idle"

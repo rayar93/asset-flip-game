@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://bmyc07srt20or" path="res://Assets/First Stage Forest/Tiles/Tileset Inside.png" id="7_pjm5i"]
 [ext_resource type="Texture2D" uid="uid://bnseyxuo482ew" path="res://Assets/First Stage Forest/Tiles/Trees.png" id="8_ow8yi"]
 [ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Scene/Character Scenes/player.tscn" id="9_cg6mr"]
-[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Scene/Character Scenes/enemy.tscn" id="9_ow8yi"]
+[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Scene/Character Scenes/darkenemy1.tscn" id="9_ow8yi"]
+[ext_resource type="PackedScene" uid="uid://bvhy58703necv" path="res://Scene/Character Scenes/hedgehog.tscn" id="10_v6sn4"]
+[ext_resource type="PackedScene" uid="uid://41tylf2xmh0i" path="res://Scene/Character Scenes/fly.tscn" id="11_sti3b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pjm5i"]
 texture = ExtResource("5_auucd")
@@ -555,3 +557,21 @@ scale = Vector2(1.5, 1.5)
 
 [node name="Player" parent="." unique_id=2056772503 instance=ExtResource("9_cg6mr")]
 position = Vector2(393, 548)
+
+[node name="CharacterBody2D" parent="." unique_id=86431098 instance=ExtResource("10_v6sn4")]
+position = Vector2(666, 550)
+
+[node name="CharacterBody2D2" parent="." unique_id=664461664 instance=ExtResource("11_sti3b")]
+position = Vector2(727, 431)
+
+[node name="CharacterBody2D3" parent="." unique_id=330400418 instance=ExtResource("11_sti3b")]
+position = Vector2(1848, 304)
+
+[node name="CharacterBody2D4" parent="." unique_id=586753993 instance=ExtResource("10_v6sn4")]
+position = Vector2(1833, 387)
+
+[node name="CharacterBody2D5" parent="." unique_id=168821679 instance=ExtResource("11_sti3b")]
+position = Vector2(1005, 363)
+
+[node name="CharacterBody2D6" parent="." unique_id=1692453471 instance=ExtResource("10_v6sn4")]
+position = Vector2(2641, 435)

@@ -85,3 +85,4 @@ Multi-platform
 Controller support
 Ranged attack
 Light area boss
+Parry mechanic

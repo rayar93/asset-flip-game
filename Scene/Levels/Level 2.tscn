@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dp2cbtma0pvin"]
 
 [ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Scene/Character Scenes/player.tscn" id="2_mhgne"]
-[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Scene/Character Scenes/enemy.tscn" id="2_vklxa"]
+[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Scene/Character Scenes/darkenemy1.tscn" id="2_vklxa"]
 [ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://Scene/Environment/killzone.tscn" id="5_l7hf0"]
 
 [node name="Level2" type="Node2D" unique_id=653709450]

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dj4ylbi51uk12" path="res://Assets/First Stage Forest/Tiles/Tileset Outside.png" id="5_n2gsl"]
 [ext_resource type="Texture2D" uid="uid://bmyc07srt20or" path="res://Assets/First Stage Forest/Tiles/Tileset Inside.png" id="6_8hh0y"]
 [ext_resource type="Texture2D" uid="uid://bnseyxuo482ew" path="res://Assets/First Stage Forest/Tiles/Trees.png" id="8_8n4jp"]
-[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Scene/Character Scenes/enemy.tscn" id="9_n2gsl"]
+[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Scene/Character Scenes/darkenemy1.tscn" id="9_n2gsl"]
 [ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://Scene/Environment/killzone.tscn" id="10_8n4jp"]
 [ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Scene/Character Scenes/player.tscn" id="10_accah"]
 
