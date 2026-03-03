@@ -77,9 +77,11 @@ Sprint 11 (due 4/16)
 Polish
 Tune variables in-level
 Bug fixing
+Pogo moving enemy bug
 
 Stretch goals
 
 Multi-platform
 Controller support
 Ranged attack
+Light area boss

@@ -1,14 +1,23 @@
 extends CharacterBody2D
 
+@export_group("Movement")
+@export var gravity = 1500
 @export var move_speed = 300
 @export var air_move_speed = 0.7
-@export var jump_velocity = -400
-@export var gravity = 1000
+@export var jump_velocity = -450
 @export var dash_speed = 1000
 @export var dash_duration = 0.2
-@export var max_health = 3
 
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@export_group("Combat")
+@export var max_health = 3
+@export var hurt_duration = 0.4
+
+@export_group("Jump Feel")
+@export var coyote_time = 0.12
+@export var jump_buffer_time = 0.12
+
+@onready var visual_root: Node2D = $VisualRoot
+@onready var sprite: AnimatedSprite2D = $VisualRoot/AnimatedSprite2D
 @onready var attack_root: Node2D = $AttackRoot
 @onready var attack_area: Area2D = $AttackRoot/AttackArea
 @onready var slash_vfx: AnimatedSprite2D = $AttackRoot/SlashVFX
@@ -16,7 +25,9 @@ extends CharacterBody2D
 var dash_time_left = 0.0
 var can_dash = true
 var can_double_jump = true
-var double_jump_anim_lock = false
+var coyote_timer = 0.0
+var jump_buffer_timer = 0.0
+var hurt_timer = 0.0
 var targets_hit_this_attack: Array[Node2D] = []
 
 enum State { GROUNDED, AIR, ATTACK, HURT, DASH, DEAD }
@@ -31,12 +42,16 @@ var current_health = max_health
 func _ready():
 	attack_area.area_entered.connect(_on_attack_hit)
 	$PlayerHurtbox.player_hurt.connect(_on_player_hurt)
-	sprite.animation_finished.connect(_on_sprite_animation_finished)
 	_return_to_base_state()
 
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
+
+	coyote_timer -= delta
+	jump_buffer_timer -= delta
+	if Input.is_action_just_pressed("jump"):
+		jump_buffer_timer = jump_buffer_time
 
 	var move_dir = Input.get_axis("move_left", "move_right")
 
@@ -44,10 +59,11 @@ func _physics_process(delta):
 		State.GROUNDED:  _handle_grounded_input(move_dir)
 		State.AIR:       _handle_air_input(move_dir)
 		State.ATTACK:    _handle_attack_logic()
-		State.HURT:      pass
+		State.HURT:      _handle_hurt_logic(delta)
 		State.DASH:      _handle_dash_logic(delta)
 
 	move_and_slide()
+	_handle_body_contacts()
 	_check_ground_status()
 	_update_facing(move_dir)
 	_update_animations(move_dir)
@@ -66,13 +82,19 @@ func set_state(new_state: State):
 		State.GROUNDED:
 			can_double_jump = true
 			can_dash = true
-			double_jump_anim_lock = false
+			if jump_buffer_timer > 0:
+				jump_buffer_timer = 0
+				velocity.y = jump_velocity
+				set_state(State.AIR)
+				return
 		State.DASH:
 			dash_time_left = dash_duration
 			velocity = Vector2(facing * dash_speed, 0)
 			can_dash = false
 		State.ATTACK:
 			_execute_attack_startup()
+		State.HURT:
+			hurt_timer = hurt_duration
 		State.DEAD:
 			velocity = Vector2.ZERO
 			get_tree().reload_current_scene()
@@ -91,10 +113,13 @@ func _handle_grounded_input(move_dir):
 func _handle_air_input(move_dir):
 	velocity.x = move_dir * move_speed * air_move_speed
 
-	if Input.is_action_just_pressed("jump") and can_double_jump:
-		velocity.y = jump_velocity
-		can_double_jump = false
-		double_jump_anim_lock = true
+	if Input.is_action_just_pressed("jump"):
+		if coyote_timer > 0:
+			velocity.y = jump_velocity
+			coyote_timer = 0
+		elif can_double_jump:
+			velocity.y = jump_velocity
+			can_double_jump = false
 	elif Input.is_action_just_pressed("dash") and can_dash:
 		set_state(State.DASH)
 	elif Input.is_action_just_pressed("attack"):
@@ -109,6 +134,11 @@ func _handle_dash_logic(delta: float):
 	if dash_time_left <= 0:
 		_return_to_base_state()
 
+func _handle_hurt_logic(delta):
+	hurt_timer -= delta
+	if hurt_timer <= 0.0:
+		_return_to_base_state()
+
 # ==============================================================================
 # Helpers
 # ==============================================================================
@@ -116,38 +146,44 @@ func _handle_dash_logic(delta: float):
 func _execute_attack_startup():
 	targets_hit_this_attack.clear()
 
-	var up = Input.is_action_pressed("up")
-	var down = Input.is_action_pressed("down")
-
 	attack_root.rotation_degrees = 0
 	attack_root.scale = Vector2.ONE
 
-	if up:        attack_root.rotation_degrees = -90
-	elif down:    attack_root.rotation_degrees = 90
-	else:         attack_root.scale.x = facing
+	if Input.is_action_pressed("up"):
+		attack_root.rotation_degrees = -90
+	elif Input.is_action_pressed("down"):
+		attack_root.rotation_degrees = 90
+	else:
+		attack_root.scale.x = facing
 
 	slash_vfx.show()
 	slash_vfx.play("attack")
 	attack_area.monitoring = true
 	attack_area.monitorable = true
 
+func _handle_body_contacts():
+	if state in [State.HURT, State.DEAD]: return
+	for i in get_slide_collision_count():
+		var collider = get_slide_collision(i).get_collider()
+		if collider.is_in_group("enemy"):
+			var knockback_dir = sign(global_position.x - collider.global_position.x)
+			if knockback_dir == 0: knockback_dir = -facing
+			current_health -= 1
+			velocity = Vector2(knockback_dir * 300, -300)
+			set_state(State.DEAD if current_health <= 0 else State.HURT)
+			break
+
 func _update_facing(move_dir):
 	if move_dir != 0 and state != State.DASH:
 		facing = sign(move_dir)
-	sprite.flip_h = (facing == -1)
+	visual_root.scale.x = facing
 
 func _update_animations(move_dir):
 	match state:
-		State.HURT:
-			_play_anim("hurt")
-		State.GROUNDED:
-			_play_anim("run" if move_dir != 0 else "idle")
-		State.AIR:
-			if double_jump_anim_lock:
-				_play_anim("double_jump")
-				if velocity.y >= 0: double_jump_anim_lock = false
-			else:
-				_play_anim("jump" if velocity.y < 0 else "fall")
+		State.HURT:     _play_anim("hurt")
+		State.DASH:     _play_anim("dash")
+		State.GROUNDED: _play_anim("run" if move_dir != 0 else "idle")
+		State.AIR:      _play_anim("jump" if velocity.y < 0 else "fall")
 
 func _play_anim(anim_name):
 	if sprite.animation != anim_name:
@@ -159,6 +195,7 @@ func _check_ground_status():
 	if is_on_floor() and state == State.AIR:
 		set_state(State.GROUNDED)
 	elif not is_on_floor() and state == State.GROUNDED:
+		coyote_timer = coyote_time
 		set_state(State.AIR)
 
 func _return_to_base_state():
@@ -187,6 +224,14 @@ func _on_player_hurt(attack_position: Vector2):
 func _on_attack_hit(area: Area2D):
 	if area in targets_hit_this_attack: return
 
+	if area.is_in_group("enemy_hitbox"):
+		targets_hit_this_attack.append(area)
+		var knockback_dir = sign(global_position.x - area.global_position.x)
+		if knockback_dir == 0: knockback_dir = -facing
+		velocity = Vector2(knockback_dir * 400, -250)
+		set_state(State.HURT)
+		return
+
 	if area.has_signal("enemy_hurt"):
 		targets_hit_this_attack.append(area)
 		area.enemy_hurt.emit(global_position)
@@ -194,7 +239,3 @@ func _on_attack_hit(area: Area2D):
 		if attack_root.rotation_degrees == 90 and not is_on_floor():
 			velocity.y = jump_velocity
 			can_double_jump = true
-
-func _on_sprite_animation_finished():
-	if state == State.HURT:
-		_return_to_base_state()
