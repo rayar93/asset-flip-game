@@ -64,12 +64,13 @@ size = Vector2(18, 12)
 size = Vector2(18, 12)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=86431098 groups=["enemies"]]
+scale = Vector2(1.2, 1.2)
 collision_layer = 4
 script = ExtResource("1_3gd3b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1251456456]
 sprite_frames = SubResource("SpriteFrames_5biyq")
-frame_progress = 0.54170024
+frame_progress = 0.016790615
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=126687276 groups=["enemy_hitbox"]]
 collision_layer = 16

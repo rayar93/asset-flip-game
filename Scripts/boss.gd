@@ -9,6 +9,7 @@ extends CharacterBody2D
 @export_group("Combat")
 @export var attack_cooldown = 0.5
 @export var side_attack_radius = 80
+@export var notice_radius = 400
 
 @export var air_far_x = 260
 @export var air_medium_x = 160
@@ -71,7 +72,7 @@ func _ready():
 	hitbox.monitoring = true
 	_disable_all_hitboxes()
 	_apply_facing()
-	set_state(State.CHASE)
+	set_state(State.INTRO)
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -80,7 +81,7 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	match state:
-		State.INTRO:			velocity.x = 0.0; _play_anim("idle")
+		State.INTRO:			_handle_intro_logic()
 		State.CHASE:			_handle_chase_logic(delta)
 		State.DASH:				_handle_dash_logic(delta)
 		State.AIR:				_handle_air_logic()
@@ -135,6 +136,12 @@ func set_state(new_state: State):
 
 func start_combat():
 	if state == State.INTRO:
+		set_state(State.CHASE)
+
+func _handle_intro_logic():
+	velocity.x = 0.0
+	_play_anim("idle")
+	if _get_distance_to_player() <= notice_radius:
 		set_state(State.CHASE)
 
 func _handle_chase_logic(delta):

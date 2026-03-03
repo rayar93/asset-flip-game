@@ -30,7 +30,7 @@ Enemy FSM (idle, chase, attack, hurt, death)
 Enemy health / death
 Enemy knockback / stun
 
-Sprint 5 (due 3/5)
+Sprint 5 (due 3/5) DONE
 
 Boss
 Player upward attack
@@ -38,14 +38,14 @@ Spawn on death
 Find assets to create a unified theme in each of the 2 areas
 Change player assets - hitbox reshaping, animation swaps, offset fixes
 Build 1-2 more common enemies
-Enemy turning bug
+Start area 2
 
 Sprint 6 (due 3/12)
 
-Match enemy, player, and background assets in each of the 2 areas
 Room transitions
 Win/lose conditions
-Start area 2
+Continue level creation
+Enemy turning bug
 
 Sprint 7 (due 3/19)
 
