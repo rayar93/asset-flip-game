@@ -222,3 +222,6 @@ func _on_attack_hit(area: Area2D):
 		if attack_root.rotation_degrees == 90 and not is_on_floor():
 			velocity.y = jump_velocity
 			can_double_jump = true
+
+func die():
+	set_state(State.DEAD)
