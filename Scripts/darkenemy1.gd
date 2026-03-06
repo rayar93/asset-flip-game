@@ -151,8 +151,8 @@ func _get_direction_to_player() -> float:
 	return sign(x_diff)
 
 func _set_hitbox_active(active):
-	hitbox.monitoring = active
-	hitbox.monitorable = active
+	hitbox.set_deferred("monitoring", active)
+	hitbox.set_deferred("monitorable", active)
 
 func _play_anim(anim_name):
 	if sprite.animation != anim_name:

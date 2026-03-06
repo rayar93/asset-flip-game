@@ -258,10 +258,10 @@ func _get_distance_to_player() -> float:
 	return abs(player.global_position.x - global_position.x)
 
 func _disable_all_hitboxes():
-	shape_side.disabled		= true
-	shape_up.disabled		= true
-	shape_strong.disabled	= true
-	shape_down.disabled		= true
+	shape_side.call_deferred("set_disabled", true)
+	shape_up.call_deferred("set_disabled", true)
+	shape_strong.call_deferred("set_disabled", true)
+	shape_down.call_deferred("set_disabled", true)
 
 func _play_anim(anim_name):
 	if sprite.animation != anim_name:

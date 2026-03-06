@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dyfvthkmau0ny"]
+
+[ext_resource type="Script" uid="uid://c3rblfpit13g4" path="res://Scripts/health_ui.gd" id="1_w7gbf"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1182147344]
+script = ExtResource("1_w7gbf")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1518962195]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer" unique_id=442308308]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer" unique_id=303176702]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="HBoxContainer" unique_id=1406116096]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2

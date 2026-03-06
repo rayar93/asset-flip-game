@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dm36tg1afnwtf" path="res://Assets/Dark Area/cave/Assets 1024 Cave/Cave - Floor.png" id="5_ko0ht"]
 [ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://Scene/Environment/killzone.tscn" id="5_l7hf0"]
 [ext_resource type="PackedScene" uid="uid://b8sk47eqixvhy" path="res://Scene/Character Scenes/darkboss.tscn" id="6_vklxa"]
+[ext_resource type="PackedScene" uid="uid://dyfvthkmau0ny" path="res://Scene/Character Scenes/health_ui.tscn" id="7_pykfk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vklxa"]
 size = Vector2(2, 2758)
@@ -174,3 +175,5 @@ region_rect = Rect2(496, 73, 374, 73)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/StaticBody2D" unique_id=506150352]
 position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_pykfk")
+
+[node name="CanvasLayer" parent="." unique_id=1182147344 instance=ExtResource("7_pykfk")]

@@ -35,6 +35,8 @@ var state := State.AIR
 var facing = 1
 var current_health = max_health
 
+signal health_changed(new_health: int)
+
 # ==============================================================================
 # Engine callbacks
 # ==============================================================================
@@ -96,7 +98,7 @@ func set_state(new_state: State):
 			hurt_timer = hurt_duration
 		State.DEAD:
 			velocity = Vector2.ZERO
-			get_tree().reload_current_scene()
+			get_tree().call_deferred("reload_current_scene")
 
 func _handle_grounded_input(move_dir):
 	velocity.x = move_dir * move_speed
@@ -168,7 +170,7 @@ func _update_facing(move_dir):
 func _update_animations(move_dir):
 	match state:
 		State.HURT:     _play_anim("hurt")
-		State.DASH:     _play_anim("dash")
+		State.DASH:     pass
 		State.GROUNDED: _play_anim("run" if move_dir != 0 else "idle")
 		State.AIR:      _play_anim("jump" if velocity.y < 0 else "fall")
 
@@ -199,6 +201,7 @@ func _on_player_hurt(attack_position: Vector2):
 	if state == State.HURT: return
 
 	current_health -= 1
+	health_changed.emit(current_health)
 	VFX.screenshake()
 	if current_health <= 0:
 		set_state(State.DEAD)

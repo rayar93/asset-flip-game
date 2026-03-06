@@ -45,6 +45,8 @@ Sprint 6 (due 3/12)
 Enemy turning bug
 Enemy contact damage
 Added screenshake
+Player health UI
+
 Room transitions
 Win/lose conditions
 Continue level creation
@@ -53,7 +55,6 @@ Sprint 7 (due 3/19)
 
 Audio: music, hit/death/jump sounds, ambient
 Screenshake, dash vfx, death/hurt vfx, land dust
-UI: player health, boss health
 Continue level creation
 
 Sprint 8 (due 3/26)
@@ -89,3 +90,4 @@ Parry mechanic
 Complex enemy platforming (chasing by jumping)
 Hit flash for enemies that don't have it
 Enemies shouldn't stand on player head
+Boss health UI
