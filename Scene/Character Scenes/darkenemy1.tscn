@@ -518,6 +518,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gaw2y"]
+size = Vector2(20, 55)
+
 [node name="Enemy" type="CharacterBody2D" unique_id=920785443 groups=["enemies"]]
 collision_layer = 4
 collision_mask = 3
@@ -553,3 +556,11 @@ position = Vector2(18, 0)
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_8lgou")
 animation = &"idle"
+
+[node name="ContactHitbox" type="Area2D" parent="." unique_id=51960370]
+collision_layer = 16
+collision_mask = 40
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ContactHitbox" unique_id=1663601884]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_gaw2y")

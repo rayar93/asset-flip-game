@@ -26,6 +26,7 @@ enemies=""
 player=""
 player_attack=""
 enemy_hitbox=""
+player_hurtbox=""
 
 [input]
 

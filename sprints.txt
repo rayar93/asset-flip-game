@@ -42,16 +42,16 @@ Start area 2
 
 Sprint 6 (due 3/12)
 
+Enemy turning bug
+Enemy contact damage
 Room transitions
 Win/lose conditions
 Continue level creation
-Enemy turning bug
 
 Sprint 7 (due 3/19)
 
 Audio: music, hit/death/jump sounds, ambient
 Screenshake, hit flash, dash vfx, death/hurt vfx, land dust
-Enemy platforming logic (including behavior near edges)
 UI: player health, boss health
 Continue level creation
 
@@ -63,7 +63,6 @@ Finalize both areas - layout, tilesets, background, lighting mood, parallax back
 Sprint 9 (due 4/2)
 
 Difficulty tuning and enemy placement in finalized areas
-Wall slide/jump
 Movement feel: acceleration/deceleration, variable jump height, terminal fall speed, hang time at apex, edge forgiveness
 
 Sprint 10 (due 4/9)
@@ -86,3 +85,4 @@ Controller support
 Ranged attack
 Light area boss
 Parry mechanic
+Complex enemy platforming (chasing by jumping)

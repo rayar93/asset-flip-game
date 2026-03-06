@@ -213,7 +213,7 @@ shape = SubResource("RectangleShape2D_71o3d")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2076986031]
 zoom = Vector2(2, 2)
 
-[node name="PlayerHurtbox" type="Area2D" parent="." unique_id=1316882466]
+[node name="PlayerHurtbox" type="Area2D" parent="." unique_id=1316882466 groups=["player_hurtbox"]]
 collision_layer = 32
 collision_mask = 16
 script = ExtResource("9_nk1wa")
@@ -230,6 +230,7 @@ frame_progress = 0.18379281
 offset = Vector2(38, -7)
 
 [node name="AttackRoot" type="Node2D" parent="." unique_id=1976591112]
+scale = Vector2(1, 0.5)
 
 [node name="AttackArea" type="Area2D" parent="AttackRoot" unique_id=1050503338 groups=["player_attack"]]
 position = Vector2(32, 0)

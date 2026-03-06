@@ -15,6 +15,7 @@ extends CharacterBody2D
 @onready var sprite: AnimatedSprite2D = $VisualRoot/AnimatedSprite2D
 @onready var hitbox: Area2D = $Hitbox
 @onready var hurtbox: Area2D = $Hurtbox
+@onready var contact_hitbox: Area2D = $ContactHitbox
 
 @onready var visual_base_x: float = visual_root.position.x
 @onready var hitbox_base_x: float = hitbox.position.x
@@ -24,6 +25,8 @@ var state = State.IDLE
 var facing = 1
 var current_health = max_health
 var hurt_timer = 0.0
+var attack_cooldown = 0.4
+var attack_cooldown_timer = 0.0
 
 var player: Node2D = null
 var attack_hit_frame = 2
@@ -39,6 +42,7 @@ func _ready():
 	hurtbox.enemy_hurt.connect(_on_hurtbox_hit)
 	sprite.animation_finished.connect(_on_anim_finished)
 	hitbox.area_entered.connect(_on_hitbox_entered)
+	contact_hitbox.area_entered.connect(_on_contact_hitbox_entered)
 
 	_set_hitbox_active(false)
 	_apply_facing()
@@ -48,6 +52,9 @@ func _ready():
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		
+	if attack_cooldown_timer > 0:
+		attack_cooldown_timer -= delta
 
 	match state:
 		State.IDLE:    _handle_idle_logic()
@@ -94,15 +101,19 @@ func _handle_chase_logic():
 		set_state(State.IDLE)
 		return
 
-	if dist <= attack_radius:
+	if dist <= attack_radius and attack_cooldown_timer <= 0:
 		set_state(State.ATTACK)
 		return
 
 	var dir = _get_direction_to_player()
-	if dir != 0:
-		_set_facing(dir)
-		velocity.x = dir * move_speed
-		_play_anim("walk")
+	if dir == 0:
+		velocity.x = 0
+		_play_anim("idle")
+		return
+
+	_set_facing(dir)
+	velocity.x = dir * move_speed
+	_play_anim("walk")
 
 func _handle_attack_logic():
 	_set_hitbox_active(sprite.frame == attack_hit_frame)
@@ -134,7 +145,10 @@ func _get_distance_to_player() -> float:
 
 func _get_direction_to_player() -> float:
 	if not is_instance_valid(player): return 0.0
-	return sign(player.global_position.x - global_position.x)
+	var x_diff = player.global_position.x - global_position.x
+	if abs(x_diff) < 8.0:
+		return 0.0
+	return sign(x_diff)
 
 func _set_hitbox_active(active):
 	hitbox.monitoring = active
@@ -178,4 +192,10 @@ func _on_hitbox_entered(area: Area2D):
 
 func _on_anim_finished():
 	if state == State.ATTACK:
+		attack_cooldown_timer = attack_cooldown
 		_return_to_engagement_state()
+
+func _on_contact_hitbox_entered(area: Area2D):
+	if state == State.DEAD: return
+	if area.name == "PlayerHurtbox":
+		area.player_hurt.emit(global_position)

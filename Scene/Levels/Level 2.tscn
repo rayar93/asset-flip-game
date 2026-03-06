@@ -10,28 +10,31 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vklxa"]
 size = Vector2(2, 2758)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pykfk"]
+size = Vector2(358, 56)
+
 [node name="Level2" type="Node2D" unique_id=653709450]
 
 [node name="KillZone" parent="." unique_id=419814295 instance=ExtResource("5_l7hf0")]
 position = Vector2(101, 2365)
 
 [node name="Player" parent="." unique_id=2056772503 instance=ExtResource("2_mhgne")]
-position = Vector2(-149, 511)
+position = Vector2(-171, 5)
 
 [node name="Enemies" type="Node2D" parent="." unique_id=497635371]
 
 [node name="Enemy" parent="Enemies" unique_id=920785443 instance=ExtResource("2_vklxa")]
-position = Vector2(130, 494)
+position = Vector2(187, 373)
 
 [node name="Decoration" type="Node2D" parent="." unique_id=72532236]
 position = Vector2(64, -15)
 
 [node name="Background" type="ColorRect" parent="Decoration" unique_id=2028229635]
 z_index = -10
-offset_left = -629.0
-offset_top = -852.0
-offset_right = 3238.0
-offset_bottom = 4104.0
+offset_left = -627.0
+offset_top = -880.0
+offset_right = 3240.0
+offset_bottom = 4076.0
 color = Color(0.101960786, 0.16470589, 0.101960786, 1)
 
 [node name="Terrain" type="Node2D" parent="." unique_id=1280496227]
@@ -153,6 +156,19 @@ position = Vector2(-455, -1404)
 shape = SubResource("RectangleShape2D_vklxa")
 
 [node name="Platforms" type="Node2D" parent="Terrain" unique_id=1650280629]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Terrain/Platforms" unique_id=1091774564]
+position = Vector2(186, 413)
+scale = Vector2(0.25, 0.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Platforms/StaticBody2D" unique_id=1194950461]
+texture = ExtResource("5_ko0ht")
+region_enabled = true
+region_rect = Rect2(496, 73, 374, 73)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/StaticBody2D" unique_id=506150352]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_pykfk")
 
 [node name="Boss" parent="." unique_id=2113211253 instance=ExtResource("6_vklxa")]
 position = Vector2(1453, 1168)
