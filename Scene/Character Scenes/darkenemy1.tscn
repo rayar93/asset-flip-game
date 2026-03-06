@@ -519,7 +519,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gaw2y"]
-size = Vector2(20, 55)
+size = Vector2(22, 55)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=920785443 groups=["enemies"]]
 collision_layer = 4

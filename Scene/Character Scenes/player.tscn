@@ -210,8 +210,9 @@ hurt_duration = 0.3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=266441734]
 shape = SubResource("RectangleShape2D_71o3d")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2076986031]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2076986031 groups=["camera"]]
 zoom = Vector2(2, 2)
+position_smoothing_enabled = true
 
 [node name="PlayerHurtbox" type="Area2D" parent="." unique_id=1316882466 groups=["player_hurtbox"]]
 collision_layer = 32

@@ -15,6 +15,10 @@ run/main_scene="uid://dp2cbtma0pvin"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+VFX="*uid://oi1riyd5g7qi"
+
 [display]
 
 window/size/viewport_width=1024
@@ -27,6 +31,7 @@ player=""
 player_attack=""
 enemy_hitbox=""
 player_hurtbox=""
+camera=""
 
 [input]
 
@@ -71,9 +76,11 @@ up={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

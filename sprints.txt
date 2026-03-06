@@ -51,7 +51,7 @@ Continue level creation
 Sprint 7 (due 3/19)
 
 Audio: music, hit/death/jump sounds, ambient
-Screenshake, hit flash, dash vfx, death/hurt vfx, land dust
+Screenshake, dash vfx, death/hurt vfx, land dust
 UI: player health, boss health
 Continue level creation
 
@@ -86,3 +86,4 @@ Ranged attack
 Light area boss
 Parry mechanic
 Complex enemy platforming (chasing by jumping)
+Hit flash for enemies that don't have it

@@ -199,6 +199,7 @@ func _on_player_hurt(attack_position: Vector2):
 	if state == State.HURT: return
 
 	current_health -= 1
+	VFX.screenshake()
 	if current_health <= 0:
 		set_state(State.DEAD)
 		return

@@ -25,6 +25,11 @@ position = Vector2(-171, 5)
 
 [node name="Enemy" parent="Enemies" unique_id=920785443 instance=ExtResource("2_vklxa")]
 position = Vector2(187, 373)
+scale = Vector2(1.5, 1.5)
+
+[node name="Boss" parent="Enemies" unique_id=2113211253 instance=ExtResource("6_vklxa")]
+position = Vector2(1453, 1168)
+scale = Vector2(1.5, 1.5)
 
 [node name="Decoration" type="Node2D" parent="." unique_id=72532236]
 position = Vector2(64, -15)
@@ -169,6 +174,3 @@ region_rect = Rect2(496, 73, 374, 73)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/StaticBody2D" unique_id=506150352]
 position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_pykfk")
-
-[node name="Boss" parent="." unique_id=2113211253 instance=ExtResource("6_vklxa")]
-position = Vector2(1453, 1168)
