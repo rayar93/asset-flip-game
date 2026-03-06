@@ -44,6 +44,7 @@ Sprint 6 (due 3/12)
 
 Enemy turning bug
 Enemy contact damage
+Added screenshake
 Room transitions
 Win/lose conditions
 Continue level creation
@@ -87,3 +88,4 @@ Light area boss
 Parry mechanic
 Complex enemy platforming (chasing by jumping)
 Hit flash for enemies that don't have it
+Enemies shouldn't stand on player head
