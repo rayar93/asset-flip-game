@@ -157,6 +157,7 @@ func _execute_attack_startup():
 	else:
 		attack_root.scale.x = facing
 
+	AudioManager.play("player_attack")
 	slash_vfx.show()
 	slash_vfx.play("attack")
 	attack_area.monitoring = true

@@ -46,7 +46,8 @@ Enemy turning bug
 Enemy contact damage
 Added screenshake
 Player health UI
-
+Audio: player attack
+---
 Room transitions
 Win/lose conditions
 Continue level creation
@@ -54,7 +55,7 @@ Continue level creation
 Sprint 7 (due 3/19)
 
 Audio: music, hit/death/jump sounds, ambient
-Screenshake, dash vfx, death/hurt vfx, land dust
+Screenshake (boss hit, landing), dash vfx, death/hurt vfx, land dust
 Continue level creation
 
 Sprint 8 (due 3/26)

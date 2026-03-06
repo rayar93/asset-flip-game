@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://fgv70q8mswx"]
+
+[ext_resource type="Script" uid="uid://cs1ng2kov1ym8" path="res://Shared/audio_manager.gd" id="1_x17ax"]
+[ext_resource type="AudioStream" uid="uid://c2wcp78i7gcoe" path="res://Audio/SFX/Player/Sword Attacks Hits and Blocks/Sword Attack 1.wav" id="2_vfyvq"]
+
+[node name="Node2D" type="Node2D" unique_id=1715663642]
+script = ExtResource("1_x17ax")
+
+[node name="PlayerAttack" type="AudioStreamPlayer2D" parent="." unique_id=463398738]
+stream = ExtResource("2_vfyvq")
+
+[node name="EnemyHit" type="AudioStreamPlayer2D" parent="." unique_id=1793989583]
+
+[node name="PlayerHurt" type="AudioStreamPlayer2D" parent="." unique_id=1994482447]
+
+[node name="PlayerDash" type="AudioStreamPlayer2D" parent="." unique_id=1551737490]
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="." unique_id=457782949]
