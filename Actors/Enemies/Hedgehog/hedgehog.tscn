@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bvhy58703necv"]
 
-[ext_resource type="Script" uid="uid://544lq86mb5i7" path="res://Scripts/hedgehog.gd" id="1_3gd3b"]
-[ext_resource type="Texture2D" uid="uid://dbwk7p57ddqat" path="res://Assets/light area enemies/pixel_art_hedgehog/pixel_art_hedgehog/move/move.png" id="1_ehkex"]
-[ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://Scripts/enemy_hurtbox.gd" id="3_7c8as"]
+[ext_resource type="Script" uid="uid://544lq86mb5i7" path="res://Actors/Enemies/Hedgehog/hedgehog.gd" id="1_3gd3b"]
+[ext_resource type="Texture2D" uid="uid://dbwk7p57ddqat" path="res://Assets/LightArea/Enemies/pixel_art_hedgehog/pixel_art_hedgehog/move/move.png" id="1_ehkex"]
+[ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://Actors/Enemies/Shared/enemy_hurtbox.gd" id="3_7c8as"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efw8c"]
 atlas = ExtResource("1_ehkex")

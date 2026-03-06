@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dp2cbtma0pvin"]
 
-[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Scene/Character Scenes/player.tscn" id="2_mhgne"]
-[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Scene/Character Scenes/darkenemy1.tscn" id="2_vklxa"]
-[ext_resource type="PackedScene" uid="uid://btxafce01lldw" path="res://Scene/Environment/floor.tscn" id="4_7no5q"]
-[ext_resource type="Texture2D" uid="uid://dm36tg1afnwtf" path="res://Assets/Dark Area/cave/Assets 1024 Cave/Cave - Floor.png" id="5_ko0ht"]
-[ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://Scene/Environment/killzone.tscn" id="5_l7hf0"]
-[ext_resource type="PackedScene" uid="uid://b8sk47eqixvhy" path="res://Scene/Character Scenes/darkboss.tscn" id="6_vklxa"]
-[ext_resource type="PackedScene" uid="uid://dyfvthkmau0ny" path="res://Scene/Character Scenes/health_ui.tscn" id="7_pykfk"]
+[ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://Levels/LightArea/killzone.tscn" id="1_o6c2n"]
+[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Actors/Player/player.tscn" id="2_i2dly"]
+[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Actors/Enemies/DarkEnemy/darkenemy1.tscn" id="3_o5dek"]
+[ext_resource type="PackedScene" uid="uid://b8sk47eqixvhy" path="res://Actors/Enemies/Boss/darkboss.tscn" id="4_hmggw"]
+[ext_resource type="PackedScene" uid="uid://btxafce01lldw" path="res://Levels/DarkArea/floor.tscn" id="5_5op0t"]
+[ext_resource type="Texture2D" uid="uid://dm36tg1afnwtf" path="res://Assets/DarkArea/cave/Assets 1024 Cave/Cave - Floor.png" id="6_cvlr1"]
+[ext_resource type="PackedScene" uid="uid://dyfvthkmau0ny" path="res://UI/health_ui.tscn" id="7_fpu20"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vklxa"]
 size = Vector2(2, 2758)
@@ -16,19 +16,19 @@ size = Vector2(358, 56)
 
 [node name="Level2" type="Node2D" unique_id=653709450]
 
-[node name="KillZone" parent="." unique_id=419814295 instance=ExtResource("5_l7hf0")]
+[node name="KillZone" parent="." unique_id=419814295 instance=ExtResource("1_o6c2n")]
 position = Vector2(101, 2365)
 
-[node name="Player" parent="." unique_id=2056772503 instance=ExtResource("2_mhgne")]
+[node name="Player" parent="." unique_id=2056772503 instance=ExtResource("2_i2dly")]
 position = Vector2(-171, 5)
 
 [node name="Enemies" type="Node2D" parent="." unique_id=497635371]
 
-[node name="Enemy" parent="Enemies" unique_id=920785443 instance=ExtResource("2_vklxa")]
+[node name="Enemy" parent="Enemies" unique_id=920785443 instance=ExtResource("3_o5dek")]
 position = Vector2(187, 373)
 scale = Vector2(1.5, 1.5)
 
-[node name="Boss" parent="Enemies" unique_id=2113211253 instance=ExtResource("6_vklxa")]
+[node name="Boss" parent="Enemies" unique_id=2113211253 instance=ExtResource("4_hmggw")]
 position = Vector2(1453, 1168)
 scale = Vector2(1.5, 1.5)
 
@@ -49,48 +49,48 @@ color = Color(0.101960786, 0.16470589, 0.101960786, 1)
 position = Vector2(-53, 385)
 scale = Vector2(0.25, 0.25)
 
-[node name="wall" parent="Terrain/Floors" unique_id=1842167336 instance=ExtResource("4_7no5q")]
+[node name="wall" parent="Terrain/Floors" unique_id=1842167336 instance=ExtResource("5_5op0t")]
 position = Vector2(-137, 576)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Terrain/Floors/wall" unique_id=1783109514]
 position = Vector2(-547, -144)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
 [node name="Sprite2D6" type="Sprite2D" parent="Terrain/Floors/wall" unique_id=2120183947]
 position = Vector2(-543, -472)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
 [node name="Sprite2D11" type="Sprite2D" parent="Terrain/Floors/wall" unique_id=698048949]
 position = Vector2(-547, -2088)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
 [node name="Sprite2D12" type="Sprite2D" parent="Terrain/Floors/wall" unique_id=1306654098]
 position = Vector2(-551, -1764)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
 [node name="Sprite2D13" type="Sprite2D" parent="Terrain/Floors/wall" unique_id=1105488937]
 position = Vector2(-543, -1440)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
 [node name="Sprite2D14" type="Sprite2D" parent="Terrain/Floors/wall" unique_id=570688950]
 position = Vector2(-543, -1116)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
 [node name="Sprite2D15" type="Sprite2D" parent="Terrain/Floors/wall" unique_id=1979432919]
 position = Vector2(-543, -788)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
@@ -105,48 +105,48 @@ color = Color(0, 0, 0, 1)
 position = Vector2(-455, -1404)
 shape = SubResource("RectangleShape2D_vklxa")
 
-[node name="wall2" parent="Terrain/Floors" unique_id=939780897 instance=ExtResource("4_7no5q")]
+[node name="wall2" parent="Terrain/Floors" unique_id=939780897 instance=ExtResource("5_5op0t")]
 position = Vector2(4336, 3336)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Terrain/Floors/wall2" unique_id=1444832925]
 position = Vector2(-547, -144)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
 [node name="Sprite2D6" type="Sprite2D" parent="Terrain/Floors/wall2" unique_id=58719794]
 position = Vector2(-543, -472)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
 [node name="Sprite2D11" type="Sprite2D" parent="Terrain/Floors/wall2" unique_id=1699799058]
 position = Vector2(-547, -2088)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
 [node name="Sprite2D12" type="Sprite2D" parent="Terrain/Floors/wall2" unique_id=1061111144]
 position = Vector2(-551, -1764)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
 [node name="Sprite2D13" type="Sprite2D" parent="Terrain/Floors/wall2" unique_id=1890570328]
 position = Vector2(-543, -1440)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
 [node name="Sprite2D14" type="Sprite2D" parent="Terrain/Floors/wall2" unique_id=1347019445]
 position = Vector2(-543, -1116)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
 [node name="Sprite2D15" type="Sprite2D" parent="Terrain/Floors/wall2" unique_id=1753834816]
 position = Vector2(-543, -788)
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(1346, 87, 213, 352)
 
@@ -168,7 +168,7 @@ position = Vector2(186, 413)
 scale = Vector2(0.25, 0.25)
 
 [node name="Sprite2D" type="Sprite2D" parent="Terrain/Platforms/StaticBody2D" unique_id=1194950461]
-texture = ExtResource("5_ko0ht")
+texture = ExtResource("6_cvlr1")
 region_enabled = true
 region_rect = Rect2(496, 73, 374, 73)
 
@@ -176,4 +176,4 @@ region_rect = Rect2(496, 73, 374, 73)
 position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_pykfk")
 
-[node name="CanvasLayer" parent="." unique_id=1182147344 instance=ExtResource("7_pykfk")]
+[node name="CanvasLayer" parent="." unique_id=1182147344 instance=ExtResource("7_fpu20")]

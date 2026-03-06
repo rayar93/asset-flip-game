@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://ckrlsxl6x1iel"]
 
-[ext_resource type="Script" uid="uid://p7jsp0inwkae" path="res://Scripts/player.gd" id="1_qrfw6"]
-[ext_resource type="Texture2D" uid="uid://hb6yf331m8aa" path="res://Assets/player/pumpkin knight/png (free)/fall.png" id="4_wcbjs"]
-[ext_resource type="Texture2D" uid="uid://dmhagxgco0u8g" path="res://Assets/player/pumpkin knight/png (free)/hit.png" id="5_3j4ux"]
-[ext_resource type="Texture2D" uid="uid://dm3u20nbtine6" path="res://Assets/player/pumpkin knight/png (free)/idle.png" id="6_4grvc"]
-[ext_resource type="Texture2D" uid="uid://i5wvnbbbtbtc" path="res://Assets/player/pumpkin knight/png (free)/jump.png" id="7_dkqqn"]
-[ext_resource type="Texture2D" uid="uid://d0f27yhhnaors" path="res://Assets/player/SlashFX Combos/SlashFX SimpleCombo3 sheet.png" id="8_8owf5"]
-[ext_resource type="Texture2D" uid="uid://x6slyvcjx38m" path="res://Assets/player/pumpkin knight/png (free)/run.png" id="8_l3ctt"]
-[ext_resource type="Script" uid="uid://bq5midtayjyae" path="res://Scripts/player_hurtbox.gd" id="9_nk1wa"]
+[ext_resource type="Script" uid="uid://p7jsp0inwkae" path="res://Actors/Player/player.gd" id="1_qrfw6"]
+[ext_resource type="Texture2D" uid="uid://hb6yf331m8aa" path="res://Assets/Player/pumpkin knight/png (free)/fall.png" id="4_wcbjs"]
+[ext_resource type="Texture2D" uid="uid://dmhagxgco0u8g" path="res://Assets/Player/pumpkin knight/png (free)/hit.png" id="5_3j4ux"]
+[ext_resource type="Texture2D" uid="uid://dm3u20nbtine6" path="res://Assets/Player/pumpkin knight/png (free)/idle.png" id="6_4grvc"]
+[ext_resource type="Texture2D" uid="uid://i5wvnbbbtbtc" path="res://Assets/Player/pumpkin knight/png (free)/jump.png" id="7_dkqqn"]
+[ext_resource type="Texture2D" uid="uid://d0f27yhhnaors" path="res://Assets/Player/SlashFX Combos/SlashFX SimpleCombo3 sheet.png" id="8_8owf5"]
+[ext_resource type="Texture2D" uid="uid://x6slyvcjx38m" path="res://Assets/Player/pumpkin knight/png (free)/run.png" id="8_l3ctt"]
+[ext_resource type="Script" uid="uid://bq5midtayjyae" path="res://Actors/Player/player_hurtbox.gd" id="9_nk1wa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_71o3d"]
 size = Vector2(10, 18)

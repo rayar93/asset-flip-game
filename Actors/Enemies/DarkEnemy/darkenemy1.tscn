@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://daab20ylnjhit"]
 
-[ext_resource type="Script" uid="uid://dudrsnmtcljs8" path="res://Scripts/darkenemy1.gd" id="1_7k104"]
-[ext_resource type="Texture2D" uid="uid://4e7x0h1slw2u" path="res://Assets/dark area enemies/dark enemy/Sprite Sheet/Attack 1.png" id="2_fjqhh"]
-[ext_resource type="Texture2D" uid="uid://ddifj4awswi8e" path="res://Assets/dark area enemies/dark enemy/Sprite Sheet/idle.png" id="3_h3adc"]
-[ext_resource type="Texture2D" uid="uid://dmg2oe4chyfsa" path="res://Assets/dark area enemies/dark enemy/Sprite Sheet/walk.png" id="4_rha2u"]
-[ext_resource type="Texture2D" uid="uid://46vc08gac2m2" path="res://Assets/dark area enemies/dark enemy/Sprite Sheet/new/death.png" id="4_rwg68"]
-[ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://Scripts/enemy_hurtbox.gd" id="5_h3adc"]
-[ext_resource type="Texture2D" uid="uid://dmvh8wfjrtlqn" path="res://Assets/dark area enemies/dark enemy/Sprite Sheet/new/hit.png" id="5_nxq4t"]
+[ext_resource type="Script" uid="uid://dudrsnmtcljs8" path="res://Actors/Enemies/DarkEnemy/darkenemy1.gd" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://4e7x0h1slw2u" path="res://Assets/DarkArea/Enemies/dark enemy/Sprite Sheet/Attack 1.png" id="2_fjqhh"]
+[ext_resource type="Texture2D" uid="uid://ddifj4awswi8e" path="res://Assets/DarkArea/Enemies/dark enemy/Sprite Sheet/idle.png" id="3_h3adc"]
+[ext_resource type="Texture2D" uid="uid://dmg2oe4chyfsa" path="res://Assets/DarkArea/Enemies/dark enemy/Sprite Sheet/walk.png" id="4_rha2u"]
+[ext_resource type="Texture2D" uid="uid://46vc08gac2m2" path="res://Assets/DarkArea/Enemies/dark enemy/Sprite Sheet/new/death.png" id="4_rwg68"]
+[ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://Actors/Enemies/Shared/enemy_hurtbox.gd" id="5_h3adc"]
+[ext_resource type="Texture2D" uid="uid://dmvh8wfjrtlqn" path="res://Assets/DarkArea/Enemies/dark enemy/Sprite Sheet/new/hit.png" id="5_nxq4t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xaro"]
 size = Vector2(20, 54.5)

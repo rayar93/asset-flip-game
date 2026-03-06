@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://41tylf2xmh0i"]
 
-[ext_resource type="Script" uid="uid://dhgnsvjmamrnq" path="res://Scripts/fly.gd" id="1_td2ay"]
-[ext_resource type="Texture2D" uid="uid://b8oke4x6x2k8d" path="res://Assets/light area enemies/fly/blue_fly_death_anim_strip_5.png" id="2_hd11h"]
-[ext_resource type="Texture2D" uid="uid://0wol67qokr31" path="res://Assets/light area enemies/fly/blue_fly_idle_or_flying_anim_strip_3.png" id="2_sbpm4"]
-[ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://Scripts/enemy_hurtbox.gd" id="3_hd11h"]
+[ext_resource type="Script" uid="uid://dhgnsvjmamrnq" path="res://Actors/Enemies/Fly/fly.gd" id="1_td2ay"]
+[ext_resource type="Texture2D" uid="uid://b8oke4x6x2k8d" path="res://Assets/LightArea/Enemies/fly/blue_fly_death_anim_strip_5.png" id="2_hd11h"]
+[ext_resource type="Texture2D" uid="uid://0wol67qokr31" path="res://Assets/LightArea/Enemies/fly/blue_fly_idle_or_flying_anim_strip_3.png" id="2_sbpm4"]
+[ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://Actors/Enemies/Shared/enemy_hurtbox.gd" id="3_hd11h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ejjq3"]
 atlas = ExtResource("2_hd11h")
