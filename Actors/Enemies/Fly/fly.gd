@@ -1,11 +1,10 @@
-extends CharacterBody2D
+extends BaseEnemy
 
 @export_group("Movement")
 @export var friction = 500
 @export var move_speed = 120
 
 @export_group("Combat")
-@export var knockback_strength = 400
 @export var notice_radius = 250
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -14,14 +13,12 @@ extends CharacterBody2D
 
 enum State { IDLE, CHASE, DEAD }
 var state = State.IDLE
-var player: Node2D = null
 
 # ==============================================================================
-# Engine callbacks
+# BaseEnemy virtual overrides
 # ==============================================================================
 
-func _ready():
-	player = get_tree().get_first_node_in_group("player")
+func _enemy_ready():
 	hurtbox.enemy_hurt.connect(_on_hurtbox_hit)
 	hitbox.area_entered.connect(_on_hitbox_entered)
 	sprite.animation_finished.connect(_on_anim_finished)
@@ -29,7 +26,7 @@ func _ready():
 	sprite.play("default")
 	set_state(State.IDLE)
 
-func _physics_process(delta):
+func _enemy_physics_process(delta):
 	match state:
 		State.IDLE:
 			_handle_idle_logic()
@@ -41,6 +38,9 @@ func _physics_process(delta):
 			velocity.x = move_toward(velocity.x, 0, friction * 0.5 * delta)
 
 	move_and_slide()
+	
+func _get_sprite():
+	return sprite
 
 # ==============================================================================
 # State logic
@@ -96,7 +96,3 @@ func _on_hitbox_entered(area: Area2D):
 func _on_anim_finished():
 	if sprite.animation == "death":
 		queue_free()
-		
-func _get_distance_to_player():
-	if not is_instance_valid(player): return INF
-	return global_position.distance_to(player.global_position)

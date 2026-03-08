@@ -67,6 +67,7 @@ size = Vector2(18, 12)
 scale = Vector2(1.2, 1.2)
 collision_layer = 4
 script = ExtResource("1_3gd3b")
+max_health = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1251456456]
 sprite_frames = SubResource("SpriteFrames_5biyq")

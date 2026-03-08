@@ -1,10 +1,10 @@
-extends CharacterBody2D
+extends BaseEnemy
 
 @export_group("Movement")
 @export var gravity = 1500
 @export var move_speed = 250
 @export var dash_speed = 1000
-@export var jump_force = -800
+@export var jump_force = -650
 
 @export_group("Combat")
 @export var attack_cooldown = 0.5
@@ -13,15 +13,10 @@ extends CharacterBody2D
 
 @export var air_far_x = 260
 @export var air_medium_x = 160
-
 @export var above_y = 60
 @export var below_y = 80
 @export var overhead_x = 100
 @export var strong_x = 100
-
-@export var hurt_duration = 0.5
-@export var knockback_strength = 150
-@export var max_health = 10
 
 @onready var visual_root: Node2D = $VisualRoot
 @onready var sprite: AnimatedSprite2D = $VisualRoot/AnimatedSprite2D
@@ -47,24 +42,16 @@ enum State {
 }
 
 var state = State.INTRO
-var facing = 1
-var current_health = max_health
-
-var player: Node2D = null
-var hurt_timer = 0.0
 var chase_timer = 0.0
 var dash_timer = 0.0
 var action_cooldown = 0.0
 var targets_hit_this_attack: Array[Node2D] = []
 
 # ==============================================================================
-# Engine callbacks
+# BaseEnemy virtual overrides
 # ==============================================================================
 
-func _ready():
-	current_health = max_health
-	player = get_tree().get_first_node_in_group("player") as Node2D
-
+func _enemy_ready():
 	hurtbox.enemy_hurt.connect(_on_hurtbox_hit)
 	sprite.animation_finished.connect(_on_anim_finished)
 	hitbox.area_entered.connect(_on_hitbox_entered)
@@ -74,7 +61,7 @@ func _ready():
 	_apply_facing()
 	set_state(State.INTRO)
 
-func _physics_process(delta):
+func _enemy_physics_process(delta):
 	if not is_on_floor():
 		if state not in [State.ATTACK_SIDE, State.ATTACK_UP, State.ATTACK_STRONG, State.ATTACK_DOWN, State.HURT, State.DEAD]:
 			_play_anim("fall")
@@ -89,10 +76,24 @@ func _physics_process(delta):
 		State.ATTACK_UP:		_handle_attack_logic("up_attack", 1, shape_up)
 		State.ATTACK_STRONG:	_handle_attack_logic("strong_attack", 1, shape_strong)
 		State.ATTACK_DOWN:		_handle_attack_logic("down_attack", 1, shape_down, true)
-		State.HURT:				_handle_hurt_logic(delta)
-		State.DEAD:				pass
 
 	move_and_slide()
+	
+func _apply_facing():
+	visual_root.scale.x = facing
+	
+func _get_sprite():
+	return sprite
+	
+func _on_hurt_finished():
+	if randf() < 0.33:
+		_set_facing(-int(_get_direction_to_player()))
+		_return_to_engagement_state()
+		action_cooldown = 0.1
+	else:
+		_set_facing(int(_get_direction_to_player()))
+		_return_to_engagement_state()
+		action_cooldown = 0.1
 
 # ==============================================================================
 # State logic
@@ -226,46 +227,15 @@ func _handle_attack_logic(anim_name: String, active_frame: int, shape: Collision
 	shape.disabled = (sprite.frame != active_frame)
 	if lock_x: velocity.x = 0
 
-func _handle_hurt_logic(delta):
-	hurt_timer -= delta
-	if hurt_timer <= 0.0:
-		if randf() < 0.33:
-			_set_facing(-_get_direction_to_player())
-			set_state(State.DASH)
-		else:
-			_set_facing(_get_direction_to_player())
-			_return_to_engagement_state()
-			action_cooldown = 0.1
-
 # ==============================================================================
 # Helpers
 # ==============================================================================
-
-func _set_facing(new_facing):
-	if new_facing == 0 or new_facing == facing: return
-	facing = new_facing
-	_apply_facing()
-
-func _apply_facing():
-	visual_root.scale.x = facing
-
-func _get_direction_to_player() -> float:
-	if not is_instance_valid(player): return 0.0
-	return sign(player.global_position.x - global_position.x)
-
-func _get_distance_to_player() -> float:
-	if not is_instance_valid(player): return INF
-	return abs(player.global_position.x - global_position.x)
 
 func _disable_all_hitboxes():
 	shape_side.call_deferred("set_disabled", true)
 	shape_up.call_deferred("set_disabled", true)
 	shape_strong.call_deferred("set_disabled", true)
 	shape_down.call_deferred("set_disabled", true)
-
-func _play_anim(anim_name):
-	if sprite.animation != anim_name:
-		sprite.play(anim_name)
 
 func _return_to_engagement_state():
 	action_cooldown = attack_cooldown
@@ -278,13 +248,10 @@ func _return_to_engagement_state():
 
 func _on_hurtbox_hit(attack_position: Vector2):
 	if state == State.HURT or state == State.DEAD: return
-
-	current_health -= 1
-	var knockback_dir = sign(global_position.x - attack_position.x)
-	if knockback_dir == 0: knockback_dir = -facing
-
-	velocity = Vector2(knockback_dir * knockback_strength, -200)
-	set_state(State.DEAD if current_health <= 0 else State.HURT)
+	if _take_hit(attack_position):
+		set_state(State.DEAD)
+	else:
+		set_state(State.HURT)
 
 func _on_hitbox_entered(area: Area2D):
 	if area in targets_hit_this_attack: return

@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends BaseEnemy
 
 @export_group("Movement")
 @export var gravity = 2000
@@ -7,9 +7,7 @@ extends CharacterBody2D
 @export_group("Combat")
 @export var notice_radius = 200
 @export var attack_radius = 100
-@export var hurt_duration = 0.2
-@export var knockback_strength = 250
-@export var max_health = 3
+var attack_cooldown = 0.4
 
 @onready var visual_root: Node2D = $VisualRoot
 @onready var sprite: AnimatedSprite2D = $VisualRoot/AnimatedSprite2D
@@ -22,23 +20,16 @@ extends CharacterBody2D
 
 enum State { IDLE, CHASE, ATTACK, HURT, DEAD }
 var state = State.IDLE
-var facing = 1
-var current_health = max_health
-var hurt_timer = 0.0
-var attack_cooldown = 0.4
 var attack_cooldown_timer = 0.0
 
-var player: Node2D = null
 var attack_hit_frame = 2
 var targets_hit_this_attack: Array[Node2D] = []
 
 # ==============================================================================
-# Engine callbacks
+# BaseEnemy virtual overrides
 # ==============================================================================
 
-func _ready():
-	player = get_tree().get_first_node_in_group("player") as Node2D
-
+func _enemy_ready():
 	hurtbox.enemy_hurt.connect(_on_hurtbox_hit)
 	sprite.animation_finished.connect(_on_anim_finished)
 	hitbox.area_entered.connect(_on_hitbox_entered)
@@ -49,7 +40,7 @@ func _ready():
 	sprite.play("idle")
 	set_state(State.IDLE)
 
-func _physics_process(delta):
+func _enemy_physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		
@@ -60,9 +51,19 @@ func _physics_process(delta):
 		State.IDLE:    _handle_idle_logic()
 		State.CHASE:   _handle_chase_logic()
 		State.ATTACK:  _handle_attack_logic()
-		State.HURT:    _handle_hurt_logic(delta)
 
 	move_and_slide()
+	
+func _apply_facing():
+	sprite.flip_h = (facing == -1)
+	visual_root.position.x = visual_base_x * facing
+	hitbox.position.x = hitbox_base_x * facing
+	
+func _get_sprite():
+	return sprite
+	
+func _on_hurt_finished():
+	set_state(State.CHASE if _get_distance_to_player() <= notice_radius else State.IDLE)
 
 # ==============================================================================
 # State logic
@@ -118,48 +119,13 @@ func _handle_chase_logic():
 func _handle_attack_logic():
 	_set_hitbox_active(sprite.frame == attack_hit_frame)
 
-func _handle_hurt_logic(delta):
-	hurt_timer -= delta
-	if hurt_timer <= 0.0:
-		_return_to_engagement_state()
-
 # ==============================================================================
 # Helpers
 # ==============================================================================
 
-func _set_facing(new_facing):
-	if new_facing == 0 or new_facing == facing: return
-	facing = new_facing
-	_apply_facing()
-
-func _apply_facing():
-	sprite.flip_h = (facing == -1)
-	visual_root.position.x = visual_base_x * facing
-	hitbox.position.x = hitbox_base_x * facing
-
-func _get_distance_to_player() -> float:
-	if not is_instance_valid(player):
-		player = get_tree().get_first_node_in_group("player")
-		return INF
-	return global_position.distance_to(player.global_position)
-
-func _get_direction_to_player() -> float:
-	if not is_instance_valid(player): return 0.0
-	var x_diff = player.global_position.x - global_position.x
-	if abs(x_diff) < 8.0:
-		return 0.0
-	return sign(x_diff)
-
 func _set_hitbox_active(active):
 	hitbox.set_deferred("monitoring", active)
 	hitbox.set_deferred("monitorable", active)
-
-func _play_anim(anim_name):
-	if sprite.animation != anim_name:
-		sprite.play(anim_name)
-
-func _return_to_engagement_state():
-	set_state(State.CHASE if _get_distance_to_player() <= notice_radius else State.IDLE)
 
 # ==============================================================================
 # Signals
@@ -168,12 +134,10 @@ func _return_to_engagement_state():
 func _on_hurtbox_hit(attack_position: Vector2):
 	if state == State.HURT or state == State.DEAD: return
 
-	current_health -= 1
-	var knockback_dir = sign(global_position.x - attack_position.x)
-	if knockback_dir == 0: knockback_dir = -facing
-
-	velocity = Vector2(knockback_dir * knockback_strength, -200)
-	set_state(State.DEAD if current_health <= 0 else State.HURT)
+	if _take_hit(attack_position):
+		set_state(State.DEAD)
+	else:
+		set_state(State.HURT)
 
 func _on_hitbox_entered(area: Area2D):
 	if area in targets_hit_this_attack: return
@@ -193,7 +157,7 @@ func _on_hitbox_entered(area: Area2D):
 func _on_anim_finished():
 	if state == State.ATTACK:
 		attack_cooldown_timer = attack_cooldown
-		_return_to_engagement_state()
+		set_state(State.CHASE if _get_distance_to_player() <= notice_radius else State.IDLE)
 
 func _on_contact_hitbox_entered(area: Area2D):
 	if state == State.DEAD: return
