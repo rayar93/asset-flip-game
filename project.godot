@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CAPSTONE PROJECT 2"
-run/main_scene="uid://dp2cbtma0pvin"
+run/main_scene="uid://ckxhvb75y2hom"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 VFX="*uid://oi1riyd5g7qi"
 AudioManager="*uid://fgv70q8mswx"
+GameFlow="*uid://dc3k7bi6l001a"
 
 [display]
 
