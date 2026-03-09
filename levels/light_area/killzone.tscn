@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7gudpk57susx"]
 
-[ext_resource type="Script" uid="uid://4ac1g0w12qeu" path="res://Shared/killzone.gd" id="1_03m7s"]
+[ext_resource type="Script" uid="uid://4ac1g0w12qeu" path="res://shared/killzone.gd" id="1_03m7s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sm61u"]
 

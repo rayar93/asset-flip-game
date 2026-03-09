@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dp2cbtma0pvin"]
 
-[ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://Levels/LightArea/killzone.tscn" id="1_63o0e"]
-[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Actors/Player/player.tscn" id="2_g1nwy"]
-[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Actors/Enemies/DarkEnemy/darkenemy1.tscn" id="3_ndqhd"]
-[ext_resource type="PackedScene" uid="uid://b8sk47eqixvhy" path="res://Actors/Enemies/Boss/darkboss.tscn" id="4_q1kk5"]
-[ext_resource type="PackedScene" uid="uid://btxafce01lldw" path="res://Levels/DarkArea/floor.tscn" id="5_a8hl1"]
-[ext_resource type="Texture2D" uid="uid://dm36tg1afnwtf" path="res://Assets/DarkArea/cave/Assets 1024 Cave/Cave - Floor.png" id="6_iicbf"]
+[ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://levels/light_area/killzone.tscn" id="1_63o0e"]
+[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://actors/player/player.tscn" id="2_g1nwy"]
+[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://actors/enemies/dark_enemy/dark_enemy.tscn" id="3_ndqhd"]
+[ext_resource type="PackedScene" uid="uid://b8sk47eqixvhy" path="res://actors/enemies/boss/boss.tscn" id="4_q1kk5"]
+[ext_resource type="PackedScene" uid="uid://btxafce01lldw" path="res://levels/dark_area/floor.tscn" id="5_a8hl1"]
+[ext_resource type="Texture2D" uid="uid://dm36tg1afnwtf" path="res://assets/dark_area/cave/Assets 1024 Cave/Cave - Floor.png" id="6_iicbf"]
 [ext_resource type="PackedScene" uid="uid://dyfvthkmau0ny" path="res://UI/health_ui.tscn" id="7_hwvx5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vklxa"]
