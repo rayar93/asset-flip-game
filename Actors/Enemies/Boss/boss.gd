@@ -7,7 +7,7 @@ extends BaseEnemy
 @export var jump_force = -650
 
 @export_group("Combat")
-@export var attack_cooldown = 0.5
+@export var attack_cooldown = 0.8
 @export var side_attack_radius = 80
 @export var notice_radius = 400
 
@@ -102,6 +102,9 @@ func _on_hurt_finished():
 func set_state(new_state: State):
 	if state == new_state: return
 
+	if state in [State.ATTACK_SIDE, State.ATTACK_UP, State.ATTACK_STRONG, State.ATTACK_DOWN]:
+		action_cooldown = attack_cooldown
+
 	_disable_all_hitboxes()
 	targets_hit_this_attack.clear()
 	state = new_state
@@ -119,20 +122,25 @@ func set_state(new_state: State):
 			_play_anim("dash")
 		State.ATTACK_SIDE:
 			velocity.x = 0
+			AudioManager.play("sword_attack")
 			_play_anim("attack")
 		State.ATTACK_UP:
 			velocity.x = 0
+			AudioManager.play("sword_attack")
 			_play_anim("up_attack")
 		State.ATTACK_STRONG:
 			velocity.x = 0
+			AudioManager.play("sword_attack")
 			_play_anim("strong_attack")
 		State.ATTACK_DOWN:
 			velocity.x = 0
+			AudioManager.play("sword_attack")
 			_play_anim("down_attack")
 		State.HURT:
 			hurt_timer = hurt_duration
 			_play_anim("hurt")
 		State.DEAD:
+			AudioManager.play("enemy_death")
 			queue_free()
 
 func start_combat():

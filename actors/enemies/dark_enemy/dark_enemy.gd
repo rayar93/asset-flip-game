@@ -7,7 +7,7 @@ extends BaseEnemy
 @export_group("Combat")
 @export var notice_radius = 200
 @export var attack_radius = 100
-var attack_cooldown = 0.4
+var attack_cooldown = 1
 
 @onready var visual_root: Node2D = $VisualRoot
 @onready var sprite: AnimatedSprite2D = $VisualRoot/AnimatedSprite2D
@@ -72,6 +72,9 @@ func _on_hurt_finished():
 func set_state(new_state: State):
 	if state == new_state: return
 
+	if state == State.ATTACK:
+		attack_cooldown_timer = attack_cooldown
+
 	_set_hitbox_active(false)
 	targets_hit_this_attack.clear()
 	state = new_state
@@ -89,6 +92,7 @@ func set_state(new_state: State):
 			hurt_timer = hurt_duration
 			_play_anim("hurt")
 		State.DEAD:
+			AudioManager.play("enemy_death")
 			queue_free()
 
 func _handle_idle_logic():
@@ -118,6 +122,8 @@ func _handle_chase_logic():
 
 func _handle_attack_logic():
 	_set_hitbox_active(sprite.frame == attack_hit_frame)
+	if sprite.frame == attack_hit_frame:
+		AudioManager.play("sword_attack")
 
 # ==============================================================================
 # Helpers
@@ -156,7 +162,6 @@ func _on_hitbox_entered(area: Area2D):
 
 func _on_anim_finished():
 	if state == State.ATTACK:
-		attack_cooldown_timer = attack_cooldown
 		set_state(State.CHASE if _get_distance_to_player() <= notice_radius else State.IDLE)
 
 func _on_contact_hitbox_entered(area: Area2D):

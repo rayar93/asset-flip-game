@@ -75,6 +75,7 @@ func _get_sprite():
 	return null
 	
 func _take_hit(attack_position: Vector2):
+	AudioManager.play("enemy_hurt")
 	current_health -= 1
 	var knockback_dir = sign(global_position.x - attack_position.x)
 	if knockback_dir == 0:

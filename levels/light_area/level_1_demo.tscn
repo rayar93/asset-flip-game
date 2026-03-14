@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://shared/transition_area.gd" id="10_is5r1"]
 [ext_resource type="PackedScene" uid="uid://41tylf2xmh0i" path="res://actors/enemies/fly/fly.tscn" id="11_dsi8g"]
 [ext_resource type="Texture2D" uid="uid://dffi3jng0edn4" path="res://assets/light_area/gate/SHADOW Series - Abyssal Gate.png" id="12_3ql6u"]
+[ext_resource type="PackedScene" uid="uid://bvhy58703necv" path="res://actors/enemies/hedgehog/hedgehog.tscn" id="13_y27sx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_accah"]
 texture = ExtResource("5_46csj")
@@ -630,6 +631,9 @@ position = Vector2(-762, 151)
 
 [node name="CharacterBody2D11" parent="Enemies" unique_id=768076478 instance=ExtResource("11_dsi8g")]
 position = Vector2(-807, 156)
+
+[node name="CharacterBody2D12" parent="Enemies" unique_id=86431098 instance=ExtResource("13_y27sx")]
+position = Vector2(-268, 502)
 
 [node name="Player" parent="." unique_id=2056772503 instance=ExtResource("10_d5dkw")]
 position = Vector2(-1834, 506)
