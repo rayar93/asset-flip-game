@@ -20,11 +20,13 @@ config/icon="res://icon.svg"
 VFX="*uid://oi1riyd5g7qi"
 AudioManager="*uid://fgv70q8mswx"
 GameFlow="*uid://dc3k7bi6l001a"
+HealthUI="*uid://dyfvthkmau0ny"
 
 [display]
 
 window/size/viewport_width=1024
 window/size/viewport_height=600
+window/size/resizable=false
 
 [global_group]
 

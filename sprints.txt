@@ -37,31 +37,33 @@ Player upward attack
 Spawn on death
 Find assets to create a unified theme in each of the 2 areas
 Change player assets - hitbox reshaping, animation swaps, offset fixes
-Build 1-2 more common enemies
+Built 2 more common enemies
 Start area 2
 
-Sprint 6 (due 3/12)
+Sprint 6 (due 3/12) DONE
 
 Enemy turning bug
 Enemy contact damage
 Added screenshake
 Player health UI
-Audio: player attack
----
+(Temporary?) audio: player attack, enemy attack/hurt/death
 Room transitions
-Win/lose conditions
 Continue level creation
+Abstracted out BaseEnemy class
+Added GameFlow script
 
 Sprint 7 (due 3/19)
-
-Audio: music, hit/death/jump sounds, ambient
-Screenshake (boss hit, landing), dash vfx, death/hurt vfx, land dust
+Win/lose conditions, menu/death screen (GameFlow.on_boss_died(), .on_player_died(), WinScreen.tscn)
+Use screenshake (boss hit, landing), dash vfx, death/hurt vfx, land dust
 Continue level creation
+Redo flier, presentation
 
 Sprint 8 (due 3/26)
 
-Finalize 3-6 enemies
+Finalize 4-12 enemies (edge detection, boss contact damage)
 Finalize both areas - layout, tilesets, background, lighting mood, parallax background, transition
+Finalize audio: music, hit/death/jump/dash/attack sounds, ambient
+Finalize assets/animations
 
 Sprint 9 (due 4/2)
 
@@ -70,9 +72,7 @@ Movement feel: acceleration/deceleration, variable jump height, terminal fall sp
 
 Sprint 10 (due 4/9)
 
-Menu screen
 On-screen prompts
-Finalize all animations
 
 Sprint 11 (due 4/16)
 
