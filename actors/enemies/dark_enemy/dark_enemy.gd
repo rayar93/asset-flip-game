@@ -7,7 +7,7 @@ extends BaseEnemy
 @export_group("Combat")
 @export var notice_radius = 200
 @export var attack_radius = 100
-var attack_cooldown = 1
+@export var attack_cooldown = 1.0
 
 @onready var visual_root: Node2D = $VisualRoot
 @onready var sprite: AnimatedSprite2D = $VisualRoot/AnimatedSprite2D

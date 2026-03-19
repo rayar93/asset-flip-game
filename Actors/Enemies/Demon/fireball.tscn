@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://jtnnotwreevm"]
+
+[ext_resource type="Texture2D" uid="uid://b46y8hwt0ulhd" path="res://Assets/dark_area/enemies/flying_demon/Flying Demon 2D Pixel Art/Sprites/projectile.png" id="1_expbp"]
+[ext_resource type="Script" uid="uid://kefyf2v15dfo" path="res://Actors/Enemies/Demon/fireball.gd" id="1_jurff"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jurff"]
+atlas = ExtResource("1_expbp")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8u5tj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jurff")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5m4od"]
+
+[node name="Area2D" type="Area2D" unique_id=234302883]
+script = ExtResource("1_jurff")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=782302855]
+sprite_frames = SubResource("SpriteFrames_8u5tj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1834397086]
+position = Vector2(-9, 3)
+scale = Vector2(0.75, 0.75)
+shape = SubResource("CircleShape2D_5m4od")
