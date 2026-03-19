@@ -37,7 +37,7 @@ Player upward attack
 Spawn on death
 Find assets to create a unified theme in each of the 2 areas
 Change player assets - hitbox reshaping, animation swaps, offset fixes
-Built 2 more common enemies
+Built 2 more common enemies (hedgehog, fly)
 Start area 2
 
 Sprint 6 (due 3/12) DONE
@@ -47,39 +47,40 @@ Enemy contact damage
 Added screenshake
 Player health UI
 (Temporary?) audio: player attack, enemy attack/hurt/death
+
+Sprint 7 (due 3/19) DONE
+
 Room transitions
-Continue level creation
 Abstracted out BaseEnemy class
 Added GameFlow script
-
-Sprint 7 (due 3/19)
-Win/lose conditions, menu/death screen (GameFlow.on_boss_died(), .on_player_died(), WinScreen.tscn)
-Use screenshake (boss hit, landing), dash vfx, death/hurt vfx, land dust
-Continue level creation
-Redo flier, presentation
+Level 2 parallax
 
 Sprint 8 (due 3/26)
 
-Finalize 4-12 enemies (edge detection, boss contact damage)
-Finalize both areas - layout, tilesets, background, lighting mood, parallax background, transition
-Finalize audio: music, hit/death/jump/dash/attack sounds, ambient
-Finalize assets/animations
+Win/lose conditions, menu/death screen (GameFlow.on_boss_died(), .on_player_died(), WinScreen.tscn)
+Use screenshake (boss hit, landing), dash vfx, death/hurt vfx, land dust
+Level creation
 
 Sprint 9 (due 4/2)
 
-Difficulty tuning and enemy placement in finalized areas
-Movement feel: acceleration/deceleration, variable jump height, terminal fall speed, hang time at apex, edge forgiveness
+Tutorial prompts
+Level creation
 
 Sprint 10 (due 4/9)
 
-On-screen prompts
+Finalize 4-12 enemies (edge detection, boss contact damage)
+Finalize both areas - layout, background, lighting, transition
+Finalize audio: music, hit/death/jump/dash/attack sounds, ambient
+Finalize assets/animations
+Difficulty tuning and enemy placement in finalized areas
 
 Sprint 11 (due 4/16)
 
 Polish
 Tune variables in-level
 Bug fixing
-Pogo moving enemy bug
+Movement feel: acceleration/deceleration, variable jump height, terminal fall speed, hang time at apex, edge forgiveness
+Make enemies stop moving for a bit when pogoed
 
 Stretch goals
 

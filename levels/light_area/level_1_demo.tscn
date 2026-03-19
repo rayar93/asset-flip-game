@@ -597,7 +597,7 @@ texture = ExtResource("12_3ql6u")
 [node name="Enemies" type="Node2D" parent="." unique_id=1014654829]
 
 [node name="Enemy" parent="Enemies" unique_id=920785443 instance=ExtResource("8_t5ptn")]
-position = Vector2(1958, 440)
+position = Vector2(1112, 375)
 
 [node name="CharacterBody2D" parent="Enemies" unique_id=664461664 instance=ExtResource("11_dsi8g")]
 position = Vector2(-766, 173)
@@ -637,3 +637,24 @@ position = Vector2(-268, 502)
 
 [node name="Player" parent="." unique_id=2056772503 instance=ExtResource("10_d5dkw")]
 position = Vector2(-1834, 506)
+
+[node name="CharacterBody2D" parent="." unique_id=538092594 instance=ExtResource("13_y27sx")]
+position = Vector2(-1405, 499)
+
+[node name="CharacterBody2D2" parent="." unique_id=1308174127 instance=ExtResource("11_dsi8g")]
+position = Vector2(-1206, 364)
+
+[node name="CharacterBody2D3" parent="." unique_id=1083509426 instance=ExtResource("13_y27sx")]
+position = Vector2(-779, 502)
+
+[node name="CharacterBody2D4" parent="." unique_id=204023321 instance=ExtResource("13_y27sx")]
+position = Vector2(424, 500)
+
+[node name="CharacterBody2D5" parent="." unique_id=1284411220 instance=ExtResource("11_dsi8g")]
+position = Vector2(692, 493)
+
+[node name="CharacterBody2D6" parent="." unique_id=1498390539 instance=ExtResource("11_dsi8g")]
+position = Vector2(530, 294)
+
+[node name="CharacterBody2D7" parent="." unique_id=1054067322 instance=ExtResource("11_dsi8g")]
+position = Vector2(968, 431)

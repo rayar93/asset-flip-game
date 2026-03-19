@@ -2,20 +2,21 @@ extends Node
 
 @onready var camera: Camera2D = get_tree().get_first_node_in_group("camera")
 
-func screenshake(duration: float = 0.2, strength: float = 8.0):
+var trauma = 0.0
+const DECAY = 1.0
+const MAX_OFFSET = 12.0
+
+func screenshake(amount: float = 0.5):
+	trauma = min(trauma + amount, 1.0)
+	
+func _physics_process(delta):
 	if not is_instance_valid(camera): return
-	var tween = create_tween()
-	var elapsed = 0.0
-	var step = 0.02
-	var original = camera.offset
-	while elapsed < duration:
-		var progress = elapsed / duration
-		var current_strength = strength * (1.0 - progress)
-		
-		var offset = Vector2(
-			randf_range(-current_strength, current_strength),
-			randf_range(-current_strength, current_strength)
-		)
-		tween.tween_property(camera, "offset", offset, step)
-		elapsed += step
-	tween.tween_property(camera, "offset", original, step)
+	if trauma <= 0.0:
+		camera.offset = Vector2.ZERO
+		return
+	trauma = max(trauma - DECAY * delta, 0.0)
+	var shake = trauma * trauma
+	camera.offset = Vector2(
+		randf_range(-MAX_OFFSET, MAX_OFFSET) * shake,
+		randf_range(-MAX_OFFSET, MAX_OFFSET) * shake
+	)

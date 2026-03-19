@@ -6392,4 +6392,5 @@ texture = SubResource("AtlasTexture_wiiu8")
 position = Vector2(7822, -18)
 
 [node name="Enemy" parent="." unique_id=920785443 instance=ExtResource("216_armii")]
-position = Vector2(1887, -15)
+position = Vector2(1883.0001, -31)
+scale = Vector2(1.5, 1.5)
