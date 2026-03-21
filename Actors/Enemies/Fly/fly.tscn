@@ -83,9 +83,12 @@ size = Vector2(8, 7)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjkow"]
 size = Vector2(8, 7)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wkvjf"]
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=664461664 groups=["enemies"]]
 scale = Vector2(1.2, 1.2)
 collision_layer = 4
+collision_mask = 5
 script = ExtResource("1_td2ay")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=908105414]
@@ -112,3 +115,8 @@ script = ExtResource("3_hd11h")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1515175257]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_yjkow")
+
+[node name="SeparationArea" type="Area2D" parent="." unique_id=1916910799]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SeparationArea" unique_id=793526693]
+shape = SubResource("CircleShape2D_wkvjf")

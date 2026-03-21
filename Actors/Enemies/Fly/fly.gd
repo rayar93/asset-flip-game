@@ -70,6 +70,16 @@ func _handle_chase_logic(delta):
 		return
 		
 	var dir = global_position.direction_to(player.global_position)
+	
+	var separation = Vector2.ZERO
+	for body in $SeparationArea.get_overlapping_bodies():
+		if body == self: continue
+		var away = global_position - body.global_position
+		if away.length() > 0:
+			separation += away.normalized() / away.length()
+			
+	dir = (dir + separation * 1.5).normalized()
+	
 	velocity = velocity.move_toward(dir * move_speed, friction * delta)
 	
 	if dir.x != 0:

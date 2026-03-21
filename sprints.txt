@@ -60,6 +60,7 @@ Sprint 8 (due 3/26)
 Win/lose conditions, menu/death screen (GameFlow.on_boss_died(), .on_player_died(), WinScreen.tscn)
 Use screenshake (boss hit, landing), dash vfx, death/hurt vfx, land dust
 Level creation
+Fix player health UI on screen reload
 
 Sprint 9 (due 4/2)
 
