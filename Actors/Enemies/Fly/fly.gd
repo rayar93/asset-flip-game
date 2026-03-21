@@ -74,6 +74,7 @@ func _handle_chase_logic(delta):
 	var separation = Vector2.ZERO
 	for body in $SeparationArea.get_overlapping_bodies():
 		if body == self: continue
+		if body is BaseEnemy and body.state == body.State.DEAD: continue
 		var away = global_position - body.global_position
 		if away.length() > 0:
 			separation += away.normalized() / away.length()

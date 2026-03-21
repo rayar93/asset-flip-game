@@ -90,6 +90,7 @@ scale = Vector2(1.2, 1.2)
 collision_layer = 4
 collision_mask = 5
 script = ExtResource("1_td2ay")
+move_speed = 80
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=908105414]
 sprite_frames = SubResource("SpriteFrames_ejjq3")

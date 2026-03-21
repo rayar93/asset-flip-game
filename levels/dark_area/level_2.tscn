@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dp2cbtma0pvin"]
 
 [ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://levels/light_area/killzone.tscn" id="1_63o0e"]
-[ext_resource type="Script" uid="uid://b8immi3i85l31" path="res://shared/parallax_fix.gd" id="1_435g3"]
+[ext_resource type="Script" uid="uid://b8immi3i85l31" path="res://levels/dark_area/parallax_fix.gd" id="1_435g3"]
 [ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://actors/player/player.tscn" id="2_g1nwy"]
 [ext_resource type="Texture2D" uid="uid://bvqj8ekw4uncp" path="res://assets/dark_area/cave/Assets 1024 Cave/Cave - RockCombinations1.png" id="2_mtarx"]
 [ext_resource type="PackedScene" uid="uid://b4xm7vedah7nv" path="res://levels/dark_area/anim_decoration.tscn" id="3_4c5ms"]

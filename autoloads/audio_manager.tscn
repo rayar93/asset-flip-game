@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fgv70q8mswx"]
 
-[ext_resource type="Script" uid="uid://cs1ng2kov1ym8" path="res://shared/audio_manager.gd" id="1_x17ax"]
+[ext_resource type="Script" uid="uid://cs1ng2kov1ym8" path="res://autoloads/audio_manager.gd" id="1_x17ax"]
 [ext_resource type="AudioStream" uid="uid://c2wcp78i7gcoe" path="res://audio/SFX/player/Sword Attacks Hits and Blocks/Sword Attack 1.wav" id="2_vfyvq"]
 [ext_resource type="AudioStream" uid="uid://b44l0nneyjoli" path="res://audio/SFX/player/Sword Attacks Hits and Blocks/Sword Impact Hit 1.wav" id="3_jmygl"]
 [ext_resource type="AudioStream" uid="uid://bcmde6k80ijkq" path="res://audio/SFX/player/Sword Attacks Hits and Blocks/Enemy Death.wav" id="4_f1pbl"]

@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://actors/enemies/dark_enemy/dark_enemy.tscn" id="8_t5ptn"]
 [ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://levels/light_area/killzone.tscn" id="9_en5tp"]
 [ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://actors/player/player.tscn" id="10_d5dkw"]
-[ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://shared/transition_area.gd" id="10_is5r1"]
+[ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="10_is5r1"]
 [ext_resource type="PackedScene" uid="uid://41tylf2xmh0i" path="res://actors/enemies/fly/fly.tscn" id="11_dsi8g"]
 [ext_resource type="Texture2D" uid="uid://dffi3jng0edn4" path="res://assets/light_area/gate/SHADOW Series - Abyssal Gate.png" id="12_3ql6u"]
 [ext_resource type="PackedScene" uid="uid://bvhy58703necv" path="res://actors/enemies/hedgehog/hedgehog.tscn" id="13_y27sx"]
