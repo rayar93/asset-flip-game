@@ -218,6 +218,8 @@
 [ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://actors/enemies/dark_enemy/dark_enemy.tscn" id="216_armii"]
 [ext_resource type="PackedScene" uid="uid://d2ikngsytxnle" path="res://actors/enemies/Demon/demon.tscn" id="217_fpibc"]
 [ext_resource type="PackedScene" uid="uid://c1y54bnb2bqcb" path="res://levels/dark_area/light_beam.tscn" id="218_4ww2d"]
+[ext_resource type="Script" uid="uid://dxtmqrhyp1b3k" path="res://levels/dark_area/dust_motes.gd" id="219_idsih"]
+[ext_resource type="Texture2D" uid="uid://d1lhwqccdn072" path="res://assets/dark_area/cave/mote.png" id="219_vrb6t"]
 
 [sub_resource type="Gradient" id="Gradient_4ww2d"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0.2, 0.2, 1)
@@ -1392,6 +1394,39 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_fpibc"]
 gradient = SubResource("Gradient_fpibc")
 fill_from = Vector2(0.33529413, 0)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vrb6t"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_idsih"]
+offsets = PackedFloat32Array(0, 0.5463415, 1)
+colors = PackedColorArray(1, 1, 1, 0.3137255, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vrb6t"]
+gradient = SubResource("Gradient_idsih")
+
+[sub_resource type="Curve" id="Curve_1jowd"]
+_data = [Vector2(0, 0.15730345), 0.0, 0.0, 0, 0, Vector2(0.49769586, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.15730345), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_p6y1t"]
+curve = SubResource("Curve_1jowd")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vecqm"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(500, 500, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, -1, 0)
+spread = 180.0
+initial_velocity_min = 5.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, -5, 0)
+scale_min = 0.29999998
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_p6y1t")
+color = Color(1, 1, 1, 0.23529412)
+color_ramp = SubResource("GradientTexture1D_vrb6t")
 
 [node name="Level2" type="Node2D" unique_id=653709450]
 
@@ -6400,3 +6435,12 @@ texture = SubResource("GradientTexture2D_fpibc")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=135498828]
 color = Color(0.039215688, 0.101960786, 0.101960786, 1)
+
+[node name="DustMotes" type="GPUParticles2D" parent="." unique_id=1804017536]
+material = SubResource("CanvasItemMaterial_vrb6t")
+position = Vector2(-9, -1991)
+amount = 50
+texture = ExtResource("219_vrb6t")
+lifetime = 8.299999999999999
+process_material = SubResource("ParticleProcessMaterial_vecqm")
+script = ExtResource("219_idsih")
