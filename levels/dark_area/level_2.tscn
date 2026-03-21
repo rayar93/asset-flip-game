@@ -217,6 +217,7 @@
 [ext_resource type="PackedScene" uid="uid://b8sk47eqixvhy" path="res://actors/enemies/boss/boss.tscn" id="215_qjln1"]
 [ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://actors/enemies/dark_enemy/dark_enemy.tscn" id="216_armii"]
 [ext_resource type="PackedScene" uid="uid://d2ikngsytxnle" path="res://actors/enemies/Demon/demon.tscn" id="217_fpibc"]
+[ext_resource type="PackedScene" uid="uid://c1y54bnb2bqcb" path="res://levels/dark_area/light_beam.tscn" id="218_4ww2d"]
 
 [sub_resource type="Gradient" id="Gradient_4ww2d"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0.2, 0.2, 1)
@@ -1576,6 +1577,7 @@ texture_scale = 4.9
 
 [node name="Boss" parent="Enemies" unique_id=2113211253 instance=ExtResource("215_qjln1")]
 position = Vector2(7822, -18)
+scale = Vector2(1.5, 1.5)
 
 [node name="Enemy" parent="Enemies" unique_id=920785443 instance=ExtResource("216_armii")]
 position = Vector2(1883.0001, -31)
@@ -1583,6 +1585,7 @@ scale = Vector2(1.5, 1.5)
 
 [node name="Demon" parent="Enemies" unique_id=1082975616 instance=ExtResource("217_fpibc")]
 position = Vector2(1190, -57)
+scale = Vector2(0.75, 0.75)
 
 [node name="Darkness" type="Node2D" parent="." unique_id=1363816062]
 
@@ -6377,6 +6380,13 @@ texture = SubResource("AtlasTexture_e77l1")
 position = Vector2(7119.9995, -2139.9995)
 scale = Vector2(0.99999964, 0.99999964)
 texture = SubResource("AtlasTexture_t1aqd")
+
+[node name="LightBeam" parent="." unique_id=1728388933 instance=ExtResource("218_4ww2d")]
+position = Vector2(1879, -285)
+beam_length = 700
+beam_width = 120
+beam_angle = 19
+beam_color = Color(0.5529412, 0.9490196, 0.8, 0.4)
 
 [node name="Doorway" type="TextureRect" parent="." unique_id=1558540064]
 offset_left = -500.0

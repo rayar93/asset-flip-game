@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c1y54bnb2bqcb"]
+
+[ext_resource type="Script" uid="uid://c1h7d6bgsmqgq" path="res://levels/dark_area/light_beam.gd" id="1_fnhwt"]
+[ext_resource type="Texture2D" uid="uid://bwklyimv351gj" path="res://assets/dark_area/cave/lightbeam.png" id="1_x471k"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fnhwt"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_8ocax"]
+offsets = PackedFloat32Array(0, 0.9811321)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lfunw"]
+gradient = SubResource("Gradient_8ocax")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5058824, 0.5529412)
+
+[node name="LightBeam" type="Node2D" unique_id=1728388933]
+script = ExtResource("1_fnhwt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2071738140]
+material = SubResource("CanvasItemMaterial_fnhwt")
+texture = ExtResource("1_x471k")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=919641240]
+position = Vector2(0, 67)
+scale = Vector2(0.5, 0.5)
+color = Color(1, 0.8784314, 0.6666667, 1)
+texture = SubResource("GradientTexture2D_lfunw")
