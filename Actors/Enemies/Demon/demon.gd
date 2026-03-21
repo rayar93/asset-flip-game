@@ -1,7 +1,7 @@
 extends BaseEnemy
 
 @export_group("Movement")
-@export var friction = 400
+@export var friction = 600
 @export var move_speed = 100
 
 @export_group("Combat")
@@ -10,9 +10,10 @@ extends BaseEnemy
 @export var attack_cooldown = 2.0
 @export var projectile_speed = 220.0
 
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var hurtbox: Area2D = $Hurtbox
-@onready var projectile_spawn: Marker2D = $ProjectileSpawn
+@onready var visual_root = $VisualRoot
+@onready var sprite: AnimatedSprite2D = $VisualRoot/AnimatedSprite2D
+@onready var hurtbox: Area2D = $VisualRoot/Hurtbox
+@onready var projectile_spawn: Marker2D = $VisualRoot/ProjectileSpawn
 
 enum State { IDLE, FLY, ATTACK, HURT, DEAD }
 var state = State.IDLE
@@ -48,9 +49,8 @@ func _enemy_physics_process(delta):
 	move_and_slide()
 	
 func _apply_facing():
-	sprite.flip_h = (facing == 1)
-	if is_node_ready() and projectile_spawn:
-		projectile_spawn.position.x = abs(projectile_spawn.position.x) * facing
+	if visual_root:
+		visual_root.scale.x = -facing
 		
 func _get_sprite():
 	return sprite

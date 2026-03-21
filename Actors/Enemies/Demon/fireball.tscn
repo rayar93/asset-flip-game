@@ -1,32 +1,192 @@
 [gd_scene format=3 uid="uid://jtnnotwreevm"]
 
-[ext_resource type="Texture2D" uid="uid://b46y8hwt0ulhd" path="res://Assets/dark_area/enemies/flying_demon/Flying Demon 2D Pixel Art/Sprites/projectile.png" id="1_expbp"]
-[ext_resource type="Script" uid="uid://kefyf2v15dfo" path="res://Actors/Enemies/Demon/fireball.gd" id="1_jurff"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jurff"]
-atlas = ExtResource("1_expbp")
-region = Rect2(0, 0, 48, 32)
+[ext_resource type="Script" uid="uid://kefyf2v15dfo" path="res://actors/enemies/Demon/fireball.gd" id="1_jurff"]
+[ext_resource type="Texture2D" uid="uid://mxi6gds1ca1v" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_0.png" id="2_htarw"]
+[ext_resource type="Texture2D" uid="uid://befgn1lw33iex" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_1.png" id="3_an5bc"]
+[ext_resource type="Texture2D" uid="uid://dfgrinj1s47ut" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_2.png" id="4_ntd40"]
+[ext_resource type="Texture2D" uid="uid://bwxtfbw410ogw" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_3.png" id="5_81yv1"]
+[ext_resource type="Texture2D" uid="uid://behgsc4aagndl" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_4.png" id="6_fttbp"]
+[ext_resource type="Texture2D" uid="uid://dtp8sylvghpg6" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_5.png" id="7_lfmle"]
+[ext_resource type="Texture2D" uid="uid://c5e8hed7ppv0l" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_6.png" id="8_kkmg4"]
+[ext_resource type="Texture2D" uid="uid://de74cry5w0c5i" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_7.png" id="9_2r3k8"]
+[ext_resource type="Texture2D" uid="uid://battiny7h1c24" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_8.png" id="10_co7mm"]
+[ext_resource type="Texture2D" uid="uid://c8wl2papkqka6" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_9.png" id="11_l1hgp"]
+[ext_resource type="Texture2D" uid="uid://ci0li74exu8p3" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_10.png" id="12_7ptk2"]
+[ext_resource type="Texture2D" uid="uid://cfao16qlv50cv" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_11.png" id="13_w0pfr"]
+[ext_resource type="Texture2D" uid="uid://dy8ra7qp226qi" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_12.png" id="14_2envl"]
+[ext_resource type="Texture2D" uid="uid://cogouc4ofq5v6" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_13.png" id="15_xk30a"]
+[ext_resource type="Texture2D" uid="uid://itk540tj3wn5" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_14.png" id="16_llt3m"]
+[ext_resource type="Texture2D" uid="uid://cmge42xa1yl77" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_15.png" id="17_fsrrh"]
+[ext_resource type="Texture2D" uid="uid://dhwujwyaj1itm" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_16.png" id="18_8twkf"]
+[ext_resource type="Texture2D" uid="uid://bgykbbmmlnkpc" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_17.png" id="19_qjmxu"]
+[ext_resource type="Texture2D" uid="uid://dm5q33d58q6tn" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_18.png" id="20_b6wjr"]
+[ext_resource type="Texture2D" uid="uid://pxbx8a7nebub" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_19.png" id="21_30g1h"]
+[ext_resource type="Texture2D" uid="uid://cjm8ners7o57n" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_20.png" id="22_bvlo0"]
+[ext_resource type="Texture2D" uid="uid://cuiwfuoth8gdp" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_21.png" id="23_ogk2r"]
+[ext_resource type="Texture2D" uid="uid://dm6uottsb4ihh" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_22.png" id="24_nhtv1"]
+[ext_resource type="Texture2D" uid="uid://2fhaenkdkwiy" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_23.png" id="25_kdac8"]
+[ext_resource type="Texture2D" uid="uid://dv3wg3tm0ml5m" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_24.png" id="26_vefut"]
+[ext_resource type="Texture2D" uid="uid://brawarbby41y0" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_25.png" id="27_x7nt3"]
+[ext_resource type="Texture2D" uid="uid://dj0l0uko6omsl" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_26.png" id="28_o7u05"]
+[ext_resource type="Texture2D" uid="uid://bkh706pksy7md" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_27.png" id="29_ox68w"]
+[ext_resource type="Texture2D" uid="uid://d2tlaadi6scqf" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_28.png" id="30_p515i"]
+[ext_resource type="Texture2D" uid="uid://dr4gbr35c242s" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_29.png" id="31_hpucp"]
+[ext_resource type="Texture2D" uid="uid://twpmommtxhpk" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_30.png" id="32_pi0oa"]
+[ext_resource type="Texture2D" uid="uid://dd24xj0vstvpk" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_31.png" id="33_fxtpn"]
+[ext_resource type="Texture2D" uid="uid://dilkyf82jcvdo" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_32.png" id="34_hvllp"]
+[ext_resource type="Texture2D" uid="uid://c0ef47sfa64t7" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_33.png" id="35_hrew4"]
+[ext_resource type="Texture2D" uid="uid://eptimaf8hqy1" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_34.png" id="36_rs8dv"]
+[ext_resource type="Texture2D" uid="uid://bae8suup1khsb" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_35.png" id="37_lcnp7"]
+[ext_resource type="Texture2D" uid="uid://qa405csu6lxa" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_36.png" id="38_b2lmo"]
+[ext_resource type="Texture2D" uid="uid://bwb3klrewen8r" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_37.png" id="39_0abhe"]
+[ext_resource type="Texture2D" uid="uid://bvaydhkf2lv47" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_38.png" id="40_n3hfd"]
+[ext_resource type="Texture2D" uid="uid://bcyg5fo2ykapp" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_39.png" id="41_of2sx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8u5tj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jurff")
+"texture": ExtResource("2_htarw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_an5bc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ntd40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_81yv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fttbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lfmle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kkmg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2r3k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_co7mm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_l1hgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7ptk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_w0pfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2envl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_xk30a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_llt3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fsrrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8twkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qjmxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_b6wjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_30g1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_bvlo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ogk2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_nhtv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kdac8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_vefut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_x7nt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_o7u05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ox68w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_p515i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_hpucp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_pi0oa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_fxtpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_hvllp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_hrew4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_rs8dv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_lcnp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_b2lmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_0abhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_n3hfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_of2sx")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 25.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5m4od"]
 
-[node name="Area2D" type="Area2D" unique_id=234302883]
+[node name="Area2D" type="Area2D" unique_id=234302883 groups=["enemy_hitbox"]]
+scale = Vector2(0.5, 0.5)
+collision_layer = 16
+collision_mask = 41
 script = ExtResource("1_jurff")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=782302855]
+scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_8u5tj")
+frame_progress = 0.3071998
+offset = Vector2(-300, -60)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1834397086]
-position = Vector2(-9, 3)
-scale = Vector2(0.75, 0.75)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_5m4od")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -2,9 +2,6 @@
 
 [ext_resource type="Script" uid="uid://cs1ng2kov1ym8" path="res://autoloads/audio_manager.gd" id="1_x17ax"]
 [ext_resource type="AudioStream" uid="uid://c2wcp78i7gcoe" path="res://audio/SFX/player/Sword Attacks Hits and Blocks/Sword Attack 1.wav" id="2_vfyvq"]
-[ext_resource type="AudioStream" uid="uid://b44l0nneyjoli" path="res://audio/SFX/player/Sword Attacks Hits and Blocks/Sword Impact Hit 1.wav" id="3_jmygl"]
-[ext_resource type="AudioStream" uid="uid://bcmde6k80ijkq" path="res://audio/SFX/player/Sword Attacks Hits and Blocks/Enemy Death.wav" id="4_f1pbl"]
-[ext_resource type="AudioStream" uid="uid://ch4g5fpdvrm42" path="res://audio/SFX/enemy/Helton Yan's Pixel Combat - Single Files/FGHTImpt_MELEE-Swish Hit_HY_PC-006.wav" id="5_0hmw2"]
 
 [node name="Node2D" type="Node2D" unique_id=1715663642]
 script = ExtResource("1_x17ax")
@@ -13,11 +10,8 @@ script = ExtResource("1_x17ax")
 stream = ExtResource("2_vfyvq")
 volume_db = -10.0
 
-[node name="EnemyHurt" type="AudioStreamPlayer" parent="." unique_id=989970710]
-stream = ExtResource("3_jmygl")
+[node name="EnemyAttack" type="AudioStreamPlayer2D" parent="." unique_id=1667630821]
 
-[node name="EnemyDeath" type="AudioStreamPlayer" parent="." unique_id=1153713172]
-stream = ExtResource("4_f1pbl")
+[node name="EnemyHurt" type="AudioStreamPlayer2D" parent="." unique_id=1558630747]
 
-[node name="SwordAttack" type="AudioStreamPlayer" parent="." unique_id=1390160509]
-stream = ExtResource("5_0hmw2")
+[node name="EnemyDeath" type="AudioStreamPlayer2D" parent="." unique_id=1411686432]

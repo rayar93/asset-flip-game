@@ -122,19 +122,19 @@ func set_state(new_state: State):
 			_play_anim("dash")
 		State.ATTACK_SIDE:
 			velocity.x = 0
-			AudioManager.play("sword_attack")
+			AudioManager.play("enemy_attack")
 			_play_anim("attack")
 		State.ATTACK_UP:
 			velocity.x = 0
-			AudioManager.play("sword_attack")
+			AudioManager.play("enemy_attack")
 			_play_anim("up_attack")
 		State.ATTACK_STRONG:
 			velocity.x = 0
-			AudioManager.play("sword_attack")
+			AudioManager.play("enemy_attack")
 			_play_anim("strong_attack")
 		State.ATTACK_DOWN:
 			velocity.x = 0
-			AudioManager.play("sword_attack")
+			AudioManager.play("enemy_attack")
 			_play_anim("down_attack")
 		State.HURT:
 			hurt_timer = hurt_duration

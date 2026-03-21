@@ -9,7 +9,7 @@ var _has_hit = false
 
 func launch(direction: Vector2, speed: float):
 	velocity = direction * speed
-	sprite.flip_h = direction.x < 0
+	rotation = direction.angle()
 	sprite.play("default")
 	
 func _physics_process(delta: float) -> void:
@@ -27,8 +27,9 @@ func _on_area_entered(area: Area2D):
 		area.player_hurt.emit(global_position)
 		_on_hit()
 		
-func _on_body_entered(_body: Node2D):
+func _on_body_entered(body: Node2D):
 	if _has_hit: return
+	if body == get_tree().get_first_node_in_group("player"): return
 	_has_hit = true
 	_on_hit()
 	

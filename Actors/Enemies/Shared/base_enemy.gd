@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var max_health = 3
 @export var knockback_strength = 250
 @export var hurt_duration = 0.2
+var contact_stun_timer = 0.0
 
 var current_health: int
 var hurt_timer = 0.0
@@ -23,7 +24,16 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	_tick_hurt_timer(delta)
-	_enemy_physics_process(delta)
+	if contact_stun_timer > 0.0:
+		contact_stun_timer -= delta
+		if not is_on_floor():
+			var grav = get("gravity")
+			if grav != null:
+				velocity.y += grav * delta
+		move_and_slide()
+	else:
+		_enemy_physics_process(delta)
+	_check_player_contact()
 	
 # ==============================================================================
 # Virtual hooks - overridden in each enemy
@@ -73,6 +83,19 @@ func _play_anim(anim_name: String):
 		
 func _get_sprite():
 	return null
+	
+func _check_player_contact():
+	if not is_instance_valid(player): return
+	for i in get_slide_collision_count():
+		var collider = get_slide_collision(i).get_collider()
+		if collider == player:
+			player.get_node("PlayerHurtbox").player_hurt.emit(global_position)
+			var dir = sign(global_position.x - player.global_position.x)
+			if dir == 0: dir = -facing
+			velocity.x = dir * knockback_strength / 2
+			velocity.y = -150
+			contact_stun_timer = 0.15
+			return
 	
 func _take_hit(attack_position: Vector2):
 	AudioManager.play("enemy_hurt")

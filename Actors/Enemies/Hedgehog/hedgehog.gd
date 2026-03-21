@@ -83,6 +83,7 @@ func _handle_patrol_logic(delta):
 func _check_wall_flip():
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
+		if collision.get_collider() == player: continue
 		var normal = collision.get_normal()
 	
 		if abs(normal.x) > 0.9 and sign(normal.x) == -facing:

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bst4ljphvupoj" path="res://autoloads/pause_menu.gd" id="1_miwa8"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1511056235]
-layer = 1000
+layer = 101
 visible = false
 script = ExtResource("1_miwa8")
 
@@ -15,10 +15,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1286948536]
-layout_mode = 0
-offset_right = 1024.0
-offset_bottom = 600.0
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1534599952]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.3372549, 0.3372549, 0.3372549, 0.5058824)
 
 [node name="Resume" type="Button" parent="Control" unique_id=534026435]

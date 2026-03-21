@@ -203,6 +203,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" unique_id=2056772503 groups=["player"]]
 collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_qrfw6")
 hurt_duration = 0.3
 
@@ -248,3 +249,5 @@ animation = &"attack"
 frame = 3
 frame_progress = 1.0
 offset = Vector2(16, 0)
+
+[connection signal="player_hurt" from="PlayerHurtbox" to="." method="_on_player_hurt"]

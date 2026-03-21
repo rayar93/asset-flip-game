@@ -123,7 +123,7 @@ func _handle_chase_logic():
 func _handle_attack_logic():
 	_set_hitbox_active(sprite.frame == attack_hit_frame)
 	if sprite.frame == attack_hit_frame:
-		AudioManager.play("sword_attack")
+		AudioManager.play("enemy_attack")
 
 # ==============================================================================
 # Helpers

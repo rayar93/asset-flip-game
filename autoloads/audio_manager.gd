@@ -2,7 +2,7 @@ extends Node
 
 @onready var players = {
 	"player_attack": $PlayerAttack,
-	"sword_attack": $SwordAttack,
+	"enemy_attack": $EnemyAttack,
 	"dash": $Dash,
 	"jump": $Jump,
 	"player_hurt": $PlayerHurt,
