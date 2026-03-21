@@ -2,21 +2,39 @@
 
 [ext_resource type="Script" uid="uid://c3rblfpit13g4" path="res://UI/health_ui.gd" id="1_w7gbf"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nc0x1"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.99215686, 0.43137255, 0.14901961, 1)
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1182147344]
 script = ExtResource("1_w7gbf")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1518962195]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1272679007]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 73.0
+offset_bottom = 26.0
+scale = Vector2(2, 2)
 
-[node name="ColorRect" type="ColorRect" parent="HBoxContainer" unique_id=442308308]
+[node name="Panel3" type="Panel" parent="HBoxContainer" unique_id=1295134495]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nc0x1")
 
-[node name="ColorRect2" type="ColorRect" parent="HBoxContainer" unique_id=303176702]
+[node name="Panel4" type="Panel" parent="HBoxContainer" unique_id=1108079131]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nc0x1")
 
-[node name="ColorRect3" type="ColorRect" parent="HBoxContainer" unique_id=1406116096]
+[node name="Panel5" type="Panel" parent="HBoxContainer" unique_id=1905180839]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nc0x1")
