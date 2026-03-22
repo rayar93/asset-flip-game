@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://d2ikngsytxnle"]
 
 [ext_resource type="Script" uid="uid://du5xd16tcn6h7" path="res://actors/enemies/Demon/demon.gd" id="1_ok3t0"]
-[ext_resource type="Texture2D" uid="uid://cdqfae3403lqy" path="res://Assets/dark_area/enemies/flying_demon/Flying Demon 2D Pixel Art/Sprites/without_outline/ATTACK.png" id="1_w83up"]
-[ext_resource type="Texture2D" uid="uid://g8t68vpy7k5f" path="res://Assets/dark_area/enemies/flying_demon/Flying Demon 2D Pixel Art/Sprites/without_outline/DEATH.png" id="2_ok3t0"]
-[ext_resource type="Texture2D" uid="uid://07ea56oj2iah" path="res://Assets/dark_area/enemies/flying_demon/Flying Demon 2D Pixel Art/Sprites/without_outline/FLYING.png" id="3_l2bfi"]
-[ext_resource type="Texture2D" uid="uid://cisadthe58qtg" path="res://Assets/dark_area/enemies/flying_demon/Flying Demon 2D Pixel Art/Sprites/without_outline/HURT.png" id="4_fvf2q"]
-[ext_resource type="Texture2D" uid="uid://cqnueddr7ljpy" path="res://Assets/dark_area/enemies/flying_demon/Flying Demon 2D Pixel Art/Sprites/without_outline/IDLE.png" id="5_wkk0c"]
+[ext_resource type="Texture2D" uid="uid://cdqfae3403lqy" path="res://assets/dark_area/enemies/flying_demon/Flying Demon 2D Pixel Art/Sprites/without_outline/ATTACK.png" id="1_w83up"]
+[ext_resource type="Texture2D" uid="uid://g8t68vpy7k5f" path="res://assets/dark_area/enemies/flying_demon/Flying Demon 2D Pixel Art/Sprites/without_outline/DEATH.png" id="2_ok3t0"]
+[ext_resource type="Texture2D" uid="uid://07ea56oj2iah" path="res://assets/dark_area/enemies/flying_demon/Flying Demon 2D Pixel Art/Sprites/without_outline/FLYING.png" id="3_l2bfi"]
+[ext_resource type="Texture2D" uid="uid://cisadthe58qtg" path="res://assets/dark_area/enemies/flying_demon/Flying Demon 2D Pixel Art/Sprites/without_outline/HURT.png" id="4_fvf2q"]
+[ext_resource type="Texture2D" uid="uid://cqnueddr7ljpy" path="res://assets/dark_area/enemies/flying_demon/Flying Demon 2D Pixel Art/Sprites/without_outline/IDLE.png" id="5_wkk0c"]
 [ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://actors/enemies/shared/enemy_hurtbox.gd" id="6_uoyy6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tmvjw"]
@@ -41,6 +41,14 @@ region = Rect2(474, 0, 79, 69)
 [sub_resource type="AtlasTexture" id="AtlasTexture_1t1lx"]
 atlas = ExtResource("1_w83up")
 region = Rect2(553, 0, 79, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o43qy"]
+atlas = ExtResource("4_fvf2q")
+region = Rect2(79, 0, 79, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cu6gj"]
+atlas = ExtResource("4_fvf2q")
+region = Rect2(158, 0, 79, 69)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wc2fc"]
 atlas = ExtResource("2_ok3t0")
@@ -85,10 +93,6 @@ region = Rect2(158, 0, 79, 69)
 [sub_resource type="AtlasTexture" id="AtlasTexture_6qdoc"]
 atlas = ExtResource("3_l2bfi")
 region = Rect2(237, 0, 79, 69)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kyjyg"]
-atlas = ExtResource("4_fvf2q")
-region = Rect2(0, 0, 79, 69)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bba5a"]
 atlas = ExtResource("4_fvf2q")
@@ -151,6 +155,12 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_o43qy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cu6gj")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_wc2fc")
 }, {
 "duration": 1.0,
@@ -194,9 +204,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kyjyg")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_bba5a")
 }, {
 "duration": 1.0,
@@ -207,7 +214,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"hurt",
-"speed": 15.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -244,9 +251,7 @@ shape = SubResource("RectangleShape2D_tmvjw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VisualRoot" unique_id=715392884]
 sprite_frames = SubResource("SpriteFrames_y7h1n")
-animation = &"attack"
-frame = 7
-frame_progress = 1.0
+animation = &"death"
 offset = Vector2(10, -7)
 
 [node name="Hurtbox" type="Area2D" parent="VisualRoot" unique_id=594218037]

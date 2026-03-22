@@ -267,13 +267,13 @@ region = Rect2(402, 630, 691, 387)
 atlas = SubResource("CompressedTexture2D_3jqqt")
 region = Rect2(1778, 255, 233, 757)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gexos"]
-atlas = ExtResource("2_mtarx")
-region = Rect2(1310, 748, 693, 372)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_j5vrt"]
 atlas = ExtResource("2_mtarx")
 region = Rect2(637, 101, 310, 255)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gexos"]
+atlas = ExtResource("2_mtarx")
+region = Rect2(1310, 748, 693, 372)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hv7s7"]
 atlas = ExtResource("2_mtarx")
@@ -331,9 +331,16 @@ region = Rect2(1166, 1250, 362, 644)
 atlas = ExtResource("2_mtarx")
 region = Rect2(1571, 1300, 398, 629)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vrb6t"]
+load_path = "res://.godot/imported/Cave - Floor.png-8ed2391b0ae16805b5bd7227557ef30a.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_5v1ns"]
-atlas = ExtResource("6_iicbf")
+atlas = SubResource("CompressedTexture2D_vrb6t")
 region = Rect2(907, 176, 425, 138)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25ldf"]
+atlas = ExtResource("6_iicbf")
+region = Rect2(21, 1426, 706, 205)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vyonl"]
 atlas = ExtResource("6_iicbf")
@@ -342,10 +349,6 @@ region = Rect2(55, 800, 1467, 161)
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5kdj"]
 atlas = ExtResource("6_iicbf")
 region = Rect2(67, 1068, 1423, 258)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_25ldf"]
-atlas = ExtResource("6_iicbf")
-region = Rect2(21, 1426, 706, 205)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvfmp"]
 atlas = ExtResource("6_iicbf")
@@ -1445,40 +1448,40 @@ scroll_scale = Vector2(0.3, 0)
 script = ExtResource("1_435g3")
 
 [node name="BigRocks8" type="Sprite2D" parent="Parallax/ParallaxFar" unique_id=935766377]
-position = Vector2(318, 181)
+position = Vector2(335, 174)
 texture = SubResource("AtlasTexture_f0khc")
 
 [node name="BigRocks" type="Sprite2D" parent="Parallax/ParallaxFar" unique_id=1301645126]
-position = Vector2(2708, 111)
+position = Vector2(2715, 103)
 texture = SubResource("AtlasTexture_qjln1")
 
 [node name="BigRocks2" type="Sprite2D" parent="Parallax/ParallaxFar" unique_id=1837251177]
-position = Vector2(2925, 262)
+position = Vector2(2930, 261)
 texture = SubResource("AtlasTexture_fpibc")
 
 [node name="BigRocks4" type="Sprite2D" parent="Parallax/ParallaxFar" unique_id=1178412749]
-position = Vector2(1742, 135)
+position = Vector2(1737, 138)
 texture = SubResource("AtlasTexture_1jowd")
 
 [node name="BigRocks5" type="Sprite2D" parent="Parallax/ParallaxFar" unique_id=775634715]
-position = Vector2(2894, -136)
+position = Vector2(2894, -61)
 texture = SubResource("AtlasTexture_vecqm")
 flip_v = true
 
 [node name="BigRocks6" type="Sprite2D" parent="Parallax/ParallaxFar" unique_id=1935928854]
-position = Vector2(1523, 196)
+position = Vector2(1518, 189)
 texture = SubResource("AtlasTexture_g6ghw")
 
 [node name="BigRocks3" type="Sprite2D" parent="Parallax/ParallaxFar" unique_id=130938576]
-position = Vector2(851, 281)
+position = Vector2(854, 244)
 texture = SubResource("AtlasTexture_idsih")
 
 [node name="BigRocks7" type="Sprite2D" parent="Parallax/ParallaxFar" unique_id=500519158]
-position = Vector2(2004, 203)
+position = Vector2(2003, 194)
 texture = SubResource("AtlasTexture_x6o2f")
 
 [node name="BigRocksTallest" type="Sprite2D" parent="Parallax/ParallaxFar" unique_id=1330913523]
-position = Vector2(1312, 38)
+position = Vector2(1312, 213)
 texture = SubResource("AtlasTexture_mtarx")
 
 [node name="ParallaxMid" type="Parallax2D" parent="Parallax" unique_id=1191906915]
@@ -1486,52 +1489,52 @@ scale = Vector2(0.4, 0.4)
 scroll_scale = Vector2(0.7, 0)
 script = ExtResource("1_435g3")
 
+[node name="RockCombinations2" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=555464370]
+position = Vector2(-4.999999, 752.5)
+scale = Vector2(0.99999964, 0.99999964)
+texture = SubResource("AtlasTexture_j5vrt")
+flip_h = true
+
 [node name="RockCombinations11" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=52500807]
-position = Vector2(-220, 652.5)
+position = Vector2(-375.00003, 697.50006)
 rotation = 0.5305801
 scale = Vector2(0.9999999, 0.9999999)
 texture = SubResource("AtlasTexture_gexos")
 
-[node name="RockCombinations2" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=555464370]
-position = Vector2(290.00003, 832.49994)
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_j5vrt")
-flip_h = true
-
 [node name="RockCombinations" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=1117357589]
-position = Vector2(1502.5, 845)
+position = Vector2(1497.5, 712.5)
 texture = SubResource("AtlasTexture_hv7s7")
 
 [node name="RockCombinations3" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=916098597]
-position = Vector2(10390, 787.5001)
+position = Vector2(11707.5, 880)
 texture = SubResource("AtlasTexture_v0l4y")
 
 [node name="RockCombinations4" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=1034707151]
-position = Vector2(14152.5, 755.0001)
+position = Vector2(14152.5, 830)
 texture = SubResource("AtlasTexture_ts52q")
 
 [node name="RockCombinations5" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=1974251747]
-position = Vector2(14722.5, 812.5)
+position = Vector2(14722.5, 887)
 texture = SubResource("AtlasTexture_ulx42")
 
 [node name="RockCombinations6" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=2047460792]
-position = Vector2(15017.5, 697.5)
+position = Vector2(15017.5, 775)
 texture = SubResource("AtlasTexture_hkvy8")
 
 [node name="RockCombinations7" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=343824071]
-position = Vector2(12300, 890)
+position = Vector2(12252.5, 882.5)
 texture = SubResource("AtlasTexture_o34qq")
 
 [node name="RockCombinations8" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=457343805]
-position = Vector2(2952.5, 840)
+position = Vector2(2960, 752.5)
 texture = SubResource("AtlasTexture_vejsp")
 
 [node name="RockCombinations9" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=1018986575]
-position = Vector2(6362.5, 845)
+position = Vector2(6365, 717.5)
 texture = SubResource("AtlasTexture_umitx")
 
 [node name="RockCombinations10" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=27595808]
-position = Vector2(8552.5, 882.5)
+position = Vector2(8510, 702.5)
 texture = SubResource("AtlasTexture_8yca7")
 
 [node name="Stalactites" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=532568469]
@@ -1552,17 +1555,22 @@ position = Vector2(8607.144, 414.28577)
 texture = SubResource("AtlasTexture_jolbd")
 
 [node name="Stalagmites3" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=1440366855]
-position = Vector2(7285.7144, 451.4286)
+position = Vector2(7278.5713, 358.5714)
 rotation = -0.17627825
 texture = SubResource("AtlasTexture_bypxq")
 
 [node name="Stalagmites4" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=1895492422]
-position = Vector2(5314.2856, 475.7143)
+position = Vector2(5312.857, 344.28574)
 texture = SubResource("AtlasTexture_vpc4o")
 
 [node name="Hill" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=180268330]
-position = Vector2(-497.14285, 535.7143)
+position = Vector2(-562.8572, 462.85715)
 texture = SubResource("AtlasTexture_5v1ns")
+
+[node name="Hill4" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=1076443152]
+position = Vector2(341.4286, 397.14285)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_25ldf")
 
 [node name="Hill2" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=1226996633]
 position = Vector2(5887.143, 515.71423)
@@ -1573,12 +1581,8 @@ position = Vector2(10231.429, 501.42856)
 texture = SubResource("AtlasTexture_q5kdj")
 flip_h = true
 
-[node name="Hill4" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=1076443152]
-position = Vector2(348.57144, 515.7143)
-texture = SubResource("AtlasTexture_25ldf")
-
 [node name="Hill5" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=2120231043]
-position = Vector2(3258.5715, 497.14285)
+position = Vector2(3235.714, 444.28574)
 texture = SubResource("AtlasTexture_kvfmp")
 
 [node name="Hill6" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=1655757666]
