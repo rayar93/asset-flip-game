@@ -14,7 +14,10 @@ func _on_node_added(node: Node):
 func _find_and_connect_player():
 	await get_tree().process_frame
 	player = get_tree().get_first_node_in_group("player")
-	if not is_instance_valid(player): return
+	if not is_instance_valid(player):
+		hide()
+		return
+	show()
 	_update_pips(player.current_health)
 	if not player.health_changed.is_connected(_on_health_changed):
 		player.health_changed.connect(_on_health_changed)

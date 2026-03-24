@@ -212,7 +212,7 @@ shape = SubResource("RectangleShape2D_71o3d")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2076986031 groups=["camera"]]
 scale = Vector2(2, 2)
-offset = Vector2(0, -100)
+offset = Vector2(0, -50)
 zoom = Vector2(2, 2)
 
 [node name="PlayerHurtbox" type="Area2D" parent="." unique_id=1316882466 groups=["player_hurtbox"]]
