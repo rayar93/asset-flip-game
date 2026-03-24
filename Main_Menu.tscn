@@ -35,12 +35,18 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_gtid3")
 
-[node name="Label" type="Label" parent="." unique_id=1239271189]
-layout_mode = 0
-offset_left = 278.0
-offset_top = 37.0
-offset_right = 740.0
-offset_bottom = 175.0
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1180004825]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -231.0
+offset_right = 231.0
+offset_bottom = 142.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="CenterContainer" unique_id=1239271189]
+layout_mode = 2
 theme = SubResource("Theme_wugcc")
 theme_override_colors/font_color = Color(1, 0.7137255, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.30988076, 0.0009441171, 0.50568485, 1)
@@ -48,22 +54,19 @@ theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
 text = "Asset Flip"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=617955678]
+[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=1346011336]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -69.0
-offset_top = -87.0
-offset_right = 81.0
-offset_bottom = 74.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer2" unique_id=617955678]
+layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="Start" type="Button" parent="VBoxContainer" unique_id=293133786]
+[node name="Start" type="Button" parent="CenterContainer2/VBoxContainer" unique_id=293133786]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -71,7 +74,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_jtkjj")
 text = "Start"
 
-[node name="Options" type="Button" parent="VBoxContainer" unique_id=1316031798]
+[node name="Options" type="Button" parent="CenterContainer2/VBoxContainer" unique_id=1316031798]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -79,7 +82,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_jtkjj")
 text = "Options"
 
-[node name="Exit" type="Button" parent="VBoxContainer" unique_id=1937667470]
+[node name="Exit" type="Button" parent="CenterContainer2/VBoxContainer" unique_id=1937667470]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -88,6 +91,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jtkjj")
 text = "Exit
 "
 
-[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CenterContainer2/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CenterContainer2/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="CenterContainer2/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

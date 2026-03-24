@@ -98,7 +98,7 @@ func set_state(new_state: State):
 			hurt_timer = hurt_duration
 		State.DEAD:
 			velocity = Vector2.ZERO
-			get_tree().call_deferred("reload_current_scene")
+			GameFlow.call_deferred("on_player_died")
 
 func _handle_grounded_input(move_dir):
 	velocity.x = move_dir * move_speed

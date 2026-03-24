@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://puedu11ilp8o"]
+
+[ext_resource type="Script" uid="uid://dfkweqmwbab7r" path="res://levels/shared/win_screen.gd" id="1_ucupn"]
+[ext_resource type="Texture2D" uid="uid://bc2pfsmb8vgg6" path="res://assets/Menu.png" id="2_ndami"]
+
+[sub_resource type="Theme" id="Theme_ali3e"]
+default_font_size = 101
+
+[node name="DeathScreen1" type="Control" unique_id=1194817763]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ucupn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2042070328]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ndami")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1021951600]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Restart" type="Button" parent="VBoxContainer" unique_id=1755260484]
+layout_mode = 2
+text = "Restart
+"
+
+[node name="Menu" type="Button" parent="VBoxContainer" unique_id=406854973]
+layout_mode = 2
+text = "Menu"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=103851975]
+layout_mode = 2
+text = "Exit"
+
+[node name="Label2" type="Label" parent="." unique_id=433700629]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -266.0
+offset_right = 266.0
+offset_bottom = 138.0
+grow_horizontal = 2
+theme = SubResource("Theme_ali3e")
+theme_override_colors/font_color = Color(1, 0.7137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.30988076, 0.0009441171, 0.50568485, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+text = "YOU WIN :)"
+
+[connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

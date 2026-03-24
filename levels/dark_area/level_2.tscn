@@ -1506,11 +1506,11 @@ position = Vector2(1497.5, 712.5)
 texture = SubResource("AtlasTexture_hv7s7")
 
 [node name="RockCombinations3" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=916098597]
-position = Vector2(11707.5, 880)
+position = Vector2(11707.5, 777.5)
 texture = SubResource("AtlasTexture_v0l4y")
 
 [node name="RockCombinations4" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=1034707151]
-position = Vector2(14152.5, 830)
+position = Vector2(14132.5, 850)
 texture = SubResource("AtlasTexture_ts52q")
 
 [node name="RockCombinations5" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=1974251747]
@@ -1522,7 +1522,7 @@ position = Vector2(15017.5, 775)
 texture = SubResource("AtlasTexture_hkvy8")
 
 [node name="RockCombinations7" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=343824071]
-position = Vector2(12252.5, 882.5)
+position = Vector2(12252.5, 757.5)
 texture = SubResource("AtlasTexture_o34qq")
 
 [node name="RockCombinations8" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=457343805]
@@ -1547,20 +1547,20 @@ scroll_scale = Vector2(0.9, 0)
 script = ExtResource("1_435g3")
 
 [node name="Stalagmites" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=1733171340]
-position = Vector2(10598.571, 330)
+position = Vector2(10598.571, 265.7143)
 texture = SubResource("AtlasTexture_3ivut")
 
 [node name="Stalagmites2" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=399166436]
-position = Vector2(8607.144, 414.28577)
+position = Vector2(8618.571, 324.28574)
 texture = SubResource("AtlasTexture_jolbd")
 
 [node name="Stalagmites3" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=1440366855]
-position = Vector2(7278.5713, 358.5714)
+position = Vector2(7254.2856, 269.99997)
 rotation = -0.17627825
 texture = SubResource("AtlasTexture_bypxq")
 
 [node name="Stalagmites4" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=1895492422]
-position = Vector2(5312.857, 344.28574)
+position = Vector2(5312.857, 242.85715)
 texture = SubResource("AtlasTexture_vpc4o")
 
 [node name="Hill" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=180268330]
@@ -1573,11 +1573,11 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_25ldf")
 
 [node name="Hill2" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=1226996633]
-position = Vector2(5887.143, 515.71423)
+position = Vector2(5862.8574, 450)
 texture = SubResource("AtlasTexture_vyonl")
 
 [node name="Hill3" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=1741506573]
-position = Vector2(10231.429, 501.42856)
+position = Vector2(10231.429, 441.42856)
 texture = SubResource("AtlasTexture_q5kdj")
 flip_h = true
 
@@ -1586,15 +1586,15 @@ position = Vector2(3235.714, 444.28574)
 texture = SubResource("AtlasTexture_kvfmp")
 
 [node name="Hill6" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=1655757666]
-position = Vector2(7885.7144, 557.1429)
+position = Vector2(7855.7144, 468.5714)
 texture = SubResource("AtlasTexture_u07s1")
 
 [node name="Hill7" type="Sprite2D" parent="Parallax/ParallaxNear" unique_id=1614672987]
-position = Vector2(10782.857, 502.85715)
+position = Vector2(10782.857, 431.4286)
 texture = SubResource("AtlasTexture_eb4s5")
 
 [node name="DoorwayLight" type="PointLight2D" parent="." unique_id=273389037]
-position = Vector2(-486, 13)
+position = Vector2(-557, -56)
 scale = Vector2(1.5, 1.5)
 color = Color(0.8849108, 0.74862736, 0.36268535, 1)
 energy = 4.28
@@ -1627,6 +1627,7 @@ position = Vector2(1190, -57)
 scale = Vector2(0.75, 0.75)
 
 [node name="Darkness" type="Node2D" parent="." unique_id=1363816062]
+visible = false
 
 [node name="Background2" type="ColorRect" parent="Darkness" unique_id=581391546]
 z_index = 100
@@ -6438,6 +6439,7 @@ texture = SubResource("GradientTexture2D_fpibc")
 [node name="SpawnPoint" type="Node2D" parent="." unique_id=583143697]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=135498828]
+visible = false
 color = Color(0.039215688, 0.101960786, 0.101960786, 1)
 
 [node name="DustMotes" type="GPUParticles2D" parent="." unique_id=1804017536]

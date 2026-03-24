@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://c7hwhu8yt7xp5"]
+
+[ext_resource type="Texture2D" uid="uid://u6hnbgxc5m0w" path="res://assets/death_screen.png" id="1_8gxic"]
+[ext_resource type="Script" uid="uid://dx6u5kp86ilsx" path="res://levels/dark_area/death_screen_2.gd" id="1_oj450"]
+
+[sub_resource type="Theme" id="Theme_oj450"]
+default_font_size = 101
+
+[node name="DeathScreen1" type="Control" unique_id=1194817763]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oj450")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2042070328]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8gxic")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1021951600]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Continue" type="Button" parent="VBoxContainer" unique_id=1755260484]
+layout_mode = 2
+text = "Continue"
+
+[node name="Restart" type="Button" parent="VBoxContainer" unique_id=1776824799]
+layout_mode = 2
+text = "Restart"
+
+[node name="Menu" type="Button" parent="VBoxContainer" unique_id=406854973]
+layout_mode = 2
+text = "Menu"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=103851975]
+layout_mode = 2
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=1373679564]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -238.0
+offset_right = 238.0
+offset_bottom = 138.0
+grow_horizontal = 2
+theme = SubResource("Theme_oj450")
+theme_override_colors/font_color = Color(0.30980393, 0, 0.5058824, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+text = "YOU DIED"
+
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
