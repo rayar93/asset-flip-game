@@ -35,6 +35,9 @@ var state := State.AIR
 var facing = 1
 var current_health = max_health
 
+var afterimage_timer = 0.0
+const AFTERIMAGE_INTERVAL = 0.1
+
 signal health_changed(new_health: int)
 
 # ==============================================================================
@@ -62,7 +65,12 @@ func _physics_process(delta):
 		State.AIR:       _handle_air_input(move_dir)
 		State.ATTACK:    _handle_attack_logic()
 		State.HURT:      _handle_hurt_logic(delta)
-		State.DASH:      _handle_dash_logic(delta)
+		State.DASH:
+			afterimage_timer -= delta
+			if afterimage_timer <= 0.0:
+				_spawn_afterimage()
+				afterimage_timer = AFTERIMAGE_INTERVAL
+			_handle_dash_logic(delta)
 
 	move_and_slide()
 	_check_ground_status()
@@ -89,6 +97,8 @@ func set_state(new_state: State):
 				set_state(State.AIR)
 				return
 		State.DASH:
+			velocity.y = 0
+			afterimage_timer = 0.0
 			dash_time_left = dash_duration
 			velocity = Vector2(facing * dash_speed, 0)
 			can_dash = false
@@ -131,6 +141,7 @@ func _handle_attack_logic():
 		_return_to_base_state()
 
 func _handle_dash_logic(delta: float):
+	velocity.y = 0
 	dash_time_left -= delta
 	if dash_time_left <= 0:
 		_return_to_base_state()
@@ -193,6 +204,33 @@ func _return_to_base_state():
 	attack_area.monitorable = false
 	slash_vfx.hide()
 	set_state(State.GROUNDED if is_on_floor() else State.AIR)
+	
+func _spawn_afterimage():
+	var sprite = $VisualRoot/AnimatedSprite2D
+	
+	var ghost = AnimatedSprite2D.new()
+	ghost.sprite_frames = sprite.sprite_frames
+	ghost.animation = sprite.animation
+	ghost.frame = sprite.frame
+	
+	ghost.offset = sprite.offset
+	ghost.centered = sprite.centered
+	ghost.flip_h = sprite.flip_h
+	ghost.flip_v = sprite.flip_v	
+	ghost.modulate.a = 0.8
+
+	get_parent().add_child(ghost)
+	ghost.global_transform = sprite.global_transform
+	
+	if ghost.has_method("reset_physics_interpolation"):
+		ghost.reset_physics_interpolation()
+	
+	var tween = create_tween()
+	tween.tween_property(ghost, "modulate:a", 0.0, 0.05)
+	tween.tween_callback(ghost.queue_free)
+	
+func die():
+	set_state(State.DEAD)
 
 # ==============================================================================
 # Signals
@@ -223,6 +261,3 @@ func _on_attack_hit(area: Area2D):
 		if attack_root.rotation_degrees == 90 and not is_on_floor():
 			velocity.y = jump_velocity
 			can_double_jump = true
-
-func die():
-	set_state(State.DEAD)

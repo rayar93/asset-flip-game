@@ -562,9 +562,7 @@ hurt_duration = 0.5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VisualRoot" unique_id=2044635699 groups=["enemies"]]
 sprite_frames = SubResource("SpriteFrames_blwc6")
-animation = &"down_attack"
-frame = 3
-frame_progress = 1.0
+animation = &"dash"
 
 [node name="Hitbox" type="Area2D" parent="VisualRoot" unique_id=1438047601]
 collision_layer = 16
