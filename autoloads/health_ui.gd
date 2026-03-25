@@ -4,7 +4,11 @@ extends CanvasLayer
 var player = null
 
 func _ready() -> void:
-	get_tree().node_added.connect(_on_node_added)
+	GameFlow.player_died.connect(func(): hide())
+	get_tree().node_added.connect(func(node):
+		if node.is_in_group("player"):
+			await _find_and_connect_player()
+	)
 	await _find_and_connect_player()
 	
 func _on_node_added(node: Node):

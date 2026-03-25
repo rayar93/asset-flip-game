@@ -1627,7 +1627,6 @@ position = Vector2(1190, -57)
 scale = Vector2(0.75, 0.75)
 
 [node name="Darkness" type="Node2D" parent="." unique_id=1363816062]
-visible = false
 
 [node name="Background2" type="ColorRect" parent="Darkness" unique_id=581391546]
 z_index = 100
@@ -6439,7 +6438,6 @@ texture = SubResource("GradientTexture2D_fpibc")
 [node name="SpawnPoint" type="Node2D" parent="." unique_id=583143697]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=135498828]
-visible = false
 color = Color(0.039215688, 0.101960786, 0.101960786, 1)
 
 [node name="DustMotes" type="GPUParticles2D" parent="." unique_id=1804017536]

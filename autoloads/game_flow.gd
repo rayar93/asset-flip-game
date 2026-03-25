@@ -53,7 +53,7 @@ func _move_player_to_spawn(spawn_point_name):
 func on_boss_died():
 	boss_died.emit()
 	await get_tree().create_timer(1.5).timeout
-	go_to_scene("res://scenes/WinScreen.tscn")
+	go_to_scene("res://levels/shared/win_screen.tscn")
 	
 func on_player_died():
 	player_died.emit()
