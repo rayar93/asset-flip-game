@@ -141,6 +141,7 @@ func set_state(new_state: State):
 			_play_anim("hurt")
 		State.DEAD:
 			AudioManager.play("enemy_death")
+			GameFlow.on_boss_died()
 			queue_free()
 
 func start_combat():

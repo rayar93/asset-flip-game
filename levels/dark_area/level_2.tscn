@@ -1617,6 +1617,7 @@ texture_scale = 4.9
 [node name="Boss" parent="Enemies" unique_id=2113211253 instance=ExtResource("215_qjln1")]
 position = Vector2(7822, -18)
 scale = Vector2(1.5, 1.5)
+max_health = 1
 
 [node name="Enemy" parent="Enemies" unique_id=920785443 instance=ExtResource("216_armii")]
 position = Vector2(1883.0001, -31)
