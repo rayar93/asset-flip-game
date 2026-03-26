@@ -63,6 +63,7 @@ Fix player health UI on screen reload
 
 Sprint 9 (due 4/2)
 
+deactivate collision during death animation
 Use screenshake (boss hit, landing), dash vfx, death/hurt vfx, land dust
 Tutorial prompts
 Level creation
