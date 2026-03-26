@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bngyw40oc06j2"]
+
+[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Actors/Player/player.tscn" id="1_vthxg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vthxg"]
+size = Vector2(5997, 20)
+
+[node name="Tutorial" type="Node2D" unique_id=662538897]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=783239808]
+position = Vector2(532, 453)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=29045092]
+position = Vector2(-162.5, 0)
+shape = SubResource("RectangleShape2D_vthxg")
+
+[node name="Texts" type="Node2D" parent="." unique_id=1510757006]
+
+[node name="Welcome Text" type="Node" parent="Texts" unique_id=1240267245]
+
+[node name="Label" type="Label" parent="Texts/Welcome Text" unique_id=1406900605]
+anchors_preset = -1
+anchor_right = -0.26660156
+offset_left = 373.0
+offset_top = 261.0
+offset_right = 1100.0
+offset_bottom = 349.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Hello Traveller, welcome to Asset Flip, a platform adventure that you are about to embark on. 
+Lets show you the ropes before you go out and explore all this wolrd has to offer. "
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2033868954]
+offset_left = -10689.0
+offset_top = -5968.0
+offset_right = 19168.0
+offset_bottom = 441.0
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=77382013]
+offset_left = -10651.0
+offset_top = 443.0
+offset_right = 19332.0
+offset_bottom = 7907.0
+color = Color(0, 0, 0, 1)
+
+[node name="Player" parent="." unique_id=2056772503 instance=ExtResource("1_vthxg")]
+position = Vector2(486, 430)
