@@ -6441,10 +6441,7 @@ texture = SubResource("AtlasTexture_t1aqd")
 
 [node name="LightBeam" parent="." unique_id=1728388933 instance=ExtResource("218_4ww2d")]
 position = Vector2(1879, -285)
-beam_length = 700
-beam_width = 120
-beam_angle = 19
-beam_color = Color(0.5529412, 0.9490196, 0.8, 0.4)
+script = null
 
 [node name="Doorway" type="TextureRect" parent="." unique_id=1558540064]
 offset_left = -500.0
@@ -6471,5 +6468,4 @@ script = ExtResource("219_idsih")
 
 [node name="LightBeam2" parent="." unique_id=2104424472 instance=ExtResource("218_4ww2d")]
 position = Vector2(-71, -331)
-beam_length = 800
-beam_width = 200
+script = null
