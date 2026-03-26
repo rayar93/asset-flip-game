@@ -1,10 +1,10 @@
 extends Control
 
 func _on_continue_pressed():
-	GameFlow.go_to_scene("res://levels/dark_area/level_2.tscn")
+	GameFlow.go_to_scene("res://levels/level_2/level_2.tscn")
 
 func _on_restart_pressed():
-	GameFlow.go_to_scene("res://levels/light_area/level_1_demo.tscn")
+	GameFlow.go_to_scene("res://levels/level_1/level_1_demo.tscn")
 	
 func _on_menu_pressed():
 	GameFlow.go_to_scene("res://Main_Menu.tscn")
