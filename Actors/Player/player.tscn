@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://ckrlsxl6x1iel"]
 
-[ext_resource type="Script" uid="uid://p7jsp0inwkae" path="res://actors/player/player.gd" id="1_qrfw6"]
-[ext_resource type="Texture2D" uid="uid://hb6yf331m8aa" path="res://assets/player/pumpkin knight/png (free)/fall.png" id="4_wcbjs"]
-[ext_resource type="Texture2D" uid="uid://dmhagxgco0u8g" path="res://assets/player/pumpkin knight/png (free)/hit.png" id="5_3j4ux"]
-[ext_resource type="Texture2D" uid="uid://dm3u20nbtine6" path="res://assets/player/pumpkin knight/png (free)/idle.png" id="6_4grvc"]
-[ext_resource type="Texture2D" uid="uid://i5wvnbbbtbtc" path="res://assets/player/pumpkin knight/png (free)/jump.png" id="7_dkqqn"]
-[ext_resource type="Texture2D" uid="uid://d0f27yhhnaors" path="res://assets/player/SlashFX Combos/SlashFX SimpleCombo3 sheet.png" id="8_8owf5"]
-[ext_resource type="Texture2D" uid="uid://x6slyvcjx38m" path="res://assets/player/pumpkin knight/png (free)/run.png" id="8_l3ctt"]
-[ext_resource type="Script" uid="uid://bq5midtayjyae" path="res://actors/player/player_hurtbox.gd" id="9_nk1wa"]
+[ext_resource type="Script" uid="uid://p7jsp0inwkae" path="res://Actors/Player/player.gd" id="1_qrfw6"]
+[ext_resource type="Texture2D" uid="uid://dr1onf7l1n8x5" path="res://assets/player/pumpkin knight/png (free)/fall.png" id="4_wcbjs"]
+[ext_resource type="Texture2D" uid="uid://cr65eip1u0ju2" path="res://assets/player/pumpkin knight/png (free)/hit.png" id="5_3j4ux"]
+[ext_resource type="Texture2D" uid="uid://uch4hj8jlj68" path="res://assets/player/pumpkin knight/png (free)/idle.png" id="6_4grvc"]
+[ext_resource type="Texture2D" uid="uid://cxdataoohrk8u" path="res://assets/player/pumpkin knight/png (free)/jump.png" id="7_dkqqn"]
+[ext_resource type="Texture2D" uid="uid://b52jqxtrylv54" path="res://assets/player/SlashFX Combos/SlashFX SimpleCombo3 sheet.png" id="8_8owf5"]
+[ext_resource type="Texture2D" uid="uid://cremcnpan1oid" path="res://assets/player/pumpkin knight/png (free)/run.png" id="8_l3ctt"]
+[ext_resource type="Script" uid="uid://bq5midtayjyae" path="res://Actors/Player/player_hurtbox.gd" id="9_nk1wa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_71o3d"]
 size = Vector2(10, 18)
@@ -211,9 +211,8 @@ hurt_duration = 0.3
 shape = SubResource("RectangleShape2D_71o3d")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2076986031 groups=["camera"]]
-scale = Vector2(2, 2)
 offset = Vector2(0, -50)
-zoom = Vector2(2, 2)
+zoom = Vector2(1.5, 1.5)
 
 [node name="PlayerHurtbox" type="Area2D" parent="." unique_id=1316882466 groups=["player_hurtbox"]]
 collision_layer = 32
