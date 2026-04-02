@@ -83,6 +83,7 @@ Tune variables in-level
 Bug fixing
 Movement feel: acceleration/deceleration, variable jump height, terminal fall speed, hang time at apex, edge forgiveness
 Make enemies stop moving for a bit when pogoed
+Death animations / effects
 
 Stretch goals
 

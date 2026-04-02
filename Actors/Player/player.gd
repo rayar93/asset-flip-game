@@ -206,8 +206,6 @@ func _return_to_base_state():
 	set_state(State.GROUNDED if is_on_floor() else State.AIR)
 	
 func _spawn_afterimage():
-	var sprite = $VisualRoot/AnimatedSprite2D
-	
 	var ghost = AnimatedSprite2D.new()
 	ghost.sprite_frames = sprite.sprite_frames
 	ghost.animation = sprite.animation

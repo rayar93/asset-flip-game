@@ -56,6 +56,8 @@ func set_state(new_state: State):
 			hitbox.set_deferred("monitorable", false)
 			hurtbox.set_deferred("monitoring", false)
 			hurtbox.set_deferred("monitorable", false)
+			collision_layer = 0
+			collision_mask = 0
 			sprite.play("death")
 			
 func _handle_idle_logic():
