@@ -54,6 +54,7 @@ func set_state(new_state: State):
 	match state:
 		State.PATROL:
 			hitbox.monitoring = true
+			sprite.play("default")
 		State.HURT:
 			hurt_timer = hurt_duration
 			sprite.play("hurt")
