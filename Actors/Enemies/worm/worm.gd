@@ -60,9 +60,12 @@ func set_state(new_state: State):
 			sprite.play("hurt")
 			hitbox.monitoring = false
 		State.DEAD:
+			velocity.x=0
+			collision_layer = 0
+			collision_mask = 0
 			AudioManager.play("enemy_death")
 			sprite.play("dead")
-			queue_free()
+			sprite.animation_finished.connect(queue_free)
 
 func _handle_patrol_logic(delta):
 	velocity.x = move_toward(

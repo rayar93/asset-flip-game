@@ -12,6 +12,7 @@ var hurt_timer = 0.0
 var facing = 1
 
 var player: Node2D = null
+var edge_ray = RayCast2D
 
 # ==============================================================================
 # Engine callbacks
@@ -20,6 +21,11 @@ var player: Node2D = null
 func _ready() -> void:
 	current_health = max_health
 	player = get_tree().get_first_node_in_group("player") as Node2D
+	edge_ray = RayCast2D.new()
+	edge_ray.target_position = Vector2(0, 32)
+	edge_ray.collision_mask = 1
+	add_child(edge_ray)
+	
 	_enemy_ready()
 
 func _physics_process(delta: float) -> void:
@@ -54,6 +60,12 @@ func _apply_facing():
 # ==============================================================================
 # Shared helpers
 # ==============================================================================
+
+func _is_near_edge():
+	if edge_ray == null: return false
+	edge_ray.position.x = facing * 16
+	edge_ray.force_raycast_update()
+	return not edge_ray.is_colliding()
 
 func _get_distance_to_player():
 	if not is_instance_valid(player):
