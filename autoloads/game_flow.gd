@@ -64,3 +64,5 @@ func on_player_died():
 		go_to_scene("res://levels/level_2/death_screen2.tscn")
 	if "level_3" in scene_path:
 		go_to_scene("res://levels/level_3/death_screen3.tscn")
+	if "Final_Level" in scene_path:
+		go_to_scene("res://levels/Final_Level/death_screen4.tscn")

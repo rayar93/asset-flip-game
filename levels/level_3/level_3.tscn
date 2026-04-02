@@ -706,7 +706,7 @@ metadata/_edit_group_ = true
 [node name="Area2D" type="Area2D" parent="Cave to Level 2" unique_id=474576972]
 collision_mask = 3
 script = ExtResource("10_gsac8")
-target_scene = "res://levels/dark_area/level_2.tscn"
+target_scene = "res://levels/Final_Level/final_level.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cave to Level 2/Area2D" unique_id=851890759]
 position = Vector2(1, 19)
