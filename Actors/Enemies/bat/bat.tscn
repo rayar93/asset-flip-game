@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://b1k6xe1pelgkg"]
 
-[ext_resource type="Texture2D" uid="uid://rx0q3ofpmsh3" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Attack.png" id="1_miid3"]
-[ext_resource type="Texture2D" uid="uid://dnqmbqvsd7rip" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Death.png" id="2_t7klc"]
-[ext_resource type="Texture2D" uid="uid://dilom5ktly524" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Flying.png" id="3_jue64"]
-[ext_resource type="Texture2D" uid="uid://dtyqt8i0bs8jx" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Hurt.png" id="4_i522r"]
-[ext_resource type="Texture2D" uid="uid://cmindfe3jwlvx" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Sleeping.png" id="5_tkwea"]
-[ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://Actors/Enemies/Shared/enemy_hurtbox.gd" id="6_ad45h"]
+[ext_resource type="Texture2D" uid="uid://bp7n7gdaymfx3" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Attack.png" id="1_miid3"]
+[ext_resource type="Script" uid="uid://cvg3l5k0m7sks" path="res://actors/enemies/bat/bat.gd" id="1_u88q0"]
+[ext_resource type="Texture2D" uid="uid://t8wyfswxr3h0" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Death.png" id="2_t7klc"]
+[ext_resource type="Texture2D" uid="uid://dtc3j7tl73gww" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Flying.png" id="3_jue64"]
+[ext_resource type="Texture2D" uid="uid://dx644qeubie74" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Hurt.png" id="4_i522r"]
+[ext_resource type="Texture2D" uid="uid://dosb5kgvbiskj" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Sleeping.png" id="5_tkwea"]
+[ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://actors/enemies/shared/enemy_hurtbox.gd" id="6_ad45h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7kpor"]
 atlas = ExtResource("1_miid3")
@@ -198,25 +199,41 @@ size = Vector2(10, 6)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u42ab"]
 size = Vector2(10, 6)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hr41a"]
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1542376191 groups=["enemies"]]
+scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_u88q0")
+max_health = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1883777498]
 sprite_frames = SubResource("SpriteFrames_2x1ut")
-animation = &"hurt"
+animation = &"sleeping"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1242831003]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_vscj2")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=968023037 groups=["enemy_hitbox"]]
+collision_layer = 16
+collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1264739423]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_wlw3y")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1815563419]
+collision_layer = 64
+collision_mask = 8
 script = ExtResource("6_ad45h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1192774900]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_u42ab")
+
+[node name="SeparationArea" type="Area2D" parent="." unique_id=2061536593]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SeparationArea" unique_id=10688957]
+shape = SubResource("CircleShape2D_hr41a")
