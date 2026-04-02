@@ -1,9 +1,54 @@
 [gd_scene format=3 uid="uid://bngyw40oc06j2"]
 
 [ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Actors/Player/player.tscn" id="1_vthxg"]
+[ext_resource type="Script" uid="uid://btc2aqh5q1eq2" path="res://levels/Tutorial/Text.gd" id="1_xxil4"]
+[ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="3_iqx1w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vthxg"]
 size = Vector2(5997, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqx1w"]
+size = Vector2(25, 41)
+
+[sub_resource type="Animation" id="Animation_vthxg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_xxil4"]
+resource_name = "Show"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.609, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iqx1w"]
+_data = {
+&"RESET": SubResource("Animation_vthxg"),
+&"Show": SubResource("Animation_xxil4")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cu6o1"]
+radius = 20.0
 
 [node name="Tutorial" type="Node2D" unique_id=662538897]
 
@@ -21,6 +66,7 @@ shape = SubResource("RectangleShape2D_vthxg")
 
 [node name="Label" type="Label" parent="Texts/Welcome Text" unique_id=1406900605]
 anchors_preset = -1
+anchor_left = -0.26660156
 anchor_right = -0.26660156
 offset_left = 373.0
 offset_top = 261.0
@@ -29,15 +75,130 @@ offset_bottom = 349.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
 text = "Hello Traveller, welcome to Asset Flip, a platform adventure that you are about to embark on. 
-Lets show you the ropes before you go out and explore all this wolrd has to offer. "
+Lets show you the ropes before you go out and explore all this wolrd has to offer. 
+
+Hold D to move Right
+
+>>>>>>>>>>>>>>>>>>>>"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="Area2D" type="Area2D" parent="Texts/Welcome Text" unique_id=1246013680]
+script = ExtResource("1_xxil4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Texts/Welcome Text/Area2D" unique_id=1374326898]
+position = Vector2(513.5, 423.5)
+shape = SubResource("RectangleShape2D_iqx1w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Texts/Welcome Text/Area2D" unique_id=1894966194]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_iqx1w")
+
+[node name="Basic_Movement" type="Node" parent="Texts" unique_id=326702852]
+
+[node name="Label" type="Label" parent="Texts/Basic_Movement" unique_id=482388756]
+anchors_preset = -1
+anchor_left = -0.26660156
+anchor_top = 0.085
+anchor_right = -0.26660156
+offset_left = 1074.0
+offset_top = 261.0
+offset_right = 1801.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Use A, D, and SPACE for baisc directional movment
+
+>>>>>>>>>>
+
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Texts/Basic_Movement" unique_id=1923861955]
+position = Vector2(560, 0)
+script = ExtResource("1_xxil4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Texts/Basic_Movement/Area2D" unique_id=291994912]
+position = Vector2(523.5, 423.5)
+shape = SubResource("RectangleShape2D_iqx1w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Texts/Basic_Movement/Area2D" unique_id=1671932000]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_iqx1w")
+
+[node name="Special_Movement" type="Node" parent="Texts" unique_id=1723617672]
+
+[node name="Label" type="Label" parent="Texts/Special_Movement" unique_id=1076808214]
+anchors_preset = -1
+anchor_left = -0.26660156
+anchor_top = 0.085
+anchor_right = -0.26660156
+offset_left = 1819.0
+offset_top = 261.0
+offset_right = 2546.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "You can double press SPACE to double jump, and use K to dash in the direction you are facing 
+
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Texts/Special_Movement" unique_id=1019253422]
+position = Vector2(1305, 0)
+script = ExtResource("1_xxil4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Texts/Special_Movement/Area2D" unique_id=2027741046]
+position = Vector2(523.5, 423.5)
+shape = SubResource("RectangleShape2D_iqx1w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Texts/Special_Movement/Area2D" unique_id=382370398]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_iqx1w")
+
+[node name="Attacking_Exit" type="Node" parent="Texts" unique_id=1324995728]
+
+[node name="Label" type="Label" parent="Texts/Attacking_Exit" unique_id=293693996]
+anchors_preset = -1
+anchor_left = -0.26660156
+anchor_top = 0.065
+anchor_right = -0.26660156
+anchor_bottom = 0.11333334
+offset_left = 2909.0
+offset_top = 261.0
+offset_right = 3636.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "To attck use J, this can also be done in any direction by using the corresponding movemnet key then J.
+
+I think you might be ready to enter the world, please continue the entrance will find you!
+
+>>>>>>>>>>>>
+
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Texts/Attacking_Exit" unique_id=2012759165]
+position = Vector2(2395, 0)
+script = ExtResource("1_xxil4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Texts/Attacking_Exit/Area2D" unique_id=1726534467]
+position = Vector2(523.5, 423.5)
+shape = SubResource("RectangleShape2D_iqx1w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Texts/Attacking_Exit/Area2D" unique_id=147760419]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_iqx1w")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2033868954]
-offset_left = -10689.0
-offset_top = -5968.0
-offset_right = 19168.0
-offset_bottom = 441.0
+offset_left = -10551.0
+offset_top = -5819.0
+offset_right = 19306.0
+offset_bottom = 590.0
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=77382013]
 offset_left = -10651.0
@@ -48,3 +209,15 @@ color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." unique_id=2056772503 instance=ExtResource("1_vthxg")]
 position = Vector2(486, 430)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2002390432]
+position = Vector2(3619, 830)
+scale = Vector2(4, 4)
+collision_mask = 3
+script = ExtResource("3_iqx1w")
+target_scene = "res://levels/level_2/level_2.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=187271496]
+position = Vector2(1, 19)
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_cu6o1")
