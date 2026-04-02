@@ -1,33 +1,33 @@
 [gd_scene format=4 uid="uid://b4llvki6ylndp"]
 
-[ext_resource type="Texture2D" uid="uid://eae2ydbj8hlw" path="res://Assets/light_area/Second Stage Forest/Backgrounds/BACKGROUND.png" id="1_q42ux"]
-[ext_resource type="Texture2D" uid="uid://eklvjeb3ds33" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 3-1.png" id="2_67vg4"]
-[ext_resource type="Texture2D" uid="uid://8osugfvuyv7o" path="res://Assets/light_area/Second Stage Forest/Backgrounds/WOODS - Fourth.png" id="2_wi0qq"]
-[ext_resource type="Texture2D" uid="uid://cdyrem8i1iqf" path="res://Assets/light_area/Second Stage Forest/Backgrounds/WOODS - Third.png" id="3_s3q8p"]
-[ext_resource type="Texture2D" uid="uid://bgdysw8rneonx" path="res://Assets/light_area/Second Stage Forest/Backgrounds/WOODS - Second.png" id="4_u4kh1"]
-[ext_resource type="Texture2D" uid="uid://cec4o0tacs1u8" path="res://Assets/light_area/Second Stage Forest/Backgrounds/VINES - Second.png" id="5_svivd"]
-[ext_resource type="Texture2D" uid="uid://coxmddxny1fl" path="res://Assets/light_area/Second Stage Forest/Backgrounds/BUSH - BACKGROUND.png" id="6_yafm2"]
-[ext_resource type="Texture2D" uid="uid://dwoqbt825bcco" path="res://Assets/light_area/Second Stage Forest/Backgrounds/WOODS - First.png" id="7_46211"]
-[ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://levels/level_1/killzone.tscn" id="8_46211"]
-[ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="9_t5hu4"]
-[ext_resource type="Texture2D" uid="uid://dph22ijs3gpov" path="res://Assets/light_area/gate/SHADOW Series - Abyssal Gate.png" id="10_eg35p"]
-[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Actors/Enemies/dark_enemy/dark_enemy.tscn" id="10_yafm2"]
-[ext_resource type="Texture2D" uid="uid://cxgw6cd7ky163" path="res://Assets/light_area/Second Stage Forest/Decorations/MUSHROOM 2-1.png" id="11_0unm6"]
-[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Actors/Player/player.tscn" id="11_67vg4"]
-[ext_resource type="Texture2D" uid="uid://bxfg81kho2dhc" path="res://Assets/light_area/Second Stage Forest/Tiles/Tilesheet - WOODS.png" id="11_wj73x"]
-[ext_resource type="PackedScene" uid="uid://bvhy58703necv" path="res://Actors/Enemies/Hedgehog/hedgehog.tscn" id="12_mqvtj"]
-[ext_resource type="Texture2D" uid="uid://mf1f2af140ha" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 1-1.png" id="12_s3q8p"]
-[ext_resource type="Texture2D" uid="uid://gur2xqy35q1" path="res://Assets/light_area/Second Stage Forest/Decorations/MUSHROOM 1-1.png" id="13_u4kh1"]
-[ext_resource type="Texture2D" uid="uid://dnl6ja6820ocb" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 3-2.png" id="14_svivd"]
-[ext_resource type="Texture2D" uid="uid://baa0a0kgxu6ax" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 1-2.png" id="15_svivd"]
-[ext_resource type="Texture2D" uid="uid://b2qvv83fh2ddc" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 2-2.png" id="19_mqvtj"]
-[ext_resource type="PackedScene" uid="uid://41tylf2xmh0i" path="res://Actors/Enemies/Fly/fly.tscn" id="19_t5hu4"]
+[ext_resource type="Texture2D" uid="uid://eae2ydbj8hlw" path="res://Assets/light_area/Second Stage Forest/Backgrounds/BACKGROUND.png" id="1_p5b22"]
+[ext_resource type="Texture2D" uid="uid://eklvjeb3ds33" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 3-1.png" id="2_t8ssf"]
+[ext_resource type="Texture2D" uid="uid://dnl6ja6820ocb" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 3-2.png" id="3_sfqu1"]
+[ext_resource type="Texture2D" uid="uid://8osugfvuyv7o" path="res://Assets/light_area/Second Stage Forest/Backgrounds/WOODS - Fourth.png" id="4_13ljr"]
+[ext_resource type="Texture2D" uid="uid://cdyrem8i1iqf" path="res://Assets/light_area/Second Stage Forest/Backgrounds/WOODS - Third.png" id="5_0vogn"]
+[ext_resource type="Texture2D" uid="uid://bgdysw8rneonx" path="res://Assets/light_area/Second Stage Forest/Backgrounds/WOODS - Second.png" id="6_adulk"]
+[ext_resource type="Texture2D" uid="uid://cec4o0tacs1u8" path="res://Assets/light_area/Second Stage Forest/Backgrounds/VINES - Second.png" id="7_e36aa"]
+[ext_resource type="Texture2D" uid="uid://coxmddxny1fl" path="res://Assets/light_area/Second Stage Forest/Backgrounds/BUSH - BACKGROUND.png" id="8_k20uf"]
+[ext_resource type="Texture2D" uid="uid://dwoqbt825bcco" path="res://Assets/light_area/Second Stage Forest/Backgrounds/WOODS - First.png" id="9_n7yk7"]
+[ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="10_gsac8"]
+[ext_resource type="Texture2D" uid="uid://dph22ijs3gpov" path="res://Assets/light_area/gate/SHADOW Series - Abyssal Gate.png" id="11_3dcxb"]
+[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Actors/Enemies/dark_enemy/dark_enemy.tscn" id="12_vjcd7"]
+[ext_resource type="PackedScene" uid="uid://41tylf2xmh0i" path="res://Actors/Enemies/Fly/fly.tscn" id="13_q7qyy"]
+[ext_resource type="PackedScene" uid="uid://bvhy58703necv" path="res://Actors/Enemies/Hedgehog/hedgehog.tscn" id="14_wbrw8"]
+[ext_resource type="Texture2D" uid="uid://cxgw6cd7ky163" path="res://Assets/light_area/Second Stage Forest/Decorations/MUSHROOM 2-1.png" id="15_8xvdf"]
+[ext_resource type="Texture2D" uid="uid://mf1f2af140ha" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 1-1.png" id="16_lfhbv"]
+[ext_resource type="Texture2D" uid="uid://gur2xqy35q1" path="res://Assets/light_area/Second Stage Forest/Decorations/MUSHROOM 1-1.png" id="17_2p3mc"]
+[ext_resource type="Texture2D" uid="uid://baa0a0kgxu6ax" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 1-2.png" id="18_i8vga"]
+[ext_resource type="Texture2D" uid="uid://b2qvv83fh2ddc" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 2-2.png" id="19_xb74x"]
+[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Actors/Player/player.tscn" id="20_8vtkf"]
+[ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://levels/level_1/killzone.tscn" id="21_7k6of"]
+[ext_resource type="Texture2D" uid="uid://bxfg81kho2dhc" path="res://Assets/light_area/Second Stage Forest/Tiles/Tilesheet - WOODS.png" id="22_4r7ot"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_is5r1"]
 radius = 20.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0unm6"]
-texture = ExtResource("11_wj73x")
+texture = ExtResource("22_4r7ot")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -628,15 +628,15 @@ repeat_times = 5
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/BackWall" unique_id=1452860227]
 position = Vector2(512, 299.99997)
 scale = Vector2(3.2, 1.875)
-texture = ExtResource("1_q42ux")
+texture = ExtResource("1_p5b22")
 
 [node name="Grass31" type="Sprite2D" parent="Backgrounds/BackWall" unique_id=200282088]
 position = Vector2(706, 348)
-texture = ExtResource("2_67vg4")
+texture = ExtResource("2_t8ssf")
 
 [node name="Grass32" type="Sprite2D" parent="Backgrounds/BackWall" unique_id=465749820]
 position = Vector2(466, 350)
-texture = ExtResource("14_svivd")
+texture = ExtResource("3_sfqu1")
 
 [node name="4" type="Parallax2D" parent="Backgrounds" unique_id=511753259]
 scroll_scale = Vector2(0.6, 0.8)
@@ -646,7 +646,7 @@ repeat_times = 5
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/4" unique_id=983093452]
 position = Vector2(512, 300)
 scale = Vector2(3.2, 1.875)
-texture = ExtResource("2_wi0qq")
+texture = ExtResource("4_13ljr")
 
 [node name="3" type="Parallax2D" parent="Backgrounds" unique_id=592369866]
 scroll_scale = Vector2(0.9, 0.8)
@@ -656,7 +656,7 @@ repeat_times = 5
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/3" unique_id=1340291347]
 position = Vector2(512, 300)
 scale = Vector2(3.2, 1.875)
-texture = ExtResource("3_s3q8p")
+texture = ExtResource("5_0vogn")
 
 [node name="2" type="Parallax2D" parent="Backgrounds" unique_id=1601752304]
 scroll_scale = Vector2(0.9, 0.8)
@@ -666,7 +666,7 @@ repeat_times = 5
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/2" unique_id=507063900]
 position = Vector2(512, 300)
 scale = Vector2(3.2, 1.875)
-texture = ExtResource("4_u4kh1")
+texture = ExtResource("6_adulk")
 
 [node name="Bush" type="Parallax2D" parent="Backgrounds" unique_id=1920016570]
 scroll_scale = Vector2(0.9, 0.8)
@@ -676,7 +676,7 @@ repeat_times = 5
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Bush" unique_id=1197040585]
 position = Vector2(512, 300)
 scale = Vector2(3.2, 1.875)
-texture = ExtResource("5_svivd")
+texture = ExtResource("7_e36aa")
 
 [node name="Vines" type="Parallax2D" parent="Backgrounds" unique_id=274929521]
 scroll_scale = Vector2(0.9, 0.8)
@@ -686,7 +686,7 @@ repeat_times = 5
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Vines" unique_id=875508105]
 position = Vector2(512, 300)
 scale = Vector2(3.2, 1.875)
-texture = ExtResource("6_yafm2")
+texture = ExtResource("8_k20uf")
 
 [node name="1" type="Parallax2D" parent="Backgrounds" unique_id=425922173]
 scroll_scale = Vector2(0.9, 0.8)
@@ -696,7 +696,7 @@ repeat_times = 5
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/1" unique_id=1730852831]
 position = Vector2(512, 247.49998)
 scale = Vector2(3.2, 2.2395833)
-texture = ExtResource("7_46211")
+texture = ExtResource("9_n7yk7")
 
 [node name="Cave to Level 2" type="Node2D" parent="." unique_id=1311851320]
 position = Vector2(1763, 296)
@@ -705,7 +705,7 @@ metadata/_edit_group_ = true
 
 [node name="Area2D" type="Area2D" parent="Cave to Level 2" unique_id=474576972]
 collision_mask = 3
-script = ExtResource("9_t5hu4")
+script = ExtResource("10_gsac8")
 target_scene = "res://levels/dark_area/level_2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cave to Level 2/Area2D" unique_id=851890759]
@@ -713,218 +713,218 @@ position = Vector2(1, 19)
 shape = SubResource("CircleShape2D_is5r1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cave to Level 2" unique_id=90664704]
-texture = ExtResource("10_eg35p")
+texture = ExtResource("11_3dcxb")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1014654829]
 
-[node name="Enemy" parent="Enemies" unique_id=920785443 instance=ExtResource("10_yafm2")]
+[node name="Enemy" parent="Enemies" unique_id=920785443 instance=ExtResource("12_vjcd7")]
 position = Vector2(1032, 324)
 
-[node name="Enemy2" parent="Enemies" unique_id=1927885853 instance=ExtResource("10_yafm2")]
+[node name="Enemy2" parent="Enemies" unique_id=1927885853 instance=ExtResource("12_vjcd7")]
 position = Vector2(1365, 324)
 
-[node name="CharacterBody2D" parent="Enemies" unique_id=664461664 instance=ExtResource("19_t5hu4")]
+[node name="CharacterBody2D" parent="Enemies" unique_id=664461664 instance=ExtResource("13_q7qyy")]
 position = Vector2(-1429, 200)
 
-[node name="CharacterBody2D2" parent="Enemies" unique_id=764332518 instance=ExtResource("19_t5hu4")]
+[node name="CharacterBody2D2" parent="Enemies" unique_id=764332518 instance=ExtResource("13_q7qyy")]
 position = Vector2(-1555, 187)
 
-[node name="CharacterBody2D3" parent="Enemies" unique_id=482694236 instance=ExtResource("19_t5hu4")]
+[node name="CharacterBody2D3" parent="Enemies" unique_id=482694236 instance=ExtResource("13_q7qyy")]
 position = Vector2(-1514, 245)
 
-[node name="CharacterBody2D4" parent="Enemies" unique_id=1280941543 instance=ExtResource("19_t5hu4")]
+[node name="CharacterBody2D4" parent="Enemies" unique_id=1280941543 instance=ExtResource("13_q7qyy")]
 position = Vector2(-1010, 207)
 
-[node name="CharacterBody2D5" parent="Enemies" unique_id=610918362 instance=ExtResource("19_t5hu4")]
+[node name="CharacterBody2D5" parent="Enemies" unique_id=610918362 instance=ExtResource("13_q7qyy")]
 position = Vector2(-783, 227)
 
-[node name="CharacterBody2D6" parent="Enemies" unique_id=1861446031 instance=ExtResource("19_t5hu4")]
+[node name="CharacterBody2D6" parent="Enemies" unique_id=1861446031 instance=ExtResource("13_q7qyy")]
 position = Vector2(-889, 176)
 
-[node name="CharacterBody2D7" parent="Enemies" unique_id=1585668946 instance=ExtResource("19_t5hu4")]
+[node name="CharacterBody2D7" parent="Enemies" unique_id=1585668946 instance=ExtResource("13_q7qyy")]
 position = Vector2(-582, 263)
 
-[node name="CharacterBody2D8" parent="Enemies" unique_id=890569367 instance=ExtResource("19_t5hu4")]
+[node name="CharacterBody2D8" parent="Enemies" unique_id=890569367 instance=ExtResource("13_q7qyy")]
 position = Vector2(-250, 187)
 
-[node name="CharacterBody2D9" parent="Enemies" unique_id=1796229538 instance=ExtResource("19_t5hu4")]
+[node name="CharacterBody2D9" parent="Enemies" unique_id=1796229538 instance=ExtResource("13_q7qyy")]
 position = Vector2(-418, 227)
 
-[node name="CharacterBody2D10" parent="Enemies" unique_id=213134590 instance=ExtResource("19_t5hu4")]
+[node name="CharacterBody2D10" parent="Enemies" unique_id=213134590 instance=ExtResource("13_q7qyy")]
 position = Vector2(159, 160)
 
-[node name="CharacterBody2D11" parent="Enemies" unique_id=1022859202 instance=ExtResource("19_t5hu4")]
+[node name="CharacterBody2D11" parent="Enemies" unique_id=1022859202 instance=ExtResource("13_q7qyy")]
 position = Vector2(364, 202)
 
-[node name="CharacterBody2D12" parent="Enemies" unique_id=86431098 instance=ExtResource("12_mqvtj")]
+[node name="CharacterBody2D12" parent="Enemies" unique_id=86431098 instance=ExtResource("14_wbrw8")]
 position = Vector2(591, 356)
 
-[node name="CharacterBody2D13" parent="Enemies" unique_id=811909856 instance=ExtResource("12_mqvtj")]
+[node name="CharacterBody2D13" parent="Enemies" unique_id=811909856 instance=ExtResource("14_wbrw8")]
 position = Vector2(788, 357)
 
-[node name="CharacterBody2D14" parent="Enemies" unique_id=544378886 instance=ExtResource("12_mqvtj")]
+[node name="CharacterBody2D14" parent="Enemies" unique_id=544378886 instance=ExtResource("14_wbrw8")]
 position = Vector2(791, 260)
 
-[node name="CharacterBody2D15" parent="Enemies" unique_id=2066326648 instance=ExtResource("12_mqvtj")]
+[node name="CharacterBody2D15" parent="Enemies" unique_id=2066326648 instance=ExtResource("14_wbrw8")]
 position = Vector2(591, 263)
 
-[node name="CharacterBody2D16" parent="Enemies" unique_id=1415528920 instance=ExtResource("12_mqvtj")]
+[node name="CharacterBody2D16" parent="Enemies" unique_id=1415528920 instance=ExtResource("14_wbrw8")]
 position = Vector2(-199, 374)
 
-[node name="CharacterBody2D17" parent="Enemies" unique_id=25629893 instance=ExtResource("12_mqvtj")]
+[node name="CharacterBody2D17" parent="Enemies" unique_id=25629893 instance=ExtResource("14_wbrw8")]
 position = Vector2(-491, 372)
 
-[node name="CharacterBody2D18" parent="Enemies" unique_id=1706541293 instance=ExtResource("12_mqvtj")]
+[node name="CharacterBody2D18" parent="Enemies" unique_id=1706541293 instance=ExtResource("14_wbrw8")]
 position = Vector2(-1450, 389)
 
 [node name="Decoration" type="Node2D" parent="." unique_id=254911395]
 
 [node name="Mushroom21" type="Sprite2D" parent="Decoration" unique_id=1468039042]
 position = Vector2(-1833, 397)
-texture = ExtResource("11_0unm6")
+texture = ExtResource("15_8xvdf")
 
 [node name="Grass11" type="Sprite2D" parent="Decoration" unique_id=2116997001]
 position = Vector2(-1722, 391)
-texture = ExtResource("12_s3q8p")
+texture = ExtResource("16_lfhbv")
 
 [node name="Mushroom11" type="Sprite2D" parent="Decoration" unique_id=529071182]
 position = Vector2(-1567, 395)
-texture = ExtResource("13_u4kh1")
+texture = ExtResource("17_2p3mc")
 
 [node name="Grass32" type="Sprite2D" parent="Decoration" unique_id=1182339815]
 position = Vector2(-1400, 395)
-texture = ExtResource("14_svivd")
+texture = ExtResource("3_sfqu1")
 
 [node name="Grass12" type="Sprite2D" parent="Decoration" unique_id=2079019187]
 position = Vector2(94, 473)
-texture = ExtResource("12_s3q8p")
+texture = ExtResource("16_lfhbv")
 
 [node name="Grass13" type="Sprite2D" parent="Decoration" unique_id=1006500007]
 position = Vector2(123, 473)
-texture = ExtResource("12_s3q8p")
+texture = ExtResource("16_lfhbv")
 
 [node name="Mushroom22" type="Sprite2D" parent="Decoration" unique_id=1033626995]
 position = Vector2(-1654, 397)
-texture = ExtResource("11_0unm6")
+texture = ExtResource("15_8xvdf")
 
 [node name="Grass14" type="Sprite2D" parent="Decoration" unique_id=1660567902]
 position = Vector2(146, 473)
-texture = ExtResource("15_svivd")
+texture = ExtResource("18_i8vga")
 
 [node name="Grass15" type="Sprite2D" parent="Decoration" unique_id=1985418509]
 position = Vector2(94, 473)
-texture = ExtResource("12_s3q8p")
+texture = ExtResource("16_lfhbv")
 
 [node name="Grass16" type="Sprite2D" parent="Decoration" unique_id=45697132]
 position = Vector2(123, 473)
-texture = ExtResource("12_s3q8p")
+texture = ExtResource("16_lfhbv")
 
 [node name="Grass17" type="Sprite2D" parent="Decoration" unique_id=1447088340]
 position = Vector2(146, 473)
-texture = ExtResource("15_svivd")
+texture = ExtResource("18_i8vga")
 
 [node name="Grass18" type="Sprite2D" parent="Decoration" unique_id=1921064760]
 position = Vector2(207, 473)
-texture = ExtResource("12_s3q8p")
+texture = ExtResource("16_lfhbv")
 
 [node name="Grass19" type="Sprite2D" parent="Decoration" unique_id=790458509]
 position = Vector2(236, 473)
-texture = ExtResource("12_s3q8p")
+texture = ExtResource("16_lfhbv")
 
 [node name="Grass20" type="Sprite2D" parent="Decoration" unique_id=1990590080]
 position = Vector2(259, 473)
-texture = ExtResource("15_svivd")
+texture = ExtResource("18_i8vga")
 
 [node name="Grass21" type="Sprite2D" parent="Decoration" unique_id=262415193]
 position = Vector2(320, 473)
-texture = ExtResource("12_s3q8p")
+texture = ExtResource("16_lfhbv")
 
 [node name="Grass22" type="Sprite2D" parent="Decoration" unique_id=1503333075]
 position = Vector2(349, 473)
-texture = ExtResource("12_s3q8p")
+texture = ExtResource("16_lfhbv")
 
 [node name="Grass23" type="Sprite2D" parent="Decoration" unique_id=1693487542]
 position = Vector2(372, 473)
-texture = ExtResource("15_svivd")
+texture = ExtResource("18_i8vga")
 
 [node name="Grass33" type="Sprite2D" parent="Decoration" unique_id=1235740503]
 position = Vector2(-1173, 396)
-texture = ExtResource("14_svivd")
+texture = ExtResource("3_sfqu1")
 
 [node name="Mushroom23" type="Sprite2D" parent="Decoration" unique_id=1311877261]
 position = Vector2(-972, 332)
-texture = ExtResource("11_0unm6")
+texture = ExtResource("15_8xvdf")
 
 [node name="Mushroom24" type="Sprite2D" parent="Decoration" unique_id=1292045904]
 position = Vector2(-1455, 270)
-texture = ExtResource("11_0unm6")
+texture = ExtResource("15_8xvdf")
 
 [node name="Grass24" type="Sprite2D" parent="Decoration" unique_id=73733891]
 position = Vector2(-779, 311)
-texture = ExtResource("19_mqvtj")
+texture = ExtResource("19_xb74x")
 
 [node name="Mushroom12" type="Sprite2D" parent="Decoration" unique_id=185380696]
 position = Vector2(-457, 268)
-texture = ExtResource("13_u4kh1")
+texture = ExtResource("17_2p3mc")
 
 [node name="Mushroom13" type="Sprite2D" parent="Decoration" unique_id=438281169]
 position = Vector2(-233, 380)
-texture = ExtResource("13_u4kh1")
+texture = ExtResource("17_2p3mc")
 
 [node name="Grass31" type="Sprite2D" parent="Decoration" unique_id=358106832]
 position = Vector2(-218, 270)
-texture = ExtResource("2_67vg4")
+texture = ExtResource("2_t8ssf")
 
 [node name="Mushroom25" type="Sprite2D" parent="Decoration" unique_id=1392269405]
 position = Vector2(-603, 380)
-texture = ExtResource("11_0unm6")
+texture = ExtResource("15_8xvdf")
 
 [node name="Grass34" type="Sprite2D" parent="Decoration" unique_id=1277517015]
 position = Vector2(-404, 382)
-texture = ExtResource("14_svivd")
+texture = ExtResource("3_sfqu1")
 
 [node name="Grass35" type="Sprite2D" parent="Decoration" unique_id=772265283]
 position = Vector2(-103, 381)
-texture = ExtResource("2_67vg4")
+texture = ExtResource("2_t8ssf")
 
 [node name="Grass25" type="Sprite2D" parent="Decoration" unique_id=1833917131]
 position = Vector2(-11, 375)
-texture = ExtResource("19_mqvtj")
+texture = ExtResource("19_xb74x")
 
 [node name="Mushroom26" type="Sprite2D" parent="Decoration" unique_id=1947236207]
 position = Vector2(-64, 238)
-texture = ExtResource("11_0unm6")
+texture = ExtResource("15_8xvdf")
 
 [node name="Mushroom27" type="Sprite2D" parent="Decoration" unique_id=2117405752]
 position = Vector2(0, 221)
-texture = ExtResource("11_0unm6")
+texture = ExtResource("15_8xvdf")
 
 [node name="Mushroom28" type="Sprite2D" parent="Decoration" unique_id=1338451882]
 position = Vector2(65, 222)
-texture = ExtResource("11_0unm6")
+texture = ExtResource("15_8xvdf")
 
 [node name="Mushroom29" type="Sprite2D" parent="Decoration" unique_id=375175099]
 position = Vector2(193, 253)
-texture = ExtResource("11_0unm6")
+texture = ExtResource("15_8xvdf")
 
 [node name="Mushroom30" type="Sprite2D" parent="Decoration" unique_id=1089311207]
 position = Vector2(256, 254)
-texture = ExtResource("11_0unm6")
+texture = ExtResource("15_8xvdf")
 
 [node name="Mushroom31" type="Sprite2D" parent="Decoration" unique_id=501167048]
 position = Vector2(321, 254)
 rotation = -0.0031192184
 scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("11_0unm6")
+texture = ExtResource("15_8xvdf")
 
 [node name="Mushroom32" type="Sprite2D" parent="Decoration" unique_id=1995402330]
 position = Vector2(129, 221)
-texture = ExtResource("11_0unm6")
+texture = ExtResource("15_8xvdf")
 
-[node name="Player" parent="." unique_id=2056772503 instance=ExtResource("11_67vg4")]
+[node name="Player" parent="." unique_id=2056772503 instance=ExtResource("20_8vtkf")]
 position = Vector2(-1934, 378)
 
-[node name="KillZone" parent="." unique_id=419814295 instance=ExtResource("8_46211")]
+[node name="KillZone" parent="." unique_id=419814295 instance=ExtResource("21_7k6of")]
 position = Vector2(232, 479)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=918675610]

@@ -586,7 +586,7 @@ scale = Vector2(2, 2)
 position = Vector2(-633, 174.5)
 collision_mask = 3
 script = ExtResource("9_7rikf")
-target_scene = "res://levels/level_1/level_2.tscn"
+target_scene = "res://levels/level_2/level_2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cave to Level 2/Area2D" unique_id=851890759]
 position = Vector2(1, 19)
@@ -657,6 +657,24 @@ position = Vector2(530, 294)
 
 [node name="CharacterBody2D19" parent="Enemies" unique_id=1054067322 instance=ExtResource("12_lwxes")]
 position = Vector2(968, 431)
+
+[node name="Cave to Level 3" type="Node2D" parent="." unique_id=1714307295]
+position = Vector2(2090, 410)
+scale = Vector2(2, 2)
+
+[node name="Area2D" type="Area2D" parent="Cave to Level 3" unique_id=279481840]
+position = Vector2(-12.5, 0)
+collision_mask = 3
+script = ExtResource("9_7rikf")
+target_scene = "res://levels/level_3/level_3.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cave to Level 3/Area2D" unique_id=279882999]
+position = Vector2(1, 19)
+shape = SubResource("CircleShape2D_is5r1")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cave to Level 3" unique_id=46079551]
+position = Vector2(-11.5, 0)
+texture = ExtResource("10_ov0dm")
 
 [node name="Player" parent="." unique_id=2056772503 instance=ExtResource("10_accah")]
 position = Vector2(-1834, 506)

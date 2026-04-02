@@ -58,7 +58,9 @@ func on_boss_died():
 func on_player_died():
 	player_died.emit()
 	var scene_path = get_tree().current_scene.scene_file_path
+	if "level_1" in scene_path:
+		go_to_scene("res://levels/level_1/death_screen1.tscn")
 	if "level_2" in scene_path:
 		go_to_scene("res://levels/level_2/death_screen2.tscn")
-	else:
-		go_to_scene("res://levels/level_1/death_screen1.tscn")
+	if "level_3" in scene_path:
+		go_to_scene("res://levels/level_3/death_screen3.tscn")

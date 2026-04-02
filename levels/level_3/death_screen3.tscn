@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://c7hwhu8yt7xp5"]
+[gd_scene format=3 uid="uid://cbu8uwm3tq3tf"]
 
-[ext_resource type="Texture2D" uid="uid://u6hnbgxc5m0w" path="res://Assets/death_screen.png" id="1_8gxic"]
-[ext_resource type="Script" uid="uid://dx6u5kp86ilsx" path="res://levels/level_2/death_screen_2.gd" id="1_oj450"]
+[ext_resource type="Script" uid="uid://dq0gfsarkv11i" path="res://levels/level_3/death_screen_3.gd" id="1_h55em"]
+[ext_resource type="Texture2D" uid="uid://u6hnbgxc5m0w" path="res://Assets/death_screen.png" id="2_2pln4"]
 
 [sub_resource type="Theme" id="Theme_oj450"]
 default_font_size = 101
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_oj450")
+script = ExtResource("1_h55em")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2042070328]
 layout_mode = 1
@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_8gxic")
+texture = ExtResource("2_2pln4")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1021951600]
 layout_mode = 1
