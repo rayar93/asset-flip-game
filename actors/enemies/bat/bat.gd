@@ -34,7 +34,7 @@ func _enemy_physics_process(delta):
 		State.ATTACK:
 			velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 		State.HURT:
-			velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
+			pass
 		State.DEAD:
 			velocity.y += 1000 * delta
 			velocity.x = move_toward(velocity.x, 0, friction * 0.5 * delta)
@@ -47,6 +47,7 @@ func _get_sprite():
 	return sprite
 	
 func _on_hurt_finished():
+	if state == State.DEAD: return
 	set_state(State.CHASE)
 	
 # ==============================================================================
@@ -55,6 +56,7 @@ func _on_hurt_finished():
 
 func set_state(new_state: State):
 	if state == new_state: return
+	if state == State.DEAD: return
 	state = new_state
 	match state:
 		State.SLEEP:
@@ -116,10 +118,11 @@ func _handle_chase_logic(delta):
 
 func _on_hurtbox_hit(attack_position: Vector2):
 	if state == State.HURT or state == State.DEAD: return
-	AudioManager.play("enemy_hurt")
-	var knockback_dir = (global_position - attack_position).normalized()
-	velocity = knockback_dir * knockback_strength
-	set_state(State.DEAD)
+	if _take_hit(attack_position):
+		set_state(State.DEAD)
+	else:
+		velocity.y = 0
+		set_state(State.HURT)
 	
 func _on_hitbox_entered(area: Area2D):
 	if state == State.DEAD: return

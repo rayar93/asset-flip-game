@@ -72,7 +72,6 @@ max_health = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1251456456]
 sprite_frames = SubResource("SpriteFrames_5biyq")
-frame_progress = 0.016790615
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=126687276 groups=["enemy_hitbox"]]
 collision_layer = 16

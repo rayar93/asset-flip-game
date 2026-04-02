@@ -121,6 +121,5 @@ func _take_hit(attack_position: Vector2):
 func _tick_hurt_timer(delta):
 	if hurt_timer > 0.0:
 		hurt_timer -= delta
-		print("hurt timer: ", hurt_timer)
 		if hurt_timer <= 0.0:
 			_on_hurt_finished()

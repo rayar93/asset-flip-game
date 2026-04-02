@@ -221,6 +221,7 @@
 [ext_resource type="Texture2D" uid="uid://d1lhwqccdn072" path="res://assets/dark_area/cave/mote.png" id="219_vrb6t"]
 [ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="220_p33w4"]
 [ext_resource type="PackedScene" uid="uid://b1k6xe1pelgkg" path="res://actors/enemies/bat/bat.tscn" id="221_l7jgd"]
+[ext_resource type="PackedScene" uid="uid://5k3by16njkdl" path="res://actors/enemies/shroom/shroom.tscn" id="222_wth84"]
 
 [sub_resource type="Gradient" id="Gradient_4ww2d"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0.2, 0.2, 1)
@@ -6471,3 +6472,6 @@ position = Vector2(850, -153)
 
 [node name="CharacterBody2D5" parent="." unique_id=335141309 instance=ExtResource("221_l7jgd")]
 position = Vector2(866, -35)
+
+[node name="CharacterBody2D6" parent="." unique_id=352327831 instance=ExtResource("222_wth84")]
+position = Vector2(495, 0)
