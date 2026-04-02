@@ -107,6 +107,7 @@ func set_state(new_state: State):
 		State.HURT:
 			hurt_timer = hurt_duration
 		State.DEAD:
+			VFX.screenshake(0.6, 20.0)
 			velocity = Vector2.ZERO
 			GameFlow.call_deferred("on_player_died")
 

@@ -137,9 +137,11 @@ func set_state(new_state: State):
 			AudioManager.play("enemy_attack")
 			_play_anim("down_attack")
 		State.HURT:
+			VFX.screenshake(0.4, 14.0)
 			hurt_timer = hurt_duration
 			_play_anim("hurt")
 		State.DEAD:
+			VFX.screenshake(0.8, 20.0)
 			AudioManager.play("enemy_death")
 			GameFlow.on_boss_died()
 			queue_free()
