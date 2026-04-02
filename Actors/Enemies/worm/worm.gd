@@ -68,6 +68,8 @@ func set_state(new_state: State):
 			sprite.animation_finished.connect(queue_free)
 
 func _handle_patrol_logic(delta):
+	if _is_near_edge():
+		_set_facing(-facing)
 	velocity.x = move_toward(
 		velocity.x,
 		facing * move_speed,
