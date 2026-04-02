@@ -1,7 +1,7 @@
 extends Control
 
 func _on_restart_pressed():
-	GameFlow.go_to_scene("res://levels/level_1/level_1_demo.tscn")
+	GameFlow.go_to_scene("res://levels/level_1/level_1.tscn")
 	
 func _on_menu_pressed():
 	GameFlow.go_to_scene("res://Main_Menu.tscn")

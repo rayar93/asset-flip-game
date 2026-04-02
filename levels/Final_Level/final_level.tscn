@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cgdoyfjgfujy2" path="res://Assets/Final Area/gothicvania church/assets/environment/tileset.png" id="3_cdmhx"]
 [ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Actors/Enemies/dark_enemy/dark_enemy.tscn" id="3_l0ewo"]
 [ext_resource type="Texture2D" uid="uid://c6b100bck76os" path="res://Assets/Final Area/gothicvania church/assets/environment/columns.png" id="5_cdmhx"]
+[ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="6_bnqhw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bnqhw"]
 texture = ExtResource("3_cdmhx")
@@ -131,6 +132,9 @@ texture = ExtResource("3_cdmhx")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_bnqhw")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_adlqn"]
+radius = 20.0
+
 [node name="Final_Level" type="Node2D" unique_id=1285270201]
 
 [node name="BackGround" type="Node2D" parent="." unique_id=651724055]
@@ -160,3 +164,15 @@ texture = ExtResource("5_cdmhx")
 
 [node name="Enemy" parent="." unique_id=920785443 instance=ExtResource("3_l0ewo")]
 position = Vector2(995, 466)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=532503518]
+position = Vector2(2210, 417)
+scale = Vector2(2, 2)
+collision_mask = 3
+script = ExtResource("6_bnqhw")
+target_scene = "res://levels/shared/win_screen.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=494082005]
+position = Vector2(1, 19)
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_adlqn")
