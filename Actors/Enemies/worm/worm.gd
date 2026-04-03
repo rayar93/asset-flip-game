@@ -61,8 +61,7 @@ func set_state(new_state: State):
 			hitbox.monitoring = false
 		State.DEAD:
 			velocity.x=0
-			collision_layer = 0
-			collision_mask = 0
+			set_collision_mask_value(2, false)
 			AudioManager.play("enemy_death")
 			sprite.play("dead")
 			sprite.animation_finished.connect(queue_free)

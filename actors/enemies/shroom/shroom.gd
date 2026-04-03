@@ -60,14 +60,8 @@ func set_state(new_state: State):
 			sprite.play("hurt")
 			hitbox.set_deferred("monitoring", false)
 		State.DEAD:
-			AudioManager.play("enemy_death")
+			begin_death()
 			sprite.play("death")
-			hitbox.set_deferred("monitoring", false)
-			hitbox.set_deferred("monitorable", false)
-			hurtbox.set_deferred("monitoring", false)
-			hurtbox.set_deferred("monitorable", false)
-			collision_layer = 0
-			collision_mask = 0
 
 func _handle_patrol_logic(delta):
 	velocity.x = move_toward(velocity.x, facing * move_speed, 1000 * delta)

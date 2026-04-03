@@ -123,3 +123,15 @@ func _tick_hurt_timer(delta):
 		hurt_timer -= delta
 		if hurt_timer <= 0.0:
 			_on_hurt_finished()
+
+func begin_death():
+	set_collision_mask_value(2, false) # Remove player collision
+	AudioManager.play("enemy_death")
+	if has_node("Hitbox"):
+		var hb = $Hitbox
+		hb.set_deferred("monitoring", false)
+		hb.set_deferred("monitorable", false)
+	if has_node("Hurtbox"):
+		var hurt = $Hurtbox
+		hurt.set_deferred("monitoring", false)
+		hurt.set_deferred("monitorable", false)

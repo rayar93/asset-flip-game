@@ -26,6 +26,9 @@ func go_to_scene(path: String, spawn_point_name = "SpawnPoint"):
 	
 	await _fade(1.0)
 	
+	if VFX:
+		VFX.reset_shake()
+	
 	get_tree().change_scene_to_file(path)
 	await get_tree().process_frame
 	await get_tree().process_frame

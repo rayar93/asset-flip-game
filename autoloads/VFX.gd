@@ -20,6 +20,11 @@ func screenshake(amount: float = 0.5, m_offset = 12.0):
 	trauma = min(trauma + amount, 1.0)
 	max_offset = m_offset
 	
+func reset_shake():
+	trauma = 0.0
+	if is_instance_valid(camera):
+		camera.offset = base_offset
+	
 func _physics_process(delta):
 	if not is_instance_valid(camera):
 		camera = get_tree().get_first_node_in_group("camera")

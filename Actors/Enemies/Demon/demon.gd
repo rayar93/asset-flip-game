@@ -83,9 +83,8 @@ func set_state(new_state: State):
 			hurt_timer = hurt_duration
 			_play_anim("hurt")
 		State.DEAD:
-			hurtbox.set_deferred("monitoring", false)
-			hurtbox.set_deferred("monitorable", false)
-			AudioManager.play("enemy_death")
+			begin_death()
+		
 			_play_anim("death")
 
 func _handle_idle_logic():
