@@ -34,8 +34,7 @@ func _enemy_physics_process(delta):
 		State.CHASE:
 			_handle_chase_logic(delta)
 		State.DEAD:
-			velocity.y += 1000 * delta
-			velocity.x = move_toward(velocity.x, 0, friction * 0.5 * delta)
+			pass
 
 	move_and_slide()
 	
