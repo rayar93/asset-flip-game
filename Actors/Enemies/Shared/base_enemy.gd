@@ -31,7 +31,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if _is_dead:
-		velocity.y += 2000 * delta
+		velocity.y += 980 * delta
 		move_and_slide()
 		return
 	
@@ -133,7 +133,7 @@ func _tick_hurt_timer(delta):
 func begin_death():
 	if _is_dead: return
 	_is_dead = true
-	velocity = Vector2(0, -100)
+	velocity = Vector2.ZERO
 	collision_layer = 0
 	set_collision_mask_value(2, false) # Remove player collision
 	AudioManager.play("enemy_death")

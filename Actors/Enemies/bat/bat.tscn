@@ -40,26 +40,6 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("2_t7klc")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rah7w"]
-atlas = ExtResource("2_t7klc")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fregi"]
-atlas = ExtResource("2_t7klc")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_usqrn"]
-atlas = ExtResource("2_t7klc")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_luweo"]
-atlas = ExtResource("2_t7klc")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i2mh3"]
-atlas = ExtResource("2_t7klc")
-region = Rect2(192, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_1cex1"]
 atlas = ExtResource("3_jue64")
 region = Rect2(0, 0, 32, 32)
@@ -127,21 +107,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a0tw6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rah7w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fregi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_usqrn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_luweo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i2mh3")
 }],
 "loop": false,
 "name": &"death",
@@ -205,12 +170,15 @@ size = Vector2(10, 6)
 scale = Vector2(2, 2)
 collision_layer = 4
 collision_mask = 3
+safe_margin = 0.2
 script = ExtResource("1_u88q0")
 max_health = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1883777498]
 sprite_frames = SubResource("SpriteFrames_2x1ut")
 animation = &"death"
+frame = 1
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1242831003]
 position = Vector2(0, -1)
