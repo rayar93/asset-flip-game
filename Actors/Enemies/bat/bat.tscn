@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://b1k6xe1pelgkg"]
 
-[ext_resource type="Texture2D" uid="uid://bp7n7gdaymfx3" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Attack.png" id="1_miid3"]
+[ext_resource type="Texture2D" uid="uid://bp7n7gdaymfx3" path="res://assets/light_area/enemies/bat/Vampire/BatVampire_Attack.png" id="1_miid3"]
 [ext_resource type="Script" uid="uid://cvg3l5k0m7sks" path="res://actors/enemies/bat/bat.gd" id="1_u88q0"]
-[ext_resource type="Texture2D" uid="uid://t8wyfswxr3h0" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Death.png" id="2_t7klc"]
-[ext_resource type="Texture2D" uid="uid://dtc3j7tl73gww" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Flying.png" id="3_jue64"]
-[ext_resource type="Texture2D" uid="uid://dx644qeubie74" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Hurt.png" id="4_i522r"]
-[ext_resource type="Texture2D" uid="uid://dosb5kgvbiskj" path="res://Assets/light_area/enemies/bat/Vampire/BatVampire_Sleeping.png" id="5_tkwea"]
+[ext_resource type="Texture2D" uid="uid://t8wyfswxr3h0" path="res://assets/light_area/enemies/bat/Vampire/BatVampire_Death.png" id="2_t7klc"]
+[ext_resource type="Texture2D" uid="uid://dtc3j7tl73gww" path="res://assets/light_area/enemies/bat/Vampire/BatVampire_Flying.png" id="3_jue64"]
+[ext_resource type="Texture2D" uid="uid://dx644qeubie74" path="res://assets/light_area/enemies/bat/Vampire/BatVampire_Hurt.png" id="4_i522r"]
+[ext_resource type="Texture2D" uid="uid://dosb5kgvbiskj" path="res://assets/light_area/enemies/bat/Vampire/BatVampire_Sleeping.png" id="5_tkwea"]
 [ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://actors/enemies/shared/enemy_hurtbox.gd" id="6_ad45h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7kpor"]
@@ -144,8 +144,8 @@ animations = [{
 "texture": SubResource("AtlasTexture_i2mh3")
 }],
 "loop": false,
-"name": &"dead",
-"speed": 5.0
+"name": &"death",
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -210,7 +210,7 @@ max_health = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1883777498]
 sprite_frames = SubResource("SpriteFrames_2x1ut")
-animation = &"sleeping"
+animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1242831003]
 position = Vector2(0, -1)

@@ -18,7 +18,6 @@ var state = State.PATROL
 func _enemy_ready():
 	hurtbox.enemy_hurt.connect(_on_hurtbox_hit)
 	hitbox.area_entered.connect(_on_hitbox_entered)
-	sprite.animation_finished.connect(_on_anim_finished)
 	sprite.play("walking")
 	set_state(State.PATROL)
 
@@ -61,7 +60,6 @@ func set_state(new_state: State):
 			hitbox.set_deferred("monitoring", false)
 		State.DEAD:
 			begin_death()
-			sprite.play("death")
 
 func _handle_patrol_logic(delta):
 	velocity.x = move_toward(velocity.x, facing * move_speed, 1000 * delta)
@@ -97,8 +95,3 @@ func _on_hitbox_entered(area: Area2D):
 	
 	if area.has_signal("player_hurt"):
 		area.player_hurt.emit(global_position)
-
-func _on_anim_finished():
-	match sprite.animation:
-		"death":
-			queue_free()

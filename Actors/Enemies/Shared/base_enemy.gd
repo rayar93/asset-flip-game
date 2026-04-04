@@ -10,6 +10,7 @@ var contact_stun_timer = 0.0
 var current_health: int
 var hurt_timer = 0.0
 var facing = 1
+var _is_dead = false
 
 var player: Node2D = null
 var edge_ray = RayCast2D
@@ -29,6 +30,11 @@ func _ready() -> void:
 	_enemy_ready()
 
 func _physics_process(delta: float) -> void:
+	if _is_dead:
+		velocity.y += 2000 * delta
+		move_and_slide()
+		return
+	
 	_tick_hurt_timer(delta)
 	if contact_stun_timer > 0.0:
 		contact_stun_timer -= delta
@@ -125,6 +131,10 @@ func _tick_hurt_timer(delta):
 			_on_hurt_finished()
 
 func begin_death():
+	if _is_dead: return
+	_is_dead = true
+	velocity = Vector2(0, -100)
+	collision_layer = 0
 	set_collision_mask_value(2, false) # Remove player collision
 	AudioManager.play("enemy_death")
 	if has_node("Hitbox"):
@@ -135,3 +145,9 @@ func begin_death():
 		var hurt = $Hurtbox
 		hurt.set_deferred("monitoring", false)
 		hurt.set_deferred("monitorable", false)
+	var sprite = _get_sprite()
+	if sprite and sprite.sprite_frames and sprite.sprite_frames.has_animation("death"):
+		sprite.play("death")
+		sprite.animation_finished.connect(queue_free)
+	else:
+		queue_free()

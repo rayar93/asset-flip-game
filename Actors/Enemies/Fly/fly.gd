@@ -52,7 +52,6 @@ func set_state(new_state: State):
 	match state:
 		State.DEAD:
 			begin_death()
-			sprite.play("death")
 			
 func _handle_idle_logic():
 	if _get_distance_to_player() <= notice_radius:

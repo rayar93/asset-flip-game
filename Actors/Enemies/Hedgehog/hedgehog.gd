@@ -58,8 +58,7 @@ func set_state(new_state: State):
 			hurt_timer = hurt_duration
 			hitbox.monitoring = false
 		State.DEAD:
-			AudioManager.play("enemy_death")
-			queue_free()
+			begin_death()
 
 func _handle_patrol_logic(delta):
 	if _is_near_edge():

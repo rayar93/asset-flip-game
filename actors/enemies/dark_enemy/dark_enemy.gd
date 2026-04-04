@@ -92,8 +92,7 @@ func set_state(new_state: State):
 			hurt_timer = hurt_duration
 			_play_anim("hurt")
 		State.DEAD:
-			AudioManager.play("enemy_death")
-			queue_free()
+			begin_death()
 
 func _handle_idle_logic():
 	if _get_distance_to_player() <= notice_radius:

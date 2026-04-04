@@ -222,6 +222,9 @@
 [ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="220_p33w4"]
 [ext_resource type="PackedScene" uid="uid://b1k6xe1pelgkg" path="res://actors/enemies/bat/bat.tscn" id="221_l7jgd"]
 [ext_resource type="PackedScene" uid="uid://5k3by16njkdl" path="res://actors/enemies/shroom/shroom.tscn" id="222_wth84"]
+[ext_resource type="PackedScene" uid="uid://d2ikngsytxnle" path="res://actors/enemies/Demon/demon.tscn" id="223_rl8x2"]
+[ext_resource type="PackedScene" uid="uid://41tylf2xmh0i" path="res://actors/enemies/fly/fly.tscn" id="224_66rlg"]
+[ext_resource type="PackedScene" uid="uid://bvhy58703necv" path="res://actors/enemies/hedgehog/hedgehog.tscn" id="225_10ggk"]
 
 [sub_resource type="Gradient" id="Gradient_4ww2d"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0.2, 0.2, 1)
@@ -1632,6 +1635,7 @@ position = Vector2(1953, -41)
 scale = Vector2(2, 2)
 
 [node name="Darkness" type="Node2D" parent="." unique_id=1363816062]
+visible = false
 
 [node name="Background2" type="ColorRect" parent="Darkness" unique_id=581391546]
 offset_left = -1120.0
@@ -6418,6 +6422,7 @@ frame_progress = 0.8411297
 [node name="SpawnPoint" type="Node2D" parent="." unique_id=583143697]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=135498828]
+visible = false
 color = Color(0.039215688, 0.101960786, 0.101960786, 1)
 
 [node name="DustMotes" type="GPUParticles2D" parent="." unique_id=1804017536]
@@ -6459,17 +6464,23 @@ position = Vector2(1, 19)
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_l7jgd")
 
-[node name="CharacterBody2D2" parent="." unique_id=1542376191 instance=ExtResource("221_l7jgd")]
-position = Vector2(714, -248)
-
-[node name="CharacterBody2D3" parent="." unique_id=2071900765 instance=ExtResource("221_l7jgd")]
-position = Vector2(794, -204)
-
-[node name="CharacterBody2D4" parent="." unique_id=1920747862 instance=ExtResource("221_l7jgd")]
-position = Vector2(850, -153)
-
 [node name="CharacterBody2D5" parent="." unique_id=335141309 instance=ExtResource("221_l7jgd")]
 position = Vector2(866, -35)
 
+[node name="CharacterBody2D7" parent="." unique_id=1542376191 instance=ExtResource("221_l7jgd")]
+position = Vector2(857, -158)
+
+[node name="CharacterBody2D8" parent="." unique_id=1686205415 instance=ExtResource("221_l7jgd")]
+position = Vector2(801, -209)
+
 [node name="CharacterBody2D6" parent="." unique_id=352327831 instance=ExtResource("222_wth84")]
 position = Vector2(495, 0)
+
+[node name="CharacterBody2D2" parent="." unique_id=1082975616 instance=ExtResource("223_rl8x2")]
+position = Vector2(1458, -88)
+
+[node name="CharacterBody2D3" parent="." unique_id=664461664 instance=ExtResource("224_66rlg")]
+position = Vector2(321, -74)
+
+[node name="CharacterBody2D4" parent="." unique_id=86431098 instance=ExtResource("225_10ggk")]
+position = Vector2(98, -19)

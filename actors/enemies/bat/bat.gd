@@ -36,8 +36,7 @@ func _enemy_physics_process(delta):
 		State.HURT:
 			pass
 		State.DEAD:
-			velocity.y += 1000 * delta
-			velocity.x = move_toward(velocity.x, 0, friction * 0.5 * delta)
+			pass
 	move_and_slide()
 	
 func _apply_facing():
@@ -78,8 +77,7 @@ func set_state(new_state: State):
 			hitbox.set_deferred("monitoring", false)
 		State.DEAD:
 			begin_death()
-			sprite.play("death")
-			
+		
 func _handle_sleep_logic():
 	if _get_distance_to_player() <= notice_radius:
 		set_state(State.CHASE)
@@ -128,5 +126,3 @@ func _on_anim_finished():
 	match sprite.animation:
 		"attacking":
 			set_state(State.CHASE)
-		"death":
-			queue_free()

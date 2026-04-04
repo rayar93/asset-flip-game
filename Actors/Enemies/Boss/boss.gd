@@ -142,9 +142,8 @@ func set_state(new_state: State):
 			_play_anim("hurt")
 		State.DEAD:
 			VFX.screenshake(0.8, 20.0)
-			AudioManager.play("enemy_death")
+			begin_death()
 			GameFlow.on_boss_died()
-			queue_free()
 
 func start_combat():
 	if state == State.INTRO:

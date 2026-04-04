@@ -60,11 +60,7 @@ func set_state(new_state: State):
 			sprite.play("hurt")
 			hitbox.monitoring = false
 		State.DEAD:
-			velocity.x=0
-			set_collision_mask_value(2, false)
-			AudioManager.play("enemy_death")
-			sprite.play("dead")
-			sprite.animation_finished.connect(queue_free)
+			begin_death()
 
 func _handle_patrol_logic(delta):
 	if _is_near_edge():

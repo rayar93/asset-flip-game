@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://b0ndqyo6a5sko"]
 
-[ext_resource type="Texture2D" uid="uid://ci4eeqtmyjakq" path="res://Assets/light_area/enemies/worm/worm_death_anim_strip_6.png" id="1_1jsqa"]
-[ext_resource type="Script" uid="uid://dj3ibiwqkee3t" path="res://Actors/Enemies/worm/worm.gd" id="1_1ml58"]
-[ext_resource type="Texture2D" uid="uid://rn1dtckchht" path="res://Assets/light_area/enemies/worm/worm_walk_anim_strip_6.png" id="2_1ml58"]
-[ext_resource type="Texture2D" uid="uid://b0me17o16yy4y" path="res://Assets/light_area/enemies/worm/worm_hit_anim_strip_3.png" id="3_j6t47"]
-[ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://Actors/Enemies/Shared/enemy_hurtbox.gd" id="4_qvnqv"]
+[ext_resource type="Texture2D" uid="uid://t24a41xr6vje" path="res://assets/light_area/enemies/worm/worm_death_anim_strip_6.png" id="1_1jsqa"]
+[ext_resource type="Script" uid="uid://dj3ibiwqkee3t" path="res://actors/enemies/worm/worm.gd" id="1_1ml58"]
+[ext_resource type="Texture2D" uid="uid://drjbdu8aplfe5" path="res://assets/light_area/enemies/worm/worm_walk_anim_strip_6.png" id="2_1ml58"]
+[ext_resource type="Texture2D" uid="uid://c5bvmiaqrrw2v" path="res://assets/light_area/enemies/worm/worm_hit_anim_strip_3.png" id="3_j6t47"]
+[ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://actors/enemies/shared/enemy_hurtbox.gd" id="4_qvnqv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oa88h"]
 atlas = ExtResource("1_1jsqa")
@@ -88,8 +88,8 @@ animations = [{
 "texture": SubResource("AtlasTexture_ccl1h")
 }],
 "loop": false,
-"name": &"dead",
-"speed": 5.0
+"name": &"death",
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -147,6 +147,7 @@ max_health = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1290605098]
 sprite_frames = SubResource("SpriteFrames_u6i4o")
+animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=42581632]
 position = Vector2(0, 0.25)
