@@ -11,10 +11,6 @@ func _ready() -> void:
 	)
 	await _find_and_connect_player()
 	
-func _on_node_added(node: Node):
-	if node.is_in_group("player"):
-		await _find_and_connect_player()
-
 func _find_and_connect_player():
 	await get_tree().process_frame
 	player = get_tree().get_first_node_in_group("player")
