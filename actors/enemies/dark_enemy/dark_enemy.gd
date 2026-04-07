@@ -25,6 +25,8 @@ var attack_cooldown_timer = 0.0
 var attack_hit_frame = 2
 var targets_hit_this_attack: Array[Node2D] = []
 
+var attack_sound_played = false
+
 # ==============================================================================
 # BaseEnemy virtual overrides
 # ==============================================================================
@@ -87,6 +89,7 @@ func set_state(new_state: State):
 			_play_anim("walk")
 		State.ATTACK:
 			velocity.x = 0
+			attack_sound_played = false
 			_play_anim("attack")
 		State.HURT:
 			hurt_timer = hurt_duration
@@ -121,7 +124,8 @@ func _handle_chase_logic():
 
 func _handle_attack_logic():
 	_set_hitbox_active(sprite.frame == attack_hit_frame)
-	if sprite.frame == attack_hit_frame:
+	if sprite.frame == attack_hit_frame and not attack_sound_played:
+		attack_sound_played = true
 		AudioManager.play("enemy_attack")
 
 # ==============================================================================

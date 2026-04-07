@@ -119,6 +119,7 @@ func _spawn_projectile():
 	
 	var dir = (player.global_position - projectile_spawn.global_position).normalized()
 	proj.launch(dir, projectile_speed)
+	AudioManager.play("fireball_launch")
 	
 # ==============================================================================
 # Signals

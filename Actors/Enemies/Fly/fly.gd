@@ -90,7 +90,6 @@ func _on_hurtbox_hit(attack_position: Vector2):
 	
 	var knockback_dir = (global_position - attack_position).normalized()
 	velocity = knockback_dir * knockback_strength
-	AudioManager.play("enemy_death")
 	set_state(State.DEAD)
 	
 func _on_hitbox_entered(area: Area2D):

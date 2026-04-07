@@ -116,25 +116,26 @@ func set_state(new_state: State):
 		State.CHASE:
 			chase_timer = 0.0
 		State.DASH:
+			AudioManager.play("boss_dash")
 			dash_timer = 0.4
 			velocity.y = 0
 			velocity.x = facing * dash_speed
 			_play_anim("dash")
 		State.ATTACK_SIDE:
 			velocity.x = 0
-			AudioManager.play("enemy_attack")
+			AudioManager.play("boss_attack")
 			_play_anim("attack")
 		State.ATTACK_UP:
 			velocity.x = 0
-			AudioManager.play("enemy_attack")
+			AudioManager.play("boss_attack")
 			_play_anim("up_attack")
 		State.ATTACK_STRONG:
 			velocity.x = 0
-			AudioManager.play("enemy_attack")
+			AudioManager.play("boss_attack")
 			_play_anim("strong_attack")
 		State.ATTACK_DOWN:
 			velocity.x = 0
-			AudioManager.play("enemy_attack")
+			AudioManager.play("boss_attack")
 			_play_anim("down_attack")
 		State.HURT:
 			VFX.screenshake(0.4, 14.0)
@@ -181,6 +182,7 @@ func _handle_chase_logic(delta):
 			return
 		if dx >= air_medium_x:
 			velocity.y = jump_force
+			AudioManager.play("boss_jump")
 			set_state(State.AIR)
 			return
 		if dx <= overhead_x and abs(dy) <= above_y:
@@ -268,6 +270,7 @@ func _on_hitbox_entered(area: Area2D):
 	if area.has_signal("player_hurt"):
 		targets_hit_this_attack.append(area)
 		area.player_hurt.emit(global_position)
+		AudioManager.play("boss_attack_connect")
 
 func _on_anim_finished():
 	if state in [State.ATTACK_SIDE, State.ATTACK_UP, State.ATTACK_STRONG, State.ATTACK_DOWN]:

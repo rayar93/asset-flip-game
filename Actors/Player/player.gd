@@ -97,6 +97,7 @@ func set_state(new_state: State):
 				set_state(State.AIR)
 				return
 		State.DASH:
+			AudioManager.play("player_dash")
 			velocity.y = 0
 			afterimage_timer = 0.0
 			dash_time_left = dash_duration
@@ -107,6 +108,7 @@ func set_state(new_state: State):
 		State.HURT:
 			hurt_timer = hurt_duration
 		State.DEAD:
+			AudioManager.play("player_death")
 			VFX.screenshake(0.6, 20.0)
 			velocity = Vector2.ZERO
 			GameFlow.call_deferred("on_player_died")
@@ -116,6 +118,7 @@ func _handle_grounded_input(move_dir):
 
 	if Input.is_action_just_pressed("jump"):
 		velocity.y = jump_velocity
+		AudioManager.play("player_jump")
 		set_state(State.AIR)
 	elif Input.is_action_just_pressed("dash") and can_dash:
 		set_state(State.DASH)
@@ -129,6 +132,7 @@ func _handle_air_input(move_dir):
 		if coyote_timer > 0:
 			velocity.y = jump_velocity
 			coyote_timer = 0
+			AudioManager.play("player_jump")
 		elif can_double_jump:
 			velocity.y = jump_velocity
 			can_double_jump = false
@@ -196,6 +200,7 @@ func _check_ground_status():
 
 	if is_on_floor() and state == State.AIR:
 		set_state(State.GROUNDED)
+		AudioManager.play("land")
 	elif not is_on_floor() and state == State.GROUNDED:
 		coyote_timer = coyote_time
 		set_state(State.AIR)
@@ -238,6 +243,7 @@ func die():
 func _on_player_hurt(attack_position: Vector2):
 	if state == State.HURT: return
 
+	AudioManager.play("player_hurt")
 	current_health -= 1
 	health_changed.emit(current_health)
 	VFX.screenshake()
@@ -260,3 +266,4 @@ func _on_attack_hit(area: Area2D):
 		if attack_root.rotation_degrees == 90 and not is_on_floor():
 			velocity.y = jump_velocity
 			can_double_jump = true
+			AudioManager.play("pogo_bounce")

@@ -15,6 +15,7 @@ func launch(direction: Vector2, speed: float):
 func _physics_process(delta: float) -> void:
 	_lifetime_timer += delta
 	if _lifetime_timer >= lifetime:
+		AudioManager.play("fireball_hit")
 		queue_free()
 		return
 	position += velocity * delta
@@ -34,4 +35,5 @@ func _on_body_entered(body: Node2D):
 	_on_hit()
 	
 func _on_hit():
+	AudioManager.play("fireball_hit")
 	queue_free()

@@ -1,21 +1,36 @@
 [gd_scene format=3 uid="uid://fgv70q8mswx"]
 
 [ext_resource type="Script" uid="uid://cs1ng2kov1ym8" path="res://autoloads/audio_manager.gd" id="1_x17ax"]
-[ext_resource type="AudioStream" uid="uid://c2wcp78i7gcoe" path="res://audio/SFX/Sword Attacks Hits and Blocks/Sword Attack 1.wav" id="2_vfyvq"]
 
 [node name="Node2D" type="Node2D" unique_id=1715663642]
 script = ExtResource("1_x17ax")
 
-[node name="PlayerAttack" type="AudioStreamPlayer" parent="." unique_id=893764777]
-stream = ExtResource("2_vfyvq")
-volume_db = -10.0
-
-[node name="EnemyAttack" type="AudioStreamPlayer2D" parent="." unique_id=1667630821]
-
-[node name="EnemyHurt" type="AudioStreamPlayer2D" parent="." unique_id=1558630747]
-
-[node name="EnemyDeath" type="AudioStreamPlayer2D" parent="." unique_id=1411686432]
-
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=843036093]
+bus = &"Music"
 
 [node name="Ambient" type="AudioStreamPlayer" parent="." unique_id=493516764]
+bus = &"Ambience"
+
+[node name="SFX1" type="AudioStreamPlayer" parent="." unique_id=1347042953]
+bus = &"SFX"
+
+[node name="SFX2" type="AudioStreamPlayer" parent="." unique_id=1393021105]
+bus = &"SFX"
+
+[node name="SFX3" type="AudioStreamPlayer" parent="." unique_id=1506703618]
+bus = &"SFX"
+
+[node name="SFX4" type="AudioStreamPlayer" parent="." unique_id=1525949795]
+bus = &"SFX"
+
+[node name="SFX5" type="AudioStreamPlayer" parent="." unique_id=1184616117]
+bus = &"SFX"
+
+[node name="SFX6" type="AudioStreamPlayer" parent="." unique_id=1987533638]
+bus = &"SFX"
+
+[node name="SFX7" type="AudioStreamPlayer" parent="." unique_id=1493306511]
+bus = &"SFX"
+
+[node name="SFX8" type="AudioStreamPlayer" parent="." unique_id=1583394833]
+bus = &"SFX"
