@@ -46,7 +46,8 @@ signal health_changed(new_health: int)
 
 func _ready():
 	attack_area.area_entered.connect(_on_attack_hit)
-	$PlayerHurtbox.player_hurt.connect(_on_player_hurt)
+	if not $PlayerHurtbox.player_hurt.is_connected(_on_player_hurt):
+		$PlayerHurtbox.player_hurt.connect(_on_player_hurt)
 	_return_to_base_state()
 
 func _physics_process(delta):

@@ -14,6 +14,7 @@ extends BaseEnemy
 @onready var sprite: AnimatedSprite2D = $VisualRoot/AnimatedSprite2D
 @onready var hurtbox: Area2D = $VisualRoot/Hurtbox
 @onready var projectile_spawn: Marker2D = $VisualRoot/ProjectileSpawn
+@onready var hitbox: Area2D = $VisualRoot/Hitbox
 
 enum State { IDLE, FLY, ATTACK, HURT, DEAD }
 var state = State.IDLE
@@ -31,6 +32,7 @@ func _enemy_ready():
 	hurtbox.enemy_hurt.connect(_on_hurtbox_hit)
 	sprite.animation_finished.connect(_on_anim_finished)
 	sprite.frame_changed.connect(_on_frame_changed)
+	hitbox.area_entered.connect(_on_hitbox_entered)
 	_apply_facing()
 	sprite.play("idle")
 	set_state(State.IDLE)
@@ -135,8 +137,6 @@ func _on_anim_finished():
 	match state:
 		State.ATTACK:
 			set_state(State.FLY if _get_distance_to_player() <= notice_radius else State.IDLE)
-		State.DEAD:
-			queue_free()
 			
 func _on_hurtbox_hit(attack_position: Vector2):
 	if state == State.HURT or state == State.DEAD: return

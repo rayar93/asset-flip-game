@@ -13,6 +13,7 @@ extends BaseEnemy
 
 enum State { IDLE, CHASE, DEAD }
 var state = State.IDLE
+var targets_hit_this_attack: Array[Node2D] = []
 
 # ==============================================================================
 # BaseEnemy virtual overrides
@@ -21,8 +22,7 @@ var state = State.IDLE
 func _enemy_ready():
 	hurtbox.enemy_hurt.connect(_on_hurtbox_hit)
 	hitbox.area_entered.connect(_on_hitbox_entered)
-	sprite.animation_finished.connect(_on_anim_finished)
-
+	hitbox.area_exited.connect(_on_hitbox_exited)
 	sprite.play("default")
 	set_state(State.IDLE)
 
@@ -94,10 +94,10 @@ func _on_hurtbox_hit(attack_position: Vector2):
 	
 func _on_hitbox_entered(area: Area2D):
 	if state == State.DEAD: return
-	
+	if area in targets_hit_this_attack: return
 	if area.has_signal("player_hurt"):
+		targets_hit_this_attack.append(area)
 		area.player_hurt.emit(global_position)
 
-func _on_anim_finished():
-	if sprite.animation == "death":
-		queue_free()
+func _on_hitbox_exited(area: Area2D):
+	targets_hit_this_attack.erase(area)
