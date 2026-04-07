@@ -15,3 +15,7 @@ volume_db = -10.0
 [node name="EnemyHurt" type="AudioStreamPlayer2D" parent="." unique_id=1558630747]
 
 [node name="EnemyDeath" type="AudioStreamPlayer2D" parent="." unique_id=1411686432]
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=843036093]
+
+[node name="Ambient" type="AudioStreamPlayer" parent="." unique_id=493516764]

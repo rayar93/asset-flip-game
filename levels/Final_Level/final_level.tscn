@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://6sfqubjc0pwx"]
 
-[ext_resource type="Texture2D" uid="uid://3tudk1pidtks" path="res://Assets/Final Area/gothicvania church/assets/environment/background.png" id="1_pmrvv"]
-[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Actors/Player/player.tscn" id="2_l0ewo"]
-[ext_resource type="Texture2D" uid="uid://cgdoyfjgfujy2" path="res://Assets/Final Area/gothicvania church/assets/environment/tileset.png" id="3_cdmhx"]
-[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Actors/Enemies/dark_enemy/dark_enemy.tscn" id="3_l0ewo"]
-[ext_resource type="Texture2D" uid="uid://c6b100bck76os" path="res://Assets/Final Area/gothicvania church/assets/environment/columns.png" id="5_cdmhx"]
+[ext_resource type="Texture2D" uid="uid://3tudk1pidtks" path="res://assets/Final Area/gothicvania church/assets/environment/background.png" id="1_pmrvv"]
+[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://actors/player/player.tscn" id="2_l0ewo"]
+[ext_resource type="Texture2D" uid="uid://cgdoyfjgfujy2" path="res://assets/Final Area/gothicvania church/assets/environment/tileset.png" id="3_cdmhx"]
+[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://actors/enemies/dark_enemy/dark_enemy.tscn" id="3_l0ewo"]
+[ext_resource type="Texture2D" uid="uid://c6b100bck76os" path="res://assets/Final Area/gothicvania church/assets/environment/columns.png" id="5_cdmhx"]
 [ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="6_bnqhw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bnqhw"]
