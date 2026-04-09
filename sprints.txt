@@ -83,13 +83,13 @@ Finish level 2
 Knight boss
 Stop interpolation on sword
 Replace dash VFX
-
-Should do
-
 Footsteps
 Enemy placement
 Difficulty tuning
 Typo in tutorial
+
+Sprint 12 (due 4/23)
+
 Boss health UI
 Do all enemies have hurt flash + death animation (hedgehog?)
 Boss intro(s?) - pause, dialogue, music change
@@ -97,9 +97,11 @@ Interface sounds
 Make doors enterable instead of instantly transporting you. Add to tutorial?
 Enter/exit sound(s?)
 Level 2 light sources - lava (hazard), torches, glowing mushrooms
+Implement settings menu or remove button
 
-Polish
+Stretch
 
+Health/max-health pickups
 Screenshake + landing dust after a fall
 Pogo feel, hang time at apex
 Stationary floating enemy
@@ -119,9 +121,7 @@ Screenshake on pogo bounce, enemy death
 Pumpkin decorations in witch boss room
 Bouncable spikes
 Player landing sound plays even tho player starts on ground
-
-Stretch
-
+Standardize buttons available on menu/pause/death screens?
 Controller support
 Complex enemy platforming (chase by jumping)
 Lock dash/double-jump behind pickups (would require trimming tutorial, adding popups)
