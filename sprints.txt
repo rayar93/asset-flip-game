@@ -87,6 +87,8 @@ Footsteps
 Enemy placement
 Difficulty tuning
 Typo in tutorial
+Disable pause menu in other menus
+Both of the bosses call the winscreen on death, choose one
 
 Sprint 12 (due 4/23)
 
