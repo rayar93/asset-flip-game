@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bngyw40oc06j2"]
 
-[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://actors/player/player.tscn" id="1_vthxg"]
+[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Actors/Player/player.tscn" id="1_vthxg"]
 [ext_resource type="Script" uid="uid://btc2aqh5q1eq2" path="res://levels/Tutorial/Text.gd" id="1_xxil4"]
 [ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="3_iqx1w"]
 
@@ -223,3 +223,12 @@ target_scene = "res://levels/level_1/level_1.tscn"
 position = Vector2(1, 19)
 scale = Vector2(4, 4)
 shape = SubResource("CircleShape2D_cu6o1")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=29894677]
+position = Vector2(104.99994, 466)
+rotation = -1.5693067
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=2073654474]
+position = Vector2(-162.5, 0)
+shape = SubResource("RectangleShape2D_vthxg")
