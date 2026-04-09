@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://dwoqbt825bcco" path="res://Assets/light_area/Second Stage Forest/Backgrounds/WOODS - First.png" id="9_n7yk7"]
 [ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="10_gsac8"]
 [ext_resource type="Texture2D" uid="uid://dph22ijs3gpov" path="res://Assets/light_area/gate/SHADOW Series - Abyssal Gate.png" id="11_3dcxb"]
-[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Actors/Enemies/dark_enemy/dark_enemy.tscn" id="12_vjcd7"]
 [ext_resource type="Texture2D" uid="uid://cxgw6cd7ky163" path="res://Assets/light_area/Second Stage Forest/Decorations/MUSHROOM 2-1.png" id="15_8xvdf"]
 [ext_resource type="Texture2D" uid="uid://mf1f2af140ha" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 1-1.png" id="16_lfhbv"]
 [ext_resource type="Texture2D" uid="uid://gur2xqy35q1" path="res://Assets/light_area/Second Stage Forest/Decorations/MUSHROOM 1-1.png" id="17_2p3mc"]
@@ -21,6 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://levels/level_1/killzone.tscn" id="21_7k6of"]
 [ext_resource type="PackedScene" uid="uid://b0ndqyo6a5sko" path="res://Actors/Enemies/worm/worm.tscn" id="21_vx5ph"]
 [ext_resource type="Texture2D" uid="uid://bxfg81kho2dhc" path="res://Assets/light_area/Second Stage Forest/Tiles/Tilesheet - WOODS.png" id="22_4r7ot"]
+[ext_resource type="PackedScene" uid="uid://d2ikngsytxnle" path="res://Actors/Enemies/Demon/demon.tscn" id="22_p5b22"]
+[ext_resource type="PackedScene" uid="uid://b1k6xe1pelgkg" path="res://Actors/Enemies/bat/bat.tscn" id="23_sfqu1"]
+[ext_resource type="PackedScene" uid="uid://5k3by16njkdl" path="res://Actors/Enemies/shroom/shroom.tscn" id="24_13ljr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_is5r1"]
 radius = 20.0
@@ -648,8 +650,8 @@ repeat_size = Vector2(1020, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/3" unique_id=1340291347]
-position = Vector2(512, 300)
-scale = Vector2(3.2, 1.875)
+position = Vector2(512, 291)
+scale = Vector2(3.2, 1.9375001)
 texture = ExtResource("5_0vogn")
 
 [node name="2" type="Parallax2D" parent="Backgrounds" unique_id=1601752304]
@@ -658,8 +660,8 @@ repeat_size = Vector2(1020, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/2" unique_id=507063900]
-position = Vector2(512, 300)
-scale = Vector2(3.2, 1.875)
+position = Vector2(512, 266)
+scale = Vector2(3.2, 2.1111112)
 texture = ExtResource("6_adulk")
 
 [node name="Bush" type="Parallax2D" parent="Backgrounds" unique_id=1920016570]
@@ -688,8 +690,8 @@ repeat_size = Vector2(1020, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/1" unique_id=1730852831]
-position = Vector2(512, 247.49998)
-scale = Vector2(3.2, 2.2395833)
+position = Vector2(512, 226.99998)
+scale = Vector2(3.2, 2.3819442)
 texture = ExtResource("9_n7yk7")
 
 [node name="Cave to Level 2" type="Node2D" parent="." unique_id=1311851320]
@@ -710,12 +712,6 @@ shape = SubResource("CircleShape2D_is5r1")
 texture = ExtResource("11_3dcxb")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1014654829]
-
-[node name="Enemy" parent="Enemies" unique_id=920785443 instance=ExtResource("12_vjcd7")]
-position = Vector2(1032, 324)
-
-[node name="Enemy2" parent="Enemies" unique_id=1927885853 instance=ExtResource("12_vjcd7")]
-position = Vector2(1365, 324)
 
 [node name="Decoration" type="Node2D" parent="." unique_id=254911395]
 
@@ -884,12 +880,6 @@ position = Vector2(-407, 265)
 [node name="CharacterBody2D4" parent="." unique_id=1275987724 instance=ExtResource("21_vx5ph")]
 position = Vector2(-148, 378)
 
-[node name="CharacterBody2D5" parent="." unique_id=1188441681 instance=ExtResource("21_vx5ph")]
-position = Vector2(696, 346)
-
-[node name="CharacterBody2D6" parent="." unique_id=1173447904 instance=ExtResource("21_vx5ph")]
-position = Vector2(814, 266)
-
 [node name="CharacterBody2D7" parent="." unique_id=1672128824 instance=ExtResource("21_vx5ph")]
 position = Vector2(512, 346)
 
@@ -901,3 +891,45 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1650585673]
 position = Vector2(-162.5, 0)
 shape = SubResource("RectangleShape2D_vx5ph")
+
+[node name="CharacterBody2D8" parent="." unique_id=1082975616 instance=ExtResource("22_p5b22")]
+position = Vector2(-289, 205)
+
+[node name="CharacterBody2D9" parent="." unique_id=1542376191 instance=ExtResource("23_sfqu1")]
+position = Vector2(128, 260)
+
+[node name="CharacterBody2D10" parent="." unique_id=150421744 instance=ExtResource("23_sfqu1")]
+position = Vector2(320, 292)
+
+[node name="CharacterBody2D11" parent="." unique_id=2013491928 instance=ExtResource("23_sfqu1")]
+position = Vector2(-468, 307)
+
+[node name="CharacterBody2D12" parent="." unique_id=1922763758 instance=ExtResource("23_sfqu1")]
+position = Vector2(-959, 293)
+
+[node name="CharacterBody2D13" parent="." unique_id=1329393176 instance=ExtResource("23_sfqu1")]
+position = Vector2(-1493, 311)
+
+[node name="CharacterBody2D5" parent="." unique_id=352327831 instance=ExtResource("24_13ljr")]
+position = Vector2(763, 365)
+
+[node name="CharacterBody2D6" parent="." unique_id=1321692914 instance=ExtResource("24_13ljr")]
+position = Vector2(610, 268)
+
+[node name="CharacterBody2D14" parent="." unique_id=310741686 instance=ExtResource("22_p5b22")]
+position = Vector2(1167, 99)
+
+[node name="CharacterBody2D15" parent="." unique_id=1644144501 instance=ExtResource("22_p5b22")]
+position = Vector2(1055, 100)
+
+[node name="CharacterBody2D16" parent="." unique_id=1350282763 instance=ExtResource("22_p5b22")]
+position = Vector2(1251, 98)
+
+[node name="CharacterBody2D17" parent="." unique_id=2141609642 instance=ExtResource("22_p5b22")]
+position = Vector2(974, 105)
+
+[node name="CharacterBody2D18" parent="." unique_id=1138086065 instance=ExtResource("22_p5b22")]
+position = Vector2(858, 165)
+
+[node name="CharacterBody2D19" parent="." unique_id=2064756727 instance=ExtResource("22_p5b22")]
+position = Vector2(992, 197)
