@@ -217,14 +217,10 @@
 [ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://actors/enemies/dark_enemy/dark_enemy.tscn" id="216_armii"]
 [ext_resource type="PackedScene" uid="uid://c1y54bnb2bqcb" path="res://levels/level_2/light_beam.tscn" id="218_4ww2d"]
 [ext_resource type="Script" uid="uid://dxtmqrhyp1b3k" path="res://levels/level_2/dust_motes.gd" id="219_idsih"]
-[ext_resource type="PackedScene" uid="uid://b0ndqyo6a5sko" path="res://actors/enemies/worm/worm.tscn" id="219_rnb7j"]
 [ext_resource type="Texture2D" uid="uid://d1lhwqccdn072" path="res://assets/dark_area/cave/mote.png" id="219_vrb6t"]
 [ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="220_p33w4"]
-[ext_resource type="PackedScene" uid="uid://b1k6xe1pelgkg" path="res://actors/enemies/bat/bat.tscn" id="221_l7jgd"]
-[ext_resource type="PackedScene" uid="uid://5k3by16njkdl" path="res://actors/enemies/shroom/shroom.tscn" id="222_wth84"]
-[ext_resource type="PackedScene" uid="uid://d2ikngsytxnle" path="res://actors/enemies/Demon/demon.tscn" id="223_rl8x2"]
-[ext_resource type="PackedScene" uid="uid://41tylf2xmh0i" path="res://actors/enemies/fly/fly.tscn" id="224_66rlg"]
-[ext_resource type="PackedScene" uid="uid://bvhy58703necv" path="res://actors/enemies/hedgehog/hedgehog.tscn" id="225_10ggk"]
+[ext_resource type="PackedScene" uid="uid://b8sk47eqixvhy" path="res://actors/enemies/boss/boss.tscn" id="221_l7jgd"]
+[ext_resource type="Texture2D" uid="uid://b8mpavxp7dck7" path="res://icon.svg" id="226_66rlg"]
 
 [sub_resource type="Gradient" id="Gradient_4ww2d"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0.2, 0.2, 1)
@@ -1799,7 +1795,7 @@ region_enabled = true
 region_rect = Rect2(274, 645, 303, 62)
 
 [node name="Platform9" type="StaticBody2D" parent="Terrain/Platforms" unique_id=1369504140]
-position = Vector2(6906.6665, -8446.666)
+position = Vector2(6280, -7913.3325)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/Platform9" unique_id=1282639614]
@@ -1814,7 +1810,7 @@ region_enabled = true
 region_rect = Rect2(293, 721, 267, 158)
 
 [node name="Platform10" type="StaticBody2D" parent="Terrain/Platforms" unique_id=2045235747]
-position = Vector2(7046.6665, -7633.333)
+position = Vector2(7040, -7486.6665)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/Platform10" unique_id=1912679261]
@@ -2012,19 +2008,6 @@ shape = SubResource("RectangleShape2D_j5vrt")
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_pi8ru")
 
-[node name="WallLeftThick4" type="StaticBody2D" parent="Terrain/Walls" unique_id=19951884]
-position = Vector2(8446.666, -3146.6665)
-rotation = 3.1415927
-scale = Vector2(0.9999998, 0.9999998)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Walls/WallLeftThick4" unique_id=1429015566]
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_j5vrt")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Walls/WallLeftThick4" unique_id=1004322576]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_pi8ru")
-
 [node name="WallLeftThick5" type="StaticBody2D" parent="Terrain/Walls" unique_id=49898189]
 position = Vector2(9440, -2480)
 scale = Vector2(0.9999998, 0.9999998)
@@ -2046,18 +2029,6 @@ scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_j5vrt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Terrain/Walls/WallLeftThick6" unique_id=1660068530]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_pi8ru")
-
-[node name="WallLeftThick7" type="StaticBody2D" parent="Terrain/Walls" unique_id=1770671708]
-position = Vector2(9440, -3140)
-scale = Vector2(0.9999998, 0.9999998)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Walls/WallLeftThick7" unique_id=1507872042]
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_j5vrt")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Walls/WallLeftThick7" unique_id=1727938083]
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_pi8ru")
 
@@ -6420,6 +6391,7 @@ autoplay = "default"
 frame_progress = 0.8411297
 
 [node name="SpawnPoint" type="Node2D" parent="." unique_id=583143697]
+position = Vector2(-110, -407)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=135498828]
 visible = false
@@ -6449,9 +6421,6 @@ beam_width = 300
 beam_angle = 20
 beam_color = Color(0.0891326, 0.49284965, 0.4111467, 0.4)
 
-[node name="CharacterBody2D" parent="." unique_id=656367632 instance=ExtResource("219_rnb7j")]
-position = Vector2(207, -5)
-
 [node name="Area2D" type="Area2D" parent="." unique_id=677839290]
 position = Vector2(927, -757)
 scale = Vector2(2, 2)
@@ -6464,23 +6433,31 @@ position = Vector2(1, 19)
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_l7jgd")
 
-[node name="CharacterBody2D5" parent="." unique_id=335141309 instance=ExtResource("221_l7jgd")]
-position = Vector2(866, -35)
+[node name="Node2D" type="Node2D" parent="." unique_id=948974947]
 
-[node name="CharacterBody2D7" parent="." unique_id=1542376191 instance=ExtResource("221_l7jgd")]
-position = Vector2(857, -158)
+[node name="TextureRect" type="TextureRect" parent="Node2D" unique_id=727548225]
+offset_left = 3968.0
+offset_top = -1153.0
+offset_right = 3979.0
+offset_bottom = 1013.0
+texture = ExtResource("226_66rlg")
+expand_mode = 1
 
-[node name="CharacterBody2D8" parent="." unique_id=1686205415 instance=ExtResource("221_l7jgd")]
-position = Vector2(801, -209)
+[node name="TextureRect2" type="TextureRect" parent="Node2D" unique_id=1276015811]
+offset_left = 1950.0
+offset_top = -1120.0
+offset_right = 1961.0
+offset_bottom = 1046.0
+texture = ExtResource("226_66rlg")
+expand_mode = 1
 
-[node name="CharacterBody2D6" parent="." unique_id=352327831 instance=ExtResource("222_wth84")]
-position = Vector2(495, 0)
+[node name="TextureRect3" type="TextureRect" parent="Node2D" unique_id=1063656182]
+offset_left = 6328.0
+offset_top = -1212.0
+offset_right = 6339.0
+offset_bottom = 954.0
+texture = ExtResource("226_66rlg")
+expand_mode = 1
 
-[node name="CharacterBody2D2" parent="." unique_id=1082975616 instance=ExtResource("223_rl8x2")]
-position = Vector2(1458, -88)
-
-[node name="CharacterBody2D3" parent="." unique_id=664461664 instance=ExtResource("224_66rlg")]
-position = Vector2(321, -74)
-
-[node name="CharacterBody2D4" parent="." unique_id=86431098 instance=ExtResource("225_10ggk")]
-position = Vector2(98, -19)
+[node name="Boss" parent="." unique_id=2113211253 instance=ExtResource("221_l7jgd")]
+position = Vector2(276, -27)

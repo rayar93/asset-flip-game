@@ -61,41 +61,67 @@ Win/lose conditions, menu/death screen (GameFlow.on_boss_died(), .on_player_died
 Level creation
 Fix player health UI on screen reload
 
-
-
-
-Sprint 9 (due 4/2)
+Sprint 9 (due 4/2) DONE
 
 deactivate collision during death animation
-Use screenshake (boss hit, landing), dash vfx, death/hurt vfx, land dust
-Tutorial prompts
+Use screenshake, death/hurt vfx
+Tutorial
 Level creation
+More enemies
+Bug fixes
 
-Sprint 10 (due 4/9)
+Sprint 10 (due 4/9) DONE
 
-Finalize 4-12 enemies (edge detection, boss contact damage)
-Finalize both areas - layout, background, lighting, transition
+Finalize 8 enemies
+Finalize most areas - layout, background, lighting, transitions
 Finalize audio: music, hit/death/jump/dash/attack sounds, ambient
 Finalize assets/animations
-Difficulty tuning and enemy placement in finalized areas
 
 Sprint 11 (due 4/16)
 
-Polish
-Tune variables in-level
-Bug fixing
-Movement feel: acceleration/deceleration, variable jump height, terminal fall speed, hang time at apex, edge forgiveness
-Make enemies stop moving for a bit when pogoed
-Death animations / effects
+Finish level 2
+Knight boss
+Stop interpolation on sword
+Replace dash VFX
 
-Stretch goals
+Should do
 
-Multi-platform
-Controller support
-Ranged attack
-Light area boss
-Parry mechanic
-Complex enemy platforming (chasing by jumping)
-Hit flash for enemies that don't have it
-Enemies shouldn't stand on player head
+Footsteps
+Enemy placement
+Difficulty tuning
+Typo in tutorial
 Boss health UI
+Do all enemies have hurt flash + death animation (hedgehog?)
+Boss intro(s?) - pause, dialogue, music change
+Interface sounds
+Make doors enterable instead of instantly transporting you. Add to tutorial?
+Enter/exit sound(s?)
+Level 2 light sources - lava (hazard), torches, glowing mushrooms
+
+Polish
+
+Screenshake + landing dust after a fall
+Pogo feel, hang time at apex
+Stationary floating enemy
+Jumping enemy
+Make enemies stop moving when pogoed
+Terminal fall speed
+Variable jump height
+Acceleration/deceleration
+Multiple entrances to/from level(s?), adjust spawnpoints to acommodate
+Lava as light source / hazard
+Torches, glowing mushrooms at light sources
+Find audio assets for: double jump, boss death, enemy telegraph, enemy death, boss roar
+Add light to fireball
+Demon death animation fixed in place
+Improve edge detection raycasts
+Screenshake on pogo bounce, enemy death
+Pumpkin decorations in witch boss room
+Bouncable spikes
+Player landing sound plays even tho player starts on ground
+
+Stretch
+
+Controller support
+Complex enemy platforming (chase by jumping)
+Lock dash/double-jump behind pickups (would require trimming tutorial, adding popups)
