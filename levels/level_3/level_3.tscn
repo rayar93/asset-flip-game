@@ -22,7 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://bxfg81kho2dhc" path="res://Assets/light_area/Second Stage Forest/Tiles/Tilesheet - WOODS.png" id="22_4r7ot"]
 [ext_resource type="PackedScene" uid="uid://d2ikngsytxnle" path="res://Actors/Enemies/Demon/demon.tscn" id="22_p5b22"]
 [ext_resource type="PackedScene" uid="uid://b1k6xe1pelgkg" path="res://Actors/Enemies/bat/bat.tscn" id="23_sfqu1"]
-[ext_resource type="PackedScene" uid="uid://5k3by16njkdl" path="res://Actors/Enemies/shroom/shroom.tscn" id="24_13ljr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_is5r1"]
 radius = 20.0
@@ -881,7 +880,7 @@ position = Vector2(-407, 265)
 position = Vector2(-148, 378)
 
 [node name="CharacterBody2D7" parent="." unique_id=1672128824 instance=ExtResource("21_vx5ph")]
-position = Vector2(512, 346)
+position = Vector2(590, 362)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1369336098]
 position = Vector2(2142.0002, 340)
@@ -910,26 +909,20 @@ position = Vector2(-959, 293)
 [node name="CharacterBody2D13" parent="." unique_id=1329393176 instance=ExtResource("23_sfqu1")]
 position = Vector2(-1493, 311)
 
-[node name="CharacterBody2D5" parent="." unique_id=352327831 instance=ExtResource("24_13ljr")]
-position = Vector2(763, 365)
-
-[node name="CharacterBody2D6" parent="." unique_id=1321692914 instance=ExtResource("24_13ljr")]
-position = Vector2(610, 268)
-
 [node name="CharacterBody2D14" parent="." unique_id=310741686 instance=ExtResource("22_p5b22")]
-position = Vector2(1167, 99)
+position = Vector2(1465, 244)
 
 [node name="CharacterBody2D15" parent="." unique_id=1644144501 instance=ExtResource("22_p5b22")]
-position = Vector2(1055, 100)
+position = Vector2(1290, 86)
 
 [node name="CharacterBody2D16" parent="." unique_id=1350282763 instance=ExtResource("22_p5b22")]
-position = Vector2(1251, 98)
+position = Vector2(1521, 321)
 
 [node name="CharacterBody2D17" parent="." unique_id=2141609642 instance=ExtResource("22_p5b22")]
-position = Vector2(974, 105)
+position = Vector2(1287, 182)
 
 [node name="CharacterBody2D18" parent="." unique_id=1138086065 instance=ExtResource("22_p5b22")]
-position = Vector2(858, 165)
+position = Vector2(1386, 159)
 
 [node name="CharacterBody2D19" parent="." unique_id=2064756727 instance=ExtResource("22_p5b22")]
-position = Vector2(992, 197)
+position = Vector2(1377, 284)
