@@ -219,7 +219,6 @@
 [ext_resource type="Script" uid="uid://dxtmqrhyp1b3k" path="res://levels/level_2/dust_motes.gd" id="219_idsih"]
 [ext_resource type="Texture2D" uid="uid://d1lhwqccdn072" path="res://assets/dark_area/cave/mote.png" id="219_vrb6t"]
 [ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="220_p33w4"]
-[ext_resource type="PackedScene" uid="uid://b8sk47eqixvhy" path="res://actors/enemies/boss/boss.tscn" id="221_l7jgd"]
 [ext_resource type="Texture2D" uid="uid://b8mpavxp7dck7" path="res://icon.svg" id="226_66rlg"]
 
 [sub_resource type="Gradient" id="Gradient_4ww2d"]
@@ -6458,6 +6457,3 @@ offset_right = 6339.0
 offset_bottom = 954.0
 texture = ExtResource("226_66rlg")
 expand_mode = 1
-
-[node name="Boss" parent="." unique_id=2113211253 instance=ExtResource("221_l7jgd")]
-position = Vector2(276, -27)

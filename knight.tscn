@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://dgv33itiij4vp"]
 
 [ext_resource type="Script" uid="uid://cds1eumroyygg" path="res://knight.gd" id="1_nabqu"]
-[ext_resource type="Texture2D" uid="uid://d4h23qt24s2wb" path="res://Assets/light_area/enemies/knight/Attacks.png" id="1_owtlo"]
-[ext_resource type="Texture2D" uid="uid://cx5fxc07qk1bk" path="res://Assets/light_area/enemies/knight/attack_from_air.png" id="2_7woc6"]
-[ext_resource type="Texture2D" uid="uid://cpi3c1fojo6u0" path="res://Assets/light_area/enemies/knight/Death.png" id="3_nabqu"]
-[ext_resource type="Texture2D" uid="uid://8wj1556rgy15" path="res://Assets/light_area/enemies/knight/Hurt.png" id="4_ttilu"]
-[ext_resource type="Texture2D" uid="uid://bl4nxgb64j43k" path="res://Assets/light_area/enemies/knight/Idle.png" id="5_ir7sf"]
-[ext_resource type="Texture2D" uid="uid://bpu0g273clb8" path="res://Assets/light_area/enemies/knight/Jump.png" id="6_2yhar"]
-[ext_resource type="Texture2D" uid="uid://1440le0c3ak6" path="res://Assets/light_area/enemies/knight/Pray.png" id="7_6j7tr"]
-[ext_resource type="Texture2D" uid="uid://mm5ebhmgfumt" path="res://Assets/light_area/enemies/knight/Roll.png" id="8_1hfkx"]
-[ext_resource type="Texture2D" uid="uid://o7rhqr6c5uuk" path="res://Assets/light_area/enemies/knight/Run.png" id="9_dbld7"]
-[ext_resource type="Texture2D" uid="uid://b53ghy4thpnk0" path="res://Assets/light_area/enemies/knight/Slide.png" id="10_y3qlt"]
-[ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://Actors/Enemies/Shared/enemy_hurtbox.gd" id="11_mqylv"]
+[ext_resource type="Texture2D" uid="uid://b15ca6wcyywg1" path="res://Assets/light_area/enemies/knight/Attacks.png" id="1_owtlo"]
+[ext_resource type="Texture2D" uid="uid://nq75eafhrw76" path="res://Assets/light_area/enemies/knight/attack_from_air.png" id="2_7woc6"]
+[ext_resource type="Texture2D" uid="uid://c8p0sxlp4x2le" path="res://Assets/light_area/enemies/knight/Death.png" id="3_nabqu"]
+[ext_resource type="Texture2D" uid="uid://d4c6yravxrw51" path="res://Assets/light_area/enemies/knight/Hurt.png" id="4_ttilu"]
+[ext_resource type="Texture2D" uid="uid://d3mcprt7cj3cs" path="res://Assets/light_area/enemies/knight/Idle.png" id="5_ir7sf"]
+[ext_resource type="Texture2D" uid="uid://lya8xu12cb2a" path="res://Assets/light_area/enemies/knight/Jump.png" id="6_2yhar"]
+[ext_resource type="Texture2D" uid="uid://dhyo8drj2imaj" path="res://Assets/light_area/enemies/knight/Pray.png" id="7_6j7tr"]
+[ext_resource type="Texture2D" uid="uid://cx73dfbi0fbop" path="res://Assets/light_area/enemies/knight/Roll.png" id="8_1hfkx"]
+[ext_resource type="Texture2D" uid="uid://dx3nal0kp4me6" path="res://Assets/light_area/enemies/knight/Run.png" id="9_dbld7"]
+[ext_resource type="Texture2D" uid="uid://2hiwgsq5038s" path="res://Assets/light_area/enemies/knight/Slide.png" id="10_y3qlt"]
+[ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://actors/enemies/shared/enemy_hurtbox.gd" id="11_mqylv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o6xid"]
 atlas = ExtResource("2_7woc6")
@@ -40,10 +40,6 @@ region = Rect2(128, 128, 128, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_v6r0o"]
 atlas = ExtResource("2_7woc6")
 region = Rect2(0, 192, 128, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_imgwj"]
-atlas = ExtResource("2_7woc6")
-region = Rect2(128, 192, 128, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xb7mf"]
 atlas = ExtResource("1_owtlo")
@@ -460,13 +456,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_v6r0o")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_imgwj")
 }],
 "loop": false,
 "name": &"attack_down",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -683,7 +676,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -833,32 +826,28 @@ size = Vector2(34, 3)
 size = Vector2(34, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ah3od"]
-size = Vector2(20, 42)
+size = Vector2(20, 46)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpdoo"]
-size = Vector2(20, 42)
+size = Vector2(20, 46)
 
 [node name="Knight" type="CharacterBody2D" unique_id=1639905681 groups=["enemies"]]
+scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_nabqu")
-gravity = null
-move_speed = null
-roll_speed = null
-attack_cooldown = null
-attack_radius = null
-notice_radius = null
-roll_cooldown = null
-max_health = null
-knockback_strength = null
-hurt_duration = null
+roll_speed = 300.0
+max_health = 5
 
 [node name="VisualRoot" type="Node2D" parent="." unique_id=627102211]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VisualRoot" unique_id=273309381]
 sprite_frames = SubResource("SpriteFrames_0k4cw")
-animation = &"combo"
-frame_progress = 0.89860743
+animation = &"stop_prayer"
 
 [node name="Hitbox" type="Area2D" parent="VisualRoot" unique_id=287937253 groups=["enemy_hitbox"]]
+collision_layer = 16
+collision_mask = 32
 
 [node name="ShapeSlash" type="CollisionShape2D" parent="VisualRoot/Hitbox" unique_id=1713862607]
 position = Vector2(7, 10)
@@ -874,12 +863,16 @@ position = Vector2(0, 22)
 shape = SubResource("RectangleShape2D_psos1")
 
 [node name="Hurtbox" type="Area2D" parent="VisualRoot" unique_id=2040164918]
+collision_layer = 64
+collision_mask = 8
 script = ExtResource("11_mqylv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VisualRoot/Hurtbox" unique_id=59956379]
-position = Vector2(0, 11)
+position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_ah3od")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1498321455]
-position = Vector2(0, 11)
+position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_cpdoo")
+
+[connection signal="frame_changed" from="VisualRoot/AnimatedSprite2D" to="." method="_on_frame_changed"]
