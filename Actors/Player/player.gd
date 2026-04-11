@@ -173,6 +173,8 @@ func _execute_attack_startup():
 		attack_root.rotation_degrees = 90
 	else:
 		attack_root.scale.x = facing
+		
+	attack_root.reset_physics_interpolation()
 
 	AudioManager.play("player_attack")
 	slash_vfx.show()
