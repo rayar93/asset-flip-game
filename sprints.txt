@@ -79,29 +79,26 @@ Finalize assets/animations
 
 Sprint 11 (due 4/16)
 
-Finish level 2
 Knight boss
 Stop interpolation on sword
+Disable pause menu in other menus
+Implement settings menu or remove button
 Replace dash VFX
 Footsteps
+Interface sounds
+Finish level 2
+Both of the bosses call the winscreen on death, choose one
 Enemy placement
 Difficulty tuning
-Disable pause menu in other menus
-Both of the bosses call the winscreen on death, choose one
-
-Sprint 12 (due 4/23)
-
-Boss health UI
-Do all enemies have hurt flash + death animation (hedgehog?)
-Boss intro(s?) - pause, dialogue, music change
-Interface sounds
-Make doors enterable instead of instantly transporting you. Add to tutorial?
-Enter/exit sound(s?)
-Level 2 light sources - lava (hazard), torches, glowing mushrooms
-Implement settings menu or remove button
 
 Stretch
 
+Make doors enterable instead of instantly transporting you. Add to tutorial?
+Enter/exit sound(s?)
+Level 2 light sources - lava (hazard), torches, glowing mushrooms
+Boss intro(s?) - pause, dialogue, music change
+Boss health UI
+Do all enemies have hurt flash + death animation (hedgehog?)
 Health/max-health pickups
 Screenshake + landing dust after a fall
 Pogo feel, hang time at apex

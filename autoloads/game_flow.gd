@@ -83,6 +83,14 @@ func _move_player_to_spawn(spawn_point_name):
 		player.global_position = spawn.global_position
 	else:
 		push_warning("GameFlow: no node named '%s' found in scene." %spawn_point_name)
+		
+func is_gameplay_scene() -> bool:
+	var path = get_tree().current_scene.scene_file_path
+	var non_gameplay = ["Main_Menu", "death_screen", "win_screen"]
+	for keyword in non_gameplay:
+		if keyword in path:
+			return false
+	return true
 
 func on_boss_died():
 	boss_died.emit()

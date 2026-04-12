@@ -6,6 +6,8 @@ func _ready() -> void:
 
 func _unhandled_input(event):
 	if event is InputEventKey and event.keycode == KEY_ESCAPE and event.pressed:
+		if not GameFlow.is_gameplay_scene():
+			return
 		if get_tree().paused:
 			resume()
 		else:
