@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d01mgj7h5s8e8"]
 
 [ext_resource type="Script" uid="uid://cmlvqx4h2ehkr" path="res://main_menu.gd" id="1_wugcc"]
-[ext_resource type="Texture2D" uid="uid://bc2pfsmb8vgg6" path="res://Assets/Menu.png" id="2_wugcc"]
+[ext_resource type="Texture2D" uid="uid://bc2pfsmb8vgg6" path="res://assets/Menu.png" id="2_wugcc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gtid3"]
 texture = ExtResource("2_wugcc")
@@ -9,13 +9,48 @@ texture = ExtResource("2_wugcc")
 [sub_resource type="Theme" id="Theme_wugcc"]
 default_font_size = 101
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jtkjj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wugcc"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_257up"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.25490198, 0.25490198, 0.25490198, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtid3"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnfjo"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.25565878, 0.2556588, 0.2556587, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="MainMenu" type="Control" unique_id=684206652]
 layout_mode = 3
@@ -66,31 +101,18 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="Start" type="Button" parent="CenterContainer2/VBoxContainer" unique_id=293133786]
+[node name="Start" type="Button" parent="CenterContainer2/VBoxContainer" unique_id=45696126]
 layout_mode = 2
-size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_jtkjj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wugcc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_257up")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gtid3")
 text = "Start"
 
-[node name="Options" type="Button" parent="CenterContainer2/VBoxContainer" unique_id=1316031798]
+[node name="Exit" type="Button" parent="CenterContainer2/VBoxContainer" unique_id=847579223]
 layout_mode = 2
-size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_jtkjj")
-text = "Options"
-
-[node name="Exit" type="Button" parent="CenterContainer2/VBoxContainer" unique_id=1937667470]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_jtkjj")
-text = "Exit
-"
-
-[connection signal="pressed" from="CenterContainer2/VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="CenterContainer2/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="CenterContainer2/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+theme_override_styles/normal = SubResource("StyleBoxFlat_wugcc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dnfjo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gtid3")
+text = "Exit"
