@@ -44,6 +44,7 @@ signal health_changed(new_health: int)
 # ==============================================================================
 
 func _ready():
+	sprite.frame_changed.connect(_on_frame_changed)
 	attack_area.area_entered.connect(_on_attack_hit)
 	if not $PlayerHurtbox.player_hurt.is_connected(_on_player_hurt):
 		$PlayerHurtbox.player_hurt.connect(_on_player_hurt)
@@ -127,10 +128,12 @@ func _handle_air_input(move_dir):
 		if coyote_timer > 0:
 			velocity.y = jump_velocity
 			coyote_timer = 0
-			AudioManager.play("player_jump")
+			AudioManager.play("player_jump", -10.0)
 		elif can_double_jump:
 			velocity.y = jump_velocity
 			can_double_jump = false
+			sprite.play("double_jump")
+			AudioManager.play("player_jump", -10.0)
 	elif Input.is_action_just_pressed("dash") and can_dash:
 		set_state(State.DASH)
 	elif Input.is_action_just_pressed("attack"):
@@ -249,3 +252,9 @@ func _on_attack_hit(area: Area2D):
 			velocity.y = jump_velocity
 			can_double_jump = true
 			AudioManager.play("pogo_bounce")
+
+func _on_frame_changed():
+	if state != State.GROUNDED: return
+	if sprite.animation != "run": return
+	if sprite.frame in [1, 3]:
+		AudioManager.play("footstep", -10.0)

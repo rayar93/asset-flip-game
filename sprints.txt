@@ -84,11 +84,11 @@ Stopped graphics interpolation on sword
 Disabled pause menu in other menus
 Standardized buttons and screens
 Added interface sounds
-
 Replace dash VFX
 Footsteps
+
 Finish level 2
-Both of the bosses call the winscreen on death, choose one
+Both of the bosses call the winscreen on death - choose one?
 Enemy placement
 Difficulty tuning
 
@@ -112,13 +112,14 @@ Hang time at apex
 Stationary floating enemy
 Jumping enemy
 Torches, glowing mushrooms at light sources
+Double-jump VFX/anim
 
 Add player death particles, other VFX, respawn on death, remove death screens
 Health/max-health pickups
 Make enemies stop moving when pogoed
 Multiple entrances to/from level(s?), adjust spawnpoints to acommodate
 Lava as light source / hazard
-Find audio assets for: double jump, boss death, enemy telegraph, enemy death, boss roar
+Find audio assets for: double jump, boss death, enemy telegraph, enemy death, boss roar, enemy movement/idle sounds
 Improve edge detection raycasts
 Bouncable spikes
 Settings menu

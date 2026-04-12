@@ -9,22 +9,31 @@ var _next_player = 0
 
 var sound_pools = {
 	"click": [
-		preload("C:/Users/alanr/OneDrive - Appalachian State University/Documents/GitHub/Capstone-Project/audio/SFX/kenney_interface-sounds/Audio/click.ogg")
+		preload("res://audio/SFX/kenney_interface-sounds/Audio/click.ogg")
 	],
 	"hover": [
-		preload("C:/Users/alanr/OneDrive - Appalachian State University/Documents/GitHub/Capstone-Project/audio/SFX/kenney_interface-sounds/Audio/hover.ogg")
+		preload("res://audio/SFX/kenney_interface-sounds/Audio/hover.ogg")
 	],
 	"pause": [
-		preload("C:/Users/alanr/OneDrive - Appalachian State University/Documents/GitHub/Capstone-Project/audio/SFX/kenney_interface-sounds/Audio/pause.ogg")
+		preload("res://audio/SFX/kenney_interface-sounds/Audio/pause.ogg")
 	],
 	"resume": [
-		preload("C:/Users/alanr/OneDrive - Appalachian State University/Documents/GitHub/Capstone-Project/audio/SFX/kenney_interface-sounds/Audio/resume.ogg")
+		preload("res://audio/SFX/kenney_interface-sounds/Audio/resume.ogg")
 	],
-	"exit": [
-		preload("C:/Users/alanr/OneDrive - Appalachian State University/Documents/GitHub/Capstone-Project/audio/SFX/kenney_interface-sounds/Audio/quit.ogg")
+	"footstep": [
+		preload("res://audio/SFX/footsteps/Linoleum_Mono_01.wav"),
+		preload("res://audio/SFX/footsteps/Linoleum_Mono_02.wav"),
+		preload("res://audio/SFX/footsteps/Linoleum_Mono_03.wav"),
+		preload("res://audio/SFX/footsteps/Linoleum_Mono_04.wav"),
+		preload("res://audio/SFX/footsteps/Linoleum_Mono_05.wav"),
 	],
 	"player_jump": [
-		preload("res://audio/SFX/Footsteps/Stone/Stone Jump.wav")
+		preload("res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNTonl_STEP-Magic Step_HY_PC-001.wav"),
+		preload("res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNTonl_STEP-Magic Step_HY_PC-002.wav"),
+		preload("res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNTonl_STEP-Magic Step_HY_PC-003.wav"),
+		preload("res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNTonl_STEP-Magic Step_HY_PC-004.wav"),
+		preload("res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNTonl_STEP-Magic Step_HY_PC-005.wav"),
+		preload("res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNTonl_STEP-Magic Step_HY_PC-006.wav")	
 	],
 	"player_dash": [
 		preload("res://audio/SFX/Helton Yan's Pixel Combat - Single Files/WHSH_MOVEMENT-Simple Whoosh_HY_PC-001.wav"),
@@ -55,7 +64,7 @@ var sound_pools = {
 		preload("res://audio/SFX/kenney_impact-sounds/Audio/impactBell_heavy_004.ogg")
 	],
 	"land": [
-		preload("res://audio/SFX/Footsteps/Stone/Stone Land.wav")
+		preload("res://audio/SFX/footsteps/Parquet_Floor_Mono_01.wav")
 	],
 	"player_heal": [
 		preload("res://audio/SFX/Helton Yan's Pixel Combat - Single Files/MAGAngl_BUFF-Simple Heal_HY_PC-001.wav"),
@@ -140,12 +149,13 @@ func _ready():
 	randomize()
 	music.process_mode = Node.PROCESS_MODE_ALWAYS
 
-func play(key: String):
+func play(key: String, volume_db: float = 0.0):
 	if not sound_pools.has(key): return
 	var p = _get_free_player()
 	if p == null: return
 	var pool = sound_pools[key]
 	p.stream = pool[randi() % pool.size()]
+	p.volume_db = volume_db
 	p.play()
 		
 func _get_free_player() -> AudioStreamPlayer:
