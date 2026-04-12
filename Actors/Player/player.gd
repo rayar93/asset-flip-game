@@ -25,6 +25,7 @@ extends CharacterBody2D
 var dash_time_left = 0.0
 var can_dash = true
 var can_double_jump = true
+var _double_jumped = false
 var coyote_timer = 0.0
 var jump_buffer_timer = 0.0
 var hurt_timer = 0.0
@@ -86,6 +87,7 @@ func set_state(new_state: State):
 	match state:
 		State.GROUNDED:
 			can_double_jump = true
+			_double_jumped = false
 			can_dash = true
 			if jump_buffer_timer > 0:
 				jump_buffer_timer = 0
@@ -132,6 +134,7 @@ func _handle_air_input(move_dir):
 		elif can_double_jump:
 			velocity.y = jump_velocity
 			can_double_jump = false
+			_double_jumped = true
 			sprite.play("double_jump")
 			AudioManager.play("player_jump", -10.0)
 	elif Input.is_action_just_pressed("dash") and can_dash:
@@ -186,10 +189,19 @@ func _update_facing(move_dir):
 
 func _update_animations(move_dir):
 	match state:
-		State.HURT:     _play_anim("hurt")
-		State.DASH:     pass
-		State.GROUNDED: _play_anim("run" if move_dir != 0 else "idle")
-		State.AIR:      _play_anim("jump" if velocity.y < 0 else "fall")
+		State.HURT:
+			_play_anim("hurt")
+		State.DASH:
+			pass
+		State.GROUNDED:
+			_play_anim("run" if move_dir != 0 else "idle")
+		State.AIR:
+			if _double_jumped and velocity.y < 0:
+				_play_anim("double_jump")
+			elif velocity.y < 0:
+				_play_anim("jump")
+			else:
+				_play_anim("fall")
 
 func _play_anim(anim_name):
 	if sprite.animation != anim_name:

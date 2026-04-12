@@ -86,22 +86,23 @@ Standardized buttons and screens
 Added interface sounds
 Replace dash VFX
 Footsteps
+Added double-jump anim
+Finish level 2!!!!!!!!!!!!!
 
-Finish level 2
-Both of the bosses call the winscreen on death - choose one?
-Enemy placement
+Stretch/polish:
+
 Difficulty tuning
+Enemy health tuning
+Both of the bosses call the winscreen on death - choose one?
 
-Stretch
-
-Terminal fall speed
-Variable jump height
-Acceleration/deceleration
 Make doors enterable instead of instantly transporting you, add door + button text to tutorial, add door sound
 Add light to fireball
 Fix demon death animation in place
 Screenshake on pogo bounce, enemy death
 Pumpkin decorations in witch boss room
+Terminal fall speed
+Variable jump height
+Acceleration/deceleration
 
 Level 2 light sources - lava (hazard), torches, glowing mushrooms
 Boss intro(s?) - pause, dialogue, music change
@@ -109,16 +110,16 @@ Boss health UI
 Do all enemies have hurt flash + death animation (hedgehog?)
 Screenshake + landing dust after a fall
 Hang time at apex
+Torches, glowing mushrooms at light sources
+Can't see below to pogo boss in final level
+
 Stationary floating enemy
 Jumping enemy
-Torches, glowing mushrooms at light sources
-Double-jump VFX/anim
-
-Add player death particles, other VFX, respawn on death, remove death screens
 Health/max-health pickups
 Make enemies stop moving when pogoed
 Multiple entrances to/from level(s?), adjust spawnpoints to acommodate
 Lava as light source / hazard
+Add player death particles, other VFX, respawn on death, remove death screens
 Find audio assets for: double jump, boss death, enemy telegraph, enemy death, boss roar, enemy movement/idle sounds
 Improve edge detection raycasts
 Bouncable spikes

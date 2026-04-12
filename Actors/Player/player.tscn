@@ -91,20 +91,20 @@ region = Rect2(576, 0, 192, 128)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("5_k67x5")
+}, {
+"duration": 1.0,
 "texture": ExtResource("3_ssdk0")
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_7aotg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_k67x5")
-}, {
-"duration": 1.0,
 "texture": ExtResource("6_12xki")
 }],
 "loop": true,
 "name": &"double_jump",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -248,7 +248,7 @@ shape = SubResource("RectangleShape2D_4nu62")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VisualRoot" unique_id=1407357925]
 sprite_frames = SubResource("SpriteFrames_s0n4a")
 animation = &"double_jump"
-frame_progress = 0.32047245
+frame_progress = 0.99354655
 offset = Vector2(38, -7)
 
 [node name="AttackRoot" type="Node2D" parent="." unique_id=1976591112]
