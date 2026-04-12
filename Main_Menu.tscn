@@ -116,3 +116,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_wugcc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dnfjo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gtid3")
 text = "Exit"
+
+[connection signal="pressed" from="CenterContainer2/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CenterContainer2/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
