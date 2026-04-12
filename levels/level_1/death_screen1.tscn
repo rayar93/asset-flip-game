@@ -1,7 +1,39 @@
 [gd_scene format=3 uid="uid://hr5oldpuxr8q"]
 
 [ext_resource type="Texture2D" uid="uid://bc2pfsmb8vgg6" path="res://assets/Menu.png" id="1_abtqd"]
-[ext_resource type="Script" uid="uid://df4p8e6o4d6ss" path="res://levels/light_area/death_screen_1.gd" id="1_mrduq"]
+[ext_resource type="Script" uid="uid://df4p8e6o4d6ss" path="res://levels/level_1/death_screen_1.gd" id="1_mrduq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dsoqk"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_01lxm"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.83905077, 0.3895794, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vxtlf"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="Theme" id="Theme_abtqd"]
 default_font_size = 101
@@ -38,16 +70,30 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Continue" type="Button" parent="VBoxContainer" unique_id=1755260484]
+[node name="Continue" type="Button" parent="VBoxContainer" unique_id=606503322]
 layout_mode = 2
-text = "Continue"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dsoqk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_01lxm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vxtlf")
+text = "Continue
+"
 
-[node name="Menu" type="Button" parent="VBoxContainer" unique_id=406854973]
+[node name="Menu" type="Button" parent="VBoxContainer" unique_id=963258286]
 layout_mode = 2
-text = "Menu"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dsoqk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_01lxm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vxtlf")
+text = "Menu
+"
 
-[node name="Exit" type="Button" parent="VBoxContainer" unique_id=103851975]
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=1388049703]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dsoqk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_01lxm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vxtlf")
 text = "Exit"
 
 [node name="Label" type="Label" parent="." unique_id=1012928639]

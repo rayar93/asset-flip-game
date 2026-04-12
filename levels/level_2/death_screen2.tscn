@@ -1,7 +1,39 @@
 [gd_scene format=3 uid="uid://c7hwhu8yt7xp5"]
 
-[ext_resource type="Texture2D" uid="uid://u6hnbgxc5m0w" path="res://Assets/death_screen.png" id="1_8gxic"]
+[ext_resource type="Texture2D" uid="uid://u6hnbgxc5m0w" path="res://assets/death_screen.png" id="1_8gxic"]
 [ext_resource type="Script" uid="uid://dx6u5kp86ilsx" path="res://levels/level_2/death_screen_2.gd" id="1_oj450"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2bra"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3p3fy"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.83905077, 0.3895794, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jk1k"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="Theme" id="Theme_oj450"]
 default_font_size = 101
@@ -38,20 +70,36 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Continue" type="Button" parent="VBoxContainer" unique_id=1755260484]
+[node name="Continue" type="Button" parent="VBoxContainer" unique_id=280440221]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_r2bra")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3p3fy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0jk1k")
 text = "Continue"
 
-[node name="Restart" type="Button" parent="VBoxContainer" unique_id=1776824799]
+[node name="Restart" type="Button" parent="VBoxContainer" unique_id=882413463]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_r2bra")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3p3fy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0jk1k")
 text = "Restart"
 
-[node name="Menu" type="Button" parent="VBoxContainer" unique_id=406854973]
+[node name="Menu" type="Button" parent="VBoxContainer" unique_id=938409629]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_r2bra")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3p3fy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0jk1k")
 text = "Menu"
 
-[node name="Exit" type="Button" parent="VBoxContainer" unique_id=103851975]
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=820405610]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_r2bra")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3p3fy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0jk1k")
 text = "Exit"
 
 [node name="Label" type="Label" parent="." unique_id=1373679564]

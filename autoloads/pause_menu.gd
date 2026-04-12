@@ -25,10 +25,11 @@ func _on_resume_pressed():
 	resume()
 	
 func _on_restart_pressed():
-	get_tree().paused = false
+	resume()
 	GameFlow.go_to_scene(GameFlow.current_level_path)
 	
 func _on_menu_pressed():
+	resume()
 	GameFlow.go_to_scene("res://Main_Menu.tscn")
 	
 func _on_quit_pressed():

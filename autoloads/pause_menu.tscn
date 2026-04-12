@@ -2,6 +2,38 @@
 
 [ext_resource type="Script" uid="uid://bst4ljphvupoj" path="res://autoloads/pause_menu.gd" id="1_miwa8"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ypvu7"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlwep"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.83905077, 0.3895794, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sg8ia"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [node name="PauseMenu" type="CanvasLayer" unique_id=1511056235]
 layer = 101
 script = ExtResource("1_miwa8")
@@ -37,22 +69,36 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Resume" type="Button" parent="Control/VBoxContainer" unique_id=534026435]
+[node name="Resume" type="Button" parent="Control/VBoxContainer" unique_id=907755375]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ypvu7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xlwep")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sg8ia")
 text = "Resume"
 
-[node name="Restart" type="Button" parent="Control/VBoxContainer" unique_id=907284484]
+[node name="Restart" type="Button" parent="Control/VBoxContainer" unique_id=1215387723]
 layout_mode = 2
-text = "Restart
-"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ypvu7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xlwep")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sg8ia")
+text = "Restart"
 
-[node name="Menu" type="Button" parent="Control/VBoxContainer" unique_id=1521298145]
+[node name="Menu" type="Button" parent="Control/VBoxContainer" unique_id=1246013686]
 layout_mode = 2
-text = "Menu
-"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ypvu7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xlwep")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sg8ia")
+text = "Menu"
 
-[node name="Quit" type="Button" parent="Control/VBoxContainer" unique_id=1445373809]
+[node name="Quit" type="Button" parent="Control/VBoxContainer" unique_id=1707576571]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ypvu7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xlwep")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sg8ia")
 text = "Quit"
 
 [connection signal="pressed" from="Control/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

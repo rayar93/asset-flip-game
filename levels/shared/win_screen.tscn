@@ -3,6 +3,38 @@
 [ext_resource type="Script" uid="uid://dfkweqmwbab7r" path="res://levels/shared/win_screen.gd" id="1_ucupn"]
 [ext_resource type="Texture2D" uid="uid://bc2pfsmb8vgg6" path="res://assets/Menu.png" id="2_ndami"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucupn"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndami"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.83905077, 0.3895794, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ali3e"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [sub_resource type="Theme" id="Theme_ali3e"]
 default_font_size = 101
 
@@ -38,17 +70,28 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Restart" type="Button" parent="VBoxContainer" unique_id=1755260484]
+[node name="Restart" type="Button" parent="VBoxContainer" unique_id=1930265233]
 layout_mode = 2
-text = "Restart
-"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ucupn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ndami")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ali3e")
+text = "Restart"
 
-[node name="Menu" type="Button" parent="VBoxContainer" unique_id=406854973]
+[node name="Menu" type="Button" parent="VBoxContainer" unique_id=1535591411]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ucupn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ndami")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ali3e")
 text = "Menu"
 
-[node name="Exit" type="Button" parent="VBoxContainer" unique_id=103851975]
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=1001434661]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ucupn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ndami")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ali3e")
 text = "Exit"
 
 [node name="Label2" type="Label" parent="." unique_id=433700629]
