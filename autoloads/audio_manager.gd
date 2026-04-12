@@ -8,6 +8,21 @@ extends Node
 var _next_player = 0
 
 var sound_pools = {
+	"click": [
+		preload("C:/Users/alanr/OneDrive - Appalachian State University/Documents/GitHub/Capstone-Project/audio/SFX/kenney_interface-sounds/Audio/click.ogg")
+	],
+	"hover": [
+		preload("C:/Users/alanr/OneDrive - Appalachian State University/Documents/GitHub/Capstone-Project/audio/SFX/kenney_interface-sounds/Audio/hover.ogg")
+	],
+	"pause": [
+		preload("C:/Users/alanr/OneDrive - Appalachian State University/Documents/GitHub/Capstone-Project/audio/SFX/kenney_interface-sounds/Audio/pause.ogg")
+	],
+	"resume": [
+		preload("C:/Users/alanr/OneDrive - Appalachian State University/Documents/GitHub/Capstone-Project/audio/SFX/kenney_interface-sounds/Audio/resume.ogg")
+	],
+	"exit": [
+		preload("C:/Users/alanr/OneDrive - Appalachian State University/Documents/GitHub/Capstone-Project/audio/SFX/kenney_interface-sounds/Audio/quit.ogg")
+	],
 	"player_jump": [
 		preload("res://audio/SFX/Footsteps/Stone/Stone Jump.wav")
 	],

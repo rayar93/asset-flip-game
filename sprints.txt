@@ -79,10 +79,11 @@ Finalize assets/animations
 
 Sprint 11 (due 4/16)
 
-Knight boss
-Stop interpolation on sword
-Disable pause menu in other menus
-Implement settings menu or remove button
+Added knight boss
+Stopped interpolation on sword
+Disabled pause menu in other menus
+Standardized buttons and screens
+
 Replace dash VFX
 Footsteps
 Interface sounds
@@ -93,10 +94,13 @@ Difficulty tuning
 
 Stretch
 
+Settings menu
+Level select
 Make doors enterable instead of instantly transporting you. Add to tutorial?
 Enter/exit sound(s?)
 Level 2 light sources - lava (hazard), torches, glowing mushrooms
 Boss intro(s?) - pause, dialogue, music change
+Add player death particles, other VFX, respawn on death, remove death screens
 Boss health UI
 Do all enemies have hurt flash + death animation (hedgehog?)
 Health/max-health pickups
@@ -118,8 +122,7 @@ Improve edge detection raycasts
 Screenshake on pogo bounce, enemy death
 Pumpkin decorations in witch boss room
 Bouncable spikes
-Player landing sound plays even tho player starts on ground
-Standardize buttons available on menu/pause/death screens?
+Player landing sound plays even tho player starts on ground??
 Controller support
 Complex enemy platforming (chase by jumping)
 Lock dash/double-jump behind pickups (would require trimming tutorial, adding popups)

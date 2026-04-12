@@ -12,6 +12,7 @@ func _unhandled_input(event):
 			resume()
 		else:
 			pause()
+			AudioManager.play("pause")
 		
 func pause():
 	show()
@@ -19,6 +20,7 @@ func pause():
 	
 func resume():
 	hide()
+	AudioManager.play("resume")
 	get_tree().paused = false
 	
 func _on_resume_pressed():
@@ -34,4 +36,5 @@ func _on_menu_pressed():
 	
 func _on_quit_pressed():
 	get_tree().paused = false
+	AudioManager.play("quit")
 	get_tree().quit()
