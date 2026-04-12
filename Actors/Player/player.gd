@@ -35,8 +35,7 @@ var state := State.AIR
 var facing = 1
 var current_health = max_health
 
-var afterimage_timer = 0.0
-const AFTERIMAGE_INTERVAL = 0.1
+const SmokeEffect = preload("C:/Users/alanr/OneDrive - Appalachian State University/Documents/GitHub/Capstone-Project/actors/player/dash.tscn")
 
 signal health_changed(new_health: int)
 
@@ -66,12 +65,7 @@ func _physics_process(delta):
 		State.AIR:       _handle_air_input(move_dir)
 		State.ATTACK:    _handle_attack_logic()
 		State.HURT:      _handle_hurt_logic(delta)
-		State.DASH:
-			afterimage_timer -= delta
-			if afterimage_timer <= 0.0:
-				_spawn_afterimage()
-				afterimage_timer = AFTERIMAGE_INTERVAL
-			_handle_dash_logic(delta)
+		State.DASH:		 _handle_dash_logic(delta)
 
 	move_and_slide()
 	_check_ground_status()
@@ -100,10 +94,10 @@ func set_state(new_state: State):
 		State.DASH:
 			AudioManager.play("player_dash")
 			velocity.y = 0
-			afterimage_timer = 0.0
 			dash_time_left = dash_duration
 			velocity = Vector2(facing * dash_speed, 0)
 			can_dash = false
+			_spawn_dash_smoke()
 		State.ATTACK:
 			_execute_attack_startup()
 		State.HURT:
@@ -213,29 +207,14 @@ func _return_to_base_state():
 	attack_area.monitorable = false
 	slash_vfx.hide()
 	set_state(State.GROUNDED if is_on_floor() else State.AIR)
-	
-func _spawn_afterimage():
-	var ghost = AnimatedSprite2D.new()
-	ghost.sprite_frames = sprite.sprite_frames
-	ghost.animation = sprite.animation
-	ghost.frame = sprite.frame
-	
-	ghost.offset = sprite.offset
-	ghost.centered = sprite.centered
-	ghost.flip_h = sprite.flip_h
-	ghost.flip_v = sprite.flip_v	
-	ghost.modulate.a = 0.8
 
-	get_parent().add_child(ghost)
-	ghost.global_transform = sprite.global_transform
-	
-	if ghost.has_method("reset_physics_interpolation"):
-		ghost.reset_physics_interpolation()
-	
-	var tween = create_tween()
-	tween.tween_property(ghost, "modulate:a", 0.0, 0.05)
-	tween.tween_callback(ghost.queue_free)
-	
+func _spawn_dash_smoke():
+	var smoke = SmokeEffect.instantiate()
+	get_parent().add_child(smoke)
+	smoke.global_position = global_position
+	smoke.scale.x = facing
+	smoke.play()
+
 func die():
 	set_state(State.DEAD)
 

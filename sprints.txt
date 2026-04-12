@@ -80,13 +80,13 @@ Finalize assets/animations
 Sprint 11 (due 4/16)
 
 Added knight boss
-Stopped interpolation on sword
+Stopped graphics interpolation on sword
 Disabled pause menu in other menus
 Standardized buttons and screens
+Added interface sounds
 
 Replace dash VFX
 Footsteps
-Interface sounds
 Finish level 2
 Both of the bosses call the winscreen on death, choose one
 Enemy placement
@@ -94,35 +94,35 @@ Difficulty tuning
 
 Stretch
 
-Settings menu
-Level select
-Make doors enterable instead of instantly transporting you. Add to tutorial?
-Enter/exit sound(s?)
-Level 2 light sources - lava (hazard), torches, glowing mushrooms
-Boss intro(s?) - pause, dialogue, music change
-Add player death particles, other VFX, respawn on death, remove death screens
-Boss health UI
-Do all enemies have hurt flash + death animation (hedgehog?)
-Health/max-health pickups
-Screenshake + landing dust after a fall
-Pogo feel, hang time at apex
-Stationary floating enemy
-Jumping enemy
-Make enemies stop moving when pogoed
 Terminal fall speed
 Variable jump height
 Acceleration/deceleration
-Multiple entrances to/from level(s?), adjust spawnpoints to acommodate
-Lava as light source / hazard
-Torches, glowing mushrooms at light sources
-Find audio assets for: double jump, boss death, enemy telegraph, enemy death, boss roar
+Make doors enterable instead of instantly transporting you, add door + button text to tutorial, add door sound
 Add light to fireball
-Demon death animation fixed in place
-Improve edge detection raycasts
+Fix demon death animation in place
 Screenshake on pogo bounce, enemy death
 Pumpkin decorations in witch boss room
+
+Level 2 light sources - lava (hazard), torches, glowing mushrooms
+Boss intro(s?) - pause, dialogue, music change
+Boss health UI
+Do all enemies have hurt flash + death animation (hedgehog?)
+Screenshake + landing dust after a fall
+Hang time at apex
+Stationary floating enemy
+Jumping enemy
+Torches, glowing mushrooms at light sources
+
+Add player death particles, other VFX, respawn on death, remove death screens
+Health/max-health pickups
+Make enemies stop moving when pogoed
+Multiple entrances to/from level(s?), adjust spawnpoints to acommodate
+Lava as light source / hazard
+Find audio assets for: double jump, boss death, enemy telegraph, enemy death, boss roar
+Improve edge detection raycasts
 Bouncable spikes
-Player landing sound plays even tho player starts on ground??
+Settings menu
+Level select
 Controller support
 Complex enemy platforming (chase by jumping)
 Lock dash/double-jump behind pickups (would require trimming tutorial, adding popups)
