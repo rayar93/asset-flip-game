@@ -208,7 +208,7 @@ offset_bottom = 7907.0
 color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." unique_id=2056772503 instance=ExtResource("1_vthxg")]
-position = Vector2(486, 435)
+position = Vector2(469, 405)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2002390432]
 position = Vector2(3619, 830)

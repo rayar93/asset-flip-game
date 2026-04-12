@@ -24,6 +24,13 @@ func resume():
 func _on_resume_pressed():
 	resume()
 	
+func _on_restart_pressed():
+	get_tree().paused = false
+	GameFlow.go_to_scene(GameFlow.current_level_path)
+	
+func _on_menu_pressed():
+	GameFlow.go_to_scene("res://Main_Menu.tscn")
+	
 func _on_quit_pressed():
 	get_tree().paused = false
 	get_tree().quit()
