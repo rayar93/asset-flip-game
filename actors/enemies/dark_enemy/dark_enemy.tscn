@@ -245,7 +245,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"death",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -387,9 +387,7 @@ position = Vector2(18, 0)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VisualRoot" unique_id=1092036382]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_8lgou")
-animation = &"death"
-frame = 8
-frame_progress = 1.0
+animation = &"idle"
 
 [node name="ContactHitbox" type="Area2D" parent="." unique_id=51960370]
 collision_layer = 16

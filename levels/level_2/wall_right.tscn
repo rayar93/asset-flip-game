@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bbumyn0ljcbij"]
+
+[ext_resource type="Texture2D" uid="uid://dm36tg1afnwtf" path="res://assets/dark_area/cave/Assets 1024 Cave/Cave - Floor.png" id="1_dhysm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hkvy8"]
+size = Vector2(120.00001, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jg0vq"]
+atlas = ExtResource("1_dhysm")
+region = Rect2(1668, 860, 141, 374)
+
+[node name="WallRight" type="StaticBody2D" unique_id=2087095069]
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1217511276]
+position = Vector2(10, 0)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_hkvy8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=274116189]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_jg0vq")

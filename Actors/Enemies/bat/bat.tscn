@@ -176,9 +176,7 @@ max_health = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1883777498]
 sprite_frames = SubResource("SpriteFrames_2x1ut")
-animation = &"death"
-frame = 1
-frame_progress = 1.0
+animation = &"sleeping"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1242831003]
 position = Vector2(0, -1)

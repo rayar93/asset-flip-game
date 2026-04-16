@@ -10,22 +10,40 @@
 [ext_resource type="Texture2D" uid="uid://dm36tg1afnwtf" path="res://assets/dark_area/cave/Assets 1024 Cave/Cave - Floor.png" id="6_iicbf"]
 [ext_resource type="Texture2D" uid="uid://1ihvcfe7q1ou" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00002.png" id="6_mtarx"]
 [ext_resource type="Texture2D" uid="uid://b2erb2ngyjh7h" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00003.png" id="7_435g3"]
+[ext_resource type="PackedScene" uid="uid://b8sk47eqixvhy" path="res://actors/enemies/boss/boss.tscn" id="8_l7jgd"]
 [ext_resource type="Texture2D" uid="uid://bv8ue16tuul47" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00004.png" id="8_qjln1"]
 [ext_resource type="Texture2D" uid="uid://da36yid27wws8" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00005.png" id="9_armii"]
+[ext_resource type="PackedScene" uid="uid://b1k6xe1pelgkg" path="res://actors/enemies/bat/bat.tscn" id="9_mrtjr"]
+[ext_resource type="PackedScene" uid="uid://0x1v3rpiymwi" path="res://levels/level_2/platform.tscn" id="9_sx6t2"]
+[ext_resource type="PackedScene" uid="uid://d2ikngsytxnle" path="res://actors/enemies/Demon/demon.tscn" id="10_5nktr"]
 [ext_resource type="Texture2D" uid="uid://bysm8w7mcb73v" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00006.png" id="10_fpibc"]
+[ext_resource type="PackedScene" uid="uid://w2l32qv6deh0" path="res://levels/level_2/platform_2.tscn" id="10_mrtjr"]
 [ext_resource type="Texture2D" uid="uid://clip52ug2vyxi" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00007.png" id="11_4ww2d"]
+[ext_resource type="PackedScene" uid="uid://bfygsbendrhy0" path="res://levels/level_2/platform_3.tscn" id="11_5nktr"]
 [ext_resource type="Texture2D" uid="uid://col0lvv25fspj" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00008.png" id="12_idsih"]
+[ext_resource type="PackedScene" uid="uid://bnjiitiggogf7" path="res://levels/level_2/platform_4.tscn" id="12_tq672"]
+[ext_resource type="PackedScene" uid="uid://b1qw0m3k7jrfw" path="res://levels/level_2/platform_5.tscn" id="13_i6s7g"]
 [ext_resource type="Texture2D" uid="uid://cj03j64q8dx8b" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00009.png" id="13_vrb6t"]
 [ext_resource type="Texture2D" uid="uid://dfuci02ie443c" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00010.png" id="14_1jowd"]
+[ext_resource type="PackedScene" uid="uid://be6aqkbma050g" path="res://levels/level_2/platform_6.tscn" id="14_t7ix4"]
+[ext_resource type="PackedScene" uid="uid://b7g3tqonsi2oi" path="res://levels/level_2/platform_7.tscn" id="15_0jyl6"]
 [ext_resource type="Texture2D" uid="uid://bur11jam2quyl" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00011.png" id="15_p6y1t"]
+[ext_resource type="PackedScene" uid="uid://ci3xuv5uc26v5" path="res://levels/level_2/platform_8.tscn" id="16_ettni"]
 [ext_resource type="Texture2D" uid="uid://2bhpbp04v67o" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00012.png" id="16_vecqm"]
+[ext_resource type="PackedScene" uid="uid://ce7ig1mvp5i7q" path="res://levels/level_2/platform_9.tscn" id="17_dp4d4"]
 [ext_resource type="Texture2D" uid="uid://dovrne50ntk3x" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00013.png" id="17_viwph"]
+[ext_resource type="PackedScene" uid="uid://b6oiylprxco22" path="res://levels/level_2/platform_10.tscn" id="18_1v40t"]
 [ext_resource type="Texture2D" uid="uid://cgxe7skfg1if3" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00014.png" id="18_g6ghw"]
+[ext_resource type="PackedScene" uid="uid://2hphiiiryvxj" path="res://levels/level_2/platform_11.tscn" id="19_3iwmq"]
 [ext_resource type="Texture2D" uid="uid://doa2reha24hi" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00015.png" id="19_yfqbl"]
+[ext_resource type="PackedScene" uid="uid://cjevjqowb5bwh" path="res://levels/level_2/wall_left.tscn" id="20_cg7ru"]
 [ext_resource type="Texture2D" uid="uid://0axvrxnbjfa5" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00016.png" id="20_x6o2f"]
+[ext_resource type="PackedScene" uid="uid://dbiwdbevdt2lx" path="res://levels/level_2/wall_left_thick.tscn" id="21_fuq0e"]
 [ext_resource type="Texture2D" uid="uid://crxkth366nli1" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00017.png" id="21_fxoon"]
 [ext_resource type="Texture2D" uid="uid://djjtimsjx7a0r" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00018.png" id="22_f0khc"]
+[ext_resource type="PackedScene" uid="uid://bbumyn0ljcbij" path="res://levels/level_2/wall_right.tscn" id="22_nncq4"]
 [ext_resource type="Texture2D" uid="uid://cutebgcap2iko" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00019.png" id="23_3jqqt"]
+[ext_resource type="PackedScene" uid="uid://ct58cdnbue8tl" path="res://levels/level_2/wall_right_thick.tscn" id="23_i3tl7"]
 [ext_resource type="Texture2D" uid="uid://b6qiiq1l48tmq" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00020.png" id="24_hv7s7"]
 [ext_resource type="Texture2D" uid="uid://cr0gr4wajkso0" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00021.png" id="25_5h88l"]
 [ext_resource type="Texture2D" uid="uid://rupp1tijuvp8" path="res://assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00022.png" id="26_j5vrt"]
@@ -212,7 +230,6 @@
 [ext_resource type="Texture2D" uid="uid://bx3uu7hvmtf1m" path="res://assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00043.png" id="207_f8a3d"]
 [ext_resource type="Texture2D" uid="uid://csthddtp1msww" path="res://assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00044.png" id="208_odp6n"]
 [ext_resource type="Texture2D" uid="uid://c4tr0cqei7kse" path="res://assets/dark_area/cave/Assets 1024 Cave/Cave - SmallRocks.png" id="209_5i75i"]
-[ext_resource type="Texture2D" uid="uid://cv5gp2ynrpdad" path="res://assets/dark_area/cave/Assets 1024 Cave/Cave - Platforms.png" id="210_v60ln"]
 [ext_resource type="Texture2D" uid="uid://dbb4gyk5nhxqh" path="res://assets/dark_area/cave/Assets 1024 Cave/Cave - BigRocks1.png" id="212_qyabc"]
 [ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://actors/enemies/dark_enemy/dark_enemy.tscn" id="216_armii"]
 [ext_resource type="PackedScene" uid="uid://c1y54bnb2bqcb" path="res://levels/level_2/light_beam.tscn" id="218_4ww2d"]
@@ -380,94 +397,6 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2unfd"]
-size = Vector2(180.00008, 180.00015)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wth84"]
-load_path = "res://.godot/imported/Cave - Platforms.png-32c2d428df0b5a6323ae25706d2c4700.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fxdkr"]
-atlas = SubResource("CompressedTexture2D_wth84")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6djqw"]
-size = Vector2(380.00003, 180)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7nf7y"]
-load_path = "res://.godot/imported/Cave - Platforms.png-32c2d428df0b5a6323ae25706d2c4700.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rl8x2"]
-atlas = SubResource("CompressedTexture2D_7nf7y")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjicq"]
-size = Vector2(550, 350)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_66rlg"]
-load_path = "res://.godot/imported/Cave - Platforms.png-32c2d428df0b5a6323ae25706d2c4700.ctex"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8l72"]
-size = Vector2(299.99997, 310)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_10ggk"]
-load_path = "res://.godot/imported/Cave - Platforms.png-32c2d428df0b5a6323ae25706d2c4700.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wf34t"]
-atlas = SubResource("CompressedTexture2D_10ggk")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i5rp"]
-size = Vector2(380, 340)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jcg0u"]
-load_path = "res://.godot/imported/Cave - Platforms.png-32c2d428df0b5a6323ae25706d2c4700.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ba8c5"]
-atlas = SubResource("CompressedTexture2D_jcg0u")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyvu8"]
-size = Vector2(339.99985, 50)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_emqjt"]
-load_path = "res://.godot/imported/Cave - Platforms.png-32c2d428df0b5a6323ae25706d2c4700.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5nhsv"]
-atlas = SubResource("CompressedTexture2D_emqjt")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7a4ma"]
-size = Vector2(179.99994, 80)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n4suq"]
-load_path = "res://.godot/imported/Cave - Platforms.png-32c2d428df0b5a6323ae25706d2c4700.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jvaln"]
-atlas = SubResource("CompressedTexture2D_n4suq")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjmgs"]
-size = Vector2(300, 40)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sx6t2"]
-load_path = "res://.godot/imported/Cave - Platforms.png-32c2d428df0b5a6323ae25706d2c4700.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mrtjr"]
-atlas = SubResource("CompressedTexture2D_sx6t2")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cy4lh"]
-size = Vector2(260.00006, 140.00003)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5nktr"]
-atlas = ExtResource("210_v60ln")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mh3se"]
-size = Vector2(380.00003, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tq672"]
-atlas = ExtResource("210_v60ln")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_buw72"]
-size = Vector2(180.00002, 340.00015)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y7ajb"]
-atlas = ExtResource("210_v60ln")
-region = Rect2(48, 644, 191, 364)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o34qq"]
 size = Vector2(110, 360)
 
@@ -481,13 +410,6 @@ size = Vector2(200.00009, 340)
 [sub_resource type="AtlasTexture" id="AtlasTexture_pi8ru"]
 atlas = ExtResource("6_iicbf")
 region = Rect2(1346, 87, 213, 352)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hkvy8"]
-size = Vector2(120.00001, 360)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jg0vq"]
-atlas = ExtResource("6_iicbf")
-region = Rect2(1668, 860, 141, 374)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0l4y"]
 size = Vector2(200.00002, 340)
@@ -1548,7 +1470,7 @@ position = Vector2(8510, 702.5)
 texture = SubResource("AtlasTexture_8yca7")
 
 [node name="Stalactites" type="Sprite2D" parent="Parallax/ParallaxMid" unique_id=532568469]
-position = Vector2(4987.5, -2950)
+position = Vector2(6130, -3947.4998)
 texture = SubResource("AtlasTexture_nn0ut")
 
 [node name="ParallaxNear" type="Parallax2D" parent="Parallax" unique_id=424962210]
@@ -1626,11 +1548,41 @@ texture_scale = 4.9
 [node name="Enemies" type="Node2D" parent="." unique_id=1010571554]
 
 [node name="Enemy" parent="Enemies" unique_id=920785443 instance=ExtResource("216_armii")]
-position = Vector2(1953, -41)
+position = Vector2(1374, -45)
 scale = Vector2(2, 2)
+notice_radius = 320
+
+[node name="Enemy2" parent="Enemies" unique_id=329485206 instance=ExtResource("216_armii")]
+position = Vector2(2655, -43)
+scale = Vector2(2, 2)
+notice_radius = 320
+
+[node name="Enemy3" parent="Enemies" unique_id=1862631778 instance=ExtResource("216_armii")]
+position = Vector2(1905, -43)
+scale = Vector2(2, 2)
+notice_radius = 320
+
+[node name="Boss" parent="Enemies" unique_id=2113211253 instance=ExtResource("8_l7jgd")]
+position = Vector2(8044, -3)
+
+[node name="CharacterBody2D" parent="Enemies" unique_id=1542376191 instance=ExtResource("9_mrtjr")]
+position = Vector2(2180, -316)
+scale = Vector2(1.5, 1.5)
+
+[node name="CharacterBody2D2" parent="Enemies" unique_id=2072324636 instance=ExtResource("9_mrtjr")]
+position = Vector2(2328, -534)
+scale = Vector2(1.5, 1.5)
+
+[node name="CharacterBody2D3" parent="Enemies" unique_id=1087096023 instance=ExtResource("9_mrtjr")]
+position = Vector2(2187, -534)
+scale = Vector2(1.5, 1.5)
+
+[node name="CharacterBody2D5" parent="Enemies" unique_id=1082975616 instance=ExtResource("10_5nktr")]
+position = Vector2(1572, -496)
+notice_radius = 400
+attack_radius = 300
 
 [node name="Darkness" type="Node2D" parent="." unique_id=1363816062]
-visible = false
 
 [node name="Background2" type="ColorRect" parent="Darkness" unique_id=581391546]
 offset_left = -1120.0
@@ -1640,10 +1592,10 @@ offset_bottom = 852.0
 color = Color(0, 0, 0, 1)
 
 [node name="Background5" type="ColorRect" parent="Darkness" unique_id=1321108524]
-offset_left = 997.0
-offset_top = -111.0
-offset_right = 1123.0
-offset_bottom = 21.0
+offset_left = 1000.0
+offset_top = -86.0
+offset_right = 1126.0
+offset_bottom = 46.0
 color = Color(0, 0, 0, 1)
 
 [node name="Background3" type="ColorRect" parent="Darkness" unique_id=1664226725]
@@ -1673,183 +1625,59 @@ scale = Vector2(0.15, 0.15)
 [node name="Platforms" type="Node2D" parent="Terrain" unique_id=1735652783]
 position = Vector2(-1173.3333, 7246.6665)
 
-[node name="Platform" type="StaticBody2D" parent="Terrain/Platforms" unique_id=2146872951]
+[node name="Platform" parent="Terrain/Platforms" unique_id=1518915528 instance=ExtResource("9_sx6t2")]
 position = Vector2(6956.6665, -8916.666)
-scale = Vector2(0.99999994, 0.99999994)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/Platform" unique_id=621752825]
-position = Vector2(6.1035156e-05, -6.1035156e-05)
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_2unfd")
+[node name="Platform2" parent="Terrain/Platforms" unique_id=824145122 instance=ExtResource("10_mrtjr")]
+position = Vector2(9313.333, -8333.333)
 
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Platforms/Platform" unique_id=877629560]
-texture = SubResource("AtlasTexture_fxdkr")
-region_enabled = true
-region_rect = Rect2(22, 25, 191, 189)
+[node name="Platform12" parent="Terrain/Platforms" unique_id=886577088 instance=ExtResource("10_mrtjr")]
+position = Vector2(10473.333, -8333.333)
 
-[node name="Platform2" type="StaticBody2D" parent="Terrain/Platforms" unique_id=1822050706]
-position = Vector2(9626.666, -8586.666)
-scale = Vector2(0.99999994, 0.99999994)
+[node name="Platform13" parent="Terrain/Platforms" unique_id=175844523 instance=ExtResource("10_mrtjr")]
+position = Vector2(11580, -8333.333)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/Platform2" unique_id=1975693157]
-position = Vector2(6.1035156e-05, 8.392334e-05)
-scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_6djqw")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Platforms/Platform2" unique_id=56658817]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_rl8x2")
-region_enabled = true
-region_rect = Rect2(233, 23, 389, 188)
-
-[node name="Platform3" type="StaticBody2D" parent="Terrain/Platforms" unique_id=2014157204]
+[node name="Platform3" parent="Terrain/Platforms" unique_id=1157149497 instance=ExtResource("11_5nktr")]
 position = Vector2(6646.6665, -10306.666)
-scale = Vector2(0.99999994, 0.99999994)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/Platform3" unique_id=152093575]
-position = Vector2(-5.000061, -4.999939)
-scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_wjicq")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Platforms/Platform3" unique_id=1520660256]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("CompressedTexture2D_66rlg")
-region_enabled = true
-region_rect = Rect2(28, 225, 562, 363)
-
-[node name="Platform4" type="StaticBody2D" parent="Terrain/Platforms" unique_id=857197434]
+[node name="Platform4" parent="Terrain/Platforms" unique_id=76709563 instance=ExtResource("12_tq672")]
 position = Vector2(6016.6665, -9166.666)
-scale = Vector2(0.99999994, 0.99999994)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/Platform4" unique_id=52740500]
-position = Vector2(-9.1552734e-05, -5)
-scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_s8l72")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Platforms/Platform4" unique_id=887891362]
-position = Vector2(3.333334, 0)
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_wf34t")
-region_enabled = true
-region_rect = Rect2(670, 56, 308, 323)
-
-[node name="Platform5" type="StaticBody2D" parent="Terrain/Platforms" unique_id=742050344]
+[node name="Platform5" parent="Terrain/Platforms" unique_id=964801929 instance=ExtResource("13_i6s7g")]
 position = Vector2(6466.6665, -9336.666)
-scale = Vector2(0.99999994, 0.99999994)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/Platform5" unique_id=834750077]
-position = Vector2(1.9073486e-06, 0)
-scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_6i5rp")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Platforms/Platform5" unique_id=906523064]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_ba8c5")
-region_enabled = true
-region_rect = Rect2(616, 398, 389, 364)
-
-[node name="Platform6" type="StaticBody2D" parent="Terrain/Platforms" unique_id=775911353]
+[node name="Platform6" parent="Terrain/Platforms" unique_id=537756616 instance=ExtResource("14_t7ix4")]
 position = Vector2(6956.6665, -9506.666)
-scale = Vector2(0.99999994, 0.99999994)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/Platform6" unique_id=1271748002]
-position = Vector2(-0.00012207031, -5)
-scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_jyvu8")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Platforms/Platform6" unique_id=2143272297]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_5nhsv")
-region_enabled = true
-region_rect = Rect2(628, 793, 355, 63)
-
-[node name="Platform7" type="StaticBody2D" parent="Terrain/Platforms" unique_id=1499942183]
+[node name="Platform7" parent="Terrain/Platforms" unique_id=1514144635 instance=ExtResource("15_0jyl6")]
 position = Vector2(5966.6665, -9706.666)
-scale = Vector2(0.99999994, 0.99999994)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/Platform7" unique_id=11099421]
-position = Vector2(-9.1552734e-05, 0)
-scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_7a4ma")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Platforms/Platform7" unique_id=2117926883]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_jvaln")
-region_enabled = true
-region_rect = Rect2(722, 889, 191, 104)
-
-[node name="Platform8" type="StaticBody2D" parent="Terrain/Platforms" unique_id=233953762]
+[node name="Platform8" parent="Terrain/Platforms" unique_id=456895762 instance=ExtResource("16_ettni")]
 position = Vector2(6526.6665, -9766.666)
-scale = Vector2(0.99999994, 0.99999994)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/Platform8" unique_id=1253941277]
-position = Vector2(-2.2888184e-05, 0)
-scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_pjmgs")
+[node name="Platform9" parent="Terrain/Platforms" unique_id=1937874748 instance=ExtResource("17_dp4d4")]
+position = Vector2(11073.333, -9166.666)
 
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Platforms/Platform8" unique_id=1156780350]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_mrtjr")
-region_enabled = true
-region_rect = Rect2(274, 645, 303, 62)
+[node name="Platform14" parent="Terrain/Platforms" unique_id=1696573922 instance=ExtResource("17_dp4d4")]
+position = Vector2(9880, -9153.333)
 
-[node name="Platform9" type="StaticBody2D" parent="Terrain/Platforms" unique_id=1369504140]
-position = Vector2(6280, -7913.3325)
-scale = Vector2(0.99999994, 0.99999994)
+[node name="Platform15" parent="Terrain/Platforms" unique_id=2122057352 instance=ExtResource("17_dp4d4")]
+position = Vector2(10440, -10006.666)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/Platform9" unique_id=1282639614]
-position = Vector2(9.1552734e-05, 3.0517578e-05)
-scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_cy4lh")
+[node name="Platform16" parent="Terrain/Platforms" unique_id=1595135936 instance=ExtResource("17_dp4d4")]
+position = Vector2(13080, -7699.9995)
 
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Platforms/Platform9" unique_id=1364088971]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_5nktr")
-region_enabled = true
-region_rect = Rect2(293, 721, 267, 158)
+[node name="Platform10" parent="Terrain/Platforms" unique_id=550420451 instance=ExtResource("18_1v40t")]
+position = Vector2(7100, -7506.6665)
 
-[node name="Platform10" type="StaticBody2D" parent="Terrain/Platforms" unique_id=2045235747]
-position = Vector2(7040, -7486.6665)
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/Platform10" unique_id=1912679261]
-position = Vector2(0, 0.00010681152)
-scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_mh3se")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Platforms/Platform10" unique_id=646997479]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_tq672")
-region_enabled = true
-region_rect = Rect2(268, 902, 389, 104)
-
-[node name="Platform11" type="StaticBody2D" parent="Terrain/Platforms" unique_id=94292025]
+[node name="Platform11" parent="Terrain/Platforms" unique_id=106789986 instance=ExtResource("19_3iwmq")]
 position = Vector2(6516.6665, -8896.666)
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Platforms/Platform11" unique_id=86722700]
-scale = Vector2(0.9999997, 0.9999997)
-shape = SubResource("RectangleShape2D_buw72")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Platforms/Platform11" unique_id=1874670773]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_y7ajb")
 
 [node name="Walls" type="Node2D" parent="Terrain" unique_id=1251733028]
 position = Vector2(-1866.6666, 2413.3333)
 
-[node name="WallLeft2" type="StaticBody2D" parent="Terrain/Walls" unique_id=408433259]
+[node name="WallLeft2" parent="Terrain/Walls" unique_id=1674516188 instance=ExtResource("20_cg7ru")]
 position = Vector2(499.99997, -3160)
-scale = Vector2(0.99999976, 0.99999976)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Walls/WallLeft2" unique_id=311025044]
-position = Vector2(-5, 0)
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_o34qq")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Walls/WallLeft2" unique_id=1763675458]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_opsnp")
 
 [node name="WallLeft12" type="StaticBody2D" parent="Terrain/Walls" unique_id=1833338533]
 position = Vector2(499.99997, -2813.3335)
@@ -1981,18 +1809,8 @@ shape = SubResource("RectangleShape2D_o34qq")
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_opsnp")
 
-[node name="WallLeftThick" type="StaticBody2D" parent="Terrain/Walls" unique_id=904974203]
+[node name="WallLeftThick" parent="Terrain/Walls" unique_id=874529560 instance=ExtResource("21_fuq0e")]
 position = Vector2(8446.666, -2486.6665)
-rotation = 3.1415927
-scale = Vector2(0.9999998, 0.9999998)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Walls/WallLeftThick" unique_id=1647300214]
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_j5vrt")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Walls/WallLeftThick" unique_id=1405464667]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_pi8ru")
 
 [node name="WallLeftThick3" type="StaticBody2D" parent="Terrain/Walls" unique_id=422271105]
 position = Vector2(8446.666, -2819.9998)
@@ -2043,30 +1861,11 @@ shape = SubResource("RectangleShape2D_j5vrt")
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_pi8ru")
 
-[node name="WallRight" type="StaticBody2D" parent="Terrain/Walls" unique_id=1172045323]
+[node name="WallRight" parent="Terrain/Walls" unique_id=2087095069 instance=ExtResource("22_nncq4")]
 position = Vector2(43566.668, -3873.333)
-scale = Vector2(0.99999976, 0.99999976)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Walls/WallRight" unique_id=447759733]
-position = Vector2(10, 0)
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_hkvy8")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Walls/WallRight" unique_id=2110572810]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_jg0vq")
-
-[node name="WallRightThick" type="StaticBody2D" parent="Terrain/Walls" unique_id=6675352]
+[node name="WallRightThick" parent="Terrain/Walls" unique_id=1578178449 instance=ExtResource("23_i3tl7")]
 position = Vector2(57153.34, -5893.3325)
-scale = Vector2(0.9999998, 0.9999998)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Walls/WallRightThick" unique_id=1420006867]
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_v0l4y")
-
-[node name="Sprite2D" type="Sprite2D" parent="Terrain/Walls/WallRightThick" unique_id=1374748737]
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("AtlasTexture_d1ntc")
 
 [node name="WallRightThick2" type="StaticBody2D" parent="Terrain/Walls" unique_id=1213247046]
 position = Vector2(57153.34, -5560)
@@ -3073,7 +2872,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_viwph")
 
 [node name="FloorLong9" type="StaticBody2D" parent="Terrain/Floors" unique_id=133349237]
-position = Vector2(2939.9998, -3153.3333)
+position = Vector2(2933.3333, -2853.3333)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorLong9" unique_id=2067847891]
@@ -3086,7 +2885,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_viwph")
 
 [node name="FloorLong15" type="StaticBody2D" parent="Terrain/Floors" unique_id=1867363116]
-position = Vector2(3346.6665, -3153.3333)
+position = Vector2(3353.3333, -2853.3333)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorLong15" unique_id=2103291555]
@@ -3655,6 +3454,249 @@ scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_idsih")
 
 [node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMedium45" unique_id=758851626]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_vrb6t")
+
+[node name="FloorSmall32" type="StaticBody2D" parent="Terrain/Floors" unique_id=1927073602]
+position = Vector2(7446.6694, -4473.332)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorSmall32" unique_id=520104182]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_hv7s7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorSmall32" unique_id=944812739]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_5h88l")
+
+[node name="FloorMediumSmall27" type="StaticBody2D" parent="Terrain/Floors" unique_id=127354191]
+position = Vector2(7693.3335, -4473.332)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMediumSmall27" unique_id=1621991254]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_g6ghw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMediumSmall27" unique_id=591148205]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_yfqbl")
+
+[node name="FloorMediumSmall28" type="StaticBody2D" parent="Terrain/Floors" unique_id=375949533]
+position = Vector2(7973.3335, -4473.333)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMediumSmall28" unique_id=177747695]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_x6o2f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMediumSmall28" unique_id=1072570692]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_fxoon")
+
+[node name="FloorMedium40" type="StaticBody2D" parent="Terrain/Floors" unique_id=1584758814]
+position = Vector2(8286.664, -4473.333)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMedium40" unique_id=2002625546]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_eq64n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMedium40" unique_id=755102343]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_qyabc")
+
+[node name="FloorMedium41" type="StaticBody2D" parent="Terrain/Floors" unique_id=2001716503]
+position = Vector2(8646.664, -4473.333)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMedium41" unique_id=1115131126]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_mtarx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMedium41" unique_id=1897000141]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_435g3")
+
+[node name="FloorMedium42" type="StaticBody2D" parent="Terrain/Floors" unique_id=1227776530]
+position = Vector2(7159.9995, -4473.333)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMedium42" unique_id=907438133]
+position = Vector2(5, 0)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_idsih")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMedium42" unique_id=305349121]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_vrb6t")
+
+[node name="FloorSmall41" type="StaticBody2D" parent="Terrain/Floors" unique_id=2106080406]
+position = Vector2(10986.67, -4473.333)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorSmall41" unique_id=456167675]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_f0khc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorSmall41" unique_id=1953058458]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_3jqqt")
+
+[node name="FloorSmall42" type="StaticBody2D" parent="Terrain/Floors" unique_id=2147385340]
+position = Vector2(11553.334, -4473.332)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorSmall42" unique_id=1138154793]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_hv7s7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorSmall42" unique_id=370800499]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_5h88l")
+
+[node name="FloorMediumSmall33" type="StaticBody2D" parent="Terrain/Floors" unique_id=1036978614]
+position = Vector2(11800.006, -4473.332)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMediumSmall33" unique_id=1321468546]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_g6ghw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMediumSmall33" unique_id=395802156]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_yfqbl")
+
+[node name="FloorMediumSmall34" type="StaticBody2D" parent="Terrain/Floors" unique_id=686250819]
+position = Vector2(12080.006, -4473.333)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMediumSmall34" unique_id=145506715]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_x6o2f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMediumSmall34" unique_id=1546611176]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_fxoon")
+
+[node name="FloorMedium49" type="StaticBody2D" parent="Terrain/Floors" unique_id=91298348]
+position = Vector2(12393.336, -4473.333)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMedium49" unique_id=1166956764]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_eq64n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMedium49" unique_id=874087132]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_qyabc")
+
+[node name="FloorMedium50" type="StaticBody2D" parent="Terrain/Floors" unique_id=1411292001]
+position = Vector2(12753.336, -4473.333)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMedium50" unique_id=1068444587]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_mtarx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMedium50" unique_id=1417725128]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_435g3")
+
+[node name="FloorMedium51" type="StaticBody2D" parent="Terrain/Floors" unique_id=518085739]
+position = Vector2(11266.664, -4473.333)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMedium51" unique_id=2131382923]
+position = Vector2(5, 0)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_idsih")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMedium51" unique_id=757901722]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_vrb6t")
+
+[node name="FloorSmall44" type="StaticBody2D" parent="Terrain/Floors" unique_id=1455601508]
+position = Vector2(8933.334, -4473.333)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorSmall44" unique_id=1672968686]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_f0khc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorSmall44" unique_id=225803973]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_3jqqt")
+
+[node name="FloorSmall45" type="StaticBody2D" parent="Terrain/Floors" unique_id=842233269]
+position = Vector2(9500.006, -4473.332)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorSmall45" unique_id=2121812209]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_hv7s7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorSmall45" unique_id=1693440313]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_5h88l")
+
+[node name="FloorMediumSmall35" type="StaticBody2D" parent="Terrain/Floors" unique_id=737915102]
+position = Vector2(9746.67, -4473.332)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMediumSmall35" unique_id=226857289]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_g6ghw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMediumSmall35" unique_id=613743713]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_yfqbl")
+
+[node name="FloorMediumSmall36" type="StaticBody2D" parent="Terrain/Floors" unique_id=1750782019]
+position = Vector2(10026.67, -4473.333)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMediumSmall36" unique_id=367804389]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_x6o2f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMediumSmall36" unique_id=743222747]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_fxoon")
+
+[node name="FloorMedium52" type="StaticBody2D" parent="Terrain/Floors" unique_id=1281046057]
+position = Vector2(10340, -4473.333)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMedium52" unique_id=1742103140]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_eq64n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMedium52" unique_id=1915576846]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_qyabc")
+
+[node name="FloorMedium53" type="StaticBody2D" parent="Terrain/Floors" unique_id=166447853]
+position = Vector2(10700, -4473.333)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMedium53" unique_id=642475846]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_mtarx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMedium53" unique_id=79034198]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_435g3")
+
+[node name="FloorMedium54" type="StaticBody2D" parent="Terrain/Floors" unique_id=1218566978]
+position = Vector2(9213.336, -4473.333)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Floors/FloorMedium54" unique_id=103374110]
+position = Vector2(5, 0)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_idsih")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Floors/FloorMedium54" unique_id=377321607]
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_vrb6t")
 
@@ -6327,17 +6369,17 @@ scale = Vector2(0.9999997, 0.9999997)
 texture = SubResource("AtlasTexture_e77l1")
 
 [node name="FloorRockyThick2" type="Sprite2D" parent="Decoration" unique_id=1910472447]
-position = Vector2(7513.333, -813.3333)
+position = Vector2(7522.666, -485.83328)
 scale = Vector2(0.99999964, 0.99999964)
 texture = SubResource("AtlasTexture_t1aqd")
 
 [node name="FloorRockyThick3" type="Sprite2D" parent="Decoration" unique_id=362389685]
-position = Vector2(7819.9995, -806.6666)
+position = Vector2(7829.3325, -479.1666)
 scale = Vector2(0.99999964, 0.99999964)
 texture = SubResource("AtlasTexture_t1aqd")
 
 [node name="FloorRockyThick4" type="Sprite2D" parent="Decoration" unique_id=2075594487]
-position = Vector2(8146.666, -799.99994)
+position = Vector2(8155.999, -472.4999)
 scale = Vector2(0.99999964, 0.99999964)
 texture = SubResource("AtlasTexture_t1aqd")
 
@@ -6408,13 +6450,13 @@ script = ExtResource("219_idsih")
 [node name="LightBeam2" parent="." unique_id=1948478900 instance=ExtResource("218_4ww2d")]
 z_index = -2
 position = Vector2(-122, -288)
-beam_length = 1000
+beam_length = 1300
 beam_width = 200
 beam_angle = -5
 
 [node name="LightBeam" parent="." unique_id=1728388933 instance=ExtResource("218_4ww2d")]
 z_index = -2
-position = Vector2(1962, -342)
+position = Vector2(1463, -314)
 beam_length = 1000
 beam_width = 300
 beam_angle = 20
@@ -6435,25 +6477,25 @@ shape = SubResource("CircleShape2D_l7jgd")
 [node name="Node2D" type="Node2D" parent="." unique_id=948974947]
 
 [node name="TextureRect" type="TextureRect" parent="Node2D" unique_id=727548225]
-offset_left = 3968.0
-offset_top = -1153.0
-offset_right = 3979.0
-offset_bottom = 1013.0
+offset_left = 3585.0
+offset_top = -1088.0
+offset_right = 3596.0
+offset_bottom = 1078.0
 texture = ExtResource("226_66rlg")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="Node2D" unique_id=1276015811]
-offset_left = 1950.0
-offset_top = -1120.0
-offset_right = 1961.0
-offset_bottom = 1046.0
+[node name="TextureRect4" type="TextureRect" parent="Node2D" unique_id=1987354395]
+offset_left = 5180.0
+offset_top = -1131.0
+offset_right = 5191.0
+offset_bottom = 1035.0
 texture = ExtResource("226_66rlg")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="Node2D" unique_id=1063656182]
-offset_left = 6328.0
-offset_top = -1212.0
-offset_right = 6339.0
-offset_bottom = 954.0
+offset_left = 6637.0
+offset_top = -1197.0
+offset_right = 6648.0
+offset_bottom = 969.0
 texture = ExtResource("226_66rlg")
 expand_mode = 1
