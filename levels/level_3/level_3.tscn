@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://bxfg81kho2dhc" path="res://Assets/light_area/Second Stage Forest/Tiles/Tilesheet - WOODS.png" id="22_4r7ot"]
 [ext_resource type="PackedScene" uid="uid://d2ikngsytxnle" path="res://Actors/Enemies/Demon/demon.tscn" id="22_p5b22"]
 [ext_resource type="PackedScene" uid="uid://b1k6xe1pelgkg" path="res://Actors/Enemies/bat/bat.tscn" id="23_sfqu1"]
+[ext_resource type="PackedScene" uid="uid://cb2n82qlyo6fs" path="res://score.tscn" id="23_t8ssf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_is5r1"]
 radius = 20.0
@@ -926,3 +927,5 @@ position = Vector2(1386, 159)
 
 [node name="CharacterBody2D19" parent="." unique_id=2064756727 instance=ExtResource("22_p5b22")]
 position = Vector2(1377, 284)
+
+[node name="Score" parent="." unique_id=658006041 instance=ExtResource("23_t8ssf")]

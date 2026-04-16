@@ -51,6 +51,7 @@ func set_state(new_state: State):
 
 	match state:
 		State.DEAD:
+			ScoreManager.add_score(50)
 			begin_death()
 			
 func _handle_idle_logic():

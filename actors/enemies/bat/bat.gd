@@ -76,6 +76,7 @@ func set_state(new_state: State):
 			sprite.play("hurt")
 			hitbox.set_deferred("monitoring", false)
 		State.DEAD:
+			ScoreManager.add_score(150)
 			begin_death()
 		
 func _handle_sleep_logic():

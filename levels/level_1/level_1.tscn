@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://mf1f2af140ha" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 1-1.png" id="20_mgcax"]
 [ext_resource type="Texture2D" uid="uid://cxj676w7qw3xh" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 2-1.png" id="21_plqb7"]
 [ext_resource type="Texture2D" uid="uid://baa0a0kgxu6ax" path="res://Assets/light_area/Second Stage Forest/Decorations/GRASS 1-2.png" id="22_xywve"]
+[ext_resource type="PackedScene" uid="uid://cb2n82qlyo6fs" path="res://score.tscn" id="23_vk63l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_accah"]
 texture = ExtResource("6_8hh0y")
@@ -850,3 +851,5 @@ texture = ExtResource("18_f313t")
 [node name="Mushroom36" type="Sprite2D" parent="Decor" unique_id=361737708]
 position = Vector2(3054, 466)
 texture = ExtResource("18_f313t")
+
+[node name="Score" parent="." unique_id=658006041 instance=ExtResource("23_vk63l")]

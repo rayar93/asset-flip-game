@@ -95,6 +95,7 @@ func set_state(new_state: State):
 			hurt_timer = hurt_duration
 			_play_anim("hurt")
 		State.DEAD:
+			ScoreManager.add_score(250)
 			begin_death()
 
 func _handle_idle_logic():

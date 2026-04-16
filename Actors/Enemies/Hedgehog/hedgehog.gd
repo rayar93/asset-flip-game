@@ -58,6 +58,7 @@ func set_state(new_state: State):
 			hurt_timer = hurt_duration
 			hitbox.monitoring = false
 		State.DEAD:
+			ScoreManager.add_score(100)
 			begin_death()
 
 func _handle_patrol_logic(delta):

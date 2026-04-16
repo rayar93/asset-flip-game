@@ -143,6 +143,7 @@ func set_state(new_state: State):
 			_play_anim("hurt")
 		State.DEAD:
 			VFX.screenshake(0.8, 20.0)
+			ScoreManager.add_score(500)
 			begin_death()
 			GameFlow.on_boss_died()
 

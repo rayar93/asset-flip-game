@@ -10,7 +10,7 @@ extends BaseEnemy
 
 enum State { PATROL, HURT, DEAD }
 var state = State.PATROL
-
+var points_for_kill = 100
 # ==============================================================================
 # BaseEnemy virtual overrides
 # ==============================================================================
@@ -59,7 +59,9 @@ func set_state(new_state: State):
 			sprite.play("hurt")
 			hitbox.set_deferred("monitoring", false)
 		State.DEAD:
+			ScoreManager.add_score(100)
 			begin_death()
+			
 
 func _handle_patrol_logic(delta):
 	velocity.x = move_toward(velocity.x, facing * move_speed, 1000 * delta)

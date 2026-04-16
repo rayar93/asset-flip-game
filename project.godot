@@ -27,6 +27,7 @@ GameFlow="*uid://dc3k7bi6l001a"
 HealthUI="*uid://dyfvthkmau0ny"
 PauseMenu="*uid://bc888v33jrvr4"
 UISound="*uid://nxhboyfoktxr"
+ScoreManager="*uid://je2jibwoovrb"
 
 [display]
 
