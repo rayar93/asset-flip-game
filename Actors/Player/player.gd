@@ -137,7 +137,7 @@ func _handle_air_input(move_dir):
 			can_double_jump = false
 			_double_jumped = true
 			sprite.play("double_jump")
-			AudioManager.play("player_jump", -10.0)
+			AudioManager.play("player_jump")
 	elif Input.is_action_just_pressed("dash") and can_dash:
 		set_state(State.DASH)
 	elif Input.is_action_just_pressed("attack"):
