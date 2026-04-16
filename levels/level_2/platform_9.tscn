@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ce7ig1mvp5i7q"]
+
+[ext_resource type="Texture2D" uid="uid://cv5gp2ynrpdad" path="res://assets/dark_area/cave/Assets 1024 Cave/Cave - Platforms.png" id="1_irxt6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cy4lh"]
+size = Vector2(260.00006, 140.00003)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nktr"]
+atlas = ExtResource("1_irxt6")
+
+[node name="Platform9" type="StaticBody2D" unique_id=1937874748]
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=931455712]
+position = Vector2(9.1552734e-05, 3.0517578e-05)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_cy4lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1961187069]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_5nktr")
+region_enabled = true
+region_rect = Rect2(293, 721, 267, 158)

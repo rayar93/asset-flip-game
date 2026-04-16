@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bnjiitiggogf7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8l72"]
+size = Vector2(299.99997, 310)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_10ggk"]
+load_path = "res://.godot/imported/Cave - Platforms.png-32c2d428df0b5a6323ae25706d2c4700.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wf34t"]
+atlas = SubResource("CompressedTexture2D_10ggk")
+
+[node name="Platform4" type="StaticBody2D" unique_id=76709563]
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1138031475]
+position = Vector2(-9.1552734e-05, -5)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_s8l72")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1102176372]
+position = Vector2(3.333334, 0)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_wf34t")
+region_enabled = true
+region_rect = Rect2(670, 56, 308, 323)

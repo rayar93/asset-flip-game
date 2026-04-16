@@ -116,6 +116,7 @@ Can't see below to pogo boss in final level
 Stationary floating enemy
 Jumping enemy
 Health/max-health pickups
+More health pips, shadow behind UI
 Make enemies stop moving when pogoed
 Multiple entrances to/from level(s?), adjust spawnpoints to acommodate
 Lava as light source / hazard
