@@ -32,13 +32,13 @@ func _update_music_for_path(path: String):
 	elif "level_1" in path or "death_screen1" in path:
 		AudioManager.play_music(preload("res://audio/music/SunnyLand Music/SunnyLand Music/adventure pack 2 ogg/megabot.ogg"))
 	elif "level_2" in path or "death_screen2" in path:
-		AudioManager.stop_music()
+		AudioManager.play_music(preload("res://audio/music/Lost(loop) - drone - dark.mp3"))
 		AudioManager.play_ambient(preload("res://audio/SFX/Ambient/BGS Loops/Cave/Cave.wav"))
 	elif "level_3" in path or "death_screen3" in path:
-		AudioManager.play_music(preload("res://audio/music/Music by Pascal Belisle/Music by Pascal Belisle/platformer_level03_loop.ogg"))
+		AudioManager.play_music(preload("res://audio/music/Alone(loop) - melancholic - slow.mp3"))
 		AudioManager.play_ambient(preload("res://audio/SFX/Ambient/BGS Loops/Forest Night/Forest Night.wav"))
 	elif "Final_Level" in path or "death_screen4" in path:
-		AudioManager.play_music(preload("res://audio/music/SunnyLand Music/SunnyLand Music/Adventure pack 1 ogg/dark-happy-world.ogg"))
+		AudioManager.play_music(preload("res://audio/music/01 - DavidKBD - Purgatory Pack - Purgatory.ogg"))
 		AudioManager.play_ambient(preload("res://audio/SFX/Ambient/BGS Loops/Interior Day/Inside Day Rain.wav"))
 	elif "pause_menu" in path:
 		pass
