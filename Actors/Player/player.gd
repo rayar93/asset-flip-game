@@ -9,7 +9,7 @@ extends CharacterBody2D
 @export var dash_duration = 0.2
 
 @export_group("Combat")
-@export var max_health = 3
+@export var max_health = 5
 @export var hurt_duration = 0.4
 
 @export_group("Jump Feel")
