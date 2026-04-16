@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://b1qw0m3k7jrfw"]
 
+[ext_resource type="Texture2D" uid="uid://bv5d6e0mqvhyd" path="res://Assets/dark_area/cave/Assets 1024 Cave/Cave - Platforms.png" id="1_0825c"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6i5rp"]
 size = Vector2(380, 340)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jcg0u"]
-load_path = "res://.godot/imported/Cave - Platforms.png-32c2d428df0b5a6323ae25706d2c4700.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ba8c5"]
-atlas = SubResource("CompressedTexture2D_jcg0u")
+atlas = ExtResource("1_0825c")
 
 [node name="Platform5" type="StaticBody2D" unique_id=964801929]
 scale = Vector2(0.99999994, 0.99999994)
