@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://levels/level_1/killzone.tscn" id="1_63o0e"]
 [ext_resource type="Script" uid="uid://b8immi3i85l31" path="res://levels/level_2/parallax_fix.gd" id="1_435g3"]
 [ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Actors/Player/player.tscn" id="2_g1nwy"]
-[ext_resource type="Texture2D" uid="uid://djmhju3wlh237" path="res://assets/dark_area/cave/Assets 1024 Cave/Cave - RockCombinations1.png" id="2_mtarx"]
+[ext_resource type="Texture2D" uid="uid://djmhju3wlh237" path="res://Assets/dark_area/cave/Assets 1024 Cave/Cave - RockCombinations1.png" id="2_mtarx"]
 [ext_resource type="PackedScene" uid="uid://b4xm7vedah7nv" path="res://levels/level_2/anim_decoration.tscn" id="3_4c5ms"]
 [ext_resource type="Texture2D" uid="uid://bd2ygv2vr4xsy" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00000.png" id="4_eq64n"]
 [ext_resource type="Texture2D" uid="uid://cfore07nsvnwl" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00001.png" id="5_qyabc"]
@@ -231,7 +231,7 @@
 [ext_resource type="Texture2D" uid="uid://c24xjacyydu30" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00043.png" id="207_f8a3d"]
 [ext_resource type="Texture2D" uid="uid://5c24vujkp11m" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00044.png" id="208_odp6n"]
 [ext_resource type="Texture2D" uid="uid://gq5ioqgw3h05" path="res://Assets/dark_area/cave/Assets 1024 Cave/Cave - SmallRocks.png" id="209_5i75i"]
-[ext_resource type="Texture2D" uid="uid://ciiqg3nttpgyq" path="res://assets/dark_area/cave/Assets 1024 Cave/Cave - BigRocks1.png" id="212_qyabc"]
+[ext_resource type="Texture2D" uid="uid://ciiqg3nttpgyq" path="res://Assets/dark_area/cave/Assets 1024 Cave/Cave - BigRocks1.png" id="212_qyabc"]
 [ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Actors/Enemies/dark_enemy/dark_enemy.tscn" id="216_armii"]
 [ext_resource type="PackedScene" uid="uid://c1y54bnb2bqcb" path="res://levels/level_2/light_beam.tscn" id="218_4ww2d"]
 [ext_resource type="Script" uid="uid://dxtmqrhyp1b3k" path="res://levels/level_2/dust_motes.gd" id="219_idsih"]
@@ -1564,7 +1564,7 @@ scale = Vector2(2, 2)
 notice_radius = 320
 
 [node name="Boss" parent="Enemies" unique_id=2113211253 instance=ExtResource("8_l7jgd")]
-position = Vector2(8044, -3)
+position = Vector2(8041.0005, -11)
 
 [node name="CharacterBody2D" parent="Enemies" unique_id=1542376191 instance=ExtResource("9_mrtjr")]
 position = Vector2(2180, -316)
@@ -1585,6 +1585,12 @@ attack_radius = 300
 
 [node name="CharacterBody2D4" parent="Enemies" unique_id=1022097115 instance=ExtResource("10_5nktr")]
 position = Vector2(3540, -416)
+
+[node name="CharacterBody2D21" parent="Enemies" unique_id=120870303 instance=ExtResource("10_5nktr")]
+position = Vector2(5772, -344)
+
+[node name="CharacterBody2D22" parent="Enemies" unique_id=1733539699 instance=ExtResource("10_5nktr")]
+position = Vector2(5988, -257)
 
 [node name="CharacterBody2D6" parent="Enemies" unique_id=1922318614 instance=ExtResource("9_mrtjr")]
 position = Vector2(3568, -243)
@@ -1746,7 +1752,10 @@ scale = Vector2(0.15, 0.15)
 position = Vector2(-1173.3333, 7246.6665)
 
 [node name="Platform" parent="Terrain/Platforms" unique_id=1518915528 instance=ExtResource("9_sx6t2")]
-position = Vector2(6956.6665, -8916.666)
+position = Vector2(32973.332, -8960)
+
+[node name="Platform19" parent="Terrain/Platforms" unique_id=1739382394 instance=ExtResource("9_sx6t2")]
+position = Vector2(35046.664, -9000)
 
 [node name="Platform2" parent="Terrain/Platforms" unique_id=824145122 instance=ExtResource("10_mrtjr")]
 position = Vector2(9313.333, -8333.333)

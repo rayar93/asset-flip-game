@@ -103,6 +103,7 @@ Pumpkin decorations in witch boss room
 Terminal fall speed
 Variable jump height
 Acceleration/deceleration
+let bats forget you
 
 Level 2 light sources - lava (hazard), torches, glowing mushrooms
 Boss intro(s?) - pause, dialogue, music change
