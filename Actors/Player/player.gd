@@ -9,7 +9,7 @@ extends CharacterBody2D
 @export var dash_duration = 0.2
 
 @export_group("Combat")
-@export var max_health = 3
+@export var max_health = 5
 @export var hurt_duration = 0.4
 
 @export_group("Jump Feel")
@@ -36,7 +36,7 @@ var state := State.AIR
 var facing = 1
 var current_health = max_health
 
-#const SmokeEffect = preload("C:/Users/alanr/OneDrive - Appalachian State University/Documents/GitHub/Capstone-Project/actors/player/dash.tscn")
+const SmokeEffect = preload("res://actors/player/dash.tscn")
 
 signal health_changed(new_health: int)
 
@@ -100,7 +100,7 @@ func set_state(new_state: State):
 			dash_time_left = dash_duration
 			velocity = Vector2(facing * dash_speed, 0)
 			can_dash = false
-			#_spawn_dash_smoke()
+			_spawn_dash_smoke()
 		State.ATTACK:
 			_execute_attack_startup()
 		State.HURT:
@@ -137,7 +137,7 @@ func _handle_air_input(move_dir):
 			can_double_jump = false
 			_double_jumped = true
 			sprite.play("double_jump")
-			AudioManager.play("player_jump", -10.0)
+			AudioManager.play("player_jump")
 	elif Input.is_action_just_pressed("dash") and can_dash:
 		set_state(State.DASH)
 	elif Input.is_action_just_pressed("attack"):
@@ -224,12 +224,12 @@ func _return_to_base_state():
 	slash_vfx.hide()
 	set_state(State.GROUNDED if is_on_floor() else State.AIR)
 
-#func _spawn_dash_smoke():
-	#var smoke = SmokeEffect.instantiate()
-	#get_parent().add_child(smoke)
-	#smoke.global_position = global_position
-	#smoke.scale.x = facing
-	#smoke.play()
+func _spawn_dash_smoke():
+	var smoke = SmokeEffect.instantiate()
+	get_parent().add_child(smoke)
+	smoke.global_position = global_position
+	smoke.scale.x = facing
+	smoke.play()
 
 func die():
 	set_state(State.DEAD)

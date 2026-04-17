@@ -38,3 +38,13 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_nc0x1")
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nc0x1")
+
+[node name="Panel6" type="Panel" parent="HBoxContainer" unique_id=1721731590]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nc0x1")
+
+[node name="Panel7" type="Panel" parent="HBoxContainer" unique_id=1988396862]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nc0x1")

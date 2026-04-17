@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://b8sk47eqixvhy"]
 
 [ext_resource type="Script" uid="uid://cm4l8krfo3514" path="res://Actors/Enemies/Boss/boss.gd" id="1_7hncy"]
-[ext_resource type="Texture2D" uid="uid://cr0mqxexma33" path="res://assets/dark_area/enemies/witch_boss/Sprite Sheet/8 - jump-down-attack.png" id="2_1p8xh"]
-[ext_resource type="Texture2D" uid="uid://bylowkwtub2hl" path="res://assets/dark_area/enemies/witch_boss/Sprite Sheet/10 - attack 1.png" id="3_652m3"]
-[ext_resource type="Texture2D" uid="uid://bjx7twnfoyvru" path="res://assets/dark_area/enemies/witch_boss/Sprite Sheet/6 - dash.png" id="4_8q66f"]
-[ext_resource type="Texture2D" uid="uid://yen33q6bnu5n" path="res://assets/dark_area/enemies/witch_boss/Sprite Sheet/15 - death.png" id="5_sx15w"]
-[ext_resource type="Texture2D" uid="uid://dk0jo22kyiiv7" path="res://assets/dark_area/enemies/witch_boss/Sprite Sheet/5 - fall.png" id="6_ce4mw"]
-[ext_resource type="Texture2D" uid="uid://bon18wgt8hwhs" path="res://assets/dark_area/enemies/witch_boss/Sprite Sheet/14 - hit.png" id="7_qikus"]
-[ext_resource type="Texture2D" uid="uid://ber8tdmr8y37y" path="res://assets/dark_area/enemies/witch_boss/Sprite Sheet/1 - Idle.png" id="8_himwi"]
-[ext_resource type="Texture2D" uid="uid://cexxlr458g4u8" path="res://assets/dark_area/enemies/witch_boss/Sprite Sheet/3 - jump.png" id="9_lmq6n"]
-[ext_resource type="Texture2D" uid="uid://trycl4yxqo3" path="res://assets/dark_area/enemies/witch_boss/Sprite Sheet/7 - jump-up-attack.png" id="10_2ti3s"]
-[ext_resource type="Texture2D" uid="uid://08l04fdubxfx" path="res://assets/dark_area/enemies/witch_boss/Sprite Sheet/4 - mid-air.png" id="11_ijaby"]
-[ext_resource type="Texture2D" uid="uid://cvtpvuvc3ibtj" path="res://assets/dark_area/enemies/witch_boss/Sprite Sheet/11 - attack 3.png" id="12_g8h8p"]
-[ext_resource type="Texture2D" uid="uid://bvb756feu87pi" path="res://assets/dark_area/enemies/witch_boss/Sprite Sheet/9 - idle-up-attack.png" id="13_ivu18"]
-[ext_resource type="Texture2D" uid="uid://7i8toeordkmq" path="res://assets/dark_area/enemies/witch_boss/Sprite Sheet/2 - Run.png" id="14_qudyh"]
+[ext_resource type="Texture2D" uid="uid://cr0mqxexma33" path="res://Assets/dark_area/enemies/witch_boss/Sprite Sheet/8 - jump-down-attack.png" id="2_1p8xh"]
+[ext_resource type="Texture2D" uid="uid://bylowkwtub2hl" path="res://Assets/dark_area/enemies/witch_boss/Sprite Sheet/10 - attack 1.png" id="3_652m3"]
+[ext_resource type="Texture2D" uid="uid://bjx7twnfoyvru" path="res://Assets/dark_area/enemies/witch_boss/Sprite Sheet/6 - dash.png" id="4_8q66f"]
+[ext_resource type="Texture2D" uid="uid://yen33q6bnu5n" path="res://Assets/dark_area/enemies/witch_boss/Sprite Sheet/15 - death.png" id="5_sx15w"]
+[ext_resource type="Texture2D" uid="uid://dk0jo22kyiiv7" path="res://Assets/dark_area/enemies/witch_boss/Sprite Sheet/5 - fall.png" id="6_ce4mw"]
+[ext_resource type="Texture2D" uid="uid://bon18wgt8hwhs" path="res://Assets/dark_area/enemies/witch_boss/Sprite Sheet/14 - hit.png" id="7_qikus"]
+[ext_resource type="Texture2D" uid="uid://ber8tdmr8y37y" path="res://Assets/dark_area/enemies/witch_boss/Sprite Sheet/1 - Idle.png" id="8_himwi"]
+[ext_resource type="Texture2D" uid="uid://cexxlr458g4u8" path="res://Assets/dark_area/enemies/witch_boss/Sprite Sheet/3 - jump.png" id="9_lmq6n"]
+[ext_resource type="Texture2D" uid="uid://trycl4yxqo3" path="res://Assets/dark_area/enemies/witch_boss/Sprite Sheet/7 - jump-up-attack.png" id="10_2ti3s"]
+[ext_resource type="Texture2D" uid="uid://08l04fdubxfx" path="res://Assets/dark_area/enemies/witch_boss/Sprite Sheet/4 - mid-air.png" id="11_ijaby"]
+[ext_resource type="Texture2D" uid="uid://cvtpvuvc3ibtj" path="res://Assets/dark_area/enemies/witch_boss/Sprite Sheet/11 - attack 3.png" id="12_g8h8p"]
+[ext_resource type="Texture2D" uid="uid://bvb756feu87pi" path="res://Assets/dark_area/enemies/witch_boss/Sprite Sheet/9 - idle-up-attack.png" id="13_ivu18"]
+[ext_resource type="Texture2D" uid="uid://7i8toeordkmq" path="res://Assets/dark_area/enemies/witch_boss/Sprite Sheet/2 - Run.png" id="14_qudyh"]
 [ext_resource type="Script" uid="uid://dwixbk5xhcrd3" path="res://Actors/Enemies/Shared/enemy_hurtbox.gd" id="15_1p8xh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kwui0"]
@@ -551,6 +551,7 @@ size = Vector2(16, 34)
 size = Vector2(16, 34)
 
 [node name="Boss" type="CharacterBody2D" unique_id=2113211253]
+scale = Vector2(1.5, 1.5)
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_7hncy")
