@@ -656,14 +656,6 @@ region = Rect2(1442, 924, 133, 103)
 atlas = ExtResource("209_5i75i")
 region = Rect2(1646, 892, 132, 167)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e77l1"]
-atlas = ExtResource("6_iicbf")
-region = Rect2(1631, 1312, 373, 121)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t1aqd"]
-atlas = ExtResource("6_iicbf")
-region = Rect2(1663, 537, 352, 215)
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i6s7g"]
 load_path = "res://.godot/imported/16x16pumpkin.png-0449caa74fb10f8ea67b4a0b926be98b.ctex"
 
@@ -729,6 +721,14 @@ load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o2u6f"]
 load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e77l1"]
+atlas = ExtResource("6_iicbf")
+region = Rect2(1631, 1312, 373, 121)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1aqd"]
+atlas = ExtResource("6_iicbf")
+region = Rect2(1663, 537, 352, 215)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7xr4r"]
 animations = [{
@@ -1618,7 +1618,6 @@ texture_scale = 4.9
 [node name="Enemy" parent="Enemies" unique_id=920785443 instance=ExtResource("216_armii")]
 position = Vector2(1374, -45)
 scale = Vector2(2, 2)
-notice_radius = 320
 
 [node name="Enemy3" parent="Enemies" unique_id=1862631778 instance=ExtResource("216_armii")]
 position = Vector2(1905, -43)
@@ -1639,7 +1638,7 @@ notice_radius = 320
 position = Vector2(8041.0005, -11)
 
 [node name="CharacterBody2D" parent="Enemies" unique_id=1542376191 instance=ExtResource("9_mrtjr")]
-position = Vector2(2180, -316)
+position = Vector2(2080, -534)
 scale = Vector2(1.5, 1.5)
 
 [node name="CharacterBody2D2" parent="Enemies" unique_id=2072324636 instance=ExtResource("9_mrtjr")]
@@ -1656,7 +1655,7 @@ notice_radius = 400
 attack_radius = 300
 
 [node name="CharacterBody2D4" parent="Enemies" unique_id=1022097115 instance=ExtResource("10_5nktr")]
-position = Vector2(3540, -416)
+position = Vector2(2778, -299)
 
 [node name="CharacterBody2D21" parent="Enemies" unique_id=120870303 instance=ExtResource("10_5nktr")]
 position = Vector2(5772, -344)
@@ -1665,10 +1664,10 @@ position = Vector2(5772, -344)
 position = Vector2(5988, -257)
 
 [node name="CharacterBody2D6" parent="Enemies" unique_id=1922318614 instance=ExtResource("9_mrtjr")]
-position = Vector2(3568, -243)
+position = Vector2(3571, -212)
 
 [node name="CharacterBody2D7" parent="Enemies" unique_id=80439239 instance=ExtResource("9_mrtjr")]
-position = Vector2(3706, -243)
+position = Vector2(3718, -212)
 
 [node name="CharacterBody2D8" parent="Enemies" unique_id=656367632 instance=ExtResource("11_tq672")]
 position = Vector2(4662, -48)
@@ -1714,7 +1713,7 @@ position = Vector2(-1, -3)
 scale = Vector2(2, 2)
 
 [node name="Darkness" type="Node2D" parent="." unique_id=1363816062]
-visible = false
+z_index = 5
 
 [node name="Background2" type="ColorRect" parent="Darkness" unique_id=581391546]
 offset_left = -1120.0
@@ -1747,19 +1746,19 @@ color = Color(0, 0, 0, 1)
 [node name="Background9" type="ColorRect" parent="Darkness" unique_id=1094339113]
 offset_left = 3587.0
 offset_top = -609.0
-offset_right = 4782.0
+offset_right = 4644.0
 offset_bottom = -477.0
 color = Color(0, 0, 0, 1)
 
 [node name="Background10" type="ColorRect" parent="Darkness" unique_id=361831910]
 offset_left = 3615.0
 offset_top = -588.0
-offset_right = 4810.0
+offset_right = 4643.0
 offset_bottom = -456.0
 color = Color(0, 0, 0, 1)
 
 [node name="Background11" type="ColorRect" parent="Darkness" unique_id=445243058]
-offset_left = 4797.0
+offset_left = 5198.0
 offset_top = -588.0
 offset_right = 6211.0
 offset_bottom = -456.0
@@ -1781,23 +1780,37 @@ color = Color(0, 0, 0, 1)
 
 [node name="Background14" type="ColorRect" parent="Darkness" unique_id=494621852]
 offset_left = 3446.0
-offset_top = -115.0
-offset_right = 4860.0
+offset_top = -112.0
+offset_right = 4611.0
 offset_bottom = 17.0
 color = Color(0, 0, 0, 1)
 
 [node name="Background15" type="ColorRect" parent="Darkness" unique_id=1990203681]
 offset_left = 4057.0
 offset_top = -163.0
-offset_right = 6113.0
+offset_right = 4610.0
+offset_bottom = -31.0
+color = Color(0, 0, 0, 1)
+
+[node name="Background17" type="ColorRect" parent="Darkness" unique_id=1927547248]
+offset_left = 5258.0
+offset_top = -163.0
+offset_right = 6094.0
 offset_bottom = -31.0
 color = Color(0, 0, 0, 1)
 
 [node name="Background16" type="ColorRect" parent="Darkness" unique_id=1026047344]
 offset_left = 4372.0
-offset_top = -86.0
-offset_right = 6428.0
+offset_top = -30.0
+offset_right = 6415.0
 offset_bottom = 46.0
+color = Color(0, 0, 0, 1)
+
+[node name="Background18" type="ColorRect" parent="Darkness" unique_id=991188887]
+offset_left = 5277.0
+offset_top = -89.0
+offset_right = 6415.0
+offset_bottom = -13.0
 color = Color(0, 0, 0, 1)
 
 [node name="Background3" type="ColorRect" parent="Darkness" unique_id=1664226725]
@@ -5852,8 +5865,86 @@ shape = SubResource("RectangleShape2D_ts52q")
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wiiu8")
 
+[node name="CeilingThick137" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=1776997914]
+position = Vector2(29666.666, -4659.9688)
+rotation = 1.5707964
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick137" unique_id=1116475447]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_ts52q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick137" unique_id=1175611259]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_wiiu8")
+
+[node name="CeilingThick138" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=1629391157]
+position = Vector2(29666.67, -4993.333)
+rotation = 1.5707964
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick138" unique_id=10046824]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_ts52q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick138" unique_id=1684490164]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_wiiu8")
+
+[node name="CeilingThick139" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=130803997]
+position = Vector2(29666.672, -5326.6875)
+rotation = 1.5707964
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick139" unique_id=348255720]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_ts52q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick139" unique_id=1932937511]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_wiiu8")
+
+[node name="CeilingThick140" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=607426983]
+position = Vector2(26120, -4613.2813)
+rotation = 4.712389
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick140" unique_id=30002446]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_ts52q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick140" unique_id=184479626]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_wiiu8")
+
+[node name="CeilingThick141" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=1342882403]
+position = Vector2(26120.004, -4946.6455)
+rotation = 4.712389
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick141" unique_id=114134949]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_ts52q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick141" unique_id=1700178689]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_wiiu8")
+
+[node name="CeilingThick142" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=1044005887]
+position = Vector2(26120.006, -5280)
+rotation = 4.712389
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick142" unique_id=1426848093]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_ts52q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick142" unique_id=1165824219]
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_wiiu8")
+
 [node name="CeilingThick105" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=540540721]
-position = Vector2(26240, -4446.6665)
+position = Vector2(26246.672, -5353.336)
 scale = Vector2(0.9999998, 0.9999998)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick105" unique_id=454345901]
@@ -5865,7 +5956,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wiiu8")
 
 [node name="CeilingThick106" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=830974197]
-position = Vector2(26566.666, -4446.6665)
+position = Vector2(26573.328, -5353.336)
 scale = Vector2(0.9999998, 0.9999998)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick106" unique_id=1817662985]
@@ -5877,7 +5968,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wiiu8")
 
 [node name="CeilingThick107" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=436975107]
-position = Vector2(26893.334, -4446.6665)
+position = Vector2(26900, -5353.336)
 scale = Vector2(0.9999998, 0.9999998)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick107" unique_id=103779612]
@@ -5889,7 +5980,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wiiu8")
 
 [node name="CeilingThick108" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=1168917139]
-position = Vector2(27220, -4446.6665)
+position = Vector2(27226.672, -5353.336)
 scale = Vector2(0.9999998, 0.9999998)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick108" unique_id=211536012]
@@ -5901,7 +5992,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wiiu8")
 
 [node name="CeilingThick109" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=968185257]
-position = Vector2(27553.334, -4446.6665)
+position = Vector2(27560, -5353.336)
 scale = Vector2(0.9999998, 0.9999998)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick109" unique_id=1772546534]
@@ -5913,7 +6004,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wiiu8")
 
 [node name="CeilingThick110" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=2068938796]
-position = Vector2(27880, -4446.6665)
+position = Vector2(27886.672, -5353.336)
 scale = Vector2(0.9999998, 0.9999998)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick110" unique_id=1312860520]
@@ -5925,7 +6016,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wiiu8")
 
 [node name="CeilingThick111" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=1469321964]
-position = Vector2(28206.666, -4446.6665)
+position = Vector2(28213.328, -5353.336)
 scale = Vector2(0.9999998, 0.9999998)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick111" unique_id=933744121]
@@ -5937,7 +6028,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wiiu8")
 
 [node name="CeilingThick112" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=1694903222]
-position = Vector2(28533.334, -4446.6665)
+position = Vector2(28540, -5353.336)
 scale = Vector2(0.9999998, 0.9999998)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick112" unique_id=1935427395]
@@ -5949,7 +6040,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wiiu8")
 
 [node name="CeilingThick113" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=1548131030]
-position = Vector2(28866.666, -4446.6665)
+position = Vector2(28873.328, -5353.336)
 scale = Vector2(0.9999998, 0.9999998)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick113" unique_id=1546944417]
@@ -5961,7 +6052,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wiiu8")
 
 [node name="CeilingThick114" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=104787667]
-position = Vector2(29193.334, -4446.6665)
+position = Vector2(29200, -5353.336)
 scale = Vector2(0.9999998, 0.9999998)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick114" unique_id=1600499795]
@@ -5973,7 +6064,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wiiu8")
 
 [node name="CeilingThick115" type="StaticBody2D" parent="Terrain/Ceilings/CeilingPiece2" unique_id=1601838094]
-position = Vector2(29519.998, -4446.6665)
+position = Vector2(29526.672, -5353.336)
 scale = Vector2(0.9999998, 0.9999998)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ceilings/CeilingPiece2/CeilingThick115" unique_id=1411085661]
@@ -6742,409 +6833,647 @@ shape = SubResource("RectangleShape2D_ts52q")
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wiiu8")
 
-[node name="Decoration" type="Node2D" parent="." unique_id=72532236]
+[node name="DecorationsBG" type="Node2D" parent="." unique_id=72532236]
 z_index = -1
 position = Vector2(-111, -1)
 scale = Vector2(0.15, 0.15)
 
-[node name="SmallRocks" type="Node2D" parent="Decoration" unique_id=2022813425]
+[node name="SmallRocks" type="Node2D" parent="DecorationsBG" unique_id=2022813425]
 position = Vector2(-2620, -7253.3335)
 
-[node name="SmallRocks" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1761054781]
+[node name="SmallRocks" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1761054781]
 position = Vector2(5116.8335, 5975.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_ao5c7")
 
-[node name="SmallRocks2" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1748409248]
+[node name="SmallRocks2" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1748409248]
 position = Vector2(5286.8335, 5975.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_710y7")
 
-[node name="SmallRocks3" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=13412907]
+[node name="SmallRocks3" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=13412907]
 position = Vector2(5446.8335, 5975.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_l4ot5")
 
-[node name="SmallRocks4" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=634592598]
+[node name="SmallRocks4" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=634592598]
 position = Vector2(4956.8335, 5965.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_dw0gb")
 
-[node name="SmallRocks5" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1994204576]
+[node name="SmallRocks5" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1994204576]
 position = Vector2(5596.8335, 5985.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_2tfx5")
 
-[node name="SmallRocks6" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=804468015]
+[node name="SmallRocks6" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=804468015]
 position = Vector2(5776.8335, 5985.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_y0dim")
 
-[node name="SmallRocks7" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=405634995]
+[node name="SmallRocks7" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=405634995]
 position = Vector2(5946.8335, 5965.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_jkuur")
 
-[node name="SmallRocks8" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1650003001]
+[node name="SmallRocks8" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1650003001]
 position = Vector2(5966.8335, 5675.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_58b8n")
 
-[node name="SmallRocks9" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=2146982531]
+[node name="SmallRocks9" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=2146982531]
 position = Vector2(5816.8335, 5615.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_d0eyt")
 
-[node name="SmallRocks10" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=231160207]
+[node name="SmallRocks10" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=231160207]
 position = Vector2(5586.8335, 5765.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_6cink")
 
-[node name="SmallRocks11" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=80938728]
+[node name="SmallRocks11" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=80938728]
 position = Vector2(5286.8335, 5785.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_i0ch0")
 
-[node name="SmallRocks12" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=644741790]
+[node name="SmallRocks12" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=644741790]
 position = Vector2(4776.8335, 5945.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_ysx52")
 
-[node name="SmallRocks13" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=887993158]
+[node name="SmallRocks13" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=887993158]
 position = Vector2(4646.8335, 5985.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_j5avx")
 
-[node name="SmallRocks14" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1614222056]
+[node name="SmallRocks14" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1614222056]
 position = Vector2(4536.8335, 5985.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_pt8ly")
 
-[node name="SmallRocks15" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=550452842]
+[node name="SmallRocks15" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=550452842]
 position = Vector2(4356.834, 5955.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_w6bje")
 
-[node name="SmallRocks16" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=161030945]
+[node name="SmallRocks16" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=161030945]
 position = Vector2(4166.8335, 5945.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_mv74w")
 
-[node name="SmallRocks17" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1525203348]
+[node name="SmallRocks17" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1525203348]
 position = Vector2(3966.8335, 5905.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_2e3lb")
 
-[node name="SmallRocks18" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1506088175]
+[node name="SmallRocks18" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1506088175]
 position = Vector2(3756.8335, 5895.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_deevk")
 
-[node name="SmallRocks19" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=449162004]
-position = Vector2(3536.8335, 5865.834)
+[node name="SmallRocks19" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=449162004]
+position = Vector2(3440, 6000.0005)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wcuxa")
 
-[node name="SmallRocks20" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=705528597]
+[node name="SmallRocks20" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=705528597]
 position = Vector2(3586.8335, 5545.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_hohcv")
 
-[node name="SmallRocks21" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=628061806]
+[node name="SmallRocks21" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=628061806]
 position = Vector2(5976.8335, 5365.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_k6uhq")
 
-[node name="SmallRocks22" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1636355901]
+[node name="SmallRocks22" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1636355901]
 position = Vector2(5786.8335, 5345.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_5bbvg")
 
-[node name="SmallRocks23" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=2013358508]
+[node name="SmallRocks23" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=2013358508]
 position = Vector2(5536.8335, 5345.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_lb27l")
 
-[node name="SmallRocks24" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=561532673]
+[node name="SmallRocks24" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=561532673]
 position = Vector2(5246.8335, 5445.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_2w053")
 
-[node name="SmallRocks25" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1669766742]
+[node name="SmallRocks25" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1669766742]
 position = Vector2(5016.8335, 5515.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_1t6pa")
 
-[node name="SmallRocks26" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1700452307]
+[node name="SmallRocks26" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1700452307]
 position = Vector2(4796.8335, 5375.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_fgr1s")
 
-[node name="SmallRocks27" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1060160494]
+[node name="SmallRocks27" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1060160494]
 position = Vector2(4586.8335, 5465.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_w4r1j")
 
-[node name="SmallRocks28" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=272185435]
+[node name="SmallRocks28" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=272185435]
 position = Vector2(4266.8335, 5495.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_jp7ai")
 
-[node name="SmallRocks29" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=134274907]
+[node name="SmallRocks29" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=134274907]
 position = Vector2(3926.8335, 5385.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_gv107")
 
-[node name="SmallRocks30" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1214522337]
+[node name="SmallRocks30" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1214522337]
 position = Vector2(3636.8335, 5075.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_tvijd")
 
-[node name="SmallRocks31" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1141527321]
+[node name="SmallRocks31" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1141527321]
 position = Vector2(4056.8335, 4985.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_0n6wa")
 
-[node name="SmallRocks32" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=193966357]
-position = Vector2(4373.3335, 4480.0005)
+[node name="SmallRocks32" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=193966357]
+position = Vector2(7753.3325, 7140.0005)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_5ep5i")
 
-[node name="SmallRocks33" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=96948315]
-position = Vector2(5436.8335, 4955.834)
+[node name="SmallRocks33" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=96948315]
+position = Vector2(10413.333, 6433.334)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wewsc")
 
-[node name="SmallRocks34" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=481838765]
+[node name="SmallRocks34" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=481838765]
 position = Vector2(5866.8335, 4665.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_ssddg")
 
-[node name="SmallRocks35" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=736207130]
+[node name="SmallRocks35" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=736207130]
 position = Vector2(5716.8335, 4645.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_74yu8")
 
-[node name="SmallRocks36" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=1232046378]
+[node name="SmallRocks36" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1232046378]
 position = Vector2(5576.8335, 4635.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_73wer")
 
-[node name="SmallRocks37" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=269744803]
+[node name="SmallRocks37" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=269744803]
 position = Vector2(5386.8335, 4665.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_efhbf")
 
-[node name="SmallRocks38" type="Sprite2D" parent="Decoration/SmallRocks" unique_id=177036007]
+[node name="SmallRocks38" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=177036007]
 position = Vector2(5186.8335, 4635.834)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_8y3ed")
 
-[node name="FloorRocky" type="Sprite2D" parent="Decoration" unique_id=234948609]
-position = Vector2(7373.333, -2766.6665)
-scale = Vector2(0.9999997, 0.9999997)
-texture = SubResource("AtlasTexture_e77l1")
-
-[node name="FloorRockyThick2" type="Sprite2D" parent="Decoration" unique_id=1910472447]
-position = Vector2(7522.666, -485.83328)
-scale = Vector2(0.99999964, 0.99999964)
-texture = SubResource("AtlasTexture_t1aqd")
-
-[node name="FloorRockyThick3" type="Sprite2D" parent="Decoration" unique_id=362389685]
-position = Vector2(7829.3325, -479.1666)
-scale = Vector2(0.99999964, 0.99999964)
-texture = SubResource("AtlasTexture_t1aqd")
-
-[node name="FloorRockyThick4" type="Sprite2D" parent="Decoration" unique_id=2075594487]
-position = Vector2(8155.999, -472.4999)
-scale = Vector2(0.99999964, 0.99999964)
-texture = SubResource("AtlasTexture_t1aqd")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Decoration" unique_id=1633052638]
+[node name="Sprite2D2" type="Sprite2D" parent="DecorationsBG" unique_id=1633052638]
 position = Vector2(42720, -706.6666)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_i6s7g")
 
-[node name="Sprite2D24" type="Sprite2D" parent="Decoration" unique_id=269711344]
+[node name="Sprite2D26" type="Sprite2D" parent="DecorationsBG" unique_id=1121223220]
+position = Vector2(52960, -26.666656)
+scale = Vector2(20, 20)
+texture = SubResource("CompressedTexture2D_i6s7g")
+
+[node name="Sprite2D24" type="Sprite2D" parent="DecorationsBG" unique_id=269711344]
 position = Vector2(48580, 26.666668)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_i6s7g")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Decoration" unique_id=433657417]
+[node name="Sprite2D3" type="Sprite2D" parent="DecorationsBG" unique_id=433657417]
 position = Vector2(54933.33, -626.6666)
 scale = Vector2(50, 50)
 texture = SubResource("CompressedTexture2D_t7ix4")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Decoration" unique_id=1485805471]
+[node name="Sprite2D4" type="Sprite2D" parent="DecorationsBG" unique_id=1485805471]
 position = Vector2(43639.996, 33.333374)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_0jyl6")
 
-[node name="Sprite2D5" type="Sprite2D" parent="Decoration" unique_id=810374047]
+[node name="Sprite2D25" type="Sprite2D" parent="DecorationsBG" unique_id=767972905]
+position = Vector2(52439.992, 33.333336)
+scale = Vector2(10, 10)
+texture = SubResource("CompressedTexture2D_0jyl6")
+
+[node name="Sprite2D5" type="Sprite2D" parent="DecorationsBG" unique_id=810374047]
 position = Vector2(48773.332, -46.666664)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_ettni")
 
-[node name="Sprite2D6" type="Sprite2D" parent="Decoration" unique_id=1910589970]
+[node name="Sprite2D6" type="Sprite2D" parent="DecorationsBG" unique_id=1910589970]
 position = Vector2(48666.664, 40)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_dp4d4")
 region_enabled = true
 region_rect = Rect2(66, 1, 12, 14)
 
-[node name="Sprite2D7" type="Sprite2D" parent="Decoration" unique_id=619420884]
+[node name="Sprite2D27" type="Sprite2D" parent="DecorationsBG" unique_id=1404307864]
+position = Vector2(54240, 33.333336)
+scale = Vector2(10, 10)
+texture = SubResource("CompressedTexture2D_dp4d4")
+region_enabled = true
+region_rect = Rect2(66, 1, 12, 14)
+
+[node name="Sprite2D28" type="Sprite2D" parent="DecorationsBG" unique_id=454643136]
+position = Vector2(54153.33, 40)
+scale = Vector2(10, 10)
+texture = SubResource("CompressedTexture2D_dp4d4")
+region_enabled = true
+region_rect = Rect2(66, 1, 12, 14)
+
+[node name="Sprite2D29" type="Sprite2D" parent="DecorationsBG" unique_id=888051431]
+position = Vector2(54066.668, 33.333332)
+scale = Vector2(10, 10)
+texture = SubResource("CompressedTexture2D_dp4d4")
+region_enabled = true
+region_rect = Rect2(66, 1, 12, 14)
+
+[node name="Sprite2D32" type="Sprite2D" parent="DecorationsBG" unique_id=1279847157]
+position = Vector2(55413.336, 40)
+scale = Vector2(10, 10)
+texture = SubResource("CompressedTexture2D_dp4d4")
+region_enabled = true
+region_rect = Rect2(66, 1, 12, 14)
+
+[node name="Sprite2D33" type="Sprite2D" parent="DecorationsBG" unique_id=860319891]
+position = Vector2(53153.33, 33.333332)
+scale = Vector2(10, 10)
+texture = SubResource("CompressedTexture2D_dp4d4")
+region_enabled = true
+region_rect = Rect2(66, 1, 12, 14)
+
+[node name="Sprite2D34" type="Sprite2D" parent="DecorationsBG" unique_id=1159681418]
+position = Vector2(53420, 33.333332)
+scale = Vector2(10, 10)
+texture = SubResource("CompressedTexture2D_dp4d4")
+region_enabled = true
+region_rect = Rect2(66, 1, 12, 14)
+
+[node name="Sprite2D7" type="Sprite2D" parent="DecorationsBG" unique_id=619420884]
 position = Vector2(48920, 39.999996)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_1v40t")
 region_enabled = true
 region_rect = Rect2(82, 1, 12, 14)
 
-[node name="Sprite2D8" type="Sprite2D" parent="Decoration" unique_id=1962704515]
+[node name="Sprite2D30" type="Sprite2D" parent="DecorationsBG" unique_id=400700426]
+position = Vector2(52793.336, 33.33333)
+scale = Vector2(10, 10)
+texture = SubResource("CompressedTexture2D_1v40t")
+region_enabled = true
+region_rect = Rect2(82, 1, 12, 14)
+
+[node name="Sprite2D31" type="Sprite2D" parent="DecorationsBG" unique_id=1200629004]
+position = Vector2(55526.668, 40)
+scale = Vector2(10, 10)
+texture = SubResource("CompressedTexture2D_1v40t")
+region_enabled = true
+region_rect = Rect2(82, 1, 12, 14)
+
+[node name="Sprite2D8" type="Sprite2D" parent="DecorationsBG" unique_id=1962704515]
 position = Vector2(45399.992, 46.666664)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_3iwmq")
 region_enabled = true
 region_rect = Rect2(3, 7, 11, 9)
 
-[node name="Sprite2D9" type="Sprite2D" parent="Decoration" unique_id=1020750939]
+[node name="Sprite2D9" type="Sprite2D" parent="DecorationsBG" unique_id=1020750939]
 position = Vector2(45586.664, 46.666718)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_cg7ru")
 region_enabled = true
 region_rect = Rect2(18, 6, 12, 10)
 
-[node name="Sprite2D10" type="Sprite2D" parent="Decoration" unique_id=519401534]
+[node name="Sprite2D10" type="Sprite2D" parent="DecorationsBG" unique_id=519401534]
 position = Vector2(47320, 73.33334)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_fuq0e")
 region_enabled = true
 region_rect = Rect2(37, 9, 7, 7)
 
-[node name="Sprite2D11" type="Sprite2D" parent="Decoration" unique_id=1797906459]
+[node name="Sprite2D11" type="Sprite2D" parent="DecorationsBG" unique_id=1797906459]
 position = Vector2(51213.336, 46.666687)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_nncq4")
 region_enabled = true
 region_rect = Rect2(48, 7, 15, 9)
 
-[node name="Sprite2D12" type="Sprite2D" parent="Decoration" unique_id=1717479053]
+[node name="Sprite2D12" type="Sprite2D" parent="DecorationsBG" unique_id=1717479053]
 position = Vector2(53806.664, 33.33333)
 scale = Vector2(15, 15)
 texture = SubResource("CompressedTexture2D_i3tl7")
 region_enabled = true
 region_rect = Rect2(2, 23, 11, 9)
 
-[node name="Sprite2D13" type="Sprite2D" parent="Decoration" unique_id=1911793147]
+[node name="Sprite2D13" type="Sprite2D" parent="DecorationsBG" unique_id=1911793147]
 position = Vector2(55719.996, -53.333336)
 scale = Vector2(30, 30)
 texture = SubResource("CompressedTexture2D_ygdif")
 region_enabled = true
 region_rect = Rect2(18, 22, 12, 10)
 
-[node name="Sprite2D14" type="Sprite2D" parent="Decoration" unique_id=1489286294]
+[node name="Sprite2D14" type="Sprite2D" parent="DecorationsBG" unique_id=1489286294]
 position = Vector2(53019.992, 66.66667)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_ngxxh")
 region_enabled = true
 region_rect = Rect2(37, 25, 7, 7)
 
-[node name="Sprite2D15" type="Sprite2D" parent="Decoration" unique_id=1618183807]
+[node name="Sprite2D15" type="Sprite2D" parent="DecorationsBG" unique_id=1618183807]
 position = Vector2(47946.664, 60.00003)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_x2hhv")
 region_enabled = true
 region_rect = Rect2(49, 23, 15, 9)
 
-[node name="Sprite2D16" type="Sprite2D" parent="Decoration" unique_id=601000159]
+[node name="Sprite2D16" type="Sprite2D" parent="DecorationsBG" unique_id=601000159]
 position = Vector2(53100, 53.33336)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_jbeqm")
 region_enabled = true
 region_rect = Rect2(2, 39, 11, 9)
 
-[node name="Sprite2D17" type="Sprite2D" parent="Decoration" unique_id=1934039623]
+[node name="Sprite2D17" type="Sprite2D" parent="DecorationsBG" unique_id=1934039623]
 position = Vector2(52326.664, 46.666687)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_jdkhc")
 region_enabled = true
 region_rect = Rect2(18, 37, 12, 11)
 
-[node name="Sprite2D18" type="Sprite2D" parent="Decoration" unique_id=1907926871]
+[node name="Sprite2D18" type="Sprite2D" parent="DecorationsBG" unique_id=1907926871]
 position = Vector2(52253.33, 60)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_rcxea")
 region_enabled = true
 region_rect = Rect2(37, 41, 7, 7)
 
-[node name="Sprite2D19" type="Sprite2D" parent="Decoration" unique_id=1590430572]
+[node name="Sprite2D19" type="Sprite2D" parent="DecorationsBG" unique_id=1590430572]
 position = Vector2(49853.33, 53.333332)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_hhule")
 region_enabled = true
 region_rect = Rect2(48, 39, 15, 9)
 
-[node name="Sprite2D20" type="Sprite2D" parent="Decoration" unique_id=669591284]
+[node name="Sprite2D20" type="Sprite2D" parent="DecorationsBG" unique_id=669591284]
 position = Vector2(51473.33, 60.00006)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_cqyqr")
 region_enabled = true
 region_rect = Rect2(3, 55, 11, 9)
 
-[node name="Sprite2D21" type="Sprite2D" parent="Decoration" unique_id=427070521]
+[node name="Sprite2D21" type="Sprite2D" parent="DecorationsBG" unique_id=427070521]
 position = Vector2(51333.332, 46.666664)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_k4ue2")
 region_enabled = true
 region_rect = Rect2(18, 53, 12, 11)
 
-[node name="Sprite2D22" type="Sprite2D" parent="Decoration" unique_id=1406256960]
+[node name="Sprite2D22" type="Sprite2D" parent="DecorationsBG" unique_id=1406256960]
 position = Vector2(48853.332, 59.999996)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_g2hql")
 region_enabled = true
 region_rect = Rect2(36, 57, 7, 7)
 
-[node name="Sprite2D23" type="Sprite2D" parent="Decoration" unique_id=1553258394]
+[node name="Sprite2D23" type="Sprite2D" parent="DecorationsBG" unique_id=1553258394]
 position = Vector2(43919.992, 53.333374)
 scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_o2u6f")
 region_enabled = true
 region_rect = Rect2(49, 55, 15, 9)
 
-[node name="AnimatedPlants" type="Node2D" parent="." unique_id=1415408544]
-z_index = 1
-position = Vector2(570.99994, -229.99998)
+[node name="DecorationsFG" type="Node2D" parent="." unique_id=879361872]
+z_index = 6
+position = Vector2(-111, -1)
 scale = Vector2(0.15, 0.15)
 
-[node name="Grass1" parent="AnimatedPlants" unique_id=1529658355 instance=ExtResource("3_4c5ms")]
+[node name="SmallRocks" type="Node2D" parent="DecorationsFG" unique_id=169079848]
+position = Vector2(-2620, -7253.3335)
+
+[node name="SmallRocks" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1230561569]
+position = Vector2(2453.3335, 7360)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_ao5c7")
+
+[node name="SmallRocks4" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=225703098]
+position = Vector2(6100, 7360.0005)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_dw0gb")
+
+[node name="SmallRocks5" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=837426126]
+position = Vector2(8013.333, 7353.3335)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_2tfx5")
+
+[node name="SmallRocks6" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1450844983]
+position = Vector2(9493.333, 7346.667)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_y0dim")
+
+[node name="SmallRocks7" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1879053047]
+position = Vector2(7713.333, 5573.334)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_jkuur")
+
+[node name="SmallRocks8" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1718181928]
+position = Vector2(5966.8335, 5675.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_58b8n")
+
+[node name="SmallRocks9" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1387464111]
+position = Vector2(5816.8335, 5615.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_d0eyt")
+
+[node name="SmallRocks11" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=586300845]
+position = Vector2(5286.8335, 5785.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_i0ch0")
+
+[node name="SmallRocks12" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1080888129]
+position = Vector2(4776.8335, 5945.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_ysx52")
+
+[node name="SmallRocks13" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1028922106]
+position = Vector2(4646.8335, 5985.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_j5avx")
+
+[node name="SmallRocks14" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1847969242]
+position = Vector2(4536.8335, 5985.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_pt8ly")
+
+[node name="SmallRocks15" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1591739462]
+position = Vector2(4356.834, 5955.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_w6bje")
+
+[node name="SmallRocks16" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=23327842]
+position = Vector2(4166.8335, 5945.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_mv74w")
+
+[node name="SmallRocks17" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=374977327]
+position = Vector2(3966.8335, 5905.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_2e3lb")
+
+[node name="SmallRocks18" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1739132459]
+position = Vector2(3756.8335, 5895.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_deevk")
+
+[node name="SmallRocks19" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1672005040]
+position = Vector2(3440, 6000.0005)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_wcuxa")
+
+[node name="SmallRocks20" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=25843278]
+position = Vector2(3586.8335, 5545.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_hohcv")
+
+[node name="SmallRocks21" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=583756018]
+position = Vector2(5976.8335, 5365.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_k6uhq")
+
+[node name="SmallRocks22" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1605004253]
+position = Vector2(5786.8335, 5345.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_5bbvg")
+
+[node name="SmallRocks23" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=802014607]
+position = Vector2(5536.8335, 5345.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_lb27l")
+
+[node name="SmallRocks24" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=115186697]
+position = Vector2(5246.8335, 5445.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_2w053")
+
+[node name="SmallRocks25" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1323709827]
+position = Vector2(5016.8335, 5515.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_1t6pa")
+
+[node name="SmallRocks26" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1104753218]
+position = Vector2(4796.8335, 5375.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_fgr1s")
+
+[node name="SmallRocks27" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1331640962]
+position = Vector2(4586.8335, 5465.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_w4r1j")
+
+[node name="SmallRocks28" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1319325175]
+position = Vector2(4266.8335, 5495.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_jp7ai")
+
+[node name="SmallRocks29" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=13562181]
+position = Vector2(3926.8335, 5385.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_gv107")
+
+[node name="SmallRocks30" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=879174396]
+position = Vector2(3636.8335, 5075.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_tvijd")
+
+[node name="SmallRocks31" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=133673895]
+position = Vector2(4056.8335, 4985.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_0n6wa")
+
+[node name="SmallRocks34" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=704945207]
+position = Vector2(5866.8335, 4665.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_ssddg")
+
+[node name="SmallRocks35" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=604431245]
+position = Vector2(5716.8335, 4645.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_74yu8")
+
+[node name="SmallRocks36" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=540941171]
+position = Vector2(5576.8335, 4635.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_73wer")
+
+[node name="SmallRocks37" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1639560860]
+position = Vector2(5386.8335, 4665.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_efhbf")
+
+[node name="SmallRocks38" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=156790256]
+position = Vector2(5186.8335, 4635.834)
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_8y3ed")
+
+[node name="FloorRocky" type="Sprite2D" parent="DecorationsFG" unique_id=702844167]
+position = Vector2(7373.333, -2766.6665)
+scale = Vector2(0.9999997, 0.9999997)
+texture = SubResource("AtlasTexture_e77l1")
+
+[node name="FloorRockyThick2" type="Sprite2D" parent="DecorationsFG" unique_id=685539626]
+position = Vector2(7522.666, -485.83328)
+scale = Vector2(0.99999964, 0.99999964)
+texture = SubResource("AtlasTexture_t1aqd")
+
+[node name="FloorRockyThick3" type="Sprite2D" parent="DecorationsFG" unique_id=1852179889]
+position = Vector2(7829.3325, -479.1666)
+scale = Vector2(0.99999964, 0.99999964)
+texture = SubResource("AtlasTexture_t1aqd")
+
+[node name="FloorRockyThick4" type="Sprite2D" parent="DecorationsFG" unique_id=67715145]
+position = Vector2(8155.999, -472.4999)
+scale = Vector2(0.99999964, 0.99999964)
+texture = SubResource("AtlasTexture_t1aqd")
+
+[node name="AnimatedPlants" type="Node2D" parent="DecorationsFG" unique_id=1415408544]
+z_index = 1
+position = Vector2(4546.666, -1526.6666)
+
+[node name="Grass1" parent="DecorationsFG/AnimatedPlants" unique_id=1529658355 instance=ExtResource("3_4c5ms")]
 position = Vector2(719.9999, 539.9999)
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_7xr4r")
 autoplay = "default"
 frame_progress = 0.49022153
 
-[node name="Grass2" parent="AnimatedPlants" unique_id=416282966 instance=ExtResource("3_4c5ms")]
+[node name="Grass2" parent="DecorationsFG/AnimatedPlants" unique_id=416282966 instance=ExtResource("3_4c5ms")]
 position = Vector2(200, 549.9999)
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_jiydw")
 autoplay = "default"
 frame_progress = 0.3589871
 
-[node name="Grass3" parent="AnimatedPlants" unique_id=1625065147 instance=ExtResource("3_4c5ms")]
+[node name="Grass3" parent="DecorationsFG/AnimatedPlants" unique_id=1625065147 instance=ExtResource("3_4c5ms")]
 position = Vector2(29.999878, 349.99997)
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_l7gda")
 autoplay = "default"
 frame_progress = 0.46960726
 
-[node name="Grass4" parent="AnimatedPlants" unique_id=576731055 instance=ExtResource("3_4c5ms")]
+[node name="Grass4" parent="DecorationsFG/AnimatedPlants" unique_id=576731055 instance=ExtResource("3_4c5ms")]
 position = Vector2(899.9998, 409.99997)
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_me0p5")
 autoplay = "default"
 frame_progress = 0.9487094
 
-[node name="Grass5" parent="AnimatedPlants" unique_id=307561897 instance=ExtResource("3_4c5ms")]
+[node name="Grass5" parent="DecorationsFG/AnimatedPlants" unique_id=307561897 instance=ExtResource("3_4c5ms")]
 position = Vector2(-5046.6665, 1313.3331)
 rotation = 0.4834562
 scale = Vector2(0.99999994, 0.99999994)
@@ -7152,8 +7481,8 @@ sprite_frames = SubResource("SpriteFrames_h2w1v")
 autoplay = "default"
 frame_progress = 0.26746592
 
-[node name="GroupPlant" parent="AnimatedPlants" unique_id=286051763 instance=ExtResource("3_4c5ms")]
-position = Vector2(-200, 469.99994)
+[node name="GroupPlant" parent="DecorationsFG/AnimatedPlants" unique_id=286051763 instance=ExtResource("3_4c5ms")]
+position = Vector2(-3146.6663, 1606.6665)
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_byh4b")
 autoplay = "default"
@@ -7163,7 +7492,6 @@ frame_progress = 0.8411297
 position = Vector2(-110, -407)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=135498828]
-visible = false
 color = Color(0.039215688, 0.101960786, 0.101960786, 1)
 
 [node name="DustMotes" type="GPUParticles2D" parent="." unique_id=1804017536]
@@ -7176,14 +7504,14 @@ process_material = SubResource("ParticleProcessMaterial_vecqm")
 script = ExtResource("219_idsih")
 
 [node name="LightBeam2" parent="." unique_id=1948478900 instance=ExtResource("218_4ww2d")]
-z_index = -2
+z_index = 1
 position = Vector2(-122, -288)
 beam_length = 1300
 beam_width = 200
 beam_angle = -5
 
 [node name="LightBeam" parent="." unique_id=1728388933 instance=ExtResource("218_4ww2d")]
-z_index = -2
+z_index = 1
 position = Vector2(1463, -314)
 beam_length = 1000
 beam_width = 300
