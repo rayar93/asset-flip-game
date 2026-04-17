@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://d2ikngsytxnle" path="res://Actors/Enemies/Demon/demon.tscn" id="22_p5b22"]
 [ext_resource type="PackedScene" uid="uid://b1k6xe1pelgkg" path="res://Actors/Enemies/bat/bat.tscn" id="23_sfqu1"]
 [ext_resource type="PackedScene" uid="uid://cb2n82qlyo6fs" path="res://score.tscn" id="23_t8ssf"]
+[ext_resource type="PackedScene" uid="uid://5k3by16njkdl" path="res://Actors/Enemies/shroom/shroom.tscn" id="24_sfqu1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_is5r1"]
 radius = 20.0
@@ -917,7 +918,7 @@ position = Vector2(1465, 244)
 position = Vector2(1290, 86)
 
 [node name="CharacterBody2D16" parent="." unique_id=1350282763 instance=ExtResource("22_p5b22")]
-position = Vector2(1521, 321)
+position = Vector2(1192, 74)
 
 [node name="CharacterBody2D17" parent="." unique_id=2141609642 instance=ExtResource("22_p5b22")]
 position = Vector2(1287, 182)
@@ -929,3 +930,9 @@ position = Vector2(1386, 159)
 position = Vector2(1377, 284)
 
 [node name="Score" parent="." unique_id=658006041 instance=ExtResource("23_t8ssf")]
+
+[node name="CharacterBody2D5" parent="." unique_id=352327831 instance=ExtResource("24_sfqu1")]
+position = Vector2(-921, 331)
+
+[node name="CharacterBody2D6" parent="." unique_id=1745535180 instance=ExtResource("24_sfqu1")]
+position = Vector2(-2106, 171)
