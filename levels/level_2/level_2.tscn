@@ -2,241 +2,241 @@
 
 [ext_resource type="PackedScene" uid="uid://7gudpk57susx" path="res://levels/level_1/killzone.tscn" id="1_63o0e"]
 [ext_resource type="Script" uid="uid://b8immi3i85l31" path="res://levels/level_2/parallax_fix.gd" id="1_435g3"]
-[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://actors/player/player.tscn" id="2_g1nwy"]
-[ext_resource type="Texture2D" uid="uid://bvqj8ekw4uncp" path="res://Assets/dark_area/cave/Assets 1024 Cave/Cave - RockCombinations1.png" id="2_mtarx"]
+[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Actors/Player/player.tscn" id="2_g1nwy"]
+[ext_resource type="Texture2D" uid="uid://djmhju3wlh237" path="res://Assets/dark_area/cave/Assets 1024 Cave/Cave - RockCombinations1.png" id="2_mtarx"]
 [ext_resource type="PackedScene" uid="uid://b4xm7vedah7nv" path="res://levels/level_2/anim_decoration.tscn" id="3_4c5ms"]
-[ext_resource type="Texture2D" uid="uid://dnsk36n1qni2x" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00000.png" id="4_eq64n"]
-[ext_resource type="Texture2D" uid="uid://qmmn23ijcmn8" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00001.png" id="5_qyabc"]
-[ext_resource type="Texture2D" uid="uid://dm36tg1afnwtf" path="res://Assets/dark_area/cave/Assets 1024 Cave/Cave - Floor.png" id="6_iicbf"]
-[ext_resource type="Texture2D" uid="uid://1ihvcfe7q1ou" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00002.png" id="6_mtarx"]
-[ext_resource type="Texture2D" uid="uid://b2erb2ngyjh7h" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00003.png" id="7_435g3"]
-[ext_resource type="PackedScene" uid="uid://b8sk47eqixvhy" path="res://actors/enemies/boss/boss.tscn" id="8_l7jgd"]
-[ext_resource type="Texture2D" uid="uid://bv8ue16tuul47" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00004.png" id="8_qjln1"]
-[ext_resource type="Texture2D" uid="uid://da36yid27wws8" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00005.png" id="9_armii"]
-[ext_resource type="PackedScene" uid="uid://b1k6xe1pelgkg" path="res://actors/enemies/bat/bat.tscn" id="9_mrtjr"]
+[ext_resource type="Texture2D" uid="uid://bd2ygv2vr4xsy" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00000.png" id="4_eq64n"]
+[ext_resource type="Texture2D" uid="uid://cfore07nsvnwl" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00001.png" id="5_qyabc"]
+[ext_resource type="Texture2D" uid="uid://e8h7otf71tnq" path="res://Assets/dark_area/cave/Assets 1024 Cave/Cave - Floor.png" id="6_iicbf"]
+[ext_resource type="Texture2D" uid="uid://omub4513y1o5" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00002.png" id="6_mtarx"]
+[ext_resource type="Texture2D" uid="uid://br88diap6wvno" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00003.png" id="7_435g3"]
+[ext_resource type="PackedScene" uid="uid://b8sk47eqixvhy" path="res://Actors/Enemies/Boss/boss.tscn" id="8_l7jgd"]
+[ext_resource type="Texture2D" uid="uid://cbs5lohnga421" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00004.png" id="8_qjln1"]
+[ext_resource type="Texture2D" uid="uid://btrm6omf7h8g4" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00005.png" id="9_armii"]
+[ext_resource type="PackedScene" uid="uid://b1k6xe1pelgkg" path="res://Actors/Enemies/bat/bat.tscn" id="9_mrtjr"]
 [ext_resource type="PackedScene" uid="uid://0x1v3rpiymwi" path="res://levels/level_2/platform.tscn" id="9_sx6t2"]
-[ext_resource type="PackedScene" uid="uid://d2ikngsytxnle" path="res://actors/enemies/Demon/demon.tscn" id="10_5nktr"]
-[ext_resource type="Texture2D" uid="uid://bysm8w7mcb73v" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00006.png" id="10_fpibc"]
+[ext_resource type="PackedScene" uid="uid://d2ikngsytxnle" path="res://Actors/Enemies/Demon/demon.tscn" id="10_5nktr"]
+[ext_resource type="Texture2D" uid="uid://bn15s5slmttw4" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00006.png" id="10_fpibc"]
 [ext_resource type="PackedScene" uid="uid://w2l32qv6deh0" path="res://levels/level_2/platform_2.tscn" id="10_mrtjr"]
-[ext_resource type="Texture2D" uid="uid://clip52ug2vyxi" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00007.png" id="11_4ww2d"]
+[ext_resource type="Texture2D" uid="uid://bbxx6m3ys0upj" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00007.png" id="11_4ww2d"]
 [ext_resource type="PackedScene" uid="uid://bfygsbendrhy0" path="res://levels/level_2/platform_3.tscn" id="11_5nktr"]
-[ext_resource type="PackedScene" uid="uid://b0ndqyo6a5sko" path="res://actors/enemies/worm/worm.tscn" id="11_tq672"]
-[ext_resource type="PackedScene" uid="uid://5k3by16njkdl" path="res://actors/enemies/shroom/shroom.tscn" id="12_i6s7g"]
-[ext_resource type="Texture2D" uid="uid://col0lvv25fspj" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00008.png" id="12_idsih"]
+[ext_resource type="PackedScene" uid="uid://b0ndqyo6a5sko" path="res://Actors/Enemies/worm/worm.tscn" id="11_tq672"]
+[ext_resource type="PackedScene" uid="uid://5k3by16njkdl" path="res://Actors/Enemies/shroom/shroom.tscn" id="12_i6s7g"]
+[ext_resource type="Texture2D" uid="uid://bu3ewdbqi0432" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00008.png" id="12_idsih"]
 [ext_resource type="PackedScene" uid="uid://bnjiitiggogf7" path="res://levels/level_2/platform_4.tscn" id="12_tq672"]
 [ext_resource type="PackedScene" uid="uid://b1qw0m3k7jrfw" path="res://levels/level_2/platform_5.tscn" id="13_i6s7g"]
-[ext_resource type="Texture2D" uid="uid://cj03j64q8dx8b" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00009.png" id="13_vrb6t"]
-[ext_resource type="Texture2D" uid="uid://dfuci02ie443c" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00010.png" id="14_1jowd"]
+[ext_resource type="Texture2D" uid="uid://cqwnr451ugcce" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00009.png" id="13_vrb6t"]
+[ext_resource type="Texture2D" uid="uid://1gg7k63eebb6" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00010.png" id="14_1jowd"]
 [ext_resource type="PackedScene" uid="uid://be6aqkbma050g" path="res://levels/level_2/platform_6.tscn" id="14_t7ix4"]
 [ext_resource type="PackedScene" uid="uid://b7g3tqonsi2oi" path="res://levels/level_2/platform_7.tscn" id="15_0jyl6"]
-[ext_resource type="Texture2D" uid="uid://bur11jam2quyl" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00011.png" id="15_p6y1t"]
+[ext_resource type="Texture2D" uid="uid://c7essffu61xoy" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00011.png" id="15_p6y1t"]
 [ext_resource type="PackedScene" uid="uid://ci3xuv5uc26v5" path="res://levels/level_2/platform_8.tscn" id="16_ettni"]
-[ext_resource type="Texture2D" uid="uid://2bhpbp04v67o" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00012.png" id="16_vecqm"]
+[ext_resource type="Texture2D" uid="uid://chyrbfuk213so" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00012.png" id="16_vecqm"]
 [ext_resource type="PackedScene" uid="uid://ce7ig1mvp5i7q" path="res://levels/level_2/platform_9.tscn" id="17_dp4d4"]
-[ext_resource type="Texture2D" uid="uid://dovrne50ntk3x" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00013.png" id="17_viwph"]
+[ext_resource type="Texture2D" uid="uid://blik8ktx8cntk" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00013.png" id="17_viwph"]
 [ext_resource type="PackedScene" uid="uid://b6oiylprxco22" path="res://levels/level_2/platform_10.tscn" id="18_1v40t"]
-[ext_resource type="Texture2D" uid="uid://cgxe7skfg1if3" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00014.png" id="18_g6ghw"]
+[ext_resource type="Texture2D" uid="uid://cwn0d5aa7eb2v" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00014.png" id="18_g6ghw"]
 [ext_resource type="PackedScene" uid="uid://2hphiiiryvxj" path="res://levels/level_2/platform_11.tscn" id="19_3iwmq"]
-[ext_resource type="Texture2D" uid="uid://doa2reha24hi" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00015.png" id="19_yfqbl"]
+[ext_resource type="Texture2D" uid="uid://ccuf81v7hijis" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00015.png" id="19_yfqbl"]
 [ext_resource type="PackedScene" uid="uid://cjevjqowb5bwh" path="res://levels/level_2/wall_left.tscn" id="20_cg7ru"]
-[ext_resource type="Texture2D" uid="uid://0axvrxnbjfa5" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00016.png" id="20_x6o2f"]
+[ext_resource type="Texture2D" uid="uid://bvwvfrsnqlr7l" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00016.png" id="20_x6o2f"]
 [ext_resource type="PackedScene" uid="uid://dbiwdbevdt2lx" path="res://levels/level_2/wall_left_thick.tscn" id="21_fuq0e"]
-[ext_resource type="Texture2D" uid="uid://crxkth366nli1" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00017.png" id="21_fxoon"]
-[ext_resource type="Texture2D" uid="uid://djjtimsjx7a0r" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00018.png" id="22_f0khc"]
+[ext_resource type="Texture2D" uid="uid://bmdbvutfwydgb" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00017.png" id="21_fxoon"]
+[ext_resource type="Texture2D" uid="uid://br5b1kac2ijt0" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00018.png" id="22_f0khc"]
 [ext_resource type="PackedScene" uid="uid://bbumyn0ljcbij" path="res://levels/level_2/wall_right.tscn" id="22_nncq4"]
-[ext_resource type="Texture2D" uid="uid://cutebgcap2iko" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00019.png" id="23_3jqqt"]
+[ext_resource type="Texture2D" uid="uid://c7hv1owvuvetc" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00019.png" id="23_3jqqt"]
 [ext_resource type="PackedScene" uid="uid://ct58cdnbue8tl" path="res://levels/level_2/wall_right_thick.tscn" id="23_i3tl7"]
-[ext_resource type="Texture2D" uid="uid://b6qiiq1l48tmq" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00020.png" id="24_hv7s7"]
-[ext_resource type="Texture2D" uid="uid://cr0gr4wajkso0" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00021.png" id="25_5h88l"]
-[ext_resource type="Texture2D" uid="uid://rupp1tijuvp8" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00022.png" id="26_j5vrt"]
-[ext_resource type="Texture2D" uid="uid://nbgl63nao6qk" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00023.png" id="27_pi8ru"]
-[ext_resource type="Texture2D" uid="uid://lh83vmalvlyu" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00024.png" id="28_v0l4y"]
-[ext_resource type="Texture2D" uid="uid://dayw7afn8w3bx" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00025.png" id="29_d1ntc"]
-[ext_resource type="Texture2D" uid="uid://of0mwrmhhs4u" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00026.png" id="30_ts52q"]
-[ext_resource type="Texture2D" uid="uid://cpxqxgd86oyu7" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00027.png" id="31_wiiu8"]
-[ext_resource type="Texture2D" uid="uid://dgg16ml8hab31" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00028.png" id="32_ulx42"]
-[ext_resource type="Texture2D" uid="uid://cdej3hokjm8vh" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00029.png" id="33_t1aqd"]
-[ext_resource type="Texture2D" uid="uid://8fhhdhjw37kh" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00000.png" id="34_hkvy8"]
-[ext_resource type="Texture2D" uid="uid://cpblr0wo5clc5" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00001.png" id="35_jg0vq"]
-[ext_resource type="Texture2D" uid="uid://7h28a0x5qili" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00002.png" id="36_o34qq"]
-[ext_resource type="Texture2D" uid="uid://bwo8t47xlethe" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00003.png" id="37_opsnp"]
-[ext_resource type="Texture2D" uid="uid://7l1iorxiwhti" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00004.png" id="38_vejsp"]
-[ext_resource type="Texture2D" uid="uid://c3nwbisd6alqa" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00005.png" id="39_e77l1"]
-[ext_resource type="Texture2D" uid="uid://dlsugos0nfwlb" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00006.png" id="40_umitx"]
-[ext_resource type="Texture2D" uid="uid://6mreyd7e8p76" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00007.png" id="41_4rstv"]
-[ext_resource type="Texture2D" uid="uid://cbvysb73l52jm" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00008.png" id="42_8yca7"]
-[ext_resource type="Texture2D" uid="uid://ci1gexwfeqwvq" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00009.png" id="43_gexos"]
-[ext_resource type="Texture2D" uid="uid://dtpfghoagpc1o" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00010.png" id="44_nn0ut"]
-[ext_resource type="Texture2D" uid="uid://fcrpvj6guyl2" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00011.png" id="45_3ivut"]
-[ext_resource type="Texture2D" uid="uid://cnoecvqjfh0w3" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00012.png" id="46_jolbd"]
-[ext_resource type="Texture2D" uid="uid://xj58x6e0j8r4" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00013.png" id="47_bypxq"]
-[ext_resource type="Texture2D" uid="uid://qtlvnek34gqh" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00014.png" id="48_vpc4o"]
-[ext_resource type="Texture2D" uid="uid://bpdaixoeqa26s" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00015.png" id="49_5v1ns"]
-[ext_resource type="Texture2D" uid="uid://bitvs7p21r8nd" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00016.png" id="50_vyonl"]
-[ext_resource type="Texture2D" uid="uid://4jql3cluwmi0" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00017.png" id="51_q5kdj"]
-[ext_resource type="Texture2D" uid="uid://yrsfud7g8qjr" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00018.png" id="52_25ldf"]
-[ext_resource type="Texture2D" uid="uid://c3873ugbq12cd" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00019.png" id="53_kvfmp"]
-[ext_resource type="Texture2D" uid="uid://bxgeiwanels4r" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00020.png" id="54_u07s1"]
-[ext_resource type="Texture2D" uid="uid://d0kulsef2b23k" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00021.png" id="55_eb4s5"]
-[ext_resource type="Texture2D" uid="uid://binlt0kaojsea" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00022.png" id="56_ryfiq"]
-[ext_resource type="Texture2D" uid="uid://bkc23kljf3mv0" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00023.png" id="57_exg3m"]
-[ext_resource type="Texture2D" uid="uid://bmeckk4p0wna5" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00024.png" id="58_386fv"]
-[ext_resource type="Texture2D" uid="uid://bb14gr5q5d8pw" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00025.png" id="59_bfb83"]
-[ext_resource type="Texture2D" uid="uid://cyrbsoju114m2" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00026.png" id="60_1oabc"]
-[ext_resource type="Texture2D" uid="uid://clsupujhuxq4u" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00027.png" id="61_eg5rs"]
-[ext_resource type="Texture2D" uid="uid://8u486x66dvws" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00028.png" id="62_fqii2"]
-[ext_resource type="Texture2D" uid="uid://c83qp6flj7htg" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00029.png" id="63_ekm5s"]
-[ext_resource type="Texture2D" uid="uid://dcyhi0ywp308v" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00000.png" id="64_xaxvc"]
-[ext_resource type="Texture2D" uid="uid://co3muuhdp03k6" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00001.png" id="65_6r0g7"]
-[ext_resource type="Texture2D" uid="uid://cstsuesresa34" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00002.png" id="66_17slu"]
-[ext_resource type="Texture2D" uid="uid://bo42xk4t6tyg5" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00003.png" id="67_f6awx"]
-[ext_resource type="Texture2D" uid="uid://buqhxvdpyhgpx" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00004.png" id="68_kkh2q"]
-[ext_resource type="Texture2D" uid="uid://b7xd2yhje0bri" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00005.png" id="69_dx6pb"]
-[ext_resource type="Texture2D" uid="uid://cwfou3vpudol5" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00006.png" id="70_r7du3"]
-[ext_resource type="Texture2D" uid="uid://dtfrhq356u06t" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00007.png" id="71_32pwk"]
-[ext_resource type="Texture2D" uid="uid://cwp0o4rxjrual" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00008.png" id="72_mnuwv"]
-[ext_resource type="Texture2D" uid="uid://btqcow7oejbg4" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00009.png" id="73_p8wxx"]
-[ext_resource type="Texture2D" uid="uid://b4flmbdsagq4e" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00010.png" id="74_eo2ic"]
-[ext_resource type="Texture2D" uid="uid://dirsknwnj4w66" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00011.png" id="75_jgjo6"]
-[ext_resource type="Texture2D" uid="uid://ko3q0e7fkk7a" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00012.png" id="76_oee6p"]
-[ext_resource type="Texture2D" uid="uid://5qujuqg8almu" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00013.png" id="77_xjo0v"]
-[ext_resource type="Texture2D" uid="uid://bx4ocp805ug2w" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00014.png" id="78_hppp7"]
-[ext_resource type="Texture2D" uid="uid://br1c53vtinpmc" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00015.png" id="79_fqu0i"]
-[ext_resource type="Texture2D" uid="uid://clrum0ych7rqs" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00016.png" id="80_vihve"]
-[ext_resource type="Texture2D" uid="uid://5exdlwag02j1" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00017.png" id="81_ug10w"]
-[ext_resource type="Texture2D" uid="uid://d4j7tea4ysjbt" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00018.png" id="82_skkvh"]
-[ext_resource type="Texture2D" uid="uid://dh6fvhca58nsy" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00019.png" id="83_egrfi"]
-[ext_resource type="Texture2D" uid="uid://chxqpfftc2lri" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00020.png" id="84_15o82"]
-[ext_resource type="Texture2D" uid="uid://1mdei0nl232s" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00021.png" id="85_xh5mx"]
-[ext_resource type="Texture2D" uid="uid://d1uns8xcu310d" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00022.png" id="86_osmns"]
-[ext_resource type="Texture2D" uid="uid://dq4guvijrgmj4" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00023.png" id="87_hn7kv"]
-[ext_resource type="Texture2D" uid="uid://diiwmnkts6q01" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00024.png" id="88_2yxqw"]
-[ext_resource type="Texture2D" uid="uid://6c01uj0tsvut" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00025.png" id="89_o7ey8"]
-[ext_resource type="Texture2D" uid="uid://csn3k4niyu0gl" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00026.png" id="90_tbpkg"]
-[ext_resource type="Texture2D" uid="uid://knxi5urx5b18" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00027.png" id="91_313pq"]
-[ext_resource type="Texture2D" uid="uid://nkvgmp0efa3t" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00028.png" id="92_qv2jj"]
-[ext_resource type="Texture2D" uid="uid://bpsp10gopoqvc" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00029.png" id="93_jau17"]
-[ext_resource type="Texture2D" uid="uid://dqfif580o6t7x" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00000.png" id="94_qysu3"]
-[ext_resource type="Texture2D" uid="uid://d2xplmnxm2622" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00001.png" id="95_efem3"]
-[ext_resource type="Texture2D" uid="uid://caj7pbbpxdbtu" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00002.png" id="96_bkp56"]
-[ext_resource type="Texture2D" uid="uid://cd8s0j62axf3s" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00003.png" id="97_j2ip8"]
-[ext_resource type="Texture2D" uid="uid://m8ea8m5xx1yt" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00004.png" id="98_qi1l2"]
-[ext_resource type="Texture2D" uid="uid://f6wk4q1eyyu" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00005.png" id="99_bccm8"]
-[ext_resource type="Texture2D" uid="uid://dy8wcjfo3vhr2" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00006.png" id="100_o6b5n"]
-[ext_resource type="Texture2D" uid="uid://dumvy3mk3166t" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00007.png" id="101_vtkro"]
-[ext_resource type="Texture2D" uid="uid://d170wkraol70d" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00008.png" id="102_yd182"]
-[ext_resource type="Texture2D" uid="uid://pbqf11m3i1d1" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00009.png" id="103_uumnp"]
-[ext_resource type="Texture2D" uid="uid://c72ejse2j77qu" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00010.png" id="104_vnwp7"]
-[ext_resource type="Texture2D" uid="uid://bgyyn6rhc5glm" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00011.png" id="105_fy31e"]
-[ext_resource type="Texture2D" uid="uid://qcgdsmhduew0" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00012.png" id="106_wrv6l"]
-[ext_resource type="Texture2D" uid="uid://yw2lk0paccfk" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00013.png" id="107_v8m3p"]
-[ext_resource type="Texture2D" uid="uid://biu2eppnumbwo" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00014.png" id="108_5jjnb"]
-[ext_resource type="Texture2D" uid="uid://dka6fjqrq8qvv" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00015.png" id="109_2mgds"]
-[ext_resource type="Texture2D" uid="uid://bhkrxrr3v1hil" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00016.png" id="110_f4ihj"]
-[ext_resource type="Texture2D" uid="uid://c8m88yxhffmxe" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00017.png" id="111_udd21"]
-[ext_resource type="Texture2D" uid="uid://e70admyvsbde" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00018.png" id="112_kxhpo"]
-[ext_resource type="Texture2D" uid="uid://r4mof6hcavyn" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00019.png" id="113_nn2x3"]
-[ext_resource type="Texture2D" uid="uid://bumm1vec6sn3x" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00020.png" id="114_ocrnw"]
-[ext_resource type="Texture2D" uid="uid://bwopcnvrvj077" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00021.png" id="115_ah283"]
-[ext_resource type="Texture2D" uid="uid://btsihyuv3se6v" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00022.png" id="116_3umnh"]
-[ext_resource type="Texture2D" uid="uid://b66sapavvonrj" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00023.png" id="117_plrov"]
-[ext_resource type="Texture2D" uid="uid://bry0mddi5uf2u" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00024.png" id="118_gnr3l"]
-[ext_resource type="Texture2D" uid="uid://dyg57iumoqjx5" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00025.png" id="119_31ydv"]
-[ext_resource type="Texture2D" uid="uid://qm4lyp0egjyt" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00026.png" id="120_acl6i"]
-[ext_resource type="Texture2D" uid="uid://cufwx1kjiqvcr" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00027.png" id="121_c1ctm"]
-[ext_resource type="Texture2D" uid="uid://bfoe4iqw77c0h" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00028.png" id="122_ou2nn"]
-[ext_resource type="Texture2D" uid="uid://8r8q4a3tarp0" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00029.png" id="123_jdf1h"]
-[ext_resource type="Texture2D" uid="uid://bli54b6c6l3xy" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00000.png" id="124_0kwic"]
-[ext_resource type="Texture2D" uid="uid://2j3wfpyrohwa" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00001.png" id="125_5bixt"]
-[ext_resource type="Texture2D" uid="uid://iighk10wyejp" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00002.png" id="126_mxq8o"]
-[ext_resource type="Texture2D" uid="uid://yhrai05kik81" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00003.png" id="127_klnxl"]
-[ext_resource type="Texture2D" uid="uid://b18uj74n2pent" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00004.png" id="128_bo55u"]
-[ext_resource type="Texture2D" uid="uid://p63ulcaavvth" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00005.png" id="129_kc4q1"]
-[ext_resource type="Texture2D" uid="uid://pi0qqfveoe0f" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00006.png" id="130_1lclb"]
-[ext_resource type="Texture2D" uid="uid://bgvns4brj05hr" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00007.png" id="131_ux0lv"]
-[ext_resource type="Texture2D" uid="uid://chrngudxpeep1" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00008.png" id="132_u1uix"]
-[ext_resource type="Texture2D" uid="uid://bpewjbxi07d2r" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00009.png" id="133_am10t"]
-[ext_resource type="Texture2D" uid="uid://byl44vvydobbh" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00010.png" id="134_ps0p4"]
-[ext_resource type="Texture2D" uid="uid://hir4ql8gabhq" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00011.png" id="135_0nfad"]
-[ext_resource type="Texture2D" uid="uid://d10lmkmkhkpwp" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00012.png" id="136_uiomt"]
-[ext_resource type="Texture2D" uid="uid://csnawecd1yw3o" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00013.png" id="137_qv8fc"]
-[ext_resource type="Texture2D" uid="uid://b2f6gax44dndm" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00014.png" id="138_5oe7v"]
-[ext_resource type="Texture2D" uid="uid://bhrrvquemv2q1" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00015.png" id="139_8ngry"]
-[ext_resource type="Texture2D" uid="uid://ctkdnx2xb0bww" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00016.png" id="140_8026w"]
-[ext_resource type="Texture2D" uid="uid://c5hk7iy72p4gy" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00017.png" id="141_s7m1v"]
-[ext_resource type="Texture2D" uid="uid://cewvdorgbosmt" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00018.png" id="142_w0qgd"]
-[ext_resource type="Texture2D" uid="uid://dky506xd5rxw4" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00019.png" id="143_pv25n"]
-[ext_resource type="Texture2D" uid="uid://bvsqoncnrfll3" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00020.png" id="144_rx0qv"]
-[ext_resource type="Texture2D" uid="uid://ctncmcqw8w8cb" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00021.png" id="145_jetky"]
-[ext_resource type="Texture2D" uid="uid://b4ymjrnp2bdyt" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00022.png" id="146_oerhl"]
-[ext_resource type="Texture2D" uid="uid://2ynvusmljmc0" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00023.png" id="147_y11jw"]
-[ext_resource type="Texture2D" uid="uid://csm1jgkgbxykv" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00024.png" id="148_qfjw3"]
-[ext_resource type="Texture2D" uid="uid://cmdyojx80t7e2" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00025.png" id="149_2fngs"]
-[ext_resource type="Texture2D" uid="uid://bte1k3vp5e04o" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00026.png" id="150_23yjc"]
-[ext_resource type="Texture2D" uid="uid://vj6pw6unmh40" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00027.png" id="151_ms2vo"]
-[ext_resource type="Texture2D" uid="uid://u3mfldme3la7" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00028.png" id="152_jo8cj"]
-[ext_resource type="Texture2D" uid="uid://r1f2712vqixa" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00029.png" id="153_tftgv"]
-[ext_resource type="Texture2D" uid="uid://deyqhavvhc5wc" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00030.png" id="154_rofjk"]
-[ext_resource type="Texture2D" uid="uid://o212ao1n0r4s" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00031.png" id="155_7tpm2"]
-[ext_resource type="Texture2D" uid="uid://cytxqhav4v6xt" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00032.png" id="156_5lcsn"]
-[ext_resource type="Texture2D" uid="uid://c4x6xk4kde5av" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00033.png" id="157_m7w0q"]
-[ext_resource type="Texture2D" uid="uid://cbmsoyh1avqwp" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00034.png" id="158_a1j8u"]
-[ext_resource type="Texture2D" uid="uid://d0u6mwy8h014n" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00035.png" id="159_2mq4o"]
-[ext_resource type="Texture2D" uid="uid://bo71ks7cewjrf" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00036.png" id="160_j2vtc"]
-[ext_resource type="Texture2D" uid="uid://bu5hr730vbxij" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00037.png" id="161_svg6l"]
-[ext_resource type="Texture2D" uid="uid://cs2n73odralep" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00038.png" id="162_oduyb"]
-[ext_resource type="Texture2D" uid="uid://b2ckgu6t2hmfc" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00039.png" id="163_y7x2d"]
-[ext_resource type="Texture2D" uid="uid://cpkp5l8045r24" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00000.png" id="164_20hcu"]
-[ext_resource type="Texture2D" uid="uid://cg57rjmt0hio2" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00001.png" id="165_r66t8"]
-[ext_resource type="Texture2D" uid="uid://su6wer5lde22" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00002.png" id="166_kuk47"]
-[ext_resource type="Texture2D" uid="uid://kr6n17rfm47c" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00003.png" id="167_f4iil"]
-[ext_resource type="Texture2D" uid="uid://cq3dapphp6cnj" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00004.png" id="168_38m0e"]
-[ext_resource type="Texture2D" uid="uid://i1mnbvf7obje" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00005.png" id="169_6rit2"]
-[ext_resource type="Texture2D" uid="uid://hsmlmai67ljr" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00006.png" id="170_7t12c"]
-[ext_resource type="Texture2D" uid="uid://bl3sfljbxn426" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00007.png" id="171_62drt"]
-[ext_resource type="Texture2D" uid="uid://b2rwo2632cefr" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00008.png" id="172_o7oo1"]
-[ext_resource type="Texture2D" uid="uid://dg8m1johjufm0" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00009.png" id="173_wkrce"]
-[ext_resource type="Texture2D" uid="uid://oklveukksvxi" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00010.png" id="174_wk8s3"]
-[ext_resource type="Texture2D" uid="uid://dq6sja6e1qy08" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00011.png" id="175_7pu8c"]
-[ext_resource type="Texture2D" uid="uid://8j3y72620at7" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00012.png" id="176_q2rb3"]
-[ext_resource type="Texture2D" uid="uid://c4d4wjdcbp5ga" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00013.png" id="177_yn1dx"]
-[ext_resource type="Texture2D" uid="uid://bn64khosxxsbl" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00014.png" id="178_7kseh"]
-[ext_resource type="Texture2D" uid="uid://cc77g3ktsnabd" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00015.png" id="179_641i8"]
-[ext_resource type="Texture2D" uid="uid://kl0adeppaybr" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00016.png" id="180_8dh5i"]
-[ext_resource type="Texture2D" uid="uid://66c42vda3r5w" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00017.png" id="181_vu5ry"]
-[ext_resource type="Texture2D" uid="uid://bpxi72jsi1rvx" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00018.png" id="182_gs047"]
-[ext_resource type="Texture2D" uid="uid://uln80164g8ag" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00019.png" id="183_8v8p6"]
-[ext_resource type="Texture2D" uid="uid://c3sbtgfgmpbwf" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00020.png" id="184_iw003"]
-[ext_resource type="Texture2D" uid="uid://bgupn2dweeeb4" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00021.png" id="185_05fyf"]
-[ext_resource type="Texture2D" uid="uid://de0phpgk4s0ik" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00022.png" id="186_mucav"]
-[ext_resource type="Texture2D" uid="uid://dqfpuectiyb7e" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00023.png" id="187_v2uub"]
-[ext_resource type="Texture2D" uid="uid://xxslt3lca0nx" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00024.png" id="188_gkm6u"]
-[ext_resource type="Texture2D" uid="uid://ib24dps76h3q" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00025.png" id="189_nlv7h"]
-[ext_resource type="Texture2D" uid="uid://de4170ujperr0" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00026.png" id="190_2rx8s"]
-[ext_resource type="Texture2D" uid="uid://dyml3cko7v5b2" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00027.png" id="191_tml60"]
-[ext_resource type="Texture2D" uid="uid://ceumgtn4ddxbb" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00028.png" id="192_4dib1"]
-[ext_resource type="Texture2D" uid="uid://bt751s27kcm3v" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00029.png" id="193_xmjpj"]
-[ext_resource type="Texture2D" uid="uid://cpie0dhlwwtih" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00030.png" id="194_2a0rx"]
-[ext_resource type="Texture2D" uid="uid://uq8qebuovlrn" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00031.png" id="195_kwkth"]
-[ext_resource type="Texture2D" uid="uid://c2dhhydrdetpw" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00032.png" id="196_slbm4"]
-[ext_resource type="Texture2D" uid="uid://dwko7nr46uls8" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00033.png" id="197_75c08"]
-[ext_resource type="Texture2D" uid="uid://cadmhecr8cni5" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00034.png" id="198_fklct"]
-[ext_resource type="Texture2D" uid="uid://bfk3au1cgjehb" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00035.png" id="199_14a5x"]
-[ext_resource type="Texture2D" uid="uid://dejkngjurl01j" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00036.png" id="200_4x3s5"]
-[ext_resource type="Texture2D" uid="uid://d8y8ycg6114e" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00037.png" id="201_nkctx"]
-[ext_resource type="Texture2D" uid="uid://cng11g6yiyl5q" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00038.png" id="202_guvm5"]
-[ext_resource type="Texture2D" uid="uid://qnjsli3et37l" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00039.png" id="203_n3uod"]
-[ext_resource type="Texture2D" uid="uid://bwxcr4sav26rb" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00040.png" id="204_vsmp3"]
-[ext_resource type="Texture2D" uid="uid://bm4bk1o7mbvjm" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00041.png" id="205_pjgbp"]
-[ext_resource type="Texture2D" uid="uid://mbxc0qbpx15p" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00042.png" id="206_ugk65"]
-[ext_resource type="Texture2D" uid="uid://bx3uu7hvmtf1m" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00043.png" id="207_f8a3d"]
-[ext_resource type="Texture2D" uid="uid://csthddtp1msww" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00044.png" id="208_odp6n"]
-[ext_resource type="Texture2D" uid="uid://c4tr0cqei7kse" path="res://Assets/dark_area/cave/Assets 1024 Cave/Cave - SmallRocks.png" id="209_5i75i"]
-[ext_resource type="Texture2D" uid="uid://dbb4gyk5nhxqh" path="res://Assets/dark_area/cave/Assets 1024 Cave/Cave - BigRocks1.png" id="212_qyabc"]
-[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://actors/enemies/dark_enemy/dark_enemy.tscn" id="216_armii"]
+[ext_resource type="Texture2D" uid="uid://bijdmw2jfofrl" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00020.png" id="24_hv7s7"]
+[ext_resource type="Texture2D" uid="uid://0jelnij3baeo" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00021.png" id="25_5h88l"]
+[ext_resource type="Texture2D" uid="uid://cbc2ibu1welal" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00022.png" id="26_j5vrt"]
+[ext_resource type="Texture2D" uid="uid://dsc5d3kng6o86" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00023.png" id="27_pi8ru"]
+[ext_resource type="Texture2D" uid="uid://bcq8a01i81bq5" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00024.png" id="28_v0l4y"]
+[ext_resource type="Texture2D" uid="uid://c3xpusomwxxi4" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00025.png" id="29_d1ntc"]
+[ext_resource type="Texture2D" uid="uid://cx07tagbors4v" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00026.png" id="30_ts52q"]
+[ext_resource type="Texture2D" uid="uid://dx57ryb3wuu1x" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00027.png" id="31_wiiu8"]
+[ext_resource type="Texture2D" uid="uid://hb7psmqcol3a" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00028.png" id="32_ulx42"]
+[ext_resource type="Texture2D" uid="uid://d2dgrdtvsohr6" path="res://Assets/dark_area/plants/Vegetation/Comp 1/PlantSmall_00029.png" id="33_t1aqd"]
+[ext_resource type="Texture2D" uid="uid://clk1n25f0lfo1" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00000.png" id="34_hkvy8"]
+[ext_resource type="Texture2D" uid="uid://b4jj2gfmxh5im" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00001.png" id="35_jg0vq"]
+[ext_resource type="Texture2D" uid="uid://h1d7304tj7m" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00002.png" id="36_o34qq"]
+[ext_resource type="Texture2D" uid="uid://frc36t05iogq" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00003.png" id="37_opsnp"]
+[ext_resource type="Texture2D" uid="uid://bvoteldoo7ot1" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00004.png" id="38_vejsp"]
+[ext_resource type="Texture2D" uid="uid://bv8xijltk2flq" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00005.png" id="39_e77l1"]
+[ext_resource type="Texture2D" uid="uid://b3jpe40y7hny5" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00006.png" id="40_umitx"]
+[ext_resource type="Texture2D" uid="uid://blid4nffuli7" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00007.png" id="41_4rstv"]
+[ext_resource type="Texture2D" uid="uid://lvxecaif74qr" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00008.png" id="42_8yca7"]
+[ext_resource type="Texture2D" uid="uid://br1m7cjsp1xei" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00009.png" id="43_gexos"]
+[ext_resource type="Texture2D" uid="uid://dc3o3wrwxw5so" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00010.png" id="44_nn0ut"]
+[ext_resource type="Texture2D" uid="uid://b45jf6su6u8j4" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00011.png" id="45_3ivut"]
+[ext_resource type="Texture2D" uid="uid://baly42myvb6ch" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00012.png" id="46_jolbd"]
+[ext_resource type="Texture2D" uid="uid://dvrvid36jtoc1" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00013.png" id="47_bypxq"]
+[ext_resource type="Texture2D" uid="uid://m5bbipnqaxoq" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00014.png" id="48_vpc4o"]
+[ext_resource type="Texture2D" uid="uid://jfmyxhdhcfkt" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00015.png" id="49_5v1ns"]
+[ext_resource type="Texture2D" uid="uid://bumqcombf5ubn" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00016.png" id="50_vyonl"]
+[ext_resource type="Texture2D" uid="uid://kdbfp2orv07q" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00017.png" id="51_q5kdj"]
+[ext_resource type="Texture2D" uid="uid://c76elfhftgwtf" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00018.png" id="52_25ldf"]
+[ext_resource type="Texture2D" uid="uid://ckvgbj2vmbous" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00019.png" id="53_kvfmp"]
+[ext_resource type="Texture2D" uid="uid://7njx122lwo57" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00020.png" id="54_u07s1"]
+[ext_resource type="Texture2D" uid="uid://d20x8l7ionv6a" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00021.png" id="55_eb4s5"]
+[ext_resource type="Texture2D" uid="uid://qsk4w54owww3" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00022.png" id="56_ryfiq"]
+[ext_resource type="Texture2D" uid="uid://c0krnv2ebm6t8" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00023.png" id="57_exg3m"]
+[ext_resource type="Texture2D" uid="uid://dng7eot44nyqc" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00024.png" id="58_386fv"]
+[ext_resource type="Texture2D" uid="uid://bu7gpxjdtw0f3" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00025.png" id="59_bfb83"]
+[ext_resource type="Texture2D" uid="uid://jvfx6cnfq37u" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00026.png" id="60_1oabc"]
+[ext_resource type="Texture2D" uid="uid://dg8ploys32ijw" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00027.png" id="61_eg5rs"]
+[ext_resource type="Texture2D" uid="uid://bcsj635lcxqjb" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00028.png" id="62_fqii2"]
+[ext_resource type="Texture2D" uid="uid://dtp5aw43ij2m8" path="res://Assets/dark_area/plants/Vegetation/Grass2/Grass2_00029.png" id="63_ekm5s"]
+[ext_resource type="Texture2D" uid="uid://dif5dprkrphb5" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00000.png" id="64_xaxvc"]
+[ext_resource type="Texture2D" uid="uid://butpw517etbls" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00001.png" id="65_6r0g7"]
+[ext_resource type="Texture2D" uid="uid://ciavhgsbiquqt" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00002.png" id="66_17slu"]
+[ext_resource type="Texture2D" uid="uid://dtckuar68ktlh" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00003.png" id="67_f6awx"]
+[ext_resource type="Texture2D" uid="uid://cfemrobm7hdar" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00004.png" id="68_kkh2q"]
+[ext_resource type="Texture2D" uid="uid://bu5ac08g00jy0" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00005.png" id="69_dx6pb"]
+[ext_resource type="Texture2D" uid="uid://by4w4nwnomktt" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00006.png" id="70_r7du3"]
+[ext_resource type="Texture2D" uid="uid://b5qm3j4xvw6es" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00007.png" id="71_32pwk"]
+[ext_resource type="Texture2D" uid="uid://c8iftjttsbadx" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00008.png" id="72_mnuwv"]
+[ext_resource type="Texture2D" uid="uid://bwsnnytx4xgiu" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00009.png" id="73_p8wxx"]
+[ext_resource type="Texture2D" uid="uid://2uom78kjks2o" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00010.png" id="74_eo2ic"]
+[ext_resource type="Texture2D" uid="uid://ctq75saavrra6" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00011.png" id="75_jgjo6"]
+[ext_resource type="Texture2D" uid="uid://b6vi34rm5a3nt" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00012.png" id="76_oee6p"]
+[ext_resource type="Texture2D" uid="uid://bpikh05a77kv8" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00013.png" id="77_xjo0v"]
+[ext_resource type="Texture2D" uid="uid://bm7r5twqnuodf" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00014.png" id="78_hppp7"]
+[ext_resource type="Texture2D" uid="uid://bx37wkxyommqq" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00015.png" id="79_fqu0i"]
+[ext_resource type="Texture2D" uid="uid://hqrbywccdp4x" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00016.png" id="80_vihve"]
+[ext_resource type="Texture2D" uid="uid://gmkldphjiwsp" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00017.png" id="81_ug10w"]
+[ext_resource type="Texture2D" uid="uid://dk4exmk0iltk7" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00018.png" id="82_skkvh"]
+[ext_resource type="Texture2D" uid="uid://csw0ngjcwfyrn" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00019.png" id="83_egrfi"]
+[ext_resource type="Texture2D" uid="uid://bpcw5sa26cnsf" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00020.png" id="84_15o82"]
+[ext_resource type="Texture2D" uid="uid://fx0l7afms4jl" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00021.png" id="85_xh5mx"]
+[ext_resource type="Texture2D" uid="uid://buu4ak3lsa5eb" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00022.png" id="86_osmns"]
+[ext_resource type="Texture2D" uid="uid://c1rytjuqsuitw" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00023.png" id="87_hn7kv"]
+[ext_resource type="Texture2D" uid="uid://bly5c4jwcpr74" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00024.png" id="88_2yxqw"]
+[ext_resource type="Texture2D" uid="uid://dhssoi7uct1oi" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00025.png" id="89_o7ey8"]
+[ext_resource type="Texture2D" uid="uid://un0l84sxk863" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00026.png" id="90_tbpkg"]
+[ext_resource type="Texture2D" uid="uid://bsxywyrn3im4k" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00027.png" id="91_313pq"]
+[ext_resource type="Texture2D" uid="uid://cuwsdpk3ydt32" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00028.png" id="92_qv2jj"]
+[ext_resource type="Texture2D" uid="uid://t20qat6yhrf5" path="res://Assets/dark_area/plants/Vegetation/Grass3/Comp 1_00029.png" id="93_jau17"]
+[ext_resource type="Texture2D" uid="uid://43auei2igdmc" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00000.png" id="94_qysu3"]
+[ext_resource type="Texture2D" uid="uid://bqk0a21k1pq2b" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00001.png" id="95_efem3"]
+[ext_resource type="Texture2D" uid="uid://csroyr68ckpwh" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00002.png" id="96_bkp56"]
+[ext_resource type="Texture2D" uid="uid://bwyvufnvdjql2" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00003.png" id="97_j2ip8"]
+[ext_resource type="Texture2D" uid="uid://4arnc7yk27mi" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00004.png" id="98_qi1l2"]
+[ext_resource type="Texture2D" uid="uid://dpwpj62eu6mva" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00005.png" id="99_bccm8"]
+[ext_resource type="Texture2D" uid="uid://ctxl0kp7p7j7o" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00006.png" id="100_o6b5n"]
+[ext_resource type="Texture2D" uid="uid://bcbiynepqsfqx" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00007.png" id="101_vtkro"]
+[ext_resource type="Texture2D" uid="uid://b7niolj1kabvy" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00008.png" id="102_yd182"]
+[ext_resource type="Texture2D" uid="uid://byataxxrrh4t5" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00009.png" id="103_uumnp"]
+[ext_resource type="Texture2D" uid="uid://cvv217ilkx27b" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00010.png" id="104_vnwp7"]
+[ext_resource type="Texture2D" uid="uid://wdjkjyn6gf5t" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00011.png" id="105_fy31e"]
+[ext_resource type="Texture2D" uid="uid://bop30q6u1g2ob" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00012.png" id="106_wrv6l"]
+[ext_resource type="Texture2D" uid="uid://bkhyja3lj5f0k" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00013.png" id="107_v8m3p"]
+[ext_resource type="Texture2D" uid="uid://lx2y4xbf3x6i" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00014.png" id="108_5jjnb"]
+[ext_resource type="Texture2D" uid="uid://by45kb0sr3j4q" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00015.png" id="109_2mgds"]
+[ext_resource type="Texture2D" uid="uid://cn741ve6gf2hk" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00016.png" id="110_f4ihj"]
+[ext_resource type="Texture2D" uid="uid://b7vc4374fda27" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00017.png" id="111_udd21"]
+[ext_resource type="Texture2D" uid="uid://dnervw6xg47sf" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00018.png" id="112_kxhpo"]
+[ext_resource type="Texture2D" uid="uid://brpey5qcde2k0" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00019.png" id="113_nn2x3"]
+[ext_resource type="Texture2D" uid="uid://cx32rrt0g7uqx" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00020.png" id="114_ocrnw"]
+[ext_resource type="Texture2D" uid="uid://owicods50rrh" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00021.png" id="115_ah283"]
+[ext_resource type="Texture2D" uid="uid://b8s8ewdg8wou2" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00022.png" id="116_3umnh"]
+[ext_resource type="Texture2D" uid="uid://bcwnpego6ivdo" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00023.png" id="117_plrov"]
+[ext_resource type="Texture2D" uid="uid://bwep46s0w6x0r" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00024.png" id="118_gnr3l"]
+[ext_resource type="Texture2D" uid="uid://d1318bor6hna0" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00025.png" id="119_31ydv"]
+[ext_resource type="Texture2D" uid="uid://w38cc6bt3jyy" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00026.png" id="120_acl6i"]
+[ext_resource type="Texture2D" uid="uid://cb0f8kt5l0vie" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00027.png" id="121_c1ctm"]
+[ext_resource type="Texture2D" uid="uid://dim7hx37bi06q" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00028.png" id="122_ou2nn"]
+[ext_resource type="Texture2D" uid="uid://cmo2qaomhmmpv" path="res://Assets/dark_area/plants/Vegetation/Grass4/Grass3_00029.png" id="123_jdf1h"]
+[ext_resource type="Texture2D" uid="uid://c58xj2l0584ld" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00000.png" id="124_0kwic"]
+[ext_resource type="Texture2D" uid="uid://dj0eb63jm5tox" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00001.png" id="125_5bixt"]
+[ext_resource type="Texture2D" uid="uid://xwjhyv3kn5rx" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00002.png" id="126_mxq8o"]
+[ext_resource type="Texture2D" uid="uid://kodd6ukj4hhp" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00003.png" id="127_klnxl"]
+[ext_resource type="Texture2D" uid="uid://b1c62egm5x5n" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00004.png" id="128_bo55u"]
+[ext_resource type="Texture2D" uid="uid://dtekk2y4qbrt7" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00005.png" id="129_kc4q1"]
+[ext_resource type="Texture2D" uid="uid://c4rfra338h8vx" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00006.png" id="130_1lclb"]
+[ext_resource type="Texture2D" uid="uid://pex0pu2hbjle" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00007.png" id="131_ux0lv"]
+[ext_resource type="Texture2D" uid="uid://cbqssr60kpudr" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00008.png" id="132_u1uix"]
+[ext_resource type="Texture2D" uid="uid://bqxmonnh71a6p" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00009.png" id="133_am10t"]
+[ext_resource type="Texture2D" uid="uid://om3pw7da7c0p" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00010.png" id="134_ps0p4"]
+[ext_resource type="Texture2D" uid="uid://326td16ymfk5" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00011.png" id="135_0nfad"]
+[ext_resource type="Texture2D" uid="uid://c8clxy6e21c20" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00012.png" id="136_uiomt"]
+[ext_resource type="Texture2D" uid="uid://dctvkm12g868p" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00013.png" id="137_qv8fc"]
+[ext_resource type="Texture2D" uid="uid://wfu0vxh70khs" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00014.png" id="138_5oe7v"]
+[ext_resource type="Texture2D" uid="uid://cmonaa0ngx20i" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00015.png" id="139_8ngry"]
+[ext_resource type="Texture2D" uid="uid://dlf1whuyk5axv" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00016.png" id="140_8026w"]
+[ext_resource type="Texture2D" uid="uid://d2l8aa64wrqo3" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00017.png" id="141_s7m1v"]
+[ext_resource type="Texture2D" uid="uid://disk1cr2s2hv7" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00018.png" id="142_w0qgd"]
+[ext_resource type="Texture2D" uid="uid://tdoitirhbvwf" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00019.png" id="143_pv25n"]
+[ext_resource type="Texture2D" uid="uid://1qixxvicf5ht" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00020.png" id="144_rx0qv"]
+[ext_resource type="Texture2D" uid="uid://c7wxaaq8aaymv" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00021.png" id="145_jetky"]
+[ext_resource type="Texture2D" uid="uid://sc2i6elc8o0q" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00022.png" id="146_oerhl"]
+[ext_resource type="Texture2D" uid="uid://bfm33gyr5am2d" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00023.png" id="147_y11jw"]
+[ext_resource type="Texture2D" uid="uid://yw0al5vdlgxk" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00024.png" id="148_qfjw3"]
+[ext_resource type="Texture2D" uid="uid://dxmqapmib8agu" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00025.png" id="149_2fngs"]
+[ext_resource type="Texture2D" uid="uid://dtw6tl45rvq06" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00026.png" id="150_23yjc"]
+[ext_resource type="Texture2D" uid="uid://c2h5fn6rctdst" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00027.png" id="151_ms2vo"]
+[ext_resource type="Texture2D" uid="uid://3n08wbeaxdmf" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00028.png" id="152_jo8cj"]
+[ext_resource type="Texture2D" uid="uid://bp40rood2ps3t" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00029.png" id="153_tftgv"]
+[ext_resource type="Texture2D" uid="uid://d037tldy6j3ep" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00030.png" id="154_rofjk"]
+[ext_resource type="Texture2D" uid="uid://br5qxxj87u0pt" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00031.png" id="155_7tpm2"]
+[ext_resource type="Texture2D" uid="uid://bkoagbn4sh3h6" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00032.png" id="156_5lcsn"]
+[ext_resource type="Texture2D" uid="uid://7g270qne8kh8" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00033.png" id="157_m7w0q"]
+[ext_resource type="Texture2D" uid="uid://njtghwmxuu4p" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00034.png" id="158_a1j8u"]
+[ext_resource type="Texture2D" uid="uid://drs8rghh21t0a" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00035.png" id="159_2mq4o"]
+[ext_resource type="Texture2D" uid="uid://b2kuw7e4lwrtc" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00036.png" id="160_j2vtc"]
+[ext_resource type="Texture2D" uid="uid://bqbnl0564krgk" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00037.png" id="161_svg6l"]
+[ext_resource type="Texture2D" uid="uid://cda0ncmrwtsjp" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00038.png" id="162_oduyb"]
+[ext_resource type="Texture2D" uid="uid://dytnthvgehykr" path="res://Assets/dark_area/plants/Vegetation/Grass5/Plant5_00039.png" id="163_y7x2d"]
+[ext_resource type="Texture2D" uid="uid://bkk3ikoqfiq8j" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00000.png" id="164_20hcu"]
+[ext_resource type="Texture2D" uid="uid://dvrv83wmf17ns" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00001.png" id="165_r66t8"]
+[ext_resource type="Texture2D" uid="uid://vukgudxphjla" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00002.png" id="166_kuk47"]
+[ext_resource type="Texture2D" uid="uid://bq510cs3sahqo" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00003.png" id="167_f4iil"]
+[ext_resource type="Texture2D" uid="uid://o0vr8sdof5ft" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00004.png" id="168_38m0e"]
+[ext_resource type="Texture2D" uid="uid://x8w8d4j3hrfy" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00005.png" id="169_6rit2"]
+[ext_resource type="Texture2D" uid="uid://dexst24ebfvba" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00006.png" id="170_7t12c"]
+[ext_resource type="Texture2D" uid="uid://cjv2styvjstos" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00007.png" id="171_62drt"]
+[ext_resource type="Texture2D" uid="uid://dficfpmftd4t8" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00008.png" id="172_o7oo1"]
+[ext_resource type="Texture2D" uid="uid://bbx5ufuiwj44g" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00009.png" id="173_wkrce"]
+[ext_resource type="Texture2D" uid="uid://3a601doj1inm" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00010.png" id="174_wk8s3"]
+[ext_resource type="Texture2D" uid="uid://bc82tcbmd7nsu" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00011.png" id="175_7pu8c"]
+[ext_resource type="Texture2D" uid="uid://1btdqssnc8d0" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00012.png" id="176_q2rb3"]
+[ext_resource type="Texture2D" uid="uid://cocx4urspadob" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00013.png" id="177_yn1dx"]
+[ext_resource type="Texture2D" uid="uid://br6kbdr8o5olv" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00014.png" id="178_7kseh"]
+[ext_resource type="Texture2D" uid="uid://bup481p1hd2nj" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00015.png" id="179_641i8"]
+[ext_resource type="Texture2D" uid="uid://b7w28qhtnhc83" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00016.png" id="180_8dh5i"]
+[ext_resource type="Texture2D" uid="uid://dj2xt4clvhe72" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00017.png" id="181_vu5ry"]
+[ext_resource type="Texture2D" uid="uid://6bileywp03mo" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00018.png" id="182_gs047"]
+[ext_resource type="Texture2D" uid="uid://bna31spk0136k" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00019.png" id="183_8v8p6"]
+[ext_resource type="Texture2D" uid="uid://cshjwxmqjviru" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00020.png" id="184_iw003"]
+[ext_resource type="Texture2D" uid="uid://c8kwif3rp8fid" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00021.png" id="185_05fyf"]
+[ext_resource type="Texture2D" uid="uid://5w6bxw876a1v" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00022.png" id="186_mucav"]
+[ext_resource type="Texture2D" uid="uid://c0p6gntyg1ed" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00023.png" id="187_v2uub"]
+[ext_resource type="Texture2D" uid="uid://poirxqfmk1e" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00024.png" id="188_gkm6u"]
+[ext_resource type="Texture2D" uid="uid://bwmdwqyc37mub" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00025.png" id="189_nlv7h"]
+[ext_resource type="Texture2D" uid="uid://7mrw0v6gqlbp" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00026.png" id="190_2rx8s"]
+[ext_resource type="Texture2D" uid="uid://8jfl3aqn7q8k" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00027.png" id="191_tml60"]
+[ext_resource type="Texture2D" uid="uid://cl4g7gbu3q26" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00028.png" id="192_4dib1"]
+[ext_resource type="Texture2D" uid="uid://dr73u01eh6bmm" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00029.png" id="193_xmjpj"]
+[ext_resource type="Texture2D" uid="uid://b5qwjia1j5t2w" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00030.png" id="194_2a0rx"]
+[ext_resource type="Texture2D" uid="uid://c2bmo6mhmhno2" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00031.png" id="195_kwkth"]
+[ext_resource type="Texture2D" uid="uid://d0p1yu0blyrnw" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00032.png" id="196_slbm4"]
+[ext_resource type="Texture2D" uid="uid://dnejqlrqhlnbe" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00033.png" id="197_75c08"]
+[ext_resource type="Texture2D" uid="uid://cp8dueumflgr3" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00034.png" id="198_fklct"]
+[ext_resource type="Texture2D" uid="uid://d02yr7u7qy7uj" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00035.png" id="199_14a5x"]
+[ext_resource type="Texture2D" uid="uid://coime6omdpter" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00036.png" id="200_4x3s5"]
+[ext_resource type="Texture2D" uid="uid://cbmh4aerne55l" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00037.png" id="201_nkctx"]
+[ext_resource type="Texture2D" uid="uid://c5tqwe5vgngvs" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00038.png" id="202_guvm5"]
+[ext_resource type="Texture2D" uid="uid://b3r7s0274qp6k" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00039.png" id="203_n3uod"]
+[ext_resource type="Texture2D" uid="uid://bey3ff5xph6wj" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00040.png" id="204_vsmp3"]
+[ext_resource type="Texture2D" uid="uid://cpe18xsknmdue" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00041.png" id="205_pjgbp"]
+[ext_resource type="Texture2D" uid="uid://cpakbqqs4ghh1" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00042.png" id="206_ugk65"]
+[ext_resource type="Texture2D" uid="uid://c24xjacyydu30" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00043.png" id="207_f8a3d"]
+[ext_resource type="Texture2D" uid="uid://5c24vujkp11m" path="res://Assets/dark_area/plants/Vegetation/Group Plant/GroupPlants_00044.png" id="208_odp6n"]
+[ext_resource type="Texture2D" uid="uid://gq5ioqgw3h05" path="res://Assets/dark_area/cave/Assets 1024 Cave/Cave - SmallRocks.png" id="209_5i75i"]
+[ext_resource type="Texture2D" uid="uid://ciiqg3nttpgyq" path="res://Assets/dark_area/cave/Assets 1024 Cave/Cave - BigRocks1.png" id="212_qyabc"]
+[ext_resource type="PackedScene" uid="uid://daab20ylnjhit" path="res://Actors/Enemies/dark_enemy/dark_enemy.tscn" id="216_armii"]
 [ext_resource type="PackedScene" uid="uid://c1y54bnb2bqcb" path="res://levels/level_2/light_beam.tscn" id="218_4ww2d"]
 [ext_resource type="Script" uid="uid://dxtmqrhyp1b3k" path="res://levels/level_2/dust_motes.gd" id="219_idsih"]
-[ext_resource type="Texture2D" uid="uid://d1lhwqccdn072" path="res://assets/dark_area/cave/mote.png" id="219_vrb6t"]
+[ext_resource type="Texture2D" uid="uid://d1lhwqccdn072" path="res://Assets/dark_area/cave/mote.png" id="219_vrb6t"]
 [ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="220_p33w4"]
 [ext_resource type="PackedScene" uid="uid://cb2n82qlyo6fs" path="res://score.tscn" id="238_tq672"]
 
@@ -657,70 +657,48 @@ atlas = ExtResource("209_5i75i")
 region = Rect2(1646, 892, 132, 167)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i6s7g"]
-load_path = "res://.godot/imported/16x16pumpkin.png-0449caa74fb10f8ea67b4a0b926be98b.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t7ix4"]
-load_path = "res://.godot/imported/pumpkin1.png-a8576e9a266a4ec750648e8d9dcb735b.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0jyl6"]
-load_path = "res://.godot/imported/pumpkin2.png-c6bf8898d3ab19d2d80874a083a136ce.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ettni"]
-load_path = "res://.godot/imported/pumpkin3.png-6230a6c8bcb77a7e66d2a920e7a565a7.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dp4d4"]
-load_path = "res://.godot/imported/PumpkinSpiceCollection.png-7ecb7818b17350fd0895d088eebea025.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1v40t"]
-load_path = "res://.godot/imported/PumpkinSpiceCollection.png-7ecb7818b17350fd0895d088eebea025.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3iwmq"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cg7ru"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fuq0e"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nncq4"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i3tl7"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ygdif"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ngxxh"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x2hhv"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jbeqm"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jdkhc"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rcxea"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hhule"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cqyqr"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k4ue2"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g2hql"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o2u6f"]
-load_path = "res://.godot/imported/pixel_pumpkins.png-d43631b062a1578de62693dd08ac21ae.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e77l1"]
 atlas = ExtResource("6_iicbf")
@@ -1871,13 +1849,13 @@ position = Vector2(34273.332, -8293.333)
 position = Vector2(20793.332, -8366.666)
 
 [node name="Platform6" parent="Terrain/Platforms" unique_id=537756616 instance=ExtResource("14_t7ix4")]
-position = Vector2(6956.6665, -9506.666)
+position = Vector2(4200, -18332.832)
 
 [node name="Platform7" parent="Terrain/Platforms" unique_id=1514144635 instance=ExtResource("15_0jyl6")]
 position = Vector2(18513.332, -8693.333)
 
 [node name="Platform8" parent="Terrain/Platforms" unique_id=456895762 instance=ExtResource("16_ettni")]
-position = Vector2(6526.6665, -9766.666)
+position = Vector2(3770, -18592.832)
 
 [node name="Platform9" parent="Terrain/Platforms" unique_id=1937874748 instance=ExtResource("17_dp4d4")]
 position = Vector2(11073.333, -9166.666)
@@ -1895,7 +1873,7 @@ position = Vector2(13080, -7699.9995)
 position = Vector2(7100, -7506.6665)
 
 [node name="Platform11" parent="Terrain/Platforms" unique_id=106789986 instance=ExtResource("19_3iwmq")]
-position = Vector2(6516.6665, -8896.666)
+position = Vector2(3760, -17722.832)
 
 [node name="Walls" type="Node2D" parent="Terrain" unique_id=1251733028]
 position = Vector2(-1866.6666, 2413.3333)
@@ -2085,6 +2063,7 @@ scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_j5vrt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Terrain/Walls/WallLeftThick2" unique_id=1892462869]
+position = Vector2(-2756.6675, -8826.169)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_pi8ru")
 
@@ -6842,157 +6821,157 @@ scale = Vector2(0.15, 0.15)
 position = Vector2(-2620, -7253.3335)
 
 [node name="SmallRocks" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1761054781]
-position = Vector2(5116.8335, 5975.834)
+position = Vector2(13309.334, -4375.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_ao5c7")
 
 [node name="SmallRocks2" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1748409248]
-position = Vector2(5286.8335, 5975.834)
+position = Vector2(13479.334, -4375.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_710y7")
 
 [node name="SmallRocks3" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=13412907]
-position = Vector2(5446.8335, 5975.834)
+position = Vector2(13639.334, -4375.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_l4ot5")
 
 [node name="SmallRocks4" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=634592598]
-position = Vector2(4956.8335, 5965.834)
+position = Vector2(13149.334, -4385.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_dw0gb")
 
 [node name="SmallRocks5" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1994204576]
-position = Vector2(5596.8335, 5985.834)
+position = Vector2(13789.334, -4365.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_2tfx5")
 
 [node name="SmallRocks6" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=804468015]
-position = Vector2(5776.8335, 5985.834)
+position = Vector2(13969.334, -4365.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_y0dim")
 
 [node name="SmallRocks7" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=405634995]
-position = Vector2(5946.8335, 5965.834)
+position = Vector2(14139.334, -4385.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_jkuur")
 
 [node name="SmallRocks8" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1650003001]
-position = Vector2(5966.8335, 5675.834)
+position = Vector2(10699.334, -4875.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_58b8n")
 
 [node name="SmallRocks9" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=2146982531]
-position = Vector2(5816.8335, 5615.834)
+position = Vector2(10549.334, -4935.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_d0eyt")
 
 [node name="SmallRocks10" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=231160207]
-position = Vector2(5586.8335, 5765.834)
+position = Vector2(13779.334, -4585.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_6cink")
 
 [node name="SmallRocks11" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=80938728]
-position = Vector2(5286.8335, 5785.834)
+position = Vector2(10019.334, -4765.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_i0ch0")
 
 [node name="SmallRocks12" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=644741790]
-position = Vector2(4776.8335, 5945.834)
+position = Vector2(9509.334, -4605.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_ysx52")
 
 [node name="SmallRocks13" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=887993158]
-position = Vector2(4646.8335, 5985.834)
+position = Vector2(9379.334, -4565.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_j5avx")
 
 [node name="SmallRocks14" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1614222056]
-position = Vector2(4536.8335, 5985.834)
+position = Vector2(9269.334, -4565.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_pt8ly")
 
 [node name="SmallRocks15" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=550452842]
-position = Vector2(4356.834, 5955.834)
+position = Vector2(9089.334, -4595.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_w6bje")
 
 [node name="SmallRocks16" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=161030945]
-position = Vector2(4166.8335, 5945.834)
+position = Vector2(8899.334, -4605.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_mv74w")
 
 [node name="SmallRocks17" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1525203348]
-position = Vector2(3966.8335, 5905.834)
+position = Vector2(8699.334, -4645.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_2e3lb")
 
 [node name="SmallRocks18" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1506088175]
-position = Vector2(3756.8335, 5895.834)
+position = Vector2(8489.334, -4655.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_deevk")
 
 [node name="SmallRocks19" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=449162004]
-position = Vector2(3440, 6000.0005)
+position = Vector2(8172.5, -4551.333)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wcuxa")
 
 [node name="SmallRocks20" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=705528597]
-position = Vector2(3586.8335, 5545.834)
+position = Vector2(8319.334, -5005.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_hohcv")
 
 [node name="SmallRocks21" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=628061806]
-position = Vector2(5976.8335, 5365.834)
+position = Vector2(10709.334, -5185.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_k6uhq")
 
 [node name="SmallRocks22" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1636355901]
-position = Vector2(5786.8335, 5345.834)
+position = Vector2(10519.334, -5205.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_5bbvg")
 
 [node name="SmallRocks23" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=2013358508]
-position = Vector2(5536.8335, 5345.834)
+position = Vector2(10269.334, -5205.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_lb27l")
 
 [node name="SmallRocks24" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=561532673]
-position = Vector2(5246.8335, 5445.834)
+position = Vector2(9979.334, -5105.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_2w053")
 
 [node name="SmallRocks25" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1669766742]
-position = Vector2(5016.8335, 5515.834)
+position = Vector2(9749.334, -5035.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_1t6pa")
 
 [node name="SmallRocks26" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1700452307]
-position = Vector2(4796.8335, 5375.834)
+position = Vector2(9529.334, -5175.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_fgr1s")
 
 [node name="SmallRocks27" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1060160494]
-position = Vector2(4586.8335, 5465.834)
+position = Vector2(9319.334, -5085.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_w4r1j")
 
 [node name="SmallRocks28" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=272185435]
-position = Vector2(4266.8335, 5495.834)
+position = Vector2(8999.334, -5055.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_jp7ai")
 
 [node name="SmallRocks29" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=134274907]
-position = Vector2(3926.8335, 5385.834)
+position = Vector2(8659.334, -5165.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_gv107")
 
 [node name="SmallRocks30" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1214522337]
-position = Vector2(3636.8335, 5075.834)
+position = Vector2(8369.334, -5475.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_tvijd")
 
 [node name="SmallRocks31" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1141527321]
-position = Vector2(4056.8335, 4985.834)
+position = Vector2(8789.334, -5565.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_0n6wa")
 
@@ -7007,27 +6986,27 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wewsc")
 
 [node name="SmallRocks34" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=481838765]
-position = Vector2(5866.8335, 4665.834)
+position = Vector2(10599.334, -5885.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_ssddg")
 
 [node name="SmallRocks35" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=736207130]
-position = Vector2(5716.8335, 4645.834)
+position = Vector2(10449.334, -5905.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_74yu8")
 
 [node name="SmallRocks36" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=1232046378]
-position = Vector2(5576.8335, 4635.834)
+position = Vector2(10309.334, -5915.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_73wer")
 
 [node name="SmallRocks37" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=269744803]
-position = Vector2(5386.8335, 4665.834)
+position = Vector2(10119.334, -5885.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_efhbf")
 
 [node name="SmallRocks38" type="Sprite2D" parent="DecorationsBG/SmallRocks" unique_id=177036007]
-position = Vector2(5186.8335, 4635.834)
+position = Vector2(9919.334, -5915.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_8y3ed")
 
@@ -7277,152 +7256,152 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_y0dim")
 
 [node name="SmallRocks7" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1879053047]
-position = Vector2(7713.333, 5573.334)
+position = Vector2(15905.833, -4777.999)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_jkuur")
 
 [node name="SmallRocks8" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1718181928]
-position = Vector2(5966.8335, 5675.834)
+position = Vector2(14159.334, -4675.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_58b8n")
 
 [node name="SmallRocks9" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1387464111]
-position = Vector2(5816.8335, 5615.834)
+position = Vector2(14009.334, -4735.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_d0eyt")
 
 [node name="SmallRocks11" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=586300845]
-position = Vector2(5286.8335, 5785.834)
+position = Vector2(13479.334, -4565.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_i0ch0")
 
 [node name="SmallRocks12" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1080888129]
-position = Vector2(4776.8335, 5945.834)
+position = Vector2(12969.334, -4405.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_ysx52")
 
 [node name="SmallRocks13" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1028922106]
-position = Vector2(4646.8335, 5985.834)
+position = Vector2(12839.334, -4365.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_j5avx")
 
 [node name="SmallRocks14" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1847969242]
-position = Vector2(4536.8335, 5985.834)
+position = Vector2(12729.334, -4365.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_pt8ly")
 
 [node name="SmallRocks15" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1591739462]
-position = Vector2(4356.834, 5955.834)
+position = Vector2(12549.334, -4395.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_w6bje")
 
 [node name="SmallRocks16" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=23327842]
-position = Vector2(4166.8335, 5945.834)
+position = Vector2(12359.334, -4405.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_mv74w")
 
 [node name="SmallRocks17" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=374977327]
-position = Vector2(3966.8335, 5905.834)
+position = Vector2(12159.334, -4445.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_2e3lb")
 
 [node name="SmallRocks18" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1739132459]
-position = Vector2(3756.8335, 5895.834)
+position = Vector2(11949.334, -4455.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_deevk")
 
 [node name="SmallRocks19" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1672005040]
-position = Vector2(3440, 6000.0005)
+position = Vector2(11632.5, -4351.333)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_wcuxa")
 
 [node name="SmallRocks20" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=25843278]
-position = Vector2(3586.8335, 5545.834)
+position = Vector2(11779.334, -4805.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_hohcv")
 
 [node name="SmallRocks21" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=583756018]
-position = Vector2(5976.8335, 5365.834)
+position = Vector2(14169.334, -4985.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_k6uhq")
 
 [node name="SmallRocks22" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1605004253]
-position = Vector2(5786.8335, 5345.834)
+position = Vector2(13979.334, -5005.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_5bbvg")
 
 [node name="SmallRocks23" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=802014607]
-position = Vector2(5536.8335, 5345.834)
+position = Vector2(13729.334, -5005.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_lb27l")
 
 [node name="SmallRocks24" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=115186697]
-position = Vector2(5246.8335, 5445.834)
+position = Vector2(13439.334, -4905.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_2w053")
 
 [node name="SmallRocks25" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1323709827]
-position = Vector2(5016.8335, 5515.834)
+position = Vector2(13209.334, -4835.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_1t6pa")
 
 [node name="SmallRocks26" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1104753218]
-position = Vector2(4796.8335, 5375.834)
+position = Vector2(12989.334, -4975.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_fgr1s")
 
 [node name="SmallRocks27" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1331640962]
-position = Vector2(4586.8335, 5465.834)
+position = Vector2(12779.334, -4885.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_w4r1j")
 
 [node name="SmallRocks28" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1319325175]
-position = Vector2(4266.8335, 5495.834)
+position = Vector2(12459.334, -4855.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_jp7ai")
 
 [node name="SmallRocks29" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=13562181]
-position = Vector2(3926.8335, 5385.834)
+position = Vector2(12119.334, -4965.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_gv107")
 
 [node name="SmallRocks30" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=879174396]
-position = Vector2(3636.8335, 5075.834)
+position = Vector2(11829.334, -5275.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_tvijd")
 
 [node name="SmallRocks31" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=133673895]
-position = Vector2(4056.8335, 4985.834)
+position = Vector2(12249.334, -5365.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_0n6wa")
 
 [node name="SmallRocks34" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=704945207]
-position = Vector2(5866.8335, 4665.834)
+position = Vector2(14059.334, -5685.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_ssddg")
 
 [node name="SmallRocks35" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=604431245]
-position = Vector2(5716.8335, 4645.834)
+position = Vector2(13909.334, -5705.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_74yu8")
 
 [node name="SmallRocks36" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=540941171]
-position = Vector2(5576.8335, 4635.834)
+position = Vector2(13769.334, -5715.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_73wer")
 
 [node name="SmallRocks37" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=1639560860]
-position = Vector2(5386.8335, 4665.834)
+position = Vector2(13579.334, -5685.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_efhbf")
 
 [node name="SmallRocks38" type="Sprite2D" parent="DecorationsFG/SmallRocks" unique_id=156790256]
-position = Vector2(5186.8335, 4635.834)
+position = Vector2(13379.334, -5715.499)
 scale = Vector2(0.99999994, 0.99999994)
 texture = SubResource("AtlasTexture_8y3ed")
 
 [node name="FloorRocky" type="Sprite2D" parent="DecorationsFG" unique_id=702844167]
-position = Vector2(7373.333, -2766.6665)
+position = Vector2(4616.666, -11592.834)
 scale = Vector2(0.9999997, 0.9999997)
 texture = SubResource("AtlasTexture_e77l1")
 
@@ -7446,28 +7425,28 @@ z_index = 1
 position = Vector2(4546.666, -1526.6666)
 
 [node name="Grass1" parent="DecorationsFG/AnimatedPlants" unique_id=1529658355 instance=ExtResource("3_4c5ms")]
-position = Vector2(719.9999, 539.9999)
+position = Vector2(1826.6669, 1560)
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_7xr4r")
 autoplay = "default"
 frame_progress = 0.49022153
 
 [node name="Grass2" parent="DecorationsFG/AnimatedPlants" unique_id=416282966 instance=ExtResource("3_4c5ms")]
-position = Vector2(200, 549.9999)
+position = Vector2(3186.667, 840.00006)
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_jiydw")
 autoplay = "default"
 frame_progress = 0.3589871
 
 [node name="Grass3" parent="DecorationsFG/AnimatedPlants" unique_id=1625065147 instance=ExtResource("3_4c5ms")]
-position = Vector2(29.999878, 349.99997)
+position = Vector2(2673.3337, 1553.3333)
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_l7gda")
 autoplay = "default"
 frame_progress = 0.46960726
 
 [node name="Grass4" parent="DecorationsFG/AnimatedPlants" unique_id=576731055 instance=ExtResource("3_4c5ms")]
-position = Vector2(899.9998, 409.99997)
+position = Vector2(3893.3337, 1526.6666)
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_me0p5")
 autoplay = "default"
@@ -7492,6 +7471,7 @@ frame_progress = 0.8411297
 position = Vector2(-110, -407)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=135498828]
+visible = false
 color = Color(0.039215688, 0.101960786, 0.101960786, 1)
 
 [node name="DustMotes" type="GPUParticles2D" parent="." unique_id=1804017536]
