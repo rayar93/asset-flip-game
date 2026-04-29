@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bngyw40oc06j2"]
 
-[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://actors/player/player.tscn" id="1_vthxg"]
+[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Actors/Player/player.tscn" id="1_vthxg"]
 [ext_resource type="Script" uid="uid://btc2aqh5q1eq2" path="res://levels/Tutorial/Text.gd" id="1_xxil4"]
 [ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="3_iqx1w"]
 
@@ -48,7 +48,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cu6o1"]
-radius = 20.0
+radius = 29.759453
 
 [node name="Tutorial" type="Node2D" unique_id=662538897]
 
