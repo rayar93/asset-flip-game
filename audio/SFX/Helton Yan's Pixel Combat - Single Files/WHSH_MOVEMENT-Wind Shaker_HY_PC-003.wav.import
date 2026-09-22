@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://o66fioygvrqu"
+path="res://.godot/imported/WHSH_MOVEMENT-Wind Shaker_HY_PC-003.wav-44e5a1650e914f777608f7f9864d5d89.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/WHSH_MOVEMENT-Wind Shaker_HY_PC-003.wav"
+dest_files=["res://.godot/imported/WHSH_MOVEMENT-Wind Shaker_HY_PC-003.wav-44e5a1650e914f777608f7f9864d5d89.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

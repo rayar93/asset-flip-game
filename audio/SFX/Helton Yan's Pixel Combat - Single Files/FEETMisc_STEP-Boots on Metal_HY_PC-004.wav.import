@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5jwt2t3njte7"
+path="res://.godot/imported/FEETMisc_STEP-Boots on Metal_HY_PC-004.wav-88f7de0463b27e20778695fed7dbc037.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/FEETMisc_STEP-Boots on Metal_HY_PC-004.wav"
+dest_files=["res://.godot/imported/FEETMisc_STEP-Boots on Metal_HY_PC-004.wav-88f7de0463b27e20778695fed7dbc037.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

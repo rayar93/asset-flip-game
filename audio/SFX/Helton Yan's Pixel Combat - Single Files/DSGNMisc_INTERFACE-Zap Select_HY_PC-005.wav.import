@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ex1a5j5mptwu"
+path="res://.godot/imported/DSGNMisc_INTERFACE-Zap Select_HY_PC-005.wav-02a8d2e88f524582bd1e91d823b56c99.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_INTERFACE-Zap Select_HY_PC-005.wav"
+dest_files=["res://.godot/imported/DSGNMisc_INTERFACE-Zap Select_HY_PC-005.wav-02a8d2e88f524582bd1e91d823b56c99.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

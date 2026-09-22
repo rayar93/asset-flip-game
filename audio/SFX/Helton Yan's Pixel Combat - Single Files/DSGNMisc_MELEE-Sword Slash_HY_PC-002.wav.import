@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bxxbrglfr76om"
+path="res://.godot/imported/DSGNMisc_MELEE-Sword Slash_HY_PC-002.wav-caca7a752ec9d1376b16640c3ae34650.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_MELEE-Sword Slash_HY_PC-002.wav"
+dest_files=["res://.godot/imported/DSGNMisc_MELEE-Sword Slash_HY_PC-002.wav-caca7a752ec9d1376b16640c3ae34650.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

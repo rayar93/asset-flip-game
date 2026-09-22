@@ -27,7 +27,7 @@ func _ready():
 	_update_music_for_path(initial_path)
 	
 func _update_music_for_path(path: String):
-	if "Tutorial" in path or "Main_Menu" in path:
+	if "tutorial" in path or "main_menu" in path:
 		AudioManager.play_music(preload("res://audio/music/SunnyLand Music/SunnyLand Music/Adventure pack 1 ogg/arcade.ogg"))
 	elif "level_1" in path or "death_screen1" in path:
 		AudioManager.play_music(preload("res://audio/music/SunnyLand Music/SunnyLand Music/adventure pack 2 ogg/megabot.ogg"))
@@ -37,7 +37,7 @@ func _update_music_for_path(path: String):
 	elif "level_3" in path or "death_screen3" in path:
 		AudioManager.play_music(preload("res://audio/music/Alone(loop) - melancholic - slow.mp3"))
 		AudioManager.play_ambient(preload("res://audio/SFX/Ambient/BGS Loops/Forest Night/Forest Night.wav"))
-	elif "Final_Level" in path or "death_screen4" in path:
+	elif "final_level" in path or "death_screen4" in path:
 		AudioManager.play_music(preload("res://audio/music/01 - DavidKBD - Purgatory Pack - Purgatory.ogg"))
 		AudioManager.play_ambient(preload("res://audio/SFX/Ambient/BGS Loops/Interior Day/Inside Day Rain.wav"))
 	elif "pause_menu" in path:
@@ -86,7 +86,7 @@ func _move_player_to_spawn(spawn_point_name):
 		
 func is_gameplay_scene() -> bool:
 	var path = get_tree().current_scene.scene_file_path
-	var non_gameplay = ["Main_Menu", "death_screen", "win_screen"]
+	var non_gameplay = ["main_menu", "death_screen", "win_screen"]
 	for keyword in non_gameplay:
 		if keyword in path:
 			return false
@@ -106,6 +106,6 @@ func on_player_died():
 		go_to_scene("res://levels/level_2/death_screen2.tscn")
 	elif "level_3" in scene_path:
 		go_to_scene("res://levels/level_3/death_screen3.tscn")
-	elif "Final_Level" in scene_path:
-		go_to_scene("res://levels/Final_Level/death_screen4.tscn")
+	elif "final_level" in scene_path:
+		go_to_scene("res://levels/final_level/death_screen4.tscn")
 	else: pass

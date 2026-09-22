@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cw8a46a0f7hqj"
+path="res://.godot/imported/DSGNMisc_MOVEMENT-Mecha Medium Jump_HY_PC-004.wav-b1a6bb5f6c54b88c8796def7e98c7182.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_MOVEMENT-Mecha Medium Jump_HY_PC-004.wav"
+dest_files=["res://.godot/imported/DSGNMisc_MOVEMENT-Mecha Medium Jump_HY_PC-004.wav-b1a6bb5f6c54b88c8796def7e98c7182.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

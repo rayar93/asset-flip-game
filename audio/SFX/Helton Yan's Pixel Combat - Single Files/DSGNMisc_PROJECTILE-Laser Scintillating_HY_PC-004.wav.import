@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dbxbentru3o7p"
+path="res://.godot/imported/DSGNMisc_PROJECTILE-Laser Scintillating_HY_PC-004.wav-5d69c0f12ff87fc5ac5ed60cb96a4fc0.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_PROJECTILE-Laser Scintillating_HY_PC-004.wav"
+dest_files=["res://.godot/imported/DSGNMisc_PROJECTILE-Laser Scintillating_HY_PC-004.wav-5d69c0f12ff87fc5ac5ed60cb96a4fc0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

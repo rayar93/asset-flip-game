@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://2bejnhbyy7bm"
+path="res://.godot/imported/MAGAngl_BUFF-Effect Success_HY_PC-002.wav-bb6fd81e4cae948500ceed8991f9f76d.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/MAGAngl_BUFF-Effect Success_HY_PC-002.wav"
+dest_files=["res://.godot/imported/MAGAngl_BUFF-Effect Success_HY_PC-002.wav-bb6fd81e4cae948500ceed8991f9f76d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

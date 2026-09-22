@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://1qnkjq16psv"
+path="res://.godot/imported/UIClick_INTERFACE-Strong Click 1_HY_PC-001.wav-78283bd605dc3a6247c03f3adf1d1300.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/UIClick_INTERFACE-Strong Click 1_HY_PC-001.wav"
+dest_files=["res://.godot/imported/UIClick_INTERFACE-Strong Click 1_HY_PC-001.wav-78283bd605dc3a6247c03f3adf1d1300.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

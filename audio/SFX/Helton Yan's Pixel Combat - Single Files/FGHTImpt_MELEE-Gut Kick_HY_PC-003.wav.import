@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://7210u1tod11o"
+path="res://.godot/imported/FGHTImpt_MELEE-Gut Kick_HY_PC-003.wav-7376ffc7d740d1f09deb28c34e6702e6.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/FGHTImpt_MELEE-Gut Kick_HY_PC-003.wav"
+dest_files=["res://.godot/imported/FGHTImpt_MELEE-Gut Kick_HY_PC-003.wav-7376ffc7d740d1f09deb28c34e6702e6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

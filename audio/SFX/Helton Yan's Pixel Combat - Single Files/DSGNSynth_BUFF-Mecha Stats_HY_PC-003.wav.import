@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3rrsebp7i1nb"
+path="res://.godot/imported/DSGNSynth_BUFF-Mecha Stats_HY_PC-003.wav-ac8e2f70a67521e47e9d4d479c2bce39.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNSynth_BUFF-Mecha Stats_HY_PC-003.wav"
+dest_files=["res://.godot/imported/DSGNSynth_BUFF-Mecha Stats_HY_PC-003.wav-ac8e2f70a67521e47e9d4d479c2bce39.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

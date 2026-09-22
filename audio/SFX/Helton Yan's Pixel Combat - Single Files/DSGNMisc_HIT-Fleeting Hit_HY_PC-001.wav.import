@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://wtriwl1ejskt"
+path="res://.godot/imported/DSGNMisc_HIT-Fleeting Hit_HY_PC-001.wav-8c5ba3c7dce1ecb40fc8d206f431c584.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_HIT-Fleeting Hit_HY_PC-001.wav"
+dest_files=["res://.godot/imported/DSGNMisc_HIT-Fleeting Hit_HY_PC-001.wav-8c5ba3c7dce1ecb40fc8d206f431c584.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

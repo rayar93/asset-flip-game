@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://byhxym7y0nfjc"
+path="res://.godot/imported/DSGNTonl_SKILL RELEASE-Electric Sphere_HY_PC-006.wav-41ce440be144f4f3725a1658f4b104a9.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNTonl_SKILL RELEASE-Electric Sphere_HY_PC-006.wav"
+dest_files=["res://.godot/imported/DSGNTonl_SKILL RELEASE-Electric Sphere_HY_PC-006.wav-41ce440be144f4f3725a1658f4b104a9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

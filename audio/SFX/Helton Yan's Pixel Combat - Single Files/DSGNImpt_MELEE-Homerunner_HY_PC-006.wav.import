@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://mhu04twlvm20"
+path="res://.godot/imported/DSGNImpt_MELEE-Homerunner_HY_PC-006.wav-8ec467ba7cb9d6828a525b55e77b5003.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNImpt_MELEE-Homerunner_HY_PC-006.wav"
+dest_files=["res://.godot/imported/DSGNImpt_MELEE-Homerunner_HY_PC-006.wav-8ec467ba7cb9d6828a525b55e77b5003.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cwuhwpc5f8khy"
+path="res://.godot/imported/MAGSpel_CAST-Critter Transformation_HY_PC-001.wav-fd6882cdb9cd680c19c60b0a9ffb5cd9.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/MAGSpel_CAST-Critter Transformation_HY_PC-001.wav"
+dest_files=["res://.godot/imported/MAGSpel_CAST-Critter Transformation_HY_PC-001.wav-fd6882cdb9cd680c19c60b0a9ffb5cd9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

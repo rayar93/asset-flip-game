@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dnxjgegh4ylfk"
+path="res://.godot/imported/DSGNMisc_STEP-Bubble Step_HY_PC-005.wav-97eb1db1efe7c58089d97c2dcf172ae5.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_STEP-Bubble Step_HY_PC-005.wav"
+dest_files=["res://.godot/imported/DSGNMisc_STEP-Bubble Step_HY_PC-005.wav-97eb1db1efe7c58089d97c2dcf172ae5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

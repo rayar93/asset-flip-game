@@ -32,7 +32,7 @@ func _on_restart_pressed():
 	
 func _on_menu_pressed():
 	resume()
-	GameFlow.go_to_scene("res://Main_Menu.tscn")
+	GameFlow.go_to_scene("res://UI/main_menu.tscn")
 	
 func _on_quit_pressed():
 	get_tree().paused = false

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dg5lonix746kd"
+path="res://.godot/imported/DSGNTonl_SKILL RELEASE-Shimmery Bubbles_HY_PC-002.wav-c4fe5b8656e6044ef2918d3eb535a5d6.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNTonl_SKILL RELEASE-Shimmery Bubbles_HY_PC-002.wav"
+dest_files=["res://.godot/imported/DSGNTonl_SKILL RELEASE-Shimmery Bubbles_HY_PC-002.wav-c4fe5b8656e6044ef2918d3eb535a5d6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

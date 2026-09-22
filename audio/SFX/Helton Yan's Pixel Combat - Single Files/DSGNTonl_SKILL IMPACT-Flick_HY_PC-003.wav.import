@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://clxqobb142klr"
+path="res://.godot/imported/DSGNTonl_SKILL IMPACT-Flick_HY_PC-003.wav-f9af679d29facb5a9f9921c6a9e9b753.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNTonl_SKILL IMPACT-Flick_HY_PC-003.wav"
+dest_files=["res://.godot/imported/DSGNTonl_SKILL IMPACT-Flick_HY_PC-003.wav-f9af679d29facb5a9f9921c6a9e9b753.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

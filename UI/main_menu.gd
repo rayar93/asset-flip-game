@@ -1,7 +1,7 @@
 extends Control
 
 func _on_start_pressed():
-	GameFlow.go_to_scene("res://levels/Tutorial/Tutorial.tscn")
+	GameFlow.go_to_scene("res://levels/tutorial/tutorial.tscn")
 	
 func _on_options_pressed():
 	pass

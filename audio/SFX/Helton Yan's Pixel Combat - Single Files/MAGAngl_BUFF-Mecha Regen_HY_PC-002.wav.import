@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dc2yyg4o636on"
+path="res://.godot/imported/MAGAngl_BUFF-Mecha Regen_HY_PC-002.wav-19492d3b0946a1c515c201367968ebeb.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/MAGAngl_BUFF-Mecha Regen_HY_PC-002.wav"
+dest_files=["res://.godot/imported/MAGAngl_BUFF-Mecha Regen_HY_PC-002.wav-19492d3b0946a1c515c201367968ebeb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

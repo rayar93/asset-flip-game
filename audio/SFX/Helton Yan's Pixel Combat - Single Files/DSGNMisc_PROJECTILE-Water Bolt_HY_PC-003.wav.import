@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cq71b5ydv3j46"
+path="res://.godot/imported/DSGNMisc_PROJECTILE-Water Bolt_HY_PC-003.wav-bd8193d1f18a47290713711779270281.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_PROJECTILE-Water Bolt_HY_PC-003.wav"
+dest_files=["res://.godot/imported/DSGNMisc_PROJECTILE-Water Bolt_HY_PC-003.wav-bd8193d1f18a47290713711779270281.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

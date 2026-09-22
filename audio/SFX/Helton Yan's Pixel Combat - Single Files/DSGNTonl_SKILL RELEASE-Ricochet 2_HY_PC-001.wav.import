@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bxpp0sn03i5t7"
+path="res://.godot/imported/DSGNTonl_SKILL RELEASE-Ricochet 2_HY_PC-001.wav-0a405916238826f4bee455b116d84723.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNTonl_SKILL RELEASE-Ricochet 2_HY_PC-001.wav"
+dest_files=["res://.godot/imported/DSGNTonl_SKILL RELEASE-Ricochet 2_HY_PC-001.wav-0a405916238826f4bee455b116d84723.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

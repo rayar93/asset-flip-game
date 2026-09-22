@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6w6aqg5w71mh"
+path="res://.godot/imported/SWSH_MOVEMENT-Bamboo Whip_HY_PC-001.wav-1556e626a73c73a3f96dfbb35ac9b953.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/SWSH_MOVEMENT-Bamboo Whip_HY_PC-001.wav"
+dest_files=["res://.godot/imported/SWSH_MOVEMENT-Bamboo Whip_HY_PC-001.wav-1556e626a73c73a3f96dfbb35ac9b953.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

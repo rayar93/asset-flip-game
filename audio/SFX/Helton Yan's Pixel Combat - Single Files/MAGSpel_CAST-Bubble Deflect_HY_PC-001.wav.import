@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmpcl05ckr0e1"
+path="res://.godot/imported/MAGSpel_CAST-Bubble Deflect_HY_PC-001.wav-7690bf3bb27ba8eaef3779f123e29cd7.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/MAGSpel_CAST-Bubble Deflect_HY_PC-001.wav"
+dest_files=["res://.godot/imported/MAGSpel_CAST-Bubble Deflect_HY_PC-001.wav-7690bf3bb27ba8eaef3779f123e29cd7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

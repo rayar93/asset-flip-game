@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bjo4n06wrlj44"
+path="res://.godot/imported/DSGNMisc_HIT-Yoi Yai_HY_PC-005.wav-f6c82703ed1617462e64eb2747d495f8.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_HIT-Yoi Yai_HY_PC-005.wav"
+dest_files=["res://.godot/imported/DSGNMisc_HIT-Yoi Yai_HY_PC-005.wav-f6c82703ed1617462e64eb2747d495f8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

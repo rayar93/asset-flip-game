@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dcp3xvgdku0si"
+path="res://.godot/imported/DSGNMisc_USABLE-Mecha Weapon Equip_HY_PC-003.wav-aa54e1fc8e8e90582bed678370c94f0a.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_USABLE-Mecha Weapon Equip_HY_PC-003.wav"
+dest_files=["res://.godot/imported/DSGNMisc_USABLE-Mecha Weapon Equip_HY_PC-003.wav-aa54e1fc8e8e90582bed678370c94f0a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

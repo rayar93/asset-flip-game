@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1y54bnb2bqcb"]
 
-[ext_resource type="Script" uid="uid://c1h7d6bgsmqgq" path="res://levels/dark_area/light_beam.gd" id="1_fnhwt"]
+[ext_resource type="Script" uid="uid://c1h7d6bgsmqgq" path="res://levels/level_2/light_beam.gd" id="1_fnhwt"]
 [ext_resource type="Texture2D" uid="uid://bwklyimv351gj" path="res://assets/dark_area/cave/lightbeam.png" id="1_x471k"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fnhwt"]

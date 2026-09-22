@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c1jr0122485ej"
+path="res://.godot/imported/DSGNMisc_PROJECTILE-Hollow Point_HY_PC-001.wav-e9ce563433a73fcf3e68704635386273.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_PROJECTILE-Hollow Point_HY_PC-001.wav"
+dest_files=["res://.godot/imported/DSGNMisc_PROJECTILE-Hollow Point_HY_PC-001.wav-e9ce563433a73fcf3e68704635386273.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

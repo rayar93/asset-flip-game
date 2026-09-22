@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://k2fpkob2lqul"
+path="res://.godot/imported/DSGNMisc_HIT-Swish Clap_HY_PC-004.wav-4128533f50a0b4886459da61548abc90.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_HIT-Swish Clap_HY_PC-004.wav"
+dest_files=["res://.godot/imported/DSGNMisc_HIT-Swish Clap_HY_PC-004.wav-4128533f50a0b4886459da61548abc90.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dbqyxjx0r4yqs"
+path="res://.godot/imported/MAGSpel_CAST-Bubbly Gather_HY_PC-003.wav-e8e065951cac23065e9215d9cb6e6789.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/MAGSpel_CAST-Bubbly Gather_HY_PC-003.wav"
+dest_files=["res://.godot/imported/MAGSpel_CAST-Bubbly Gather_HY_PC-003.wav-e8e065951cac23065e9215d9cb6e6789.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

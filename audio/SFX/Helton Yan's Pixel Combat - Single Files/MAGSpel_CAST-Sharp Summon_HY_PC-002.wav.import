@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://com28s8fccwp0"
+path="res://.godot/imported/MAGSpel_CAST-Sharp Summon_HY_PC-002.wav-fbd17c18100ff8087472a6462926b870.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/MAGSpel_CAST-Sharp Summon_HY_PC-002.wav"
+dest_files=["res://.godot/imported/MAGSpel_CAST-Sharp Summon_HY_PC-002.wav-fbd17c18100ff8087472a6462926b870.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

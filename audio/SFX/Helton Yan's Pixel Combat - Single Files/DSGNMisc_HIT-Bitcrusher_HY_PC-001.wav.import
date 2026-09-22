@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://brdl457ysa8a7"
+path="res://.godot/imported/DSGNMisc_HIT-Bitcrusher_HY_PC-001.wav-e44a20f9edd279ff31c35b1a480ec664.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_HIT-Bitcrusher_HY_PC-001.wav"
+dest_files=["res://.godot/imported/DSGNMisc_HIT-Bitcrusher_HY_PC-001.wav-e44a20f9edd279ff31c35b1a480ec664.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

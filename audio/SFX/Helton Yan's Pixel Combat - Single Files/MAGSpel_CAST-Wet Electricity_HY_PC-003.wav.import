@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://brdh3hlcio3jk"
+path="res://.godot/imported/MAGSpel_CAST-Wet Electricity_HY_PC-003.wav-8cc4e46edf3f603cb10eeaca651cf78f.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/MAGSpel_CAST-Wet Electricity_HY_PC-003.wav"
+dest_files=["res://.godot/imported/MAGSpel_CAST-Wet Electricity_HY_PC-003.wav-8cc4e46edf3f603cb10eeaca651cf78f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

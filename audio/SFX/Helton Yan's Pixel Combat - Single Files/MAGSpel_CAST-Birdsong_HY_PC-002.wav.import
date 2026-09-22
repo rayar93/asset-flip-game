@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dwen68ll6ckhx"
+path="res://.godot/imported/MAGSpel_CAST-Birdsong_HY_PC-002.wav-55363b70f572a63b3779acfef9c8bd28.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/MAGSpel_CAST-Birdsong_HY_PC-002.wav"
+dest_files=["res://.godot/imported/MAGSpel_CAST-Birdsong_HY_PC-002.wav-55363b70f572a63b3779acfef9c8bd28.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

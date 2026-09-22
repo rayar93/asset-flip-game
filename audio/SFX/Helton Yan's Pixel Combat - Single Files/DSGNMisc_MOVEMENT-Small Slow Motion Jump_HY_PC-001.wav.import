@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b1jq0113cfpps"
+path="res://.godot/imported/DSGNMisc_MOVEMENT-Small Slow Motion Jump_HY_PC-001.wav-04fd5831410086fe6536ffe365d4a7f9.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_MOVEMENT-Small Slow Motion Jump_HY_PC-001.wav"
+dest_files=["res://.godot/imported/DSGNMisc_MOVEMENT-Small Slow Motion Jump_HY_PC-001.wav-04fd5831410086fe6536ffe365d4a7f9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

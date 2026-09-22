@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnw3jun35l04e"
+path="res://.godot/imported/DSGNMisc_SKILL IMPACT-Dramatic Finish_HY_PC-001.wav-b7ef538ed49d1d969aa30acd9ca40ae2.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_SKILL IMPACT-Dramatic Finish_HY_PC-001.wav"
+dest_files=["res://.godot/imported/DSGNMisc_SKILL IMPACT-Dramatic Finish_HY_PC-001.wav-b7ef538ed49d1d969aa30acd9ca40ae2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

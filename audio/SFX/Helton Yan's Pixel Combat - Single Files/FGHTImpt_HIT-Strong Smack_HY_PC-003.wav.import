@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://p8uyd62l7cig"
+path="res://.godot/imported/FGHTImpt_HIT-Strong Smack_HY_PC-003.wav-e75c788c82bb08604f97de6ffaea4874.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/FGHTImpt_HIT-Strong Smack_HY_PC-003.wav"
+dest_files=["res://.godot/imported/FGHTImpt_HIT-Strong Smack_HY_PC-003.wav-e75c788c82bb08604f97de6ffaea4874.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

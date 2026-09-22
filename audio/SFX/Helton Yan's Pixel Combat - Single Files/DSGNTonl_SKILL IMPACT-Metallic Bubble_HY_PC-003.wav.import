@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://snhl418e6vch"
+path="res://.godot/imported/DSGNTonl_SKILL IMPACT-Metallic Bubble_HY_PC-003.wav-7964cada35692605110548be13fb9aac.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNTonl_SKILL IMPACT-Metallic Bubble_HY_PC-003.wav"
+dest_files=["res://.godot/imported/DSGNTonl_SKILL IMPACT-Metallic Bubble_HY_PC-003.wav-7964cada35692605110548be13fb9aac.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

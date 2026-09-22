@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b7g3tqonsi2oi"]
 
-[ext_resource type="Texture2D" uid="uid://bv5d6e0mqvhyd" path="res://Assets/dark_area/cave/Assets 1024 Cave/Cave - Platforms.png" id="1_dl125"]
+[ext_resource type="Texture2D" uid="uid://bv5d6e0mqvhyd" path="res://assets/dark_area/cave/Assets 1024 Cave/Cave - Platforms.png" id="1_dl125"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7a4ma"]
 size = Vector2(179.99994, 80)

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hycuo5n53803"
+path="res://.godot/imported/FEETMisc_STEP-Boots on Grass_HY_PC-002.wav-da54f380e0ee1a6f87ba4fe692ee36fd.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/FEETMisc_STEP-Boots on Grass_HY_PC-002.wav"
+dest_files=["res://.godot/imported/FEETMisc_STEP-Boots on Grass_HY_PC-002.wav-da54f380e0ee1a6f87ba4fe692ee36fd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

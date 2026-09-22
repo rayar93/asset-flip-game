@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://boou81qv0bv7y"
+path="res://.godot/imported/DSGNSynth_CAST-Mecha Energy Movement_HY_PC-001.wav-563147ab94edafb7027a5c27ea506559.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNSynth_CAST-Mecha Energy Movement_HY_PC-001.wav"
+dest_files=["res://.godot/imported/DSGNSynth_CAST-Mecha Energy Movement_HY_PC-001.wav-563147ab94edafb7027a5c27ea506559.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

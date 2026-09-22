@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5cxa2n2a247m"
+path="res://.godot/imported/SWSH_MOVEMENT-Bubbly Passby_HY_PC-003.wav-2d3d37e3f90bb9b00b5e33b75e6995e4.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/SWSH_MOVEMENT-Bubbly Passby_HY_PC-003.wav"
+dest_files=["res://.godot/imported/SWSH_MOVEMENT-Bubbly Passby_HY_PC-003.wav-2d3d37e3f90bb9b00b5e33b75e6995e4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

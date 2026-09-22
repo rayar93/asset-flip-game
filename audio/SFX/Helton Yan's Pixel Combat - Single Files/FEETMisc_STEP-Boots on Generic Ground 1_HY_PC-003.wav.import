@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://by01rxx2hjcpw"
+path="res://.godot/imported/FEETMisc_STEP-Boots on Generic Ground 1_HY_PC-003.wav-17393b738b3d2c6d5a81dbb2b5797d18.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/FEETMisc_STEP-Boots on Generic Ground 1_HY_PC-003.wav"
+dest_files=["res://.godot/imported/FEETMisc_STEP-Boots on Generic Ground 1_HY_PC-003.wav-17393b738b3d2c6d5a81dbb2b5797d18.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

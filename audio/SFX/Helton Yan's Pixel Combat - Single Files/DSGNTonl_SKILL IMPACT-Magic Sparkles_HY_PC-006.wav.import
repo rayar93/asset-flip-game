@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0cy61hgai5o6"
+path="res://.godot/imported/DSGNTonl_SKILL IMPACT-Magic Sparkles_HY_PC-006.wav-79d4737c5391b343527e3e3a0705c8cf.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNTonl_SKILL IMPACT-Magic Sparkles_HY_PC-006.wav"
+dest_files=["res://.godot/imported/DSGNTonl_SKILL IMPACT-Magic Sparkles_HY_PC-006.wav-79d4737c5391b343527e3e3a0705c8cf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

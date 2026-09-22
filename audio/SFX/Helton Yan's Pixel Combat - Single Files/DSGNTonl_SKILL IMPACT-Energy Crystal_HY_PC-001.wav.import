@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bmrxra8k2r1qd"
+path="res://.godot/imported/DSGNTonl_SKILL IMPACT-Energy Crystal_HY_PC-001.wav-c6aee514dfd0e6034f12c7a0ad1c783b.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNTonl_SKILL IMPACT-Energy Crystal_HY_PC-001.wav"
+dest_files=["res://.godot/imported/DSGNTonl_SKILL IMPACT-Energy Crystal_HY_PC-001.wav-c6aee514dfd0e6034f12c7a0ad1c783b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

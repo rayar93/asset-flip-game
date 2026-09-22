@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bybddoxkkdryr"
+path="res://.godot/imported/WHSH_MOVEMENT-Mecha Cruiser Passby_HY_PC-002.wav-88f3a8c48b8ecd302db2d71533e7bd09.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/WHSH_MOVEMENT-Mecha Cruiser Passby_HY_PC-002.wav"
+dest_files=["res://.godot/imported/WHSH_MOVEMENT-Mecha Cruiser Passby_HY_PC-002.wav-88f3a8c48b8ecd302db2d71533e7bd09.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

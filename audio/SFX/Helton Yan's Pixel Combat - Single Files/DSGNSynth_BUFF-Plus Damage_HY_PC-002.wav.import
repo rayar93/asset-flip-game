@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dlw3oyrshcapv"
+path="res://.godot/imported/DSGNSynth_BUFF-Plus Damage_HY_PC-002.wav-0ab76d4b9e6d295305401f067e46d220.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNSynth_BUFF-Plus Damage_HY_PC-002.wav"
+dest_files=["res://.godot/imported/DSGNSynth_BUFF-Plus Damage_HY_PC-002.wav-0ab76d4b9e6d295305401f067e46d220.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

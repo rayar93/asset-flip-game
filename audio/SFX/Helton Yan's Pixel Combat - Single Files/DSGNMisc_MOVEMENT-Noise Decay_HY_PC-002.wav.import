@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c24k1alba7lo"
+path="res://.godot/imported/DSGNMisc_MOVEMENT-Noise Decay_HY_PC-002.wav-c28a2fdb8a74dcb463f5fcf377b7b57c.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_MOVEMENT-Noise Decay_HY_PC-002.wav"
+dest_files=["res://.godot/imported/DSGNMisc_MOVEMENT-Noise Decay_HY_PC-002.wav-c28a2fdb8a74dcb463f5fcf377b7b57c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

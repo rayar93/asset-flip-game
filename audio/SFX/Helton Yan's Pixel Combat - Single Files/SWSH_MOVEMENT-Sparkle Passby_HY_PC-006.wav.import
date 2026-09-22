@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dlhsh70708iib"
+path="res://.godot/imported/SWSH_MOVEMENT-Sparkle Passby_HY_PC-006.wav-739b16320cc9dbdf30ec6aa199b4920d.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/SWSH_MOVEMENT-Sparkle Passby_HY_PC-006.wav"
+dest_files=["res://.godot/imported/SWSH_MOVEMENT-Sparkle Passby_HY_PC-006.wav-739b16320cc9dbdf30ec6aa199b4920d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

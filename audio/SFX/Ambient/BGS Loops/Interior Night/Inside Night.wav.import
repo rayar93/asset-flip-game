@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bov22xl1qxi5l"
+path="res://.godot/imported/Inside Night.wav-348d526c7fb9cc028ed3a408245b4a81.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Ambient/BGS Loops/Interior Night/Inside Night.wav"
+dest_files=["res://.godot/imported/Inside Night.wav-348d526c7fb9cc028ed3a408245b4a81.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

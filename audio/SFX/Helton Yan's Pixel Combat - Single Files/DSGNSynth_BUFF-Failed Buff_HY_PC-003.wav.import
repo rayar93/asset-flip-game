@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://1ce3duoqmo0d"
+path="res://.godot/imported/DSGNSynth_BUFF-Failed Buff_HY_PC-003.wav-dc45ca1c23f3bc854d1ed629e6c5a25d.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNSynth_BUFF-Failed Buff_HY_PC-003.wav"
+dest_files=["res://.godot/imported/DSGNSynth_BUFF-Failed Buff_HY_PC-003.wav-dc45ca1c23f3bc854d1ed629e6c5a25d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

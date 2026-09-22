@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bqbkl0ldqmv5j"
+path="res://.godot/imported/DSGNMisc_MOVEMENT-Sparkly Water_HY_PC-001.wav-f9c8a32416dc6a09ac3cfe1d7f8f8f4e.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNMisc_MOVEMENT-Sparkly Water_HY_PC-001.wav"
+dest_files=["res://.godot/imported/DSGNMisc_MOVEMENT-Sparkly Water_HY_PC-001.wav-f9c8a32416dc6a09ac3cfe1d7f8f8f4e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

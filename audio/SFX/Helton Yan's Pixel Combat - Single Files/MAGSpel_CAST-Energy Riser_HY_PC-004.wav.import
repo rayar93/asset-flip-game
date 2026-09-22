@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddxswsnngmgvd"
+path="res://.godot/imported/MAGSpel_CAST-Energy Riser_HY_PC-004.wav-cbdb44dba0ec6fc6c86d03fbcf3def34.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/MAGSpel_CAST-Energy Riser_HY_PC-004.wav"
+dest_files=["res://.godot/imported/MAGSpel_CAST-Energy Riser_HY_PC-004.wav-cbdb44dba0ec6fc6c86d03fbcf3def34.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

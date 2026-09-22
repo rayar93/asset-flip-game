@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dydj7w7umpcxk"
+path="res://.godot/imported/DSGNSynth_BUFF-Bird Buff_HY_PC-003.wav-6d13a36723be706fa02a77199f96b080.sample"
+
+[deps]
+
+source_file="res://audio/SFX/Helton Yan's Pixel Combat - Single Files/DSGNSynth_BUFF-Bird Buff_HY_PC-003.wav"
+dest_files=["res://.godot/imported/DSGNSynth_BUFF-Bird Buff_HY_PC-003.wav-6d13a36723be706fa02a77199f96b080.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
