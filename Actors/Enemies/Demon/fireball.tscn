@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://jtnnotwreevm"]
 
-[ext_resource type="Script" uid="uid://kefyf2v15dfo" path="res://actors/enemies/Demon/fireball.gd" id="1_jurff"]
+[ext_resource type="Script" uid="uid://kefyf2v15dfo" path="res://actors/enemies/demon/fireball.gd" id="1_jurff"]
 [ext_resource type="Texture2D" uid="uid://mxi6gds1ca1v" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_0.png" id="2_htarw"]
 [ext_resource type="Texture2D" uid="uid://befgn1lw33iex" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_1.png" id="3_an5bc"]
 [ext_resource type="Texture2D" uid="uid://dfgrinj1s47ut" path="res://assets/dark_area/enemies/flying_demon/fireballs/fireball_high_speed_side_small/imgs/img_2.png" id="4_ntd40"]

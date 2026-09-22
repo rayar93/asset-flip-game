@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bngyw40oc06j2"]
 
-[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://Actors/Player/player.tscn" id="1_vthxg"]
-[ext_resource type="Script" uid="uid://btc2aqh5q1eq2" path="res://levels/Tutorial/Text.gd" id="1_xxil4"]
+[ext_resource type="PackedScene" uid="uid://ckrlsxl6x1iel" path="res://actors/player/player.tscn" id="1_vthxg"]
+[ext_resource type="Script" uid="uid://btc2aqh5q1eq2" path="res://levels/tutorial/text.gd" id="1_xxil4"]
 [ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="3_iqx1w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vthxg"]

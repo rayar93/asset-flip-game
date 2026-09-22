@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cpmfpwtwpuxv0"]
 
-[ext_resource type="Script" uid="uid://b4hy20xtob2lw" path="res://levels/Final_Level/death_screen_4.gd" id="1_rchw5"]
+[ext_resource type="Script" uid="uid://b4hy20xtob2lw" path="res://levels/final_level/death_screen_4.gd" id="1_rchw5"]
 [ext_resource type="Texture2D" uid="uid://bjy343430xq6n" path="res://assets/deathscreen4.png" id="2_rchw5"]
 
 [sub_resource type="Theme" id="Theme_oj450"]

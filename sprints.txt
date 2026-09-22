@@ -84,10 +84,10 @@ Stopped graphics interpolation on sword
 Disabled pause menu in other menus
 Standardized buttons and screens
 Added interface sounds
-Replace dash VFX
+Replaced dash VFX
 Footsteps
 Added double-jump anim
-Finish level 2!!!!!!!!!!!!!
+Finished all 5 levels
 
 Stretch/polish:
 

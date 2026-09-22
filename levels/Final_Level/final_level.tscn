@@ -1,12 +1,12 @@
 [gd_scene format=4 uid="uid://6sfqubjc0pwx"]
 
-[ext_resource type="Texture2D" uid="uid://3tudk1pidtks" path="res://Assets/Final Area/gothicvania church/assets/environment/background.png" id="1_pmrvv"]
-[ext_resource type="Texture2D" uid="uid://cgdoyfjgfujy2" path="res://Assets/Final Area/gothicvania church/assets/environment/tileset.png" id="3_cdmhx"]
-[ext_resource type="Texture2D" uid="uid://c6b100bck76os" path="res://Assets/Final Area/gothicvania church/assets/environment/columns.png" id="5_cdmhx"]
-[ext_resource type="PackedScene" uid="uid://bg3s0u700kpc8" path="res://Actors/Player/player_final.tscn" id="6_adlqn"]
+[ext_resource type="Texture2D" uid="uid://3tudk1pidtks" path="res://assets/final_area/gothicvania church/assets/environment/background.png" id="1_pmrvv"]
+[ext_resource type="Texture2D" uid="uid://cgdoyfjgfujy2" path="res://assets/final_area/gothicvania church/assets/environment/tileset.png" id="3_cdmhx"]
+[ext_resource type="Texture2D" uid="uid://c6b100bck76os" path="res://assets/final_area/gothicvania church/assets/environment/columns.png" id="5_cdmhx"]
+[ext_resource type="PackedScene" uid="uid://bg3s0u700kpc8" path="res://actors/player/player_final.tscn" id="6_adlqn"]
 [ext_resource type="Script" uid="uid://bpdcql86qsm5f" path="res://levels/shared/transition_area.gd" id="6_bnqhw"]
-[ext_resource type="PackedScene" uid="uid://dgv33itiij4vp" path="res://knight.tscn" id="6_foa1k"]
-[ext_resource type="PackedScene" uid="uid://cb2n82qlyo6fs" path="res://score.tscn" id="7_adlqn"]
+[ext_resource type="PackedScene" uid="uid://dgv33itiij4vp" path="res://actors/enemies/knight/knight.tscn" id="6_foa1k"]
+[ext_resource type="PackedScene" uid="uid://cb2n82qlyo6fs" path="res://UI/score.tscn" id="7_adlqn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bnqhw"]
 texture = ExtResource("3_cdmhx")

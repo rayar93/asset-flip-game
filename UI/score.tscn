@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cb2n82qlyo6fs"]
 
-[ext_resource type="Script" uid="uid://big37uipsbo4d" path="res://Score.gd" id="1_t1x8i"]
+[ext_resource type="Script" uid="uid://big37uipsbo4d" path="res://UI/score.gd" id="1_t1x8i"]
 
 [node name="Score" type="CanvasLayer" unique_id=658006041]
 script = ExtResource("1_t1x8i")
