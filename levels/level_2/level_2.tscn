@@ -7471,7 +7471,6 @@ frame_progress = 0.8411297
 position = Vector2(-110, -407)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=135498828]
-visible = false
 color = Color(0.039215688, 0.101960786, 0.101960786, 1)
 
 [node name="DustMotes" type="GPUParticles2D" parent="." unique_id=1804017536]

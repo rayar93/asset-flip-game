@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://koc35d42m3w2"
-path="res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+uid="uid://dldq26j8gsf6y"
+path="res://.godot/imported/img_21.png-72d111653ab6085e2461c4ce1dab45fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.svg"
-dest_files=["res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"]
+source_file="res://spare/assets/dark_area/enemies/flying_demon/fireballs/fire_ball_blue_side_small/imgs/img_21.png"
+dest_files=["res://.godot/imported/img_21.png-72d111653ab6085e2461c4ce1dab45fe.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

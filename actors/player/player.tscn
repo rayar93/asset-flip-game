@@ -247,7 +247,7 @@ shape = SubResource("RectangleShape2D_4nu62")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VisualRoot" unique_id=1407357925]
 sprite_frames = SubResource("SpriteFrames_s0n4a")
-animation = &"double_jump"
+animation = &"idle"
 offset = Vector2(38, -7)
 
 [node name="AttackRoot" type="Node2D" parent="." unique_id=1976591112]
