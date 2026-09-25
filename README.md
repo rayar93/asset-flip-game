@@ -80,8 +80,7 @@ Built by Alan Ray and Patrick Anderson over eleven one-week sprints in spring
 2026. Every third-party art and audio pack, with its creator and source, is
 listed in [CREDITS.md](CREDITS.md).
 
-## Technical report
+## Report and presentation
 
-The full 29-page technical report covering design, development, testing,
-results and future work is in
-[docs/AssetFlip-technical-report.pdf](docs/AssetFlip-technical-report.pdf).
+- **Report:** [reports/report.pdf](reports/report.pdf) - the 21-page technical report covering design, development, testing, results and future work
+- **Presentation:** [reports/presentation.pdf](reports/presentation.pdf) - the final capstone presentation
