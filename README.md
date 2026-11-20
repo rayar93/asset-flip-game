@@ -1,5 +1,7 @@
 # Asset Flip
 
+**Try it:** [Play in your browser on itch.io](https://rayar93.itch.io/asset-flip) - nothing to install.
+
 A two-dimensional side-scrolling platformer with melee combat, built in Godot 4
 as a senior capstone project at Appalachian State University.
 
